@@ -15,11 +15,13 @@ class Person {
     /* 带属性观察者的属性 */
     var fullName: String = "" {
         
+        /* 赋值之前会触发这个方法 */
         willSet(newValue) {
             print("before set fullName to \(newValue)")
             self.fullName = newValue
         }
         
+        /* 赋值之后会触发这个方法 */
         didSet {
             print("after set fullName is \(self.fullName)")
         }
