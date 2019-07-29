@@ -119,6 +119,8 @@ class BasicConsoleTest {
         let classAndStruct = ClassAndStruct()
         classAndStruct.classTest()
         classAndStruct.structTest()
+        classAndStruct.selectableTest()
+        classAndStruct.inheritTest()
     }
     
 }

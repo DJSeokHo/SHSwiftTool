@@ -41,4 +41,25 @@ class Person {
         self.age = age
         return self
     }
+    
+    /*
+     这里的andAge是显示的指定外部形参名
+     方法名的最后一个单词已经描述了第一个参数的意义，所以第一个参数无需指定外部形参名，
+     从第二个形参开始，可以有外部形参名
+    */
+    func setName(name: String, andAge age: Int) -> Person {
+        self.name = name
+        self.age = age
+        return self
+    }
+    
+    /*
+     类，结构体，枚举中都可以使用static来表示静态方法(类方法)
+     在类中才能使用class来表示类方法
+     
+     static 和 class 的区别在于，用class修饰的方法可以被子类重写，而static 不行
+    */
+    static func info() {
+        print("this is Person class")
+    }
 }
