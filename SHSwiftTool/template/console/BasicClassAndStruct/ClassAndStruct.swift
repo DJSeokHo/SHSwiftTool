@@ -83,4 +83,37 @@ class ClassAndStruct {
         // 子类改变了父类的只读属性，所以这里可以赋值，但是没有意义
         FlyCar.type = "fly car"
     }
+    
+    /*
+     判断对象类型
+    */
+    func checkObjectType() {
+        
+        let car = FlyCar()
+        print("\(car is FlyCar)")
+        print("\(car is Car)")
+        print("\(car is Fruit)")
+        
+    }
+    
+    /*
+     强制向下转换对象类型
+    */
+    func castingObjectType() {
+        let car: Car = Car()
+        let flyCar: FlyCar = car as! FlyCar
+    }
+    
+    /*
+     Any和AnyObject
+     AnyObject: 代表任何类的实例 类似Java的object
+     Any: 代表任何类型 类似Java的Object
+    */
+    func any() {
+        
+        var anyArray: [Any] = [1, "1", Apple()]
+        
+        var anyObjectArray: [AnyObject] = [Car(), FlyCar(), Apple()]
+    }
 }
+

@@ -125,6 +125,9 @@
 		C34D9CB222C10D04006F4B99 /* BasicClassAndStruct */ = {
 			isa = PBXGroup;
 			children = (
+				C359FE2222F08F4800D0009E /* Encapsulation */,
+				C359FE2122F08D6500D0009E /* Protocol */,
+				C359FE2022F08D5400D0009E /* Extension */,
 				C35230ED22EF319B00342A44 /* Inherit */,
 				C35230E622EF27CA00342A44 /* Selectalbe */,
 				C3845A5122EDDA6200FAC52B /* Struct */,
@@ -177,6 +180,27 @@
 				C35230F622EF33DA00342A44 /* FlyCar.swift */,
 			);
 			path = Car;
+			sourceTree = "<group>";
+		};
+		C359FE2022F08D5400D0009E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C359FE2122F08D6500D0009E /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C359FE2222F08F4800D0009E /* Encapsulation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encapsulation;
 			sourceTree = "<group>";
 		};
 		C37112B422BD036900E92DA8 = {

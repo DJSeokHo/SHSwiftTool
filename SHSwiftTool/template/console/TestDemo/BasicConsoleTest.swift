@@ -121,6 +121,7 @@ class BasicConsoleTest {
         classAndStruct.structTest()
         classAndStruct.selectableTest()
         classAndStruct.inheritTest()
+        classAndStruct.checkObjectType()
     }
     
 }
