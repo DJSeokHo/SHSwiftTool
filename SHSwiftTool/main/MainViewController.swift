@@ -9,7 +9,15 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    
+    @IBOutlet var label: UILabel!
+    @IBAction func onButtonClicked(_ sender: UIButton) {
+        print("???")
+        self.label.text = "hahaha"
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
