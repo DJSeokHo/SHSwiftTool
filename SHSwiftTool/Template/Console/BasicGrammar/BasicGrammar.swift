@@ -21,13 +21,14 @@ class BasicGrammer {
         
         // var 是变量
         var age = 20
+        age = 10
         
         // 指定类型
         let nameString: String = "name"
-        var ageNumber: Int = 40
+        let ageNumber: Int = 40
         
         // 类型转换
-        var ageParsing: Int = Int(ageNumber)
+        let ageParsing: Int = Int(ageNumber)
         
         print("\(name) \(age) \(nameString) \(ageNumber) \(ageParsing)")
     }
@@ -56,6 +57,7 @@ class BasicGrammer {
         shoppingList.append("haha")
         print(shoppingList[shoppingList.count - 1])
         
+        // 新建一个空字符串
         var emptyArray = [String]()
         emptyArray.append("1")
         emptyArray.append("2")
@@ -85,6 +87,7 @@ class BasicGrammer {
         // 惊叹号是强制解析 - 强制拆包
         print(peopleAnyDictionary["age"]!)
         
+        // 新建一个新的字典
         var emptyDictionary = [String: Any]()
         emptyDictionary["name"] = "hehe"
         emptyDictionary["age"] = 40
@@ -95,6 +98,7 @@ class BasicGrammer {
     
     /*
      switch控制 不需要 break
+     因为swift 不存在条件贯穿
     */
     func switchControl() {
         let name = "haha"

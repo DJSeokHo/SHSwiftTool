@@ -10,29 +10,35 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    private static let TAG = "MainViewController"
+   
     
-    @IBOutlet var label: UILabel!
-    @IBAction func onButtonClicked(_ sender: UIButton) {
-        print("???")
-        self.label.text = "hahaha"
-        
-    }
+    @IBOutlet var buttonLoginTemplate: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        let basicConsoleTest = BasicConsoleTest()
+        // Do any additional setup after loading the view.
+        ILog.debug(tag: MainViewController.TAG, content: "viewDidLoad")
+        setListener()
+        
+//        let basicConsoleTest = BasicConsoleTest()
 //        basicConsoleTest.basicGrammarTest()
 //        basicConsoleTest.basicStringTest()
 //        basicConsoleTest.basicCollectionTest()
 //        basicConsoleTest.basicControlFlowTest()
 //        basicConsoleTest.basicFunctionTest()
-        basicConsoleTest.basicClassAndStruct()
+//        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
     }
 
+    private func setListener() {
+        self.buttonLoginTemplate.addTarget(self, action: #selector(self.onButtonLoginTemplateClicked(_:)), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonLoginTemplateClicked(_ sender: UIButton) {
+        ILog.debug(tag: MainViewController.TAG, content: "onButtonLoginTemplateClicked")
+    }
 
     /*
     // MARK: - Navigation
