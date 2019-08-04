@@ -44,9 +44,9 @@
 		C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C388903D22F5AF05007C444F /* LoginViewController.xib */; };
 		C388904322F5AF28007C444F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904222F5AF28007C444F /* LoginController.swift */; };
 		C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904422F5AF3B007C444F /* LoginInfoModel.swift */; };
-		C388904822F5B22A007C444F /* LoginResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904622F5B22A007C444F /* LoginResultViewController.swift */; };
-		C388904922F5B22A007C444F /* LoginResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C388904722F5B22A007C444F /* LoginResultViewController.xib */; };
 		C388904E22F5B57E007C444F /* ILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904D22F5B57E007C444F /* ILog.swift */; };
+		C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B664422F721A6004EE452 /* LoginHomeViewController.swift */; };
+		C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38B664522F721A6004EE452 /* LoginHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,9 +89,9 @@
 		C388903D22F5AF05007C444F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C388904222F5AF28007C444F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C388904422F5AF3B007C444F /* LoginInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfoModel.swift; sourceTree = "<group>"; };
-		C388904622F5B22A007C444F /* LoginResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultViewController.swift; sourceTree = "<group>"; };
-		C388904722F5B22A007C444F /* LoginResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginResultViewController.xib; sourceTree = "<group>"; };
 		C388904D22F5B57E007C444F /* ILog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILog.swift; sourceTree = "<group>"; };
+		C38B664422F721A6004EE452 /* LoginHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeViewController.swift; sourceTree = "<group>"; };
+		C38B664522F721A6004EE452 /* LoginHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,8 +323,8 @@
 				C388904022F5AF13007C444F /* Model */,
 				C388903C22F5AF05007C444F /* LoginViewController.swift */,
 				C388903D22F5AF05007C444F /* LoginViewController.xib */,
-				C388904622F5B22A007C444F /* LoginResultViewController.swift */,
-				C388904722F5B22A007C444F /* LoginResultViewController.xib */,
+				C38B664422F721A6004EE452 /* LoginHomeViewController.swift */,
+				C38B664522F721A6004EE452 /* LoginHomeViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -430,8 +430,8 @@
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
-				C388904922F5B22A007C444F /* LoginResultViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
+				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,11 +443,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34D31E222E9EA6C00E22BC6 /* ExampleProtocol.swift in Sources */,
-				C388904822F5B22A007C444F /* LoginResultViewController.swift in Sources */,
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
+				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
 				C34D31EA22E9EBF000E22BC6 /* IntExtension.swift in Sources */,
 				C37112E122BD0FBB00E92DA8 /* BasicGrammar.swift in Sources */,
 				C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */,

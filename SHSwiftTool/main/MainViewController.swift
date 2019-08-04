@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
     
     private static let TAG = "MainViewController"
-   
     
     @IBOutlet var buttonLoginTemplate: UIButton!
     
@@ -31,6 +30,7 @@ class MainViewController: UIViewController {
 //        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
     }
+  
 
     private func setListener() {
         self.buttonLoginTemplate.addTarget(self, action: #selector(self.onButtonLoginTemplateClicked(_:)), for: UIControl.Event.touchUpInside)
@@ -38,6 +38,17 @@ class MainViewController: UIViewController {
     
     @objc private func onButtonLoginTemplateClicked(_ sender: UIButton) {
         ILog.debug(tag: MainViewController.TAG, content: "onButtonLoginTemplateClicked")
+        
+        let loginHomeViewController = LoginHomeViewController();
+        
+        // create navigation controller and put main view controller as root view
+        let navigationController: UINavigationController = UINavigationController(rootViewController: loginHomeViewController)
+        
+        // make navigation controller as window root view controller
+        //        self.window!.rootViewController = navigationController
+        
+        self.present(navigationController, animated: true, completion: nil)
+        
     }
 
     /*

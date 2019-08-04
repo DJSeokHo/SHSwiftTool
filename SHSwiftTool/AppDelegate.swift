@@ -16,13 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window!.backgroundColor = UIColor.white
+      
+        // create main container view controller
+        let mainViewController: MainViewController = MainViewController()
         
-        let mainView: MainViewController = MainViewController()
+        // create navigation controller and put main view controller as root view
+//        let navigationController: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.backgroundColor = UIColor.white
-        window!.rootViewController = mainView
-        window!.makeKeyAndVisible()
+        // make navigation controller as window root view controller
+//        self.window!.rootViewController = navigationController
+        self.window!.rootViewController = mainViewController
+        
+        self.window!.makeKeyAndVisible()
         
         
         return true
