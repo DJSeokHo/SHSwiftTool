@@ -196,6 +196,21 @@
 			path = Car;
 			sourceTree = "<group>";
 		};
+		C35749DF22FFB43800354D1F /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				C35749E022FFB45000354D1F /* AlertProgressView */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		C35749E022FFB45000354D1F /* AlertProgressView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlertProgressView;
+			sourceTree = "<group>";
+		};
 		C359FE2022F08D5400D0009E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +326,7 @@
 		C388903822F5AE7F007C444F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C35749DF22FFB43800354D1F /* CommonUI */,
 				C388903922F5AEAD007C444F /* Login */,
 			);
 			path = UI;

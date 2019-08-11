@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var buttonLogin: UIButton!
     
+    private var loginInfoModel: LoginInfoModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,6 @@ class LoginViewController: UIViewController {
     
     private func hideSystemNavigationBar() {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
     }
     
     private func showSystemNavigationBar() {
@@ -57,6 +57,8 @@ class LoginViewController: UIViewController {
     
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginViewController.TAG, content: "onButtonLoginTemplateClicked")
+        
+        self.navigationController?.popViewController(animated: true)
     }
     /*
     // MARK: - Navigation
