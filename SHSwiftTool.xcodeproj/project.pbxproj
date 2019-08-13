@@ -28,6 +28,9 @@
 		C35230F122EF31DE00342A44 /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F022EF31DE00342A44 /* Apple.swift */; };
 		C35230F522EF33CD00342A44 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F422EF33CD00342A44 /* Car.swift */; };
 		C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F622EF33DA00342A44 /* FlyCar.swift */; };
+		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
+		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
+		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
 		C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112C022BD036900E92DA8 /* AppDelegate.swift */; };
 		C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37112C722BD036A00E92DA8 /* Assets.xcassets */; };
 		C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112D822BD050800E92DA8 /* MainViewController.swift */; };
@@ -71,6 +74,9 @@
 		C35230F022EF31DE00342A44 /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		C35230F422EF33CD00342A44 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		C35230F622EF33DA00342A44 /* FlyCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyCar.swift; sourceTree = "<group>"; };
+		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
+		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
+		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		C37112BD22BD036900E92DA8 /* SHSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37112C022BD036900E92DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37112C722BD036A00E92DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,16 +205,34 @@
 		C35749DF22FFB43800354D1F /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				C35749E022FFB45000354D1F /* AlertProgressView */,
+				C358DDA423019795007F10C6 /* NavigationBarViewHolder */,
+				C35749E022FFB45000354D1F /* AlertProgressViewHolder */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
 		};
-		C35749E022FFB45000354D1F /* AlertProgressView */ = {
+		C35749E022FFB45000354D1F /* AlertProgressViewHolder */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = AlertProgressView;
+			path = AlertProgressViewHolder;
+			sourceTree = "<group>";
+		};
+		C358DDA423019795007F10C6 /* NavigationBarViewHolder */ = {
+			isa = PBXGroup;
+			children = (
+				C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */,
+				C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */,
+			);
+			path = NavigationBarViewHolder;
+			sourceTree = "<group>";
+		};
+		C358DDAB23019C6A007F10C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C358DDAE2301A754007F10C6 /* icon_close.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C359FE2022F08D5400D0009E /* Extension */ = {
@@ -251,6 +275,7 @@
 		C37112BF22BD036900E92DA8 /* SHSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				C358DDAB23019C6A007F10C6 /* Resources */,
 				C388904A22F5B558007C444F /* Framework */,
 				C37112DE22BD0F1D00E92DA8 /* Template */,
 				C37112D722BD04F800E92DA8 /* main */,
@@ -445,9 +470,11 @@
 			files = (
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
+				C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
+				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +495,7 @@
 				C37112E122BD0FBB00E92DA8 /* BasicGrammar.swift in Sources */,
 				C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */,
 				C3845A4F22EDDA1200FAC52B /* Person.swift in Sources */,
+				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,

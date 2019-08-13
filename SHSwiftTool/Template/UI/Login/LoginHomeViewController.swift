@@ -16,7 +16,6 @@ class LoginHomeViewController: UIViewController {
     @IBOutlet var labelUserID: UILabel!
     
     @IBOutlet var buttonLogin: UIButton!
-    @IBOutlet var buttonClose: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,6 +27,18 @@ class LoginHomeViewController: UIViewController {
     }
     deinit {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "deinit")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        initNavigationBar()
+    }
+    
+    private func initNavigationBar() {
+        
+        let navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
+     
+        self.view.addSubview(navigationBarViewHolder)
+        
     }
     
     private func hideSystemNavigationBar() {
@@ -42,7 +53,7 @@ class LoginHomeViewController: UIViewController {
     private func setListener() {
         self.buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClicked(_:)), for: UIControl.Event.touchUpInside)
         
-        self.buttonClose.addTarget(self, action: #selector(self.onButtonCloseClicked(_:)), for: UIControl.Event.touchUpInside)
+//        self.buttonClose.addTarget(self, action: #selector(self.onButtonCloseClicked(_:)), for: UIControl.Event.touchUpInside)
     }
     
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
@@ -50,11 +61,11 @@ class LoginHomeViewController: UIViewController {
         let loginViewController = LoginViewController();
         self.navigationController?.pushViewController(loginViewController, animated: true)
     }
-    
-    @objc private func onButtonCloseClicked(_ sender: UIButton) {
-        ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonCloseClicked")
-        self.dismiss(animated: true, completion: nil)
-    }
+//
+//    @objc private func onButtonCloseClicked(_ sender: UIButton) {
+//        ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonCloseClicked")
+//        self.dismiss(animated: true, completion: nil)
+//    }
 
     /*
     // MARK: - Navigation
