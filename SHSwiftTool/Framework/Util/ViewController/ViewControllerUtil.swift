@@ -27,4 +27,8 @@ class ViewControllerUtil {
         from.present(navigationController, animated: true, completion: nil)
     }
     
+    public static func finishSelf(view: UIViewController) {
+        view.dismiss(animated: true, completion: nil)
+    }
+    
 }

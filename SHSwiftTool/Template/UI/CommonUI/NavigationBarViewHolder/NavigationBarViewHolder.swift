@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
+public protocol NavigationBarViewHolderDelegate {
+    func onButtonLeftClicked()
+    func onButtonRightClicked()
+}
+
 class NavigationBarViewHolder: UIView {
+    
     
     private static let TAG = "NavigationBarViewHolder"
     
@@ -17,6 +23,8 @@ class NavigationBarViewHolder: UIView {
     @IBOutlet var buttonRight: UIButton!
     
     @IBOutlet var labelTitle: UILabel!
+    
+    private var navigationBarViewHolderDelegate: NavigationBarViewHolderDelegate?
    
     
     override init(frame: CGRect) {
@@ -48,6 +56,10 @@ class NavigationBarViewHolder: UIView {
     
         addSubview(view)
         setListener()
+    }
+    
+    public func setDelegate(navigationBarViewHolderDelegate: NavigationBarViewHolderDelegate) {
+        self.navigationBarViewHolderDelegate = navigationBarViewHolderDelegate
     }
     
     public func setTitle(title: String) {
@@ -91,11 +103,11 @@ class NavigationBarViewHolder: UIView {
     }
 
     @objc private func onButtonLeftCLicked(_ sender: UIButton) {
-        ILog.debug(tag: NavigationBarViewHolder.TAG, content: "onButtonLeftCLicked")
+        self.navigationBarViewHolderDelegate?.onButtonLeftClicked()
     }
     
     @objc private func onButtonRightClicked(_ sender: UIButton) {
-        ILog.debug(tag: NavigationBarViewHolder.TAG, content: "onButtonRightClicked")
+        self.navigationBarViewHolderDelegate?.onButtonRightClicked()
     }
     
 }

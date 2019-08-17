@@ -8,7 +8,8 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
+   
 
     private static let TAG = "LoginViewController"
     
@@ -43,12 +44,23 @@ class LoginViewController: UIViewController {
         initNavigationBar()
     }
     
+    func onButtonLeftClicked() {
+        ILog.debug(tag: LoginViewController.TAG, content: "onButtonLeftClicked")
+        NavigationUtil.navigationToPrev(from: self, animated: true)
+    }
+    
+    func onButtonRightClicked() {
+        ILog.debug(tag: LoginViewController.TAG, content: "onButtonRightClicked")
+    }
+    
     private func initNavigationBar() {
         
         let navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
         navigationBarViewHolder.setTitle(title: "Login")
         navigationBarViewHolder.hideRightButton()
         navigationBarViewHolder.setLeftButtonImage(imageName: "icon_back.png")
+        
+        navigationBarViewHolder.setDelegate(navigationBarViewHolderDelegate: self)
         
         self.view.addSubview(navigationBarViewHolder)
     }
@@ -59,8 +71,12 @@ class LoginViewController: UIViewController {
     
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginViewController.TAG, content: "onButtonLoginTemplateClicked")
-        
-        NavigationUtil.navigationToPrev(from: self, animated: true)
+
+//        NavigationUtil.navigationToPrev(from: self, animated: true)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        ILog.debug(tag: LoginViewController.TAG, content: "viewDidDisappear")
     }
     
     

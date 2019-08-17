@@ -8,14 +8,13 @@
 
 import UIKit
 
-class LoginHomeViewController: UIViewController {
+class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate {
+    
 
     private static let TAG = "LoginHomeViewController"
-    
-    
+   
     @IBOutlet var labelUserID: UILabel!
     @IBOutlet var buttonLogin: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +22,7 @@ class LoginHomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         setListener()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,9 +35,21 @@ class LoginHomeViewController: UIViewController {
         navigationBarViewHolder.setTitle(title: "Login Home")
         navigationBarViewHolder.setRightButtonImage(imageName: "icon_close.png")
         navigationBarViewHolder.hideLeftButton()
-     
+        
+        navigationBarViewHolder.setDelegate(navigationBarViewHolderDelegate: self)
+        
         self.view.addSubview(navigationBarViewHolder)  
     }
+    
+    func onButtonLeftClicked() {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonLeftCLicked")
+    }
+    
+    func onButtonRightClicked() {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonRightClicked")
+        ViewControllerUtil.finishSelf(view: self)
+    }
+    
 
     private func setListener() {
         self.buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClicked(_:)), for: UIControl.Event.touchUpInside)
@@ -49,8 +61,8 @@ class LoginHomeViewController: UIViewController {
         NavigationUtil.navigationToNext(from: self, target: LoginViewController(), animated: true)
     }
 
-    deinit {
-        ILog.debug(tag: LoginHomeViewController.TAG, content: "deinit")
+    override func viewDidDisappear(_ animated: Bool) {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "viewDidDisappear")
     }
     /*
     // MARK: - Navigation
