@@ -12,13 +12,16 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     
 
     private static let TAG = "LoginHomeViewController"
+    
+    public var fromWhere: String?
    
-    @IBOutlet var labelUserID: UILabel!
+    @IBOutlet var labelLoginInfo: UILabel!
     @IBOutlet var buttonLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initObserver()
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         setListener()
@@ -27,6 +30,18 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         initNavigationBar()
+        labelLoginInfo.text = fromWhere
+    }
+    
+    private func initObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(observerLoginSuccess(notfication:)), name: Notification.Name(rawValue: NotifcationConstants.LOGIN_SUCCESS), object: nil)
+    }
+    
+    @objc func observerLoginSuccess(notfication: NSNotification) {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "observerLoginSuccess")
+        
+        fromWhere = "From observerLoginSuccess"
+        labelLoginInfo.text = fromWhere
     }
     
     private func initNavigationBar() {

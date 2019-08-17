@@ -34,6 +34,7 @@
 		C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357911E2308323000BDB17E /* ThreadUtil.swift */; };
 		C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35791202308358F00BDB17E /* AlertWaitingViewHolder.xib */; };
 		C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791222308359800BDB17E /* AlertWaitingViewHolder.swift */; };
+		C35791282308453200BDB17E /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791272308453200BDB17E /* NotificationConstants.swift */; };
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
@@ -86,6 +87,7 @@
 		C357911E2308323000BDB17E /* ThreadUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadUtil.swift; sourceTree = "<group>"; };
 		C35791202308358F00BDB17E /* AlertWaitingViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertWaitingViewHolder.xib; sourceTree = "<group>"; };
 		C35791222308359800BDB17E /* AlertWaitingViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWaitingViewHolder.swift; sourceTree = "<group>"; };
+		C35791272308453200BDB17E /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
@@ -254,6 +256,14 @@
 				C357911E2308323000BDB17E /* ThreadUtil.swift */,
 			);
 			path = Thread;
+			sourceTree = "<group>";
+		};
+		C3579124230844CE00BDB17E /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				C35791272308453200BDB17E /* NotificationConstants.swift */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 		C358DDA423019795007F10C6 /* NavigationBarViewHolder */ = {
@@ -436,6 +446,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C3579124230844CE00BDB17E /* NotificationCenter */,
 				C357911D2308322300BDB17E /* Thread */,
 				C357911A2307F26800BDB17E /* ViewController */,
 				C35791172307F04B00BDB17E /* Navigation */,
@@ -552,6 +563,7 @@
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
+				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,

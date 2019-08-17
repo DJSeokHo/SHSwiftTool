@@ -83,16 +83,21 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
             // do login
             
             ThreadUtil.startUIThread(runnable: {
-                
+               
                 alertWaitingViewHolder.removeFromSuperview()
                 NavigationUtil.navigationToPrev(from: self, animated: true)
 
+                NotificationCenter.default.post(name: Notification.Name(rawValue: NotifcationConstants.LOGIN_SUCCESS), object: self, userInfo: nil)
+                
             }, after: 3)
         }
+        
+        ILog.debug(tag: LoginViewController.TAG, content: "login...")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         ILog.debug(tag: LoginViewController.TAG, content: "viewDidDisappear")
+        NotificationCenter.default.removeObserver(self)
     }
     
     

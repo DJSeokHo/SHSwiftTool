@@ -39,7 +39,10 @@ class MainViewController: UIViewController {
     @objc private func onButtonLoginTemplateClicked(_ sender: UIButton) {
         ILog.debug(tag: MainViewController.TAG, content: "onButtonLoginTemplateClicked")
         
-        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: LoginHomeViewController())
+        let loginHomeViewController = LoginHomeViewController()
+        loginHomeViewController.fromWhere = "From \(MainViewController.TAG)"
+        
+        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: loginHomeViewController)
     }
 
     deinit {

@@ -1,0 +1,15 @@
+//
+//  NotificationConstants.swift
+//  SHSwiftTool
+//
+//  Created by Seok Ho on 17/08/2019.
+//  Copyright © 2019 SWein. All rights reserved.
+//
+
+import Foundation
+
+class NotifcationConstants {
+    
+    public static let LOGIN_SUCCESS = "LOGIN_SUCCESS"
+    
+}
