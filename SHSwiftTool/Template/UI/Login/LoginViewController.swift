@@ -35,22 +35,24 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        hideSystemNavigationBar()
+        NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         setListener()
     }
     
-    deinit {
-        ILog.debug(tag: LoginViewController.TAG, content: "deinit")
+    override func viewWillAppear(_ animated: Bool) {
+        initNavigationBar()
     }
     
-    private func hideSystemNavigationBar() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    private func initNavigationBar() {
+        
+        let navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
+        navigationBarViewHolder.setTitle(title: "Login")
+        navigationBarViewHolder.hideRightButton()
+        navigationBarViewHolder.setLeftButtonImage(imageName: "icon_back.png")
+        
+        self.view.addSubview(navigationBarViewHolder)
     }
     
-    private func showSystemNavigationBar() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-
     private func setListener() {
         self.buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClicked(_:)), for: UIControl.Event.touchUpInside)
     }
@@ -58,8 +60,14 @@ class LoginViewController: UIViewController {
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginViewController.TAG, content: "onButtonLoginTemplateClicked")
         
-        self.navigationController?.popViewController(animated: true)
+        NavigationUtil.navigationToPrev(from: self, animated: true)
     }
+    
+    
+    deinit {
+        ILog.debug(tag: LoginViewController.TAG, content: "deinit")
+    }
+    
     /*
     // MARK: - Navigation
 

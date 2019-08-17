@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBarViewHolder" customModule="SHSwiftTool">
             <connections>
+                <outlet property="buttonLeft" destination="o4m-lo-MRb" id="raz-ix-wfe"/>
                 <outlet property="buttonRight" destination="IRj-RL-rks" id="Zla-qo-nVS"/>
                 <outlet property="labelTitle" destination="7rs-iW-OC9" id="CZD-R6-jcX"/>
             </connections>
@@ -30,7 +31,10 @@
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IRj-RL-rks">
                     <rect key="frame" x="436" y="40" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="icon_close.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o4m-lo-MRb">
+                    <rect key="frame" x="13" y="40" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.43529411764705883" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,7 +44,4 @@
             <point key="canvasLocation" x="450.9375" y="-153.16901408450704"/>
         </view>
     </objects>
-    <resources>
-        <image name="icon_close.png" width="96" height="96"/>
-    </resources>
 </document>

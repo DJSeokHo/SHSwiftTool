@@ -28,6 +28,9 @@
 		C35230F122EF31DE00342A44 /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F022EF31DE00342A44 /* Apple.swift */; };
 		C35230F522EF33CD00342A44 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F422EF33CD00342A44 /* Car.swift */; };
 		C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F622EF33DA00342A44 /* FlyCar.swift */; };
+		C35791162307EFD500BDB17E /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C35791152307EFD500BDB17E /* icon_back.png */; };
+		C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791182307F05D00BDB17E /* NavigationUtil.swift */; };
+		C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */; };
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
@@ -74,6 +77,9 @@
 		C35230F022EF31DE00342A44 /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		C35230F422EF33CD00342A44 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		C35230F622EF33DA00342A44 /* FlyCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyCar.swift; sourceTree = "<group>"; };
+		C35791152307EFD500BDB17E /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
+		C35791182307F05D00BDB17E /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
+		C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtil.swift; sourceTree = "<group>"; };
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
@@ -218,6 +224,22 @@
 			path = AlertProgressViewHolder;
 			sourceTree = "<group>";
 		};
+		C35791172307F04B00BDB17E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C35791182307F05D00BDB17E /* NavigationUtil.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C357911A2307F26800BDB17E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		C358DDA423019795007F10C6 /* NavigationBarViewHolder */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +252,7 @@
 		C358DDAB23019C6A007F10C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C35791152307EFD500BDB17E /* icon_back.png */,
 				C358DDAE2301A754007F10C6 /* icon_close.png */,
 			);
 			path = Resources;
@@ -397,6 +420,8 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C357911A2307F26800BDB17E /* ViewController */,
+				C35791172307F04B00BDB17E /* Navigation */,
 				C388904C22F5B56F007C444F /* Debug */,
 			);
 			path = Util;
@@ -469,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
+				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
@@ -499,6 +525,7 @@
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
+				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
@@ -521,6 +548,7 @@
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
+				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,6 @@ class LoginHomeViewController: UIViewController {
     
     
     @IBOutlet var labelUserID: UILabel!
-    
     @IBOutlet var buttonLogin: UIButton!
     
     
@@ -22,11 +21,8 @@ class LoginHomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        hideSystemNavigationBar()
+        NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         setListener()
-    }
-    deinit {
-        ILog.debug(tag: LoginHomeViewController.TAG, content: "deinit")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,37 +32,26 @@ class LoginHomeViewController: UIViewController {
     private func initNavigationBar() {
         
         let navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
+        navigationBarViewHolder.setTitle(title: "Login Home")
+        navigationBarViewHolder.setRightButtonImage(imageName: "icon_close.png")
+        navigationBarViewHolder.hideLeftButton()
      
-        self.view.addSubview(navigationBarViewHolder)
-        
-    }
-    
-    private func hideSystemNavigationBar() {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
-    }
-    
-    private func showSystemNavigationBar() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.view.addSubview(navigationBarViewHolder)  
     }
 
     private func setListener() {
         self.buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClicked(_:)), for: UIControl.Event.touchUpInside)
         
-//        self.buttonClose.addTarget(self, action: #selector(self.onButtonCloseClicked(_:)), for: UIControl.Event.touchUpInside)
     }
     
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonLoginClicked")
-        let loginViewController = LoginViewController();
-        self.navigationController?.pushViewController(loginViewController, animated: true)
+        NavigationUtil.navigationToNext(from: self, target: LoginViewController(), animated: true)
     }
-//
-//    @objc private func onButtonCloseClicked(_ sender: UIButton) {
-//        ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonCloseClicked")
-//        self.dismiss(animated: true, completion: nil)
-//    }
 
+    deinit {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "deinit")
+    }
     /*
     // MARK: - Navigation
 

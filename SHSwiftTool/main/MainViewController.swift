@@ -39,18 +39,12 @@ class MainViewController: UIViewController {
     @objc private func onButtonLoginTemplateClicked(_ sender: UIButton) {
         ILog.debug(tag: MainViewController.TAG, content: "onButtonLoginTemplateClicked")
         
-        let loginHomeViewController = LoginHomeViewController();
-        
-        // create navigation controller and put main view controller as root view
-        let navigationController: UINavigationController = UINavigationController(rootViewController: loginHomeViewController)
-        
-        // make navigation controller as window root view controller
-        //        self.window!.rootViewController = navigationController
-        
-        self.present(navigationController, animated: true, completion: nil)
-        
+        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: LoginHomeViewController())
     }
 
+    deinit {
+        ILog.debug(tag: MainViewController.TAG, content: "deinit")
+    }
     /*
     // MARK: - Navigation
 
