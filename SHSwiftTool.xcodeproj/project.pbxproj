@@ -31,6 +31,9 @@
 		C35791162307EFD500BDB17E /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C35791152307EFD500BDB17E /* icon_back.png */; };
 		C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791182307F05D00BDB17E /* NavigationUtil.swift */; };
 		C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */; };
+		C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357911E2308323000BDB17E /* ThreadUtil.swift */; };
+		C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35791202308358F00BDB17E /* AlertWaitingViewHolder.xib */; };
+		C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791222308359800BDB17E /* AlertWaitingViewHolder.swift */; };
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
@@ -80,6 +83,9 @@
 		C35791152307EFD500BDB17E /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
 		C35791182307F05D00BDB17E /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtil.swift; sourceTree = "<group>"; };
+		C357911E2308323000BDB17E /* ThreadUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadUtil.swift; sourceTree = "<group>"; };
+		C35791202308358F00BDB17E /* AlertWaitingViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertWaitingViewHolder.xib; sourceTree = "<group>"; };
+		C35791222308359800BDB17E /* AlertWaitingViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWaitingViewHolder.swift; sourceTree = "<group>"; };
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
@@ -212,16 +218,18 @@
 			isa = PBXGroup;
 			children = (
 				C358DDA423019795007F10C6 /* NavigationBarViewHolder */,
-				C35749E022FFB45000354D1F /* AlertProgressViewHolder */,
+				C35749E022FFB45000354D1F /* AlertWaitingViewHolder */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
 		};
-		C35749E022FFB45000354D1F /* AlertProgressViewHolder */ = {
+		C35749E022FFB45000354D1F /* AlertWaitingViewHolder */ = {
 			isa = PBXGroup;
 			children = (
+				C35791202308358F00BDB17E /* AlertWaitingViewHolder.xib */,
+				C35791222308359800BDB17E /* AlertWaitingViewHolder.swift */,
 			);
-			path = AlertProgressViewHolder;
+			path = AlertWaitingViewHolder;
 			sourceTree = "<group>";
 		};
 		C35791172307F04B00BDB17E /* Navigation */ = {
@@ -238,6 +246,14 @@
 				C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C357911D2308322300BDB17E /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				C357911E2308323000BDB17E /* ThreadUtil.swift */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		C358DDA423019795007F10C6 /* NavigationBarViewHolder */ = {
@@ -420,6 +436,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C357911D2308322300BDB17E /* Thread */,
 				C357911A2307F26800BDB17E /* ViewController */,
 				C35791172307F04B00BDB17E /* Navigation */,
 				C388904C22F5B56F007C444F /* Debug */,
@@ -501,6 +518,7 @@
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
+				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +538,7 @@
 				C34D31EA22E9EBF000E22BC6 /* IntExtension.swift in Sources */,
 				C37112E122BD0FBB00E92DA8 /* BasicGrammar.swift in Sources */,
 				C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */,
+				C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */,
 				C3845A4F22EDDA1200FAC52B /* Person.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
@@ -537,6 +556,7 @@
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
+				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,

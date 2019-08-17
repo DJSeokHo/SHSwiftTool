@@ -72,7 +72,23 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginViewController.TAG, content: "onButtonLoginTemplateClicked")
 
-//        NavigationUtil.navigationToPrev(from: self, animated: true)
+        login()
+            }
+    
+    private func login() {
+        let alertWaitingViewHolder = AlertWaitingViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        self.view.addSubview(alertWaitingViewHolder)
+        
+        ThreadUtil.startThread {
+            // do login
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                alertWaitingViewHolder.removeFromSuperview()
+                NavigationUtil.navigationToPrev(from: self, animated: true)
+
+            }, after: 3)
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

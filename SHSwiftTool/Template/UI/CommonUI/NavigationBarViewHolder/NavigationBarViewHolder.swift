@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol NavigationBarViewHolderDelegate {
+protocol NavigationBarViewHolderDelegate {
     func onButtonLeftClicked()
     func onButtonRightClicked()
 }
@@ -51,7 +51,7 @@ class NavigationBarViewHolder: UIView {
     
     private func onCreateView() {
         ILog.debug(tag: NavigationBarViewHolder.TAG, content: "initialization")
-        let view = Bundle(for: type(of: self)).loadNibNamed("NavigationBarViewHolder", owner: self, options: nil)?.first as! UIView
+        let view = Bundle(for: type(of: self)).loadNibNamed(NavigationBarViewHolder.TAG, owner: self, options: nil)?.first as! UIView
         view.frame = bounds
     
         addSubview(view)
