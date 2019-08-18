@@ -14,6 +14,8 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     private static let TAG = "LoginHomeViewController"
     
     public var fromWhere: String?
+    
+    private var navigationBarViewHolder: NavigationBarViewHolder?
    
     @IBOutlet var labelLoginInfo: UILabel!
     @IBOutlet var buttonLogin: UIButton!
@@ -62,14 +64,16 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     
     private func initNavigationBar() {
         
-        let navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
-        navigationBarViewHolder.setTitle(title: "Login Home")
-        navigationBarViewHolder.setRightButtonImage(imageName: "icon_close.png")
-        navigationBarViewHolder.hideLeftButton()
-        
-        navigationBarViewHolder.setDelegate(navigationBarViewHolderDelegate: self)
-        
-        self.view.addSubview(navigationBarViewHolder)  
+        if(navigationBarViewHolder == nil) {
+            navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
+            navigationBarViewHolder!.setTitle(title: "Login Home")
+            navigationBarViewHolder!.setRightButtonImage(imageName: "icon_close.png")
+            navigationBarViewHolder!.hideLeftButton()
+            
+            navigationBarViewHolder!.setDelegate(navigationBarViewHolderDelegate: self)
+            
+            self.view.addSubview(navigationBarViewHolder!)
+        }
     }
     
     func onButtonLeftClicked() {
@@ -95,6 +99,17 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     @objc private func onButtonLogoutClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonLogoutClicked")
         
+        AlertViewUtil.showTwoButtonAlertView(from: self,
+                                             setTitle: "Logout",
+                                             setMessage: "logout?",
+                                             setConfirmButtonTitle: "Confirm",
+                                             setCancelButtonTitle: "Cancel",
+                                             setConfirmDelegate: {_ in
+                                                self.logout()
+        })
+    }
+    
+    private func logout() {
         UserDefaultsUtil.save(key: LoginConstants.ID_KEY, andValue: "")
         UserDefaultsUtil.save(key: LoginConstants.PW_KEY, andValue: "")
         UserDefaultsUtil.save(key: LoginConstants.AUTO_LOGIN_KEY, andValue: false)

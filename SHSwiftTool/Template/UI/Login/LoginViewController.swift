@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
 
     private static let TAG = "LoginViewController"
     
+    private var navigationBarViewHolder: NavigationBarViewHolder?
     
     @IBOutlet var textFieldID: UITextField!
     @IBOutlet var textFieldPW: UITextField!
@@ -70,14 +71,17 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     private func initNavigationBar() {
         
-        let navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
-        navigationBarViewHolder.setTitle(title: "Login")
-        navigationBarViewHolder.hideRightButton()
-        navigationBarViewHolder.setLeftButtonImage(imageName: "icon_back.png")
+        if(navigationBarViewHolder == nil) {
+            navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
+            navigationBarViewHolder!.setTitle(title: "Login")
+            navigationBarViewHolder!.hideRightButton()
+            navigationBarViewHolder!.setLeftButtonImage(imageName: "icon_back.png")
+            
+            navigationBarViewHolder!.setDelegate(navigationBarViewHolderDelegate: self)
+            
+            self.view.addSubview(navigationBarViewHolder!)
+        }
         
-        navigationBarViewHolder.setDelegate(navigationBarViewHolderDelegate: self)
-        
-        self.view.addSubview(navigationBarViewHolder)
     }
     
     private func setListener() {
