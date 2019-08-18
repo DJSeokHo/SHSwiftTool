@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     private static let TAG = "MainViewController"
     
     @IBOutlet var buttonLoginTemplate: UIButton!
+    @IBOutlet var buttonTabBarTemplate: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,14 @@ class MainViewController: UIViewController {
 
     private func setListener() {
         self.buttonLoginTemplate.addTarget(self, action: #selector(self.onButtonLoginTemplateClicked(_:)), for: UIControl.Event.touchUpInside)
+        
+        self.buttonTabBarTemplate.addTarget(self, action: #selector(self.onButtonTabBarTemplateClicked(_:)), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonTabBarTemplateClicked(_ sender: UIButton) {
+        ILog.debug(tag: MainViewController.TAG, content: "onButtonTabBarTemplateClicked")
+        
+        
     }
     
     @objc private func onButtonLoginTemplateClicked(_ sender: UIButton) {

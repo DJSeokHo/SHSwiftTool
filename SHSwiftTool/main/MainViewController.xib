@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
                 <outlet property="buttonLoginTemplate" destination="gzO-dP-WWY" id="0UF-gP-bKg"/>
+                <outlet property="buttonTabBarTemplate" destination="0YP-vM-DpA" id="ngu-3h-gcK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="KVB-ij-dh5"/>
             </connections>
         </placeholder>
@@ -24,6 +25,11 @@
                     <rect key="frame" x="44" y="33" width="232" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Login Template"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0YP-vM-DpA">
+                    <rect key="frame" x="44" y="86" width="232" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Tab Bar Template"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

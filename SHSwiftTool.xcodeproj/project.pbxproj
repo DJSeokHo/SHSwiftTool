@@ -211,6 +211,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		C351598623096D1300848456 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		C35230E622EF27CA00342A44 /* Selectalbe */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +258,7 @@
 		C35749DF22FFB43800354D1F /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				C351598623096D1300848456 /* TabBar */,
 				C358DDA423019795007F10C6 /* NavigationBarViewHolder */,
 				C35749E022FFB45000354D1F /* AlertWaitingViewHolder */,
 			);
