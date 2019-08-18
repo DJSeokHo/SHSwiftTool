@@ -20,6 +20,10 @@
 		C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351192B22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift */; };
 		C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351192D22BFBCC00023C35F /* BasicFunction.swift */; };
 		C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351192F22BFC55A0023C35F /* BasicEnum.swift */; };
+		C35159792309333D00848456 /* NotificationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35159782309333D00848456 /* NotificationUtil.swift */; };
+		C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351597D230936B000848456 /* UserDefaultsUtil.swift */; };
+		C351598223093E0300848456 /* AlertViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C351598123093E0300848456 /* AlertViewUtil.swift */; };
+		C35159852309414400848456 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35159842309414400848456 /* LoginConstants.swift */; };
 		C35230E522EF24AA00342A44 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230E422EF24AA00342A44 /* Rect.swift */; };
 		C35230E822EF27E000342A44 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230E722EF27E000342A44 /* Customer.swift */; };
 		C35230EA22EF281B00342A44 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230E922EF281B00342A44 /* Employee.swift */; };
@@ -73,6 +77,10 @@
 		C351192B22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCheckAPICanUsable.swift; sourceTree = "<group>"; };
 		C351192D22BFBCC00023C35F /* BasicFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFunction.swift; sourceTree = "<group>"; };
 		C351192F22BFC55A0023C35F /* BasicEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicEnum.swift; sourceTree = "<group>"; };
+		C35159782309333D00848456 /* NotificationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUtil.swift; sourceTree = "<group>"; };
+		C351597D230936B000848456 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		C351598123093E0300848456 /* AlertViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewUtil.swift; sourceTree = "<group>"; };
+		C35159842309414400848456 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
 		C35230E422EF24AA00342A44 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
 		C35230E722EF27E000342A44 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		C35230E922EF281B00342A44 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
@@ -179,6 +187,30 @@
 			path = TestDemo;
 			sourceTree = "<group>";
 		};
+		C351597A2309369200848456 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				C351597D230936B000848456 /* UserDefaultsUtil.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		C351598023093DF400848456 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				C351598123093E0300848456 /* AlertViewUtil.swift */,
+			);
+			name = AlertView;
+			sourceTree = "<group>";
+		};
+		C35159832309413B00848456 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C35159842309414400848456 /* LoginConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		C35230E622EF27CA00342A44 /* Selectalbe */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				C35791272308453200BDB17E /* NotificationConstants.swift */,
+				C35159782309333D00848456 /* NotificationUtil.swift */,
 			);
 			path = NotificationCenter;
 			sourceTree = "<group>";
@@ -409,6 +442,7 @@
 		C388903922F5AEAD007C444F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C35159832309413B00848456 /* Constants */,
 				C388904122F5AF18007C444F /* Controller */,
 				C388904022F5AF13007C444F /* Model */,
 				C388903C22F5AF05007C444F /* LoginViewController.swift */,
@@ -446,6 +480,8 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C351598023093DF400848456 /* AlertView */,
+				C351597A2309369200848456 /* UserDefaults */,
 				C3579124230844CE00BDB17E /* NotificationCenter */,
 				C357911D2308322300BDB17E /* Thread */,
 				C357911A2307F26800BDB17E /* ViewController */,
@@ -560,9 +596,11 @@
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
+				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
+				C35159852309414400848456 /* LoginConstants.swift in Sources */,
 				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
@@ -575,12 +613,14 @@
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
+				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
+				C351598223093E0300848456 /* AlertViewUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

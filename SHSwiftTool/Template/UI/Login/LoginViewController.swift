@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     @IBOutlet var textFieldID: UITextField!
     @IBOutlet var textFieldPW: UITextField!
+    @IBOutlet var autoLoginSwitch: UISwitch!
     
     @IBOutlet var labelAutoLoginResult: UILabel!
     @IBAction func switchAutoLogin(_ sender: UISwitch) {
@@ -42,6 +43,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         initNavigationBar()
+        updateView()
     }
     
     func onButtonLeftClicked() {
@@ -51,6 +53,19 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     func onButtonRightClicked() {
         ILog.debug(tag: LoginViewController.TAG, content: "onButtonRightClicked")
+    }
+    
+    private func updateView() {
+        
+        loginInfoModel = LoginInfoModel(
+            userID: UserDefaultsUtil.get(key: LoginConstants.ID_KEY),
+            userPassword: UserDefaultsUtil.get(key: LoginConstants.PW_KEY),
+            autoLogin: UserDefaultsUtil.get(key: LoginConstants.AUTO_LOGIN_KEY))
+        
+        if(loginInfoModel.getAutoLogin()) {
+            autoLogin()
+        }
+        
     }
     
     private func initNavigationBar() {
@@ -71,11 +86,73 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginViewController.TAG, content: "onButtonLoginTemplateClicked")
-
+        
+        if(!check()) {
+            return
+        }
+        
         login()
-            }
+    }
+    
+    private func check() -> Bool {
+        
+        if(textFieldID.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == "") {
+            AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Login", setMessage: "Input id please", setButtonTitle: "Confirm")
+            textFieldID.text = ""
+            return false;
+        }
+        
+        if(textFieldPW.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == "") {
+            AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Login", setMessage: "Input password please", setButtonTitle: "Confirm")
+            textFieldPW.text = ""
+            return false;
+        }
+        
+        return true
+        
+    }
+    
+    private func autoLogin() {
+        
+        let alertWaitingViewHolder = AlertWaitingViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        self.view.addSubview(alertWaitingViewHolder)
+        
+        ThreadUtil.startThread {
+            // do login
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                alertWaitingViewHolder.removeFromSuperview()
+                NavigationUtil.navigationToPrev(from: self, animated: true)
+                
+                var userInfo = Dictionary<AnyHashable, Any>()
+                userInfo[LoginConstants.ID_KEY] = self.loginInfoModel.getUserID()
+                userInfo[LoginConstants.PW_KEY] = self.loginInfoModel.getUserPassword()
+                NotificationUtil.post(name: NotifcationConstants.LOGIN_SUCCESS, object: self, userInfo: userInfo)
+                
+                
+            }, after: 3)
+        }
+        
+        ILog.debug(tag: LoginViewController.TAG, content: "auto login...")
+        
+    }
     
     private func login() {
+        
+        let id = textFieldID.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let pw = textFieldPW.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        loginInfoModel = LoginInfoModel(userID: id!, userPassword: pw!, autoLogin: autoLoginSwitch.isOn)
+        
+        UserDefaultsUtil.save(key: LoginConstants.ID_KEY, andValue: loginInfoModel.getUserID())
+        UserDefaultsUtil.save(key: LoginConstants.PW_KEY, andValue: loginInfoModel.getUserPassword())
+        UserDefaultsUtil.save(key: LoginConstants.AUTO_LOGIN_KEY, andValue: loginInfoModel.getAutoLogin())
+       
+        ILog.debug(tag: LoginViewController.TAG, content: loginInfoModel.getUserID())
+        ILog.debug(tag: LoginViewController.TAG, content: loginInfoModel.getUserPassword())
+        ILog.debug(tag: LoginViewController.TAG, content: loginInfoModel.getAutoLogin())
+        
         let alertWaitingViewHolder = AlertWaitingViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         self.view.addSubview(alertWaitingViewHolder)
         
@@ -87,7 +164,11 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
                 alertWaitingViewHolder.removeFromSuperview()
                 NavigationUtil.navigationToPrev(from: self, animated: true)
 
-                NotificationCenter.default.post(name: Notification.Name(rawValue: NotifcationConstants.LOGIN_SUCCESS), object: self, userInfo: nil)
+                var userInfo = Dictionary<AnyHashable, Any>()
+                userInfo[LoginConstants.ID_KEY] = self.loginInfoModel.getUserID()
+                userInfo[LoginConstants.PW_KEY] = self.loginInfoModel.getUserPassword()
+                NotificationUtil.post(name: NotifcationConstants.LOGIN_SUCCESS, object: self, userInfo: userInfo)
+                
                 
             }, after: 3)
         }
@@ -97,7 +178,6 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     override func viewDidDisappear(_ animated: Bool) {
         ILog.debug(tag: LoginViewController.TAG, content: "viewDidDisappear")
-        NotificationCenter.default.removeObserver(self)
     }
     
     

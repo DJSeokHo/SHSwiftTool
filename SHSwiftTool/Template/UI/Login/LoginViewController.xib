@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
+                <outlet property="autoLoginSwitch" destination="H6t-x1-trD" id="iJd-vV-poU"/>
                 <outlet property="buttonLogin" destination="8ES-I5-xvd" id="bDQ-jV-rmk"/>
                 <outlet property="labelAutoLoginResult" destination="jen-LI-cik" id="ey8-Uf-A8X"/>
                 <outlet property="textFieldID" destination="OZm-9M-Xie" id="jMz-Gm-mDa"/>

@@ -17,10 +17,11 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
    
     @IBOutlet var labelLoginInfo: UILabel!
     @IBOutlet var buttonLogin: UIButton!
+    @IBOutlet var buttonLogout: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initObserver()
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
@@ -29,18 +30,33 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "viewWillAppear")
         initNavigationBar()
         labelLoginInfo.text = fromWhere
     }
     
     private func initObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(observerLoginSuccess(notfication:)), name: Notification.Name(rawValue: NotifcationConstants.LOGIN_SUCCESS), object: nil)
+        
+        NotificationUtil.addObserver(observer: self, selector: #selector(observerLoginSuccess(notfication:)), name: NotifcationConstants.LOGIN_SUCCESS)
+       
     }
     
     @objc func observerLoginSuccess(notfication: NSNotification) {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "observerLoginSuccess")
         
-        fromWhere = "From observerLoginSuccess"
+        let userInfo = notfication.userInfo
+        
+        let id = userInfo![LoginConstants.ID_KEY]!
+        let pw = userInfo![LoginConstants.PW_KEY]!
+        
+        ILog.debug(tag: LoginHomeViewController.TAG, content: userInfo![LoginConstants.ID_KEY]!)
+        ILog.debug(tag: LoginHomeViewController.TAG, content: userInfo![LoginConstants.PW_KEY]!)
+        
+        fromWhere = """
+        From observerLoginSuccess
+        \(id)
+        \(pw)
+        """
         labelLoginInfo.text = fromWhere
     }
     
@@ -68,16 +84,32 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
 
     private func setListener() {
         self.buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClicked(_:)), for: UIControl.Event.touchUpInside)
-        
+        self.buttonLogout.addTarget(self, action: #selector(self.onButtonLogoutClicked(_:)), for: UIControl.Event.touchUpInside)
     }
     
     @objc private func onButtonLoginClicked(_ sender: UIButton) {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonLoginClicked")
         NavigationUtil.navigationToNext(from: self, target: LoginViewController(), animated: true)
     }
+    
+    @objc private func onButtonLogoutClicked(_ sender: UIButton) {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonLogoutClicked")
+        
+        UserDefaultsUtil.save(key: LoginConstants.ID_KEY, andValue: "")
+        UserDefaultsUtil.save(key: LoginConstants.PW_KEY, andValue: "")
+        UserDefaultsUtil.save(key: LoginConstants.AUTO_LOGIN_KEY, andValue: false)
+        
+        ViewControllerUtil.finishSelf(view: self)
+    }
 
     override func viewDidDisappear(_ animated: Bool) {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "viewDidDisappear")
+        
+    }
+    
+    deinit {
+        ILog.debug(tag: LoginHomeViewController.TAG, content: "deinit")
+        NotificationUtil.removeAllObserver(observer: self)
     }
     /*
     // MARK: - Navigation
