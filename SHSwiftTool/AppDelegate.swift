@@ -17,23 +17,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window!.backgroundColor = UIColor.white
-      
+//        initMainViewController()
+        initBottomTabBar()
+        
+        return true
+    }
+    
+    private func initMainViewController() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.backgroundColor = UIColor.white
+        
         // create main container view controller
         let mainViewController: MainViewController = MainViewController()
         
         // create navigation controller and put main view controller as root view
-//        let navigationController: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        //        let navigationController: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
         // make navigation controller as window root view controller
-//        self.window!.rootViewController = navigationController
-        self.window!.rootViewController = mainViewController
+        //        self.window!.rootViewController = navigationController
+        window!.rootViewController = mainViewController
+        window!.makeKeyAndVisible()
+    }
+    
+    /*
+     UITabBarController通常最为整个程序的rootViewController，而且不能添加到别的视图控制器中，
+     UITabBarController主要用来管理用户提供的包含各种内容的子视图控制器，
+     而每一个子视图控制器则负责管理自己的视图层级关系。
+     
+     @1x : 推荐 25 x 25   (最大: 48 x 32)
+     @2x : 推荐 50 x 50   (最大: 96 x 64)
+     @3x : 推荐 75 x 75   (最大: 144 x 96)
+     */
+    private func initBottomTabBar() {
         
-        self.window!.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.backgroundColor = UIColor.white
         
+        let homeViewController = HomeViewController()
+        homeViewController.tabBarItem.image = UIImage(named: "icon_home_un_selected")?.withRenderingMode(.alwaysOriginal)
+        homeViewController.tabBarItem.selectedImage = UIImage(named: "icon_home_selected")?.withRenderingMode(.alwaysOriginal)
+        homeViewController.tabBarItem.title = HomeViewController.TITLE
         
-        return true
+        let friendViewController = FriendViewController()
+        friendViewController.tabBarItem.image = UIImage(named: "icon_friend_un_selected")?.withRenderingMode(.alwaysOriginal)
+        friendViewController.tabBarItem.selectedImage = UIImage(named: "icon_friend_selected")?.withRenderingMode(.alwaysOriginal)
+        friendViewController.tabBarItem.title = FriendViewController.TITLE
+        
+        let eventViewController = EventViewController()
+        eventViewController.tabBarItem.image = UIImage(named: "icon_event_un_selected")?.withRenderingMode(.alwaysOriginal)
+        eventViewController.tabBarItem.selectedImage = UIImage(named: "icon_event_selected")?.withRenderingMode(.alwaysOriginal)
+        eventViewController.tabBarItem.title = EventViewController.TITLE
+        
+        let profileViewController = ProfileViewController()
+        profileViewController.tabBarItem.image = UIImage(named: "icon_profile_un_selected")?.withRenderingMode(.alwaysOriginal)
+        profileViewController.tabBarItem.selectedImage = UIImage(named: "icon_profile_selected")?.withRenderingMode(.alwaysOriginal)
+        profileViewController.tabBarItem.title = ProfileViewController.TITLE
+        
+        let tabBarController = UITabBarController()
+        // tabBarController的主题颜色
+        tabBarController.tabBar.tintColor = UIColor.init(red: 9/255.0, green: 187/255.0, blue: 7/255.0, alpha: 1)
+        // tabBarController的子视图控制器集合
+        tabBarController.viewControllers = [
+            homeViewController,
+            friendViewController,
+            eventViewController,
+            profileViewController
+        ]
+       
+        // 添加到rootViewController
+        window?.rootViewController = tabBarController
+        window!.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

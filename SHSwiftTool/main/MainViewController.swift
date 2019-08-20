@@ -31,7 +31,7 @@ class MainViewController: UIViewController {
 //        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
     }
-  
+    
 
     private func setListener() {
         self.buttonLoginTemplate.addTarget(self, action: #selector(self.onButtonLoginTemplateClicked(_:)), for: UIControl.Event.touchUpInside)
@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
     
     @objc private func onButtonTabBarTemplateClicked(_ sender: UIButton) {
         ILog.debug(tag: MainViewController.TAG, content: "onButtonTabBarTemplateClicked")
-        
         
     }
     
