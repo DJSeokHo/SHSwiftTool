@@ -1,23 +1,22 @@
 //
-//  EventViewController.swift
+//  DashboardViewController.swift
 //  SHSwiftTool
 //
-//  Created by Seok Ho on 20/08/2019.
+//  Created by Seok Ho on 21/08/2019.
 //  Copyright © 2019 SWein. All rights reserved.
 //
 
 import UIKit
 
-class EventViewController: UIViewController {
+class DashboardViewController: UIViewController {
 
-    private static let TAG = "EventViewController"
-    
-    public static let TITLE = "Event"
+    public static let TITLE = "Dashboard"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
     }
 
 

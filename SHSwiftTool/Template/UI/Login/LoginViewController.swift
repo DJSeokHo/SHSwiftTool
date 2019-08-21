@@ -81,7 +81,6 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
             
             self.view.addSubview(navigationBarViewHolder!)
         }
-        
     }
     
     private func setListener() {

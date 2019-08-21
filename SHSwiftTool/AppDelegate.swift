@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
        
 //        initMainViewController()
-        initBottomTabBar()
+//        initBottomTabBar()
+        initBottomTabBarWithNavigation()
         
         return true
     }
@@ -53,20 +54,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.backgroundColor = UIColor.white
         
-        let homeViewController = HomeViewController()
-        homeViewController.tabBarItem.image = UIImage(named: "icon_home_un_selected")?.withRenderingMode(.alwaysOriginal)
-        homeViewController.tabBarItem.selectedImage = UIImage(named: "icon_home_selected")?.withRenderingMode(.alwaysOriginal)
-        homeViewController.tabBarItem.title = HomeViewController.TITLE
+        let dashboardViewController = DashboardViewController()
+        dashboardViewController.tabBarItem.image = UIImage(named: "icon_dashboard_un_selected")?.withRenderingMode(.alwaysOriginal)
+        dashboardViewController.tabBarItem.selectedImage = UIImage(named: "icon_dashboard_selected")?.withRenderingMode(.alwaysOriginal)
+        dashboardViewController.tabBarItem.title = DashboardViewController.TITLE
         
-        let friendViewController = FriendViewController()
-        friendViewController.tabBarItem.image = UIImage(named: "icon_friend_un_selected")?.withRenderingMode(.alwaysOriginal)
-        friendViewController.tabBarItem.selectedImage = UIImage(named: "icon_friend_selected")?.withRenderingMode(.alwaysOriginal)
-        friendViewController.tabBarItem.title = FriendViewController.TITLE
+        let clientViewController = ClientViewController()
+        clientViewController.tabBarItem.image = UIImage(named: "icon_client_un_selected")?.withRenderingMode(.alwaysOriginal)
+        clientViewController.tabBarItem.selectedImage = UIImage(named: "icon_client_selected")?.withRenderingMode(.alwaysOriginal)
+        clientViewController.tabBarItem.title = ClientViewController.TITLE
         
-        let eventViewController = EventViewController()
-        eventViewController.tabBarItem.image = UIImage(named: "icon_event_un_selected")?.withRenderingMode(.alwaysOriginal)
-        eventViewController.tabBarItem.selectedImage = UIImage(named: "icon_event_selected")?.withRenderingMode(.alwaysOriginal)
-        eventViewController.tabBarItem.title = EventViewController.TITLE
+        let productViewController = ProductViewController()
+        productViewController.tabBarItem.image = UIImage(named: "icon_product_un_selected")?.withRenderingMode(.alwaysOriginal)
+        productViewController.tabBarItem.selectedImage = UIImage(named: "icon_product_selected")?.withRenderingMode(.alwaysOriginal)
+        productViewController.tabBarItem.title = ProductViewController.TITLE
+        
+        
+        let orderViewController = OrderViewController()
+        orderViewController.tabBarItem.image = UIImage(named: "icon_order_un_selected")?.withRenderingMode(.alwaysOriginal)
+        orderViewController.tabBarItem.selectedImage = UIImage(named: "icon_order_selected")?.withRenderingMode(.alwaysOriginal)
+        orderViewController.tabBarItem.title = OrderViewController.TITLE
+        
         
         let profileViewController = ProfileViewController()
         profileViewController.tabBarItem.image = UIImage(named: "icon_profile_un_selected")?.withRenderingMode(.alwaysOriginal)
@@ -76,17 +84,98 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBarController = UITabBarController()
         // tabBarController的主题颜色
         tabBarController.tabBar.tintColor = UIColor.init(red: 9/255.0, green: 187/255.0, blue: 7/255.0, alpha: 1)
+        
+        // 修改标签栏选中时文字颜色、字体
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .selected)
+        
+        // 修改标签栏未选中时文字颜色、字体
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
+        
         // tabBarController的子视图控制器集合
         tabBarController.viewControllers = [
-            homeViewController,
-            friendViewController,
-            eventViewController,
+            dashboardViewController,
+            clientViewController,
+            productViewController,
+            orderViewController,
             profileViewController
         ]
-       
+        
         // 添加到rootViewController
         window?.rootViewController = tabBarController
         window!.makeKeyAndVisible()
+    }
+    
+    /*
+     UITabBarController通常最为整个程序的rootViewController，而且不能添加到别的视图控制器中，
+     UITabBarController主要用来管理用户提供的包含各种内容的子视图控制器，
+     而每一个子视图控制器则负责管理自己的视图层级关系。
+     
+     @1x : 推荐 25 x 25   (最大: 48 x 32)
+     @2x : 推荐 50 x 50   (最大: 96 x 64)
+     @3x : 推荐 75 x 75   (最大: 144 x 96)
+     */
+    private func initBottomTabBarWithNavigation() {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.backgroundColor = UIColor.white
+        
+        let dashboardViewController = DashboardViewController()
+        dashboardViewController.tabBarItem.image = UIImage(named: "icon_dashboard_un_selected")?.withRenderingMode(.alwaysOriginal)
+        dashboardViewController.tabBarItem.selectedImage = UIImage(named: "icon_dashboard_selected")?.withRenderingMode(.alwaysOriginal)
+        dashboardViewController.tabBarItem.title = DashboardViewController.TITLE
+        // create navigation controller and put main view controller as root view
+        let dashboardNavigationController: UINavigationController = UINavigationController(rootViewController: dashboardViewController)
+        
+        let clientViewController = ClientViewController()
+        clientViewController.tabBarItem.image = UIImage(named: "icon_client_un_selected")?.withRenderingMode(.alwaysOriginal)
+        clientViewController.tabBarItem.selectedImage = UIImage(named: "icon_client_selected")?.withRenderingMode(.alwaysOriginal)
+        clientViewController.tabBarItem.title = ClientViewController.TITLE
+        // create navigation controller and put main view controller as root view
+        let clientNavigationController: UINavigationController = UINavigationController(rootViewController: clientViewController)
+        
+        let productViewController = ProductViewController()
+        productViewController.tabBarItem.image = UIImage(named: "icon_product_un_selected")?.withRenderingMode(.alwaysOriginal)
+        productViewController.tabBarItem.selectedImage = UIImage(named: "icon_product_selected")?.withRenderingMode(.alwaysOriginal)
+        productViewController.tabBarItem.title = ProductViewController.TITLE
+        // create navigation controller and put main view controller as root view
+        let productNavigationController: UINavigationController = UINavigationController(rootViewController: productViewController)
+        
+        let orderViewController = OrderViewController()
+        orderViewController.tabBarItem.image = UIImage(named: "icon_order_un_selected")?.withRenderingMode(.alwaysOriginal)
+        orderViewController.tabBarItem.selectedImage = UIImage(named: "icon_order_selected")?.withRenderingMode(.alwaysOriginal)
+        orderViewController.tabBarItem.title = OrderViewController.TITLE
+        // create navigation controller and put main view controller as root view
+        let orderNavigationController: UINavigationController = UINavigationController(rootViewController: orderViewController)
+        
+        let profileViewController = ProfileViewController()
+        profileViewController.tabBarItem.image = UIImage(named: "icon_profile_un_selected")?.withRenderingMode(.alwaysOriginal)
+        profileViewController.tabBarItem.selectedImage = UIImage(named: "icon_profile_selected")?.withRenderingMode(.alwaysOriginal)
+        profileViewController.tabBarItem.title = ProfileViewController.TITLE
+        // create navigation controller and put main view controller as root view
+        let profileNavigationController: UINavigationController = UINavigationController(rootViewController: profileViewController)
+        
+        let tabBarController = UITabBarController()
+        // tabBarController的主题颜色
+        tabBarController.tabBar.tintColor = UIColor.init(red: 9/255.0, green: 187/255.0, blue: 7/255.0, alpha: 1)
+        
+        // 修改标签栏选中时文字颜色、字体
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .selected)
+        
+        // 修改标签栏未选中时文字颜色、字体
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
+        
+        // tabBarController的子视图控制器集合
+        tabBarController.viewControllers = [
+            dashboardNavigationController,
+            clientNavigationController,
+            productNavigationController,
+            orderNavigationController,
+            profileNavigationController
+        ]
+       
+        window!.rootViewController = tabBarController
+        window!.makeKeyAndVisible()
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

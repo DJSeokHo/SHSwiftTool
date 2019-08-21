@@ -8,19 +8,46 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     private static let TAG = "ProfileViewController"
     
     public static let TITLE = "Profile"
+    
+    private var navigationBarViewHolder: NavigationBarViewHolder?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-       
+        NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        initNavigationBar()
+    }
+    
+    private func initNavigationBar() {
+        
+        if(navigationBarViewHolder == nil) {
+            navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
+            navigationBarViewHolder!.setTitle(title: "Login")
+            navigationBarViewHolder!.hideRightButton()
+            navigationBarViewHolder!.setLeftButtonImage(imageName: "icon_back.png")
+            
+            navigationBarViewHolder!.setDelegate(navigationBarViewHolderDelegate: self)
+            
+            self.view.addSubview(navigationBarViewHolder!)
+        }
+    }
+    
+    func onButtonLeftClicked() {
+        ILog.debug(tag: ProfileViewController.TAG, content: "onButtonLeftClicked")
+    }
+    
+    func onButtonRightClicked() {
+        ILog.debug(tag: ProfileViewController.TAG, content: "onButtonRightClicked")
+    }
 
     /*
     // MARK: - Navigation
