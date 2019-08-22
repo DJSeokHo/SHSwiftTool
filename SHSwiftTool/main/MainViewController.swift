@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         ILog.debug(tag: MainViewController.TAG, content: "viewDidLoad")
+        
         setListener()
         
 //        let basicConsoleTest = BasicConsoleTest()

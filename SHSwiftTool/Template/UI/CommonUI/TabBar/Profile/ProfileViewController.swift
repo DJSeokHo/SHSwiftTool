@@ -16,24 +16,28 @@ class ProfileViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     private var navigationBarViewHolder: NavigationBarViewHolder?
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         initNavigationBar()
     }
     
+    
     private func initNavigationBar() {
         
         if(navigationBarViewHolder == nil) {
             navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
-            navigationBarViewHolder!.setTitle(title: "Login")
+            navigationBarViewHolder!.setTitle(title: ProfileViewController.TITLE)
             navigationBarViewHolder!.hideRightButton()
-            navigationBarViewHolder!.setLeftButtonImage(imageName: "icon_back.png")
+            navigationBarViewHolder!.hideLeftButton()
             
             navigationBarViewHolder!.setDelegate(navigationBarViewHolderDelegate: self)
             

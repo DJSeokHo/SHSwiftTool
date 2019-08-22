@@ -42,6 +42,8 @@
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
+		C35EDDDE230EE214000E34C3 /* TemplateTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */; };
+		C35EDDDF230EE214000E34C3 /* TemplateTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */; };
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
 		C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112C022BD036900E92DA8 /* AppDelegate.swift */; };
@@ -139,6 +141,8 @@
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTestViewController.swift; sourceTree = "<group>"; };
+		C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateTestViewController.xib; sourceTree = "<group>"; };
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C37112BD22BD036900E92DA8 /* SHSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -555,6 +559,8 @@
 			children = (
 				C388903822F5AE7F007C444F /* UI */,
 				C37112DF22BD0F2600E92DA8 /* Console */,
+				C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */,
+				C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -782,6 +788,7 @@
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
+				C35EDDDF230EE214000E34C3 /* TemplateTestViewController.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
@@ -847,6 +854,7 @@
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
+				C35EDDDE230EE214000E34C3 /* TemplateTestViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
