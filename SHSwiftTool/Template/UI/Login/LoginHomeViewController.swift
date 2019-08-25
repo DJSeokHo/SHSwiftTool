@@ -76,6 +76,14 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
         }
     }
     
+    private func removeNavigationBar() {
+        if(navigationBarViewHolder != nil) {
+            ILog.debug(tag: LoginHomeViewController.TAG, content: "removeNavigationBar")
+            navigationBarViewHolder?.removeFromSuperview()
+            navigationBarViewHolder = nil;
+        }
+    }
+    
     func onButtonLeftClicked() {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "onButtonLeftCLicked")
     }
@@ -119,7 +127,7 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
 
     override func viewDidDisappear(_ animated: Bool) {
         ILog.debug(tag: LoginHomeViewController.TAG, content: "viewDidDisappear")
-        
+        removeNavigationBar()
     }
     
     deinit {

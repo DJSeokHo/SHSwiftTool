@@ -15,6 +15,8 @@ class TemplateTestViewController: UIViewController, NavigationBarViewHolderDeleg
     private var navigationBarViewHolder: NavigationBarViewHolder?
     
     @IBOutlet var buttonLoginTemplate: UIButton!
+    @IBOutlet var buttonGoToMain: UIButton!
+    @IBOutlet var buttonCamera: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,14 @@ class TemplateTestViewController: UIViewController, NavigationBarViewHolderDeleg
         }
     }
     
+    private func removeNavigationBar() {
+        if(navigationBarViewHolder != nil) {
+            ILog.debug(tag: TemplateTestViewController.TAG, content: "removeNavigationBar")
+            navigationBarViewHolder?.removeFromSuperview()
+            navigationBarViewHolder = nil;
+        }
+    }
+    
     func onButtonLeftClicked() {
         ILog.debug(tag: TemplateTestViewController.TAG, content: "onButtonLeftClicked")
     }
@@ -53,6 +63,22 @@ class TemplateTestViewController: UIViewController, NavigationBarViewHolderDeleg
     
     private func setListener() {
         self.buttonLoginTemplate.addTarget(self, action: #selector(self.onButtonLoginTemplateClicked(_:)), for: UIControl.Event.touchUpInside)
+        
+        self.buttonGoToMain.addTarget(self, action: #selector(self.onButtonGoToMainClicked(_:)), for: UIControl.Event.touchUpInside)
+        
+        self.buttonCamera.addTarget(self, action: #selector(self.onButtonCameraClicked(_:)), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonCameraClicked(_ sender: UIButton) {
+        let cameraViewController = CameraViewController()
+        cameraViewController.width = self.view.frame.width
+        ViewControllerUtil.startNewViewController(from: self, target: cameraViewController)
+    }
+    
+    @objc private func onButtonGoToMainClicked(_ sender: UIButton) {
+        let mainViewController = MainViewController()
+        mainViewController.width = self.view.frame.width
+        ViewControllerUtil.startNewViewController(from: self, target: mainViewController)
     }
     
     @objc private func onButtonLoginTemplateClicked(_ sender: UIButton) {
@@ -62,6 +88,10 @@ class TemplateTestViewController: UIViewController, NavigationBarViewHolderDeleg
         loginHomeViewController.fromWhere = "From \(TemplateTestViewController.TAG)"
         
         ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: loginHomeViewController)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        removeNavigationBar()
     }
     
     

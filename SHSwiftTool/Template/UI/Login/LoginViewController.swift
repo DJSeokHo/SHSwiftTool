@@ -83,6 +83,14 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
         }
     }
     
+    private func removeNavigationBar() {
+        if(navigationBarViewHolder != nil) {
+            ILog.debug(tag: LoginViewController.TAG, content: "removeNavigationBar")
+            navigationBarViewHolder?.removeFromSuperview()
+            navigationBarViewHolder = nil;
+        }
+    }
+    
     private func setListener() {
         self.buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClicked(_:)), for: UIControl.Event.touchUpInside)
     }
@@ -181,6 +189,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     override func viewDidDisappear(_ animated: Bool) {
         ILog.debug(tag: LoginViewController.TAG, content: "viewDidDisappear")
+        removeNavigationBar()
     }
     
     

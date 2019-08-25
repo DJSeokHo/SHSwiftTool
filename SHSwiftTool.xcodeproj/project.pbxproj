@@ -65,6 +65,9 @@
 		C388904E22F5B57E007C444F /* ILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904D22F5B57E007C444F /* ILog.swift */; };
 		C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B664422F721A6004EE452 /* LoginHomeViewController.swift */; };
 		C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38B664522F721A6004EE452 /* LoginHomeViewController.xib */; };
+		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
+		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
+		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
 		C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6AED230D84C100BDDF5D /* icon_client_selected@3x.png */; };
 		C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6AEE230D84C100BDDF5D /* icon_order_selected@3x.png */; };
 		C3DD6AF7230D84C100BDDF5D /* icon_dashboard_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6AEF230D84C100BDDF5D /* icon_dashboard_selected@3x.png */; };
@@ -166,6 +169,9 @@
 		C388904D22F5B57E007C444F /* ILog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILog.swift; sourceTree = "<group>"; };
 		C38B664422F721A6004EE452 /* LoginHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeViewController.swift; sourceTree = "<group>"; };
 		C38B664522F721A6004EE452 /* LoginHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHomeViewController.xib; sourceTree = "<group>"; };
+		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
+		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		C3DD6AED230D84C100BDDF5D /* icon_client_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_client_selected@3x.png"; sourceTree = "<group>"; };
 		C3DD6AEE230D84C100BDDF5D /* icon_order_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_order_selected@3x.png"; sourceTree = "<group>"; };
 		C3DD6AEF230D84C100BDDF5D /* icon_dashboard_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_dashboard_selected@3x.png"; sourceTree = "<group>"; };
@@ -642,6 +648,7 @@
 		C388904A22F5B558007C444F /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				C39AD8B52312AF600072FAB5 /* Modules */,
 				C388904B22F5B568007C444F /* Util */,
 			);
 			path = Framework;
@@ -650,6 +657,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C39AD8B223129A0A0072FAB5 /* Storage */,
 				C351598023093DF400848456 /* AlertView */,
 				C351597A2309369200848456 /* UserDefaults */,
 				C3579124230844CE00BDB17E /* NotificationCenter */,
@@ -667,6 +675,31 @@
 				C388904D22F5B57E007C444F /* ILog.swift */,
 			);
 			path = Debug;
+			sourceTree = "<group>";
+		};
+		C39AD8B223129A0A0072FAB5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		C39AD8B52312AF600072FAB5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C39AD8B62312AF700072FAB5 /* Camera */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C39AD8B62312AF700072FAB5 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */,
+				C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		C3DD6B1D230D860500BDDF5D /* Dashboard */ = {
@@ -798,6 +831,7 @@
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
+				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
@@ -850,9 +884,11 @@
 				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
 				C3DD6B2F230D865200BDDF5D /* OrderViewController.swift in Sources */,
+				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
+				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
 				C35EDDDE230EE214000E34C3 /* TemplateTestViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
