@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
+import Photos
 
-class CameraViewController: UIViewController, NavigationBarViewHolderDelegate {
+class CameraViewController: UIViewController, NavigationBarViewHolderDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
    
     
     private static let TAG = "CameraViewController"
     
     @IBOutlet var buttonCamera: UIButton!
+    @IBOutlet var imageView: UIImageView!
     
     public var width:CGFloat?
     private var navigationBarViewHolder: NavigationBarViewHolder?
@@ -23,7 +26,57 @@ class CameraViewController: UIViewController, NavigationBarViewHolderDelegate {
 
         // Do any additional setup after loading the view.
         
+        checkCameraPermission()
+        checkAlbumPermission()
+        
         setListener()
+    }
+    
+    private func checkCameraPermission() {
+        /*
+         need add this in info.plist
+         
+         <key>NSCameraUsageDescription</key>
+         <string>cameraDesciption</string>
+         
+         you can open info.plist in source code mode
+        */
+        if (AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == .notDetermined) {
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: { (statusFirst) in
+                if statusFirst {
+                    ILog.debug(tag: CameraViewController.TAG, content: "allow camera")
+                }
+                else {
+                    ILog.debug(tag: CameraViewController.TAG, content: "not allow camera")
+                    ViewControllerUtil.finishSelf(view: self)
+                }
+            })
+        }
+        
+    }
+    
+    private func checkAlbumPermission() {
+        /*
+         need add this in info.plist
+         
+         <key>NSPhotoLibraryUsageDescription</key>
+         <string>photoLibraryDesciption</string>
+         
+         
+         */
+        
+        if (PHPhotoLibrary.authorizationStatus() == .notDetermined) {
+            PHPhotoLibrary.requestAuthorization({ (firstStatus) in
+                let result = (firstStatus == .authorized)
+                if result {
+                    ILog.debug(tag: CameraViewController.TAG, content: "allow album")
+                }
+                else {
+                    ILog.debug(tag: CameraViewController.TAG, content: "not allow album")
+                    ViewControllerUtil.finishSelf(view: self)
+                }
+            })
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +111,7 @@ class CameraViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     @objc func onButtonCameraClicked(_ sender: UIButton) {
         ILog.debug(tag: CameraViewController.TAG, content: "onButtonCameraClicked")
+        toggleImageActionSheet()
     }
 
     func onButtonLeftClicked() {
@@ -68,10 +122,63 @@ class CameraViewController: UIViewController, NavigationBarViewHolderDelegate {
         ViewControllerUtil.finishSelf(view: self)
     }
     
+    private func toggleImageActionSheet() {
+        
+        let sexActionSheet = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        weak var weakSelf = self
+        
+        let cameraAlertAction = UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: {
+            (alert: UIAlertAction!) in
+            
+            weakSelf?.initCameraPicker()
+            ILog.debug(tag: CameraViewController.TAG, content: "cameraAlertAction")
+        })
+        
+        let albumAlertAction = UIAlertAction(title: "Album", style: UIAlertAction.Style.default, handler: {
+            (alert: UIAlertAction!) in
+            
+            ILog.debug(tag: CameraViewController.TAG, content: "albumAlertAction")
+        })
+        
+        let cancelAlertAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {
+            (alert: UIAlertAction!) in
+                
+            ILog.debug(tag: CameraViewController.TAG, content: "cancelAlertAction")
+        })
+        
+        
+        sexActionSheet.addAction(cameraAlertAction)
+        sexActionSheet.addAction(albumAlertAction)
+        sexActionSheet.addAction(cancelAlertAction)
+        
+        self.present(sexActionSheet, animated: true, completion: nil)
+      
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         removeNavigationBar()
     }
 
+    func initCameraPicker() {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let cameraPicker = UIImagePickerController()
+            cameraPicker.delegate = self
+            cameraPicker.allowsEditing = true
+            cameraPicker.sourceType = .camera
+         
+            self.present(cameraPicker, animated: true, completion: nil)
+        }
+        else {
+            
+            ILog.debug(tag: CameraViewController.TAG, content: "Not support camera")
+        
+        }
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
