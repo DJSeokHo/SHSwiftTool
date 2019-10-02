@@ -25,7 +25,7 @@ class BasicString {
         // 初始化空字符串
         var anotherEmptyString = String()
         
-        
+        // 初始化字符串并赋值
         var welcome = "hello"
         welcome.insert("!", at: welcome.endIndex)
         // welcome 变量现在等于 "hello!"

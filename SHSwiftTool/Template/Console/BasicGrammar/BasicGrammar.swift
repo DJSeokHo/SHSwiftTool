@@ -16,18 +16,18 @@ class BasicGrammer {
     */
     func simpleValue() {
         
-        // let 是常量
+        // let 是常量, 常量必须赋值和初始化
         let name = "name"
         
-        // var 是变量
-        var age = 20
+        // var 是变量，变量不需要赋值，不赋值的话需要指定类型，可以用Any
+        var age: Int
         age = 10
         
         // 指定类型
         let nameString: String = "name"
         let ageNumber: Int = 40
         
-        // 类型转换
+        // 类型强制转换
         let ageParsing: Int = Int(ageNumber)
         
         print("\(name) \(age) \(nameString) \(ageNumber) \(ageParsing)")
@@ -57,7 +57,7 @@ class BasicGrammer {
         shoppingList.append("haha")
         print(shoppingList[shoppingList.count - 1])
         
-        // 新建一个空字符串
+        // 新建一个空字符串数组
         var emptyArray = [String]()
         emptyArray.append("1")
         emptyArray.append("2")
@@ -73,7 +73,7 @@ class BasicGrammer {
         var peopleDictionary = [
             "name": "haha",
             "age": "20",
-        ]
+        ] as [String: String]
         
         // 未强制解析 - 未强制拆包
         print(peopleDictionary["name"])
