@@ -22,16 +22,21 @@ class BasicCollection {
         
         // 声明数组
         var stringArray: Array<String>
+        
+        // 简化的声明数组方法
         var nameArray: [String]
         var ageArray: [Int]
         
         // 创建数组
         stringArray = Array<String>()
+        
+        // 添加数组元素
         stringArray.append("1")
         stringArray.append("2")
         stringArray.append("3")
         
         nameArray = [String](arrayLiteral: "1", "2", "3")
+        // 插入数组元素
         nameArray.insert("4", at: 1)
         
         ageArray = [1, 2, 3]
@@ -42,6 +47,11 @@ class BasicCollection {
         // 遍历数组
         for name in nameArray {
             print(name)
+        }
+        
+        // 遍历数组
+        for (index, value) in nameArray.enumerated() {
+            print("intex \(index) is \(value)")
         }
         
         for index in 0..<ageArray.count {

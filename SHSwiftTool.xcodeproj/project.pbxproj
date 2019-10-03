@@ -46,6 +46,8 @@
 		C35EDDDF230EE214000E34C3 /* TemplateTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */; };
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
+		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
+		C3615B512346355D00EF5A85 /* BasicClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B502346355D00EF5A85 /* BasicClosure.swift */; };
 		C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112C022BD036900E92DA8 /* AppDelegate.swift */; };
 		C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37112C722BD036A00E92DA8 /* Assets.xcassets */; };
 		C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112D822BD050800E92DA8 /* MainViewController.swift */; };
@@ -148,6 +150,8 @@
 		C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateTestViewController.xib; sourceTree = "<group>"; };
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
+		C3615B502346355D00EF5A85 /* BasicClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicClosure.swift; sourceTree = "<group>"; };
 		C37112BD22BD036900E92DA8 /* SHSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37112C022BD036900E92DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37112C722BD036A00E92DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -512,6 +516,63 @@
 			path = "@1x";
 			sourceTree = "<group>";
 		};
+		C3615B472346324B00EF5A85 /* BasicString */ = {
+			isa = PBXGroup;
+			children = (
+				C34E4F5B22BDD1FB009744C1 /* BasicString.swift */,
+			);
+			path = BasicString;
+			sourceTree = "<group>";
+		};
+		C3615B482346327100EF5A85 /* BasicCollection */ = {
+			isa = PBXGroup;
+			children = (
+				C34E4F5D22BDD2D3009744C1 /* BasicCollection.swift */,
+			);
+			path = BasicCollection;
+			sourceTree = "<group>";
+		};
+		C3615B492346327F00EF5A85 /* BasicControlFlow */ = {
+			isa = PBXGroup;
+			children = (
+				C351192922BFB4580023C35F /* BasicControlFlow.swift */,
+			);
+			path = BasicControlFlow;
+			sourceTree = "<group>";
+		};
+		C3615B4A2346328B00EF5A85 /* BasicFunction */ = {
+			isa = PBXGroup;
+			children = (
+				C351192D22BFBCC00023C35F /* BasicFunction.swift */,
+				C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */,
+			);
+			path = BasicFunction;
+			sourceTree = "<group>";
+		};
+		C3615B4D2346351400EF5A85 /* BasicEnum */ = {
+			isa = PBXGroup;
+			children = (
+				C351192F22BFC55A0023C35F /* BasicEnum.swift */,
+			);
+			path = BasicEnum;
+			sourceTree = "<group>";
+		};
+		C3615B4E2346352200EF5A85 /* BasicCheckAPICanUsable */ = {
+			isa = PBXGroup;
+			children = (
+				C351192B22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift */,
+			);
+			path = BasicCheckAPICanUsable;
+			sourceTree = "<group>";
+		};
+		C3615B4F2346353300EF5A85 /* BasicClosure */ = {
+			isa = PBXGroup;
+			children = (
+				C3615B502346355D00EF5A85 /* BasicClosure.swift */,
+			);
+			path = BasicClosure;
+			sourceTree = "<group>";
+		};
 		C37112B422BD036900E92DA8 = {
 			isa = PBXGroup;
 			children = (
@@ -574,15 +635,16 @@
 		C37112DF22BD0F2600E92DA8 /* Console */ = {
 			isa = PBXGroup;
 			children = (
+				C3615B4F2346353300EF5A85 /* BasicClosure */,
+				C3615B4E2346352200EF5A85 /* BasicCheckAPICanUsable */,
+				C3615B4D2346351400EF5A85 /* BasicEnum */,
+				C3615B4A2346328B00EF5A85 /* BasicFunction */,
+				C3615B492346327F00EF5A85 /* BasicControlFlow */,
+				C3615B482346327100EF5A85 /* BasicCollection */,
+				C3615B472346324B00EF5A85 /* BasicString */,
 				C31D26D122E8A9EA00A50386 /* BasicGrammar */,
 				C34D9CBB22C11455006F4B99 /* TestDemo */,
 				C34D9CB222C10D04006F4B99 /* BasicClassAndStruct */,
-				C34E4F5B22BDD1FB009744C1 /* BasicString.swift */,
-				C34E4F5D22BDD2D3009744C1 /* BasicCollection.swift */,
-				C351192922BFB4580023C35F /* BasicControlFlow.swift */,
-				C351192B22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift */,
-				C351192D22BFBCC00023C35F /* BasicFunction.swift */,
-				C351192F22BFC55A0023C35F /* BasicEnum.swift */,
 			);
 			path = Console;
 			sourceTree = "<group>";
@@ -870,6 +932,7 @@
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
+				C3615B512346355D00EF5A85 /* BasicClosure.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
@@ -881,6 +944,7 @@
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
+				C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */,
 				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
 				C3DD6B2F230D865200BDDF5D /* OrderViewController.swift in Sources */,

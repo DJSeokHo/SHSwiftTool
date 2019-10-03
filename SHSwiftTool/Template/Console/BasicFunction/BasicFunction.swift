@@ -14,6 +14,7 @@ class BasicFunction {
         return "Hello \(name)"
     }
     
+    // 返回值是一个元组
     func returnWithMultiItemTuple() -> (name: String, age: Int) {
         return ("Seok Ho", 32)
     }
@@ -21,8 +22,9 @@ class BasicFunction {
     /*
         from 在这里就是函数参数标签
         参数标签的使用能够让一个函数在调用时更有表达力，更类似自然语言，并且仍保持了函数内部的可读性以及清晰的意图
+        如果你不希望为某个参数添加一个标签，可以使用一个下划线（_）来代替一个明确的参数标签
     */
-    func functionWithParameterTag(person: String, from hometown: String) -> String {
+    func functionWithParameterTag(_ person: String, from hometown: String) -> String {
         return "Hello \(person) welcome and WOW, you come from \(hometown)!!!"
     }
     
@@ -36,7 +38,7 @@ class BasicFunction {
     /*
         可变参数
     */
-    func functionChangeParameter(numbers: Double...) -> Double {
+    func functionChangeParameter(_ numbers: Double...) -> Double {
         var total: Double = 0
         for number in numbers {
             total += number
@@ -44,6 +46,15 @@ class BasicFunction {
         return total / Double(numbers.count)
     }
     
+    /*
+     你可以用两个 Int 型的变量来调用 swapTwoInts(_:_:)。需要注意的是，someInt 和 anotherInt 在传入 swapTwoInts(_:_:) 函数前，都加了 & 的前缀
+     
+     var someInt = 3
+     var anotherInt = 107
+     swapTwoInts(&someInt, &anotherInt)
+     print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
+     // 打印“someInt is now 107, and anotherInt is now 3”
+     */
     func swapTwoInts(_ a: inout Int, _ b: inout Int) {
         let temporaryA = a
         a = b

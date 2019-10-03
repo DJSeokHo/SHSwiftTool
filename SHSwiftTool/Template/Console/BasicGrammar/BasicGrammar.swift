@@ -23,6 +23,12 @@ class BasicGrammer {
         var age: Int
         age = 10
         
+        // 现在 what 的值是 nil
+        var what: Any?
+        
+        // 现在 what 的值是个 Int 类型，值是123
+        what = 123
+        
         // 指定类型
         let nameString: String = "name"
         let ageNumber: Int = 40
