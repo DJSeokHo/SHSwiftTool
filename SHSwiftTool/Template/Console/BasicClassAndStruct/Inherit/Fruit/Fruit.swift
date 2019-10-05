@@ -9,8 +9,10 @@
 import Foundation
 
 class Fruit {
-    var weight = 0.0
-    func info() {
+    
+    public var weight = 0.0
+    
+    public func info() {
         print("a fruit, weight is \(weight)")
     }
     

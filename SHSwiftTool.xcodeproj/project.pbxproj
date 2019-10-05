@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D26D222E8AA2B00A50386 /* Shape.swift */; };
+		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
+		C34CB5762348A4E90067F851 /* Eatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5752348A4E90067F851 /* Eatable.swift */; };
+		C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB57B2348A5410067F851 /* AppleEatable.swift */; };
 		C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34D31DD22E9E5F800E22BC6 /* RankEnum.swift */; };
 		C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34D31DF22E9E79100E22BC6 /* CardStruct.swift */; };
 		C34D31E222E9EA6C00E22BC6 /* ExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34D31E122E9EA6C00E22BC6 /* ExampleProtocol.swift */; };
@@ -112,6 +115,9 @@
 
 /* Begin PBXFileReference section */
 		C31D26D222E8AA2B00A50386 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C34CB5752348A4E90067F851 /* Eatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatable.swift; sourceTree = "<group>"; };
+		C34CB57B2348A5410067F851 /* AppleEatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEatable.swift; sourceTree = "<group>"; };
 		C34D31DD22E9E5F800E22BC6 /* RankEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankEnum.swift; sourceTree = "<group>"; };
 		C34D31DF22E9E79100E22BC6 /* CardStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStruct.swift; sourceTree = "<group>"; };
 		C34D31E122E9EA6C00E22BC6 /* ExampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProtocol.swift; sourceTree = "<group>"; };
@@ -428,6 +434,7 @@
 		C359FE2022F08D5400D0009E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C34CB5732348A2AC0067F851 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -435,6 +442,8 @@
 		C359FE2122F08D6500D0009E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				C34CB5752348A4E90067F851 /* Eatable.swift */,
+				C34CB57B2348A5410067F851 /* AppleEatable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -929,6 +938,7 @@
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
+				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
@@ -950,6 +960,7 @@
 				C3DD6B2F230D865200BDDF5D /* OrderViewController.swift in Sources */,
 				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
+				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
 				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
@@ -959,6 +970,7 @@
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
+				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,

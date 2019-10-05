@@ -10,9 +10,9 @@ import Foundation
 
 class Apple: Fruit {
     
-    var name: String?
+    public var name: String!
     
-    func taste() {
+    public func taste() {
         print("\(name!) taste good!")
     }
     

@@ -16,6 +16,11 @@ class ClassAndStruct {
         
         Person.info()
         
+        // 弱引用
+        weak var weakPerson: Person?
+        weakPerson = Person()
+        
+        
         let person: Person = Person()
         
         person.name = "who"
@@ -116,6 +121,21 @@ class ClassAndStruct {
         var anyArray: [Any] = [1, "1", Apple()]
         
         var anyObjectArray: [AnyObject] = [Car(), FlyCar(), Apple()]
+    }
+    
+    func extensionTest() {
+        print(String.TAG)
+        print(String.info())
+    }
+    
+    func protocolTest() {
+        print(AppleEatable.TAG)
+        let appleEatable: AppleEatable!
+        appleEatable = AppleEatable()
+        appleEatable.taste()
+        appleEatable.test("haha", "hehe")
+        
+        AppleEatable.info("sh")
     }
 }
 
