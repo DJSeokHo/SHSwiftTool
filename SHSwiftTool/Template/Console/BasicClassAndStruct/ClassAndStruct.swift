@@ -12,6 +12,8 @@ class ClassAndStruct {
     
     func classTest() {
         
+        print(Person.TAG)
+        
         Person.info()
         
         let person: Person = Person()
@@ -42,7 +44,7 @@ class ClassAndStruct {
     }
     
     func structTest() {
-        let dog = Dog()
+        var dog = Dog()
         dog.name = "dog"
         dog.age = 9
         dog.run()

@@ -112,6 +112,12 @@ class BasicConsoleTest {
         print(closureFunction("you"))
         
         basicFunction.closureTest()
+        
+        var a = 3
+        var b = 5
+        
+        basicFunction.swap(a: &a, b: &b)
+        print("after swap a is \(a) and b is \(b)")
     }
     
     func basicClassAndStruct() {

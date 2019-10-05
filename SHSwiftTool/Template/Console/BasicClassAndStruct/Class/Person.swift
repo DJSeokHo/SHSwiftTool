@@ -9,6 +9,10 @@
 import Foundation
 
 class Person {
+    
+    public static let TAG: String = "Person"
+    
+    
     var name: String = ""
     var age: Int = 0
     
@@ -30,7 +34,7 @@ class Person {
     
     func say(content: String) {
         print(content)
-    }
+    } 
     
     func setName(name: String) -> Person {
         self.name = name
@@ -58,6 +62,8 @@ class Person {
      在类中才能使用class来表示类方法
      
      static 和 class 的区别在于，用class修饰的方法可以被子类重写，而static 不行
+     
+     一般 类方法，推荐使用 static，因为就解耦的重要性来说，不推荐使用继承
     */
     static func info() {
         print("this is Person class")

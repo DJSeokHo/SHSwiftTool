@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Dog {
+struct Dog {
     var name: String!
     var age: Int!
     

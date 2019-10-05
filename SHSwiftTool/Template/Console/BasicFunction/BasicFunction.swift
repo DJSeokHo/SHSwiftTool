@@ -163,4 +163,12 @@ class BasicFunction {
         print(someClosureFunction(1, 2))
     }
    
+    /*
+     inout 让值类型以引用的方式进行传参
+     */
+    func swap( a: inout Int, b: inout Int) {
+        let temp = a;
+        a = b;
+        b = temp;
+    }
 }
