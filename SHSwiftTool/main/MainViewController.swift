@@ -24,12 +24,12 @@ class MainViewController: UIViewController, NavigationBarViewHolderDelegate {
         
         showPaths()
         
-//        let basicConsoleTest = BasicConsoleTest()
+        let basicConsoleTest = BasicConsoleTest()
 //        basicConsoleTest.basicGrammarTest()
 //        basicConsoleTest.basicStringTest()
 //        basicConsoleTest.basicCollectionTest()
 //        basicConsoleTest.basicControlFlowTest()
-//        basicConsoleTest.basicFunctionTest()
+        basicConsoleTest.basicFunctionTest()
 //        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
     }

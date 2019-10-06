@@ -45,12 +45,13 @@
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
+		C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC62F234A0CFB00B94A78 /* Closure.swift */; };
+		C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC631234A13C900B94A78 /* TrailingClosure.swift */; };
 		C35EDDDE230EE214000E34C3 /* TemplateTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */; };
 		C35EDDDF230EE214000E34C3 /* TemplateTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */; };
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
 		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
-		C3615B512346355D00EF5A85 /* BasicClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B502346355D00EF5A85 /* BasicClosure.swift */; };
 		C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112C022BD036900E92DA8 /* AppDelegate.swift */; };
 		C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37112C722BD036A00E92DA8 /* Assets.xcassets */; };
 		C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112D822BD050800E92DA8 /* MainViewController.swift */; };
@@ -152,12 +153,13 @@
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		C35DC62F234A0CFB00B94A78 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		C35DC631234A13C900B94A78 /* TrailingClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingClosure.swift; sourceTree = "<group>"; };
 		C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTestViewController.swift; sourceTree = "<group>"; };
 		C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateTestViewController.xib; sourceTree = "<group>"; };
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
-		C3615B502346355D00EF5A85 /* BasicClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicClosure.swift; sourceTree = "<group>"; };
 		C37112BD22BD036900E92DA8 /* SHSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37112C022BD036900E92DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37112C722BD036A00E92DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -554,6 +556,8 @@
 			children = (
 				C351192D22BFBCC00023C35F /* BasicFunction.swift */,
 				C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */,
+				C35DC62F234A0CFB00B94A78 /* Closure.swift */,
+				C35DC631234A13C900B94A78 /* TrailingClosure.swift */,
 			);
 			path = BasicFunction;
 			sourceTree = "<group>";
@@ -572,14 +576,6 @@
 				C351192B22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift */,
 			);
 			path = BasicCheckAPICanUsable;
-			sourceTree = "<group>";
-		};
-		C3615B4F2346353300EF5A85 /* BasicClosure */ = {
-			isa = PBXGroup;
-			children = (
-				C3615B502346355D00EF5A85 /* BasicClosure.swift */,
-			);
-			path = BasicClosure;
 			sourceTree = "<group>";
 		};
 		C37112B422BD036900E92DA8 = {
@@ -644,7 +640,6 @@
 		C37112DF22BD0F2600E92DA8 /* Console */ = {
 			isa = PBXGroup;
 			children = (
-				C3615B4F2346353300EF5A85 /* BasicClosure */,
 				C3615B4E2346352200EF5A85 /* BasicCheckAPICanUsable */,
 				C3615B4D2346351400EF5A85 /* BasicEnum */,
 				C3615B4A2346328B00EF5A85 /* BasicFunction */,
@@ -942,7 +937,6 @@
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
-				C3615B512346355D00EF5A85 /* BasicClosure.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
@@ -961,7 +955,9 @@
 				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
+				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
+				C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
 				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,

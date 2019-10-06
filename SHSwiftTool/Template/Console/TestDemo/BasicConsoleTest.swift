@@ -118,6 +118,27 @@ class BasicConsoleTest {
         
         basicFunction.swap(a: &a, b: &b)
         print("after swap a is \(a) and b is \(b)")
+        
+        let closure: Closure = Closure()
+        
+        var mathFunc = closure.getMathFunc("cube")
+        print(mathFunc(2))
+        mathFunc = closure.getMathFunc("square")
+        print(mathFunc(5))
+        mathFunc = closure.getMathFunc("other")
+        print(mathFunc(5))
+        
+      
+        print(closure.square(3))
+        print(closure.cube)
+        
+        let trailingClosure: TrailingClosure = TrailingClosure()
+        
+        let result = trailingClosure.getMathFunc(7, fn: {(value: Int) -> Int in
+            return value * value
+        })
+        
+        print(result)
     }
     
     func basicClassAndStruct() {
