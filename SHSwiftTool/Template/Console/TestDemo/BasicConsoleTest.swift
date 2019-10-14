@@ -151,4 +151,13 @@ class BasicConsoleTest {
         classAndStruct.checkObjectType()
     }
     
+    func basicFoundation() {
+        let basicFoundation = BasicFoundation()
+        basicFoundation.testNSString()
+        basicFoundation.testNSMutableString()
+        basicFoundation.testNSDate()
+        basicFoundation.testNSDateFormatter()
+        basicFoundation.testNSCalendarAndNSDateComponents()
+    }
+    
 }

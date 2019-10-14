@@ -29,9 +29,10 @@ class MainViewController: UIViewController, NavigationBarViewHolderDelegate {
 //        basicConsoleTest.basicStringTest()
 //        basicConsoleTest.basicCollectionTest()
 //        basicConsoleTest.basicControlFlowTest()
-        basicConsoleTest.basicFunctionTest()
+//        basicConsoleTest.basicFunctionTest()
 //        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
+        basicConsoleTest.basicFoundation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
