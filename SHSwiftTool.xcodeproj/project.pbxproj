@@ -74,6 +74,8 @@
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
+		C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D731222358686200C02EC3 /* BasicUIViewController.swift */; };
+		C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D731232358686200C02EC3 /* BasicUIViewController.xib */; };
 		C3DB2ADD2351B09700D1A621 /* BasicFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB2ADC2351B09700D1A621 /* BasicFoundation.swift */; };
 		C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6AED230D84C100BDDF5D /* icon_client_selected@3x.png */; };
 		C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6AEE230D84C100BDDF5D /* icon_order_selected@3x.png */; };
@@ -185,6 +187,8 @@
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		C3D731222358686200C02EC3 /* BasicUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUIViewController.swift; sourceTree = "<group>"; };
+		C3D731232358686200C02EC3 /* BasicUIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicUIViewController.xib; sourceTree = "<group>"; };
 		C3DB2ADC2351B09700D1A621 /* BasicFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFoundation.swift; sourceTree = "<group>"; };
 		C3DD6AED230D84C100BDDF5D /* icon_client_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_client_selected@3x.png"; sourceTree = "<group>"; };
 		C3DD6AEE230D84C100BDDF5D /* icon_order_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_order_selected@3x.png"; sourceTree = "<group>"; };
@@ -631,6 +635,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3D731212358684400C02EC3 /* BasicUIViewController */,
 				C388903822F5AE7F007C444F /* UI */,
 				C37112DF22BD0F2600E92DA8 /* Console */,
 				C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */,
@@ -771,6 +776,15 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		C3D731212358684400C02EC3 /* BasicUIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3D731222358686200C02EC3 /* BasicUIViewController.swift */,
+				C3D731232358686200C02EC3 /* BasicUIViewController.xib */,
+			);
+			path = BasicUIViewController;
+			sourceTree = "<group>";
+		};
 		C3DB2ADB2351B06F00D1A621 /* BasicFoundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +892,7 @@
 				C3DD6B05230D850100BDDF5D /* icon_dashboard_un_selected@2x.png in Resources */,
 				C3DD6B17230D85F800BDDF5D /* icon_product_un_selected.png in Resources */,
 				C3DD6B37230D88D500BDDF5D /* icon_profile_selected@2x.png in Resources */,
+				C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */,
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
@@ -968,6 +983,7 @@
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
+				C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
