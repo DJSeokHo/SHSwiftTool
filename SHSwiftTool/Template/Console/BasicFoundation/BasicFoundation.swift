@@ -202,4 +202,158 @@ class BasicFoundation {
         let date1 = calendar!.date(from: comp1 as DateComponents)
         print(date1!)
     }
+    
+    public func testNSArray() {
+        
+        var array: NSArray = ["1", "2", "3", "4"];
+        
+        print("\(array.object(at: 1))")
+        print("\(array.firstObject!)")
+        print("\(array.lastObject!)")
+        
+        let subArray = array.objects(at: NSIndexSet(indexesIn: NSMakeRange(1, 2)) as IndexSet)
+        print(subArray)
+        
+        let pos = array.index(of: "2")
+        print(pos)
+        
+        array = array.adding("5") as NSArray
+        array = array.addingObjects(from: ["6", "7"]) as NSArray
+        
+//        array.write(toFile: <#T##String#>, atomically: <#T##Bool#>)
+        for content in array {
+            print(content)
+        }
+        
+        print(array.count)
+    }
+    
+    public func testNSMutableArray() {
+        
+        print("-----------------")
+        
+        let mutableArray: NSMutableArray = ["1", "2", "3", "4"]
+        mutableArray.add("5")
+        mutableArray.addObjects(from: ["6", "7"])
+        mutableArray.insert("0", at: 0)
+        
+        for content in mutableArray {
+            print(content)
+        }
+        
+        mutableArray.remove("3")
+        mutableArray.removeObject(at: 0)
+        mutableArray.replaceObject(at: 0, with: 11)
+        
+        for content in mutableArray {
+            print(content)
+        }
+        
+        print(mutableArray.count)
+    }
+    
+    /*
+     NSOrderedSet
+     有序集合
+     这里没有弄例子
+     需要时再弄
+     */
+    public func testNSSet() {
+        
+        var mainSet: NSSet = NSSet(objects: "1", "2", "3", "4")
+        var subSet: NSSet = NSSet()
+        
+        mainSet = mainSet.addingObjects(from: ["5", "6", "4"]) as NSSet
+        
+        subSet = subSet.addingObjects(from: ["2", "3"]) as NSSet
+        
+        // 计算并集
+        print("\(mainSet.intersects(subSet as! Set))")
+        
+        // 计算交集
+        print("\(subSet.isSubset(of: mainSet as! Set))")
+        
+        print("\(mainSet.contains("5"))")
+    }
+    
+    /*
+     NSMutableOrderedSet
+     可变有序集合
+     这里没有弄例子
+     需要时再弄
+     */
+    public func testNSMutableSet() {
+        
+        let mainSet: NSMutableSet = NSMutableSet()
+        let subSet: NSMutableSet = NSMutableSet()
+        
+        mainSet.add("1")
+        mainSet.add("2")
+        mainSet.add("3")
+        mainSet.add("4")
+        
+        mainSet.addObjects(from: ["2", "3"])
+        
+        mainSet.add("5")
+        mainSet.remove("5")
+        
+        subSet.add("2")
+        subSet.add("3")
+        
+        // 计算两个集合的并集，直接改变集合
+        mainSet.union(subSet as! Set)
+        
+        // 计算两个集合的差集，直接改变集合
+        mainSet.minus(subSet as! Set)
+        
+        // 计算两个集合的交集， 直接改变集合
+        mainSet.intersect(subSet as! Set)
+        
+    }
+    
+    public func testNSDictionary() {
+        
+        print("-------------------")
+        
+        let dict: NSDictionary = NSDictionary(dictionary: [
+            "1": "one",
+            "2": "two",
+            "3": "three",
+            "4": "four"
+        ])
+      
+        print(dict)
+        print(dict.allKeys)
+        print(dict.allValues)
+        print(dict.count)
+        
+        dict.enumerateKeysAndObjects() {
+            key,value,_ in
+            print("key \(key) : value \(value)")
+        }
+    }
+    
+    public func testNSMutableDictionary() {
+        
+        print("-------------------")
+        
+        let dict: NSMutableDictionary = NSMutableDictionary()
+        
+        dict.setValue("1", forKey: "one")
+        dict["two"] = "2"
+        dict.setValue("3", forKey: "three")
+        
+        dict.enumerateKeysAndObjects() {
+            key,value,_ in
+            print("key \(key) : value \(value)")
+        }
+        
+        dict.removeObject(forKey: "two")
+        dict.enumerateKeysAndObjects() {
+            key,value,_ in
+            print("key \(key) : value \(value)")
+        }
+        
+    }
+    
 }

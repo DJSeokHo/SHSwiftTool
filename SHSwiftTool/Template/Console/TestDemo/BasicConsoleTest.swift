@@ -158,6 +158,12 @@ class BasicConsoleTest {
         basicFoundation.testNSDate()
         basicFoundation.testNSDateFormatter()
         basicFoundation.testNSCalendarAndNSDateComponents()
+        basicFoundation.testNSArray()
+        basicFoundation.testNSMutableArray()
+        basicFoundation.testNSSet()
+        basicFoundation.testNSMutableSet()
+        basicFoundation.testNSDictionary()
+        basicFoundation.testNSMutableDictionary()
     }
     
 }
