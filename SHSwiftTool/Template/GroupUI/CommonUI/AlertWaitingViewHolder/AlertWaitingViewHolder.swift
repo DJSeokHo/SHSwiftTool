@@ -13,20 +13,21 @@ class AlertWaitingViewHolder: UIView {
     
     private static let TAG = "AlertWaitingViewHolder"
     
+    private static let NIB_NAME = "AlertWaitingViewHolder"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        ILog.debug(tag: AlertWaitingViewHolder.TAG, content: "override init \(frame.width) \(frame.height)")
         initialization()
     }
+    
     deinit {
-        ILog.debug(tag: AlertWaitingViewHolder.TAG, content: "deinit")
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        ILog.debug(tag: AlertWaitingViewHolder.TAG, content: "required init")
+       
         initialization()
     }
     
@@ -36,12 +37,12 @@ class AlertWaitingViewHolder: UIView {
     }
     
     private func onCreateView() {
-        ILog.debug(tag: AlertWaitingViewHolder.TAG, content: "initialization")
-        let view = Bundle(for: type(of: self)).loadNibNamed(AlertWaitingViewHolder.TAG, owner: self, options: nil)?.first as! UIView
+       
+        let view = Bundle(for: type(of: self)).loadNibNamed(AlertWaitingViewHolder.NIB_NAME, owner: self, options: nil)?.first as! UIView
+        
         view.frame = bounds
         
         addSubview(view)
-   
     }
     
 }
