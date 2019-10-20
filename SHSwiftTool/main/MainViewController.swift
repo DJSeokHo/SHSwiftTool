@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, NavigationBarViewHolderDelegate {
+class MainViewController: UIViewController {
     
     private static let TAG = "MainViewController"
     
@@ -16,15 +16,23 @@ class MainViewController: UIViewController, NavigationBarViewHolderDelegate {
     
     public var width: CGFloat?
     
+    @IBOutlet var buttonBasicUIViewController: UIButton!
+    @IBOutlet var buttonBasicNavigationController: UIButton!
+    @IBOutlet var buttonLogin: UIButton!
+    @IBOutlet var buttonCamera: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         ILog.debug(tag: MainViewController.TAG, content: "viewDidLoad")
         
-        showPaths()
+        setListener()
         
-        let basicConsoleTest = BasicConsoleTest()
+//        showPaths()
+        
+//        let basicConsoleTest = BasicConsoleTest()
 //        basicConsoleTest.basicGrammarTest()
 //        basicConsoleTest.basicStringTest()
 //        basicConsoleTest.basicCollectionTest()
@@ -32,57 +40,62 @@ class MainViewController: UIViewController, NavigationBarViewHolderDelegate {
 //        basicConsoleTest.basicFunctionTest()
 //        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
-        basicConsoleTest.basicFoundation()
+//        basicConsoleTest.basicFoundation()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        initNavigationBar()
-    }
-    
-    private func showPaths() {
-        StorageUtil.getAppSandBoxDirectory()
-        StorageUtil.getDocumentDirectory()
-        StorageUtil.getTempDirectory()
-        StorageUtil.getLibraryDirectory()
-        StorageUtil.getLibraryCachesDirectory()
-    }
-    
-    private func initNavigationBar() {
+    private func setListener() {
+        buttonBasicUIViewController.addTarget(self, action: #selector(self.onButtonBasicUIViewControllerClick(_:)), for: UIControl.Event.touchUpInside)
+
+        buttonBasicNavigationController.addTarget(self, action: #selector(self.onButtonBasicNavigationControllerClick(_:)), for: UIControl.Event.touchUpInside)
         
-        if(navigationBarViewHolder == nil) {
-            navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.width!, height: 80))
-            navigationBarViewHolder!.setTitle(title: "Main")
-            navigationBarViewHolder!.setRightButtonImage(imageName: "icon_close.png")
-            navigationBarViewHolder!.hideLeftButton()
-            
-            navigationBarViewHolder!.setDelegate(navigationBarViewHolderDelegate: self)
-            
-            self.view.addSubview(navigationBarViewHolder!)
-        }
+        buttonLogin.addTarget(self, action: #selector(self.onButtonLoginClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonCamera.addTarget(self, action: #selector(self.onButtonCameraClick(_:)), for: UIControl.Event.touchUpInside)
     }
     
-    private func removeNavigationBar() {
-        if(navigationBarViewHolder != nil) {
-            ILog.debug(tag: MainViewController.TAG, content: "removeNavigationBar")
-            navigationBarViewHolder?.removeFromSuperview()
-            navigationBarViewHolder = nil;
-        }
+    /*
+     go to basic ui view controller template
+     */
+    @objc private func onButtonBasicUIViewControllerClick(_ sender: UIButton) {
+        ILog.debug(tag: MainViewController.TAG, content: "onButtonBasicUIViewControllerClick")
+        
+        let basicUIViewController = BasicUIViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicUIViewController)
     }
     
-    
-    func onButtonLeftClicked() {
-        ILog.debug(tag: MainViewController.TAG, content: "onButtonLeftCLicked")
+    /*
+     go to basic navigation controller template
+     */
+    @objc private func onButtonBasicNavigationControllerClick(_ sender: UIButton) {
+        ILog.debug(tag: MainViewController.TAG, content: "onButtonBasicNavigationControllerClick")
+        
+        let firstViewController = FirstViewController()
+        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: firstViewController)
     }
     
-    func onButtonRightClicked() {
-        ILog.debug(tag: MainViewController.TAG, content: "onButtonRightClicked")
-        ViewControllerUtil.finishSelf(view: self)
+    @objc private func onButtonLoginClick(_ sender: UIButton) {
+        ILog.debug(tag: MainViewController.TAG, content: "onButtonLoginClick")
+        
+        let loginHomeViewController = LoginHomeViewController()
+        loginHomeViewController.fromWhere = "From \(MainViewController.TAG)"
+        
+        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: loginHomeViewController)
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        removeNavigationBar()
+    
+    @objc private func onButtonCameraClick(_ sender: UIButton) {
+        let cameraViewController = CameraViewController()
+        cameraViewController.width = self.view.frame.width
+        ViewControllerUtil.startNewViewController(from: self, target: cameraViewController)
     }
-
+   
+//    private func showPaths() {
+//        StorageUtil.getAppSandBoxDirectory()
+//        StorageUtil.getDocumentDirectory()
+//        StorageUtil.getTempDirectory()
+//        StorageUtil.getLibraryDirectory()
+//        StorageUtil.getLibraryCachesDirectory()
+//    }
+   
     deinit {
         ILog.debug(tag: MainViewController.TAG, content: "deinit")
     }

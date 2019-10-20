@@ -47,8 +47,6 @@
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
 		C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC62F234A0CFB00B94A78 /* Closure.swift */; };
 		C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC631234A13C900B94A78 /* TrailingClosure.swift */; };
-		C35EDDDE230EE214000E34C3 /* TemplateTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */; };
-		C35EDDDF230EE214000E34C3 /* TemplateTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */; };
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
 		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
@@ -71,6 +69,12 @@
 		C388904E22F5B57E007C444F /* ILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904D22F5B57E007C444F /* ILog.swift */; };
 		C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B664422F721A6004EE452 /* LoginHomeViewController.swift */; };
 		C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38B664522F721A6004EE452 /* LoginHomeViewController.xib */; };
+		C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9DA235C41940032F41F /* FirstViewController.swift */; };
+		C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9DB235C41940032F41F /* FirstViewController.xib */; };
+		C38FE9E0235C41A00032F41F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9DE235C41A00032F41F /* SecondViewController.swift */; };
+		C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9DF235C41A00032F41F /* SecondViewController.xib */; };
+		C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9E2235C41AD0032F41F /* ThirdViewController.swift */; };
+		C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */; };
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
@@ -158,8 +162,6 @@
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		C35DC62F234A0CFB00B94A78 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		C35DC631234A13C900B94A78 /* TrailingClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingClosure.swift; sourceTree = "<group>"; };
-		C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTestViewController.swift; sourceTree = "<group>"; };
-		C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateTestViewController.xib; sourceTree = "<group>"; };
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
@@ -184,6 +186,12 @@
 		C388904D22F5B57E007C444F /* ILog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILog.swift; sourceTree = "<group>"; };
 		C38B664422F721A6004EE452 /* LoginHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeViewController.swift; sourceTree = "<group>"; };
 		C38B664522F721A6004EE452 /* LoginHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHomeViewController.xib; sourceTree = "<group>"; };
+		C38FE9DA235C41940032F41F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C38FE9DB235C41940032F41F /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		C38FE9DE235C41A00032F41F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C38FE9DF235C41A00032F41F /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		C38FE9E2235C41AD0032F41F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
@@ -635,11 +643,10 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C38FE9D9235C40D70032F41F /* BasicNavigationController */,
 				C3D731212358684400C02EC3 /* BasicUIViewController */,
-				C388903822F5AE7F007C444F /* UI */,
+				C388903822F5AE7F007C444F /* GroupUI */,
 				C37112DF22BD0F2600E92DA8 /* Console */,
-				C35EDDDC230EE214000E34C3 /* TemplateTestViewController.swift */,
-				C35EDDDD230EE214000E34C3 /* TemplateTestViewController.xib */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -680,13 +687,13 @@
 			path = Struct;
 			sourceTree = "<group>";
 		};
-		C388903822F5AE7F007C444F /* UI */ = {
+		C388903822F5AE7F007C444F /* GroupUI */ = {
 			isa = PBXGroup;
 			children = (
 				C35749DF22FFB43800354D1F /* CommonUI */,
 				C388903922F5AEAD007C444F /* Login */,
 			);
-			path = UI;
+			path = GroupUI;
 			sourceTree = "<group>";
 		};
 		C388903922F5AEAD007C444F /* Login */ = {
@@ -749,6 +756,19 @@
 				C388904D22F5B57E007C444F /* ILog.swift */,
 			);
 			path = Debug;
+			sourceTree = "<group>";
+		};
+		C38FE9D9235C40D70032F41F /* BasicNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C38FE9DA235C41940032F41F /* FirstViewController.swift */,
+				C38FE9DB235C41940032F41F /* FirstViewController.xib */,
+				C38FE9DE235C41A00032F41F /* SecondViewController.swift */,
+				C38FE9DF235C41A00032F41F /* SecondViewController.xib */,
+				C38FE9E2235C41AD0032F41F /* ThirdViewController.swift */,
+				C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */,
+			);
+			path = BasicNavigationController;
 			sourceTree = "<group>";
 		};
 		C39AD8B223129A0A0072FAB5 /* Storage */ = {
@@ -913,11 +933,12 @@
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
-				C35EDDDF230EE214000E34C3 /* TemplateTestViewController.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
+				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
+				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
@@ -933,6 +954,7 @@
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
+				C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */,
 				C3DD6B28230D863A00BDDF5D /* ClientViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -983,13 +1005,14 @@
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
+				C38FE9E0235C41A00032F41F /* SecondViewController.swift in Sources */,
 				C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
 				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
-				C35EDDDE230EE214000E34C3 /* TemplateTestViewController.swift in Sources */,
+				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
@@ -1003,6 +1026,7 @@
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
+				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
 				C351598223093E0300848456 /* AlertViewUtil.swift in Sources */,
 			);

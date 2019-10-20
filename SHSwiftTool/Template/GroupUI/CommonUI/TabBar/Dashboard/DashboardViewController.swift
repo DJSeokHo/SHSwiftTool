@@ -35,8 +35,6 @@ class DashboardViewController: UIViewController, NavigationBarViewHolderDelegate
     @objc private func onButtonTestClicked(_ sender: UIButton) {
         ILog.debug(tag: DashboardViewController.TAG, content: "onButtonTestClicked")
         
-        let templateTestViewController = TemplateTestViewController()
-        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: templateTestViewController)
     }
     
     override func viewWillAppear(_ animated: Bool) {

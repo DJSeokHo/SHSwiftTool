@@ -10,10 +10,25 @@ import UIKit
 
 class BasicUIViewController: UIViewController {
 
+    public static let TAG: String = "BasicUIViewController"
+    
+    @IBOutlet var buttonClose: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setListener()
+    }
+    
+    private func setListener() {
+       
+        buttonClose.addTarget(self, action: #selector(onButtonCloseClick(_:)), for: UIControl.Event.touchUpInside)
+        
+    }
+
+    @objc private func onButtonCloseClick(_ sender: UIButton) {
+        ViewControllerUtil.finishSelf(view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
