@@ -777,6 +777,20 @@
 			path = BasicNavigationController;
 			sourceTree = "<group>";
 		};
+		C38FE9EE235C71590032F41F /* Http */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		C38FE9EF235C71800032F41F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		C39AD8B223129A0A0072FAB5 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -788,6 +802,8 @@
 		C39AD8B52312AF600072FAB5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C38FE9EF235C71800032F41F /* Database */,
+				C38FE9EE235C71590032F41F /* Http */,
 				C39AD8B62312AF700072FAB5 /* Camera */,
 			);
 			path = Modules;
