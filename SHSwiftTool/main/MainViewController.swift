@@ -27,20 +27,10 @@ class MainViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         ILog.debug(tag: MainViewController.TAG, content: "viewDidLoad")
+        basicConsoleTest()
         
         setListener()
-        
-//        showPaths()
-        
-//        let basicConsoleTest = BasicConsoleTest()
-//        basicConsoleTest.basicGrammarTest()
-//        basicConsoleTest.basicStringTest()
-//        basicConsoleTest.basicCollectionTest()
-//        basicConsoleTest.basicControlFlowTest()
-//        basicConsoleTest.basicFunctionTest()
-//        basicConsoleTest.basicClassAndStruct()
-//        basicConsoleTest.basicInherit()
-//        basicConsoleTest.basicFoundation()
+    
     }
     
     private func setListener() {
@@ -87,14 +77,28 @@ class MainViewController: UIViewController {
         cameraViewController.width = self.view.frame.width
         ViewControllerUtil.startNewViewController(from: self, target: cameraViewController)
     }
+    
+    private func basicConsoleTest() {
+        showPaths()
+
+//        let basicConsoleTest = BasicConsoleTest()
+//        basicConsoleTest.basicGrammarTest()
+//        basicConsoleTest.basicStringTest()
+//        basicConsoleTest.basicCollectionTest()
+//        basicConsoleTest.basicControlFlowTest()
+//        basicConsoleTest.basicFunctionTest()
+//        basicConsoleTest.basicClassAndStruct()
+//        basicConsoleTest.basicInherit()
+//        basicConsoleTest.basicFoundation()
+    }
    
-//    private func showPaths() {
-//        StorageUtil.getAppSandBoxDirectory()
-//        StorageUtil.getDocumentDirectory()
-//        StorageUtil.getTempDirectory()
-//        StorageUtil.getLibraryDirectory()
-//        StorageUtil.getLibraryCachesDirectory()
-//    }
+    private func showPaths() {
+        StorageUtil.getAppSandBoxDirectory()
+        StorageUtil.getDocumentDirectory()
+        StorageUtil.getTempDirectory()
+        StorageUtil.getLibraryDirectory()
+        StorageUtil.getLibraryCachesDirectory()
+    }
    
     deinit {
         ILog.debug(tag: MainViewController.TAG, content: "deinit")
