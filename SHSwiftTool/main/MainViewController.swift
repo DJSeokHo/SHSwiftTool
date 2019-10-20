@@ -69,8 +69,8 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicNavigationControllerClick(_ sender: UIButton) {
         ILog.debug(tag: MainViewController.TAG, content: "onButtonBasicNavigationControllerClick")
         
-        let firstViewController = FirstViewController()
-        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: firstViewController)
+        let navigationRootViewController = NavigationRootViewController()
+        ViewControllerUtil.startNewViewControllerWithNavigation(from: self, target: navigationRootViewController)
     }
     
     @objc private func onButtonLoginClick(_ sender: UIButton) {

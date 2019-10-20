@@ -75,6 +75,8 @@
 		C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9DF235C41A00032F41F /* SecondViewController.xib */; };
 		C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9E2235C41AD0032F41F /* ThirdViewController.swift */; };
 		C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */; };
+		C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9E6235C61DA0032F41F /* NavigationRootViewController.swift */; };
+		C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9E7235C61DA0032F41F /* NavigationRootViewController.xib */; };
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
@@ -192,6 +194,8 @@
 		C38FE9DF235C41A00032F41F /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		C38FE9E2235C41AD0032F41F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		C38FE9E6235C61DA0032F41F /* NavigationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootViewController.swift; sourceTree = "<group>"; };
+		C38FE9E7235C61DA0032F41F /* NavigationRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationRootViewController.xib; sourceTree = "<group>"; };
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
@@ -767,6 +771,8 @@
 				C38FE9DF235C41A00032F41F /* SecondViewController.xib */,
 				C38FE9E2235C41AD0032F41F /* ThirdViewController.swift */,
 				C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */,
+				C38FE9E6235C61DA0032F41F /* NavigationRootViewController.swift */,
+				C38FE9E7235C61DA0032F41F /* NavigationRootViewController.xib */,
 			);
 			path = BasicNavigationController;
 			sourceTree = "<group>";
@@ -915,6 +921,7 @@
 				C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */,
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
+				C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
@@ -1014,6 +1021,7 @@
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
+				C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  NavigationRootViewController.swift
 //  SHSwiftTool
 //
 //  Created by Seok Ho on 2019/10/20.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, NavigationBarViewHolderDelegate {
+class NavigationRootViewController: UIViewController, NavigationBarViewHolderDelegate {
 
-    public static let TAG: String = "FirstViewController"
-    
-    @IBOutlet var buttonNext: UIButton!
+    public static let TAG: String = "NavigationRootViewController"
     
     private var navigationBarViewHolder: NavigationBarViewHolder?
+    
+    @IBOutlet var buttonNext: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +32,11 @@ class FirstViewController: UIViewController, NavigationBarViewHolderDelegate {
 
     @objc private func onButtonNextClick(_ sender: UIButton) {
         
-        let secondViewController = SecondViewController()
+        let firstViewController = FirstViewController()
      
-        NavigationUtil.navigationToNext(from: self, target: secondViewController, animated: true)
+        NavigationUtil.navigationToNext(from: self, target: firstViewController, animated: true)
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -51,9 +52,9 @@ class FirstViewController: UIViewController, NavigationBarViewHolderDelegate {
 
         if(navigationBarViewHolder == nil) {
             navigationBarViewHolder = NavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
-            navigationBarViewHolder!.setTitle(title: FirstViewController.TAG)
-            navigationBarViewHolder!.setLeftButtonImage(imageName: "icon_back.png")
-            navigationBarViewHolder!.hideRightButton()
+            navigationBarViewHolder!.setTitle(title: NavigationRootViewController.TAG)
+            navigationBarViewHolder!.setRightButtonImage(imageName: "icon_close.png")
+            navigationBarViewHolder!.hideLeftButton()
 
             navigationBarViewHolder!.setDelegate(navigationBarViewHolderDelegate: self)
 
@@ -67,20 +68,20 @@ class FirstViewController: UIViewController, NavigationBarViewHolderDelegate {
             navigationBarViewHolder = nil;
         }
     }
-    
+
     func onButtonLeftClicked() {
-        NavigationUtil.navigationToPrev(from: self, animated: true)
+        
     }
 
     func onButtonRightClicked() {
-        
+        ViewControllerUtil.finishSelf(view: self)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         removeNavigationBar()
         super.viewDidDisappear(animated)
     }
-    
+
     /*
     // MARK: - Navigation
 
