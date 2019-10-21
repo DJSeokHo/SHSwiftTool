@@ -33,6 +33,21 @@ class BasicUIViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        addCustomUIViewWithoutNib()
+    }
+    
+    /*
+     在界面中间添加一个大小为100像素的黑色方块区域
+     */
+    private func addCustomUIViewWithoutNib() {
+        let customUIView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        
+        self.view.addSubview(customUIView)
+        
+        let fullScreen = DisplayUtil.getFullScreenSize()
+        customUIView.center = CGPoint(x: fullScreen.width * 0.5, y: fullScreen.height * 0.5)
+        customUIView.backgroundColor = UIColor.black
     }
     
     override func viewDidAppear(_ animated: Bool) {

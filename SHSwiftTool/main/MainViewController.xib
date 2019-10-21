@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
+                <outlet property="buttonBasicLabel" destination="KjZ-Q5-8FT" id="lec-VR-YWn"/>
                 <outlet property="buttonBasicNavigationController" destination="BFX-tW-lkn" id="ine-ra-URv"/>
+                <outlet property="buttonBasicTextField" destination="sf3-fu-yAy" id="vsy-1T-dgT"/>
                 <outlet property="buttonBasicUIViewController" destination="giS-2S-ltZ" id="AdX-zA-At6"/>
                 <outlet property="buttonCamera" destination="hyC-Xj-wn1" id="5vC-fr-Frv"/>
                 <outlet property="buttonLogin" destination="cdV-fr-df5" id="j8c-Ru-TTw"/>
@@ -50,6 +52,20 @@
                             <rect key="frame" x="8" y="122" width="272" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Camera">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-Q5-8FT">
+                            <rect key="frame" x="8" y="160" width="272" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Basic Label">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-fu-yAy">
+                            <rect key="frame" x="8" y="198" width="272" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Basic Text Field">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

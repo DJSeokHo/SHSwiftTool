@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D26D222E8AA2B00A50386 /* Shape.swift */; };
+		C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762C7235DF285006E3434 /* DisplayUtil.swift */; };
+		C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */; };
+		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
+		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
+		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
 		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
 		C34CB5762348A4E90067F851 /* Eatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5752348A4E90067F851 /* Eatable.swift */; };
 		C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB57B2348A5410067F851 /* AppleEatable.swift */; };
@@ -125,6 +130,11 @@
 
 /* Begin PBXFileReference section */
 		C31D26D222E8AA2B00A50386 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		C32762C7235DF285006E3434 /* DisplayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUtil.swift; sourceTree = "<group>"; };
+		C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelViewController.swift; sourceTree = "<group>"; };
+		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
+		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
+		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
 		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C34CB5752348A4E90067F851 /* Eatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatable.swift; sourceTree = "<group>"; };
 		C34CB57B2348A5410067F851 /* AppleEatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEatable.swift; sourceTree = "<group>"; };
@@ -264,6 +274,32 @@
 				C34D31DF22E9E79100E22BC6 /* CardStruct.swift */,
 			);
 			path = BasicGrammar;
+			sourceTree = "<group>";
+		};
+		C32762C6235DF272006E3434 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				C32762C7235DF285006E3434 /* DisplayUtil.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		C32762C9235DF359006E3434 /* BasicLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */,
+				C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */,
+			);
+			path = BasicLabel;
+			sourceTree = "<group>";
+		};
+		C32762CE235DFC11006E3434 /* BasicTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */,
+				C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */,
+			);
+			path = BasicTextField;
 			sourceTree = "<group>";
 		};
 		C34D31E722E9EB9B00E22BC6 /* Protocol */ = {
@@ -647,6 +683,8 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C32762CE235DFC11006E3434 /* BasicTextField */,
+				C32762C9235DF359006E3434 /* BasicLabel */,
 				C38FE9D9235C40D70032F41F /* BasicNavigationController */,
 				C3D731212358684400C02EC3 /* BasicUIViewController */,
 				C388903822F5AE7F007C444F /* GroupUI */,
@@ -742,6 +780,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C32762C6235DF272006E3434 /* Display */,
 				C39AD8B223129A0A0072FAB5 /* Storage */,
 				C351598023093DF400848456 /* AlertView */,
 				C351597A2309369200848456 /* UserDefaults */,
@@ -932,8 +971,10 @@
 				C3DD6B33230D88BC00BDDF5D /* icon_profile_un_selected@3x.png in Resources */,
 				C3DD6B0C230D850100BDDF5D /* icon_order_selected@2x.png in Resources */,
 				C3DD6B05230D850100BDDF5D /* icon_dashboard_un_selected@2x.png in Resources */,
+				C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */,
 				C3DD6B17230D85F800BDDF5D /* icon_product_un_selected.png in Resources */,
 				C3DD6B37230D88D500BDDF5D /* icon_profile_selected@2x.png in Resources */,
+				C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */,
 				C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */,
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
@@ -1017,6 +1058,7 @@
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
+				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
@@ -1029,6 +1071,7 @@
 				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
 				C38FE9E0235C41A00032F41F /* SecondViewController.swift in Sources */,
+				C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */,
 				C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */,
@@ -1038,6 +1081,7 @@
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */,
+				C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
