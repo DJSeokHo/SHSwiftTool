@@ -126,6 +126,11 @@
 		C3DD6B38230D88D500BDDF5D /* icon_profile_un_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6B36230D88D500BDDF5D /* icon_profile_un_selected@2x.png */; };
 		C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6B39230D88EF00BDDF5D /* icon_profile_selected.png */; };
 		C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DD6B3A230D88EF00BDDF5D /* icon_profile_un_selected.png */; };
+		C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD28235F435D00AEA02D /* BasicTextViewViewController.swift */; };
+		C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DECD29235F435D00AEA02D /* BasicTextViewViewController.xib */; };
+		C3DECD2E235F4AE400AEA02D /* SoftKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */; };
+		C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */; };
+		C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +255,11 @@
 		C3DD6B36230D88D500BDDF5D /* icon_profile_un_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_profile_un_selected@2x.png"; sourceTree = "<group>"; };
 		C3DD6B39230D88EF00BDDF5D /* icon_profile_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile_selected.png; sourceTree = "<group>"; };
 		C3DD6B3A230D88EF00BDDF5D /* icon_profile_un_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_profile_un_selected.png; sourceTree = "<group>"; };
+		C3DECD28235F435D00AEA02D /* BasicTextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextViewViewController.swift; sourceTree = "<group>"; };
+		C3DECD29235F435D00AEA02D /* BasicTextViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextViewViewController.xib; sourceTree = "<group>"; };
+		C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftKeyboardUtil.swift; sourceTree = "<group>"; };
+		C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonViewController.swift; sourceTree = "<group>"; };
+		C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicButtonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -683,6 +693,8 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3DECD2F235F4D7900AEA02D /* BasicButton */,
+				C3DECD27235F432500AEA02D /* BasicTextView */,
 				C32762CE235DFC11006E3434 /* BasicTextField */,
 				C32762C9235DF359006E3434 /* BasicLabel */,
 				C38FE9D9235C40D70032F41F /* BasicNavigationController */,
@@ -780,6 +792,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C3DECD2C235F4AD300AEA02D /* Keyboard */,
 				C32762C6235DF272006E3434 /* Display */,
 				C39AD8B223129A0A0072FAB5 /* Storage */,
 				C351598023093DF400848456 /* AlertView */,
@@ -910,6 +923,32 @@
 			path = Order;
 			sourceTree = "<group>";
 		};
+		C3DECD27235F432500AEA02D /* BasicTextView */ = {
+			isa = PBXGroup;
+			children = (
+				C3DECD28235F435D00AEA02D /* BasicTextViewViewController.swift */,
+				C3DECD29235F435D00AEA02D /* BasicTextViewViewController.xib */,
+			);
+			path = BasicTextView;
+			sourceTree = "<group>";
+		};
+		C3DECD2C235F4AD300AEA02D /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		C3DECD2F235F4D7900AEA02D /* BasicButton */ = {
+			isa = PBXGroup;
+			children = (
+				C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */,
+				C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */,
+			);
+			path = BasicButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -979,6 +1018,7 @@
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
 				C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */,
+				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
@@ -1002,6 +1042,7 @@
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
+				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
@@ -1049,6 +1090,7 @@
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
+				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
@@ -1065,6 +1107,7 @@
 				C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */,
 				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
+				C3DECD2E235F4AE400AEA02D /* SoftKeyboardUtil.swift in Sources */,
 				C3DD6B2F230D865200BDDF5D /* OrderViewController.swift in Sources */,
 				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
@@ -1085,6 +1128,7 @@
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
+				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,

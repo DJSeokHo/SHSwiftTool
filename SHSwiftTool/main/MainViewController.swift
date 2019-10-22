@@ -22,7 +22,8 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonCamera: UIButton!
     @IBOutlet var buttonBasicLabel: UIButton!
     @IBOutlet var buttonBasicTextField: UIButton!
-    
+    @IBOutlet var buttonBasicTextView: UIButton!
+    @IBOutlet var buttonBasicButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,10 @@ class MainViewController: UIViewController {
         buttonBasicLabel.addTarget(self, action: #selector(self.onButtonBasicLabelClick(_:)), for: UIControl.Event.touchUpInside)
     
         buttonBasicTextField.addTarget(self, action: #selector(self.onButtonBasicTextFieldClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicTextView.addTarget(self, action: #selector(self.onButtonBasicTextViewClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicButton.addTarget(self, action: #selector(self.onButtonBasicButtonClick(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -92,6 +97,16 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicTextFieldClick(_ sender: UIButton) {
         let basicTextFieldViewController = BasicTextFieldViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicTextFieldViewController)
+    }
+    
+    @objc private func onButtonBasicTextViewClick(_ send: UIButton) {
+        let basicTextViewViewController = BasicTextViewViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicTextViewViewController)
+    }
+    
+    @objc private func onButtonBasicButtonClick(_ send: UIButton) {
+        let basicButtonViewController = BasicButtonViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicButtonViewController)
     }
     
     private func basicConsoleTest() {

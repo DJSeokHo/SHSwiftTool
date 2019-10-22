@@ -60,7 +60,8 @@ class BasicTextFieldViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         // 隐藏键盘
-        self.view.endEditing(true)
+//        self.view.endEditing(true)
+        textField.resignFirstResponder()
         
         ILog.debug(tag: BasicTextFieldViewController.TAG, content: "return \(textField.text ?? "")")
         return true
