@@ -131,6 +131,8 @@
 		C3DECD2E235F4AE400AEA02D /* SoftKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */; };
 		C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */; };
 		C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */; };
+		C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */; };
+		C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -260,6 +262,8 @@
 		C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftKeyboardUtil.swift; sourceTree = "<group>"; };
 		C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonViewController.swift; sourceTree = "<group>"; };
 		C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicButtonViewController.xib; sourceTree = "<group>"; };
+		C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlertViewController.swift; sourceTree = "<group>"; };
+		C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicAlertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,6 +697,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3F901492360875200C8CFD1 /* BasicAlert */,
 				C3DECD2F235F4D7900AEA02D /* BasicButton */,
 				C3DECD27235F432500AEA02D /* BasicTextView */,
 				C32762CE235DFC11006E3434 /* BasicTextField */,
@@ -949,6 +954,15 @@
 			path = BasicButton;
 			sourceTree = "<group>";
 		};
+		C3F901492360875200C8CFD1 /* BasicAlert */ = {
+			isa = PBXGroup;
+			children = (
+				C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */,
+				C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */,
+			);
+			path = BasicAlert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1045,6 +1059,7 @@
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
+				C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
@@ -1085,6 +1100,7 @@
 				C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */,
 				C3845A4F22EDDA1200FAC52B /* Person.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
+				C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,

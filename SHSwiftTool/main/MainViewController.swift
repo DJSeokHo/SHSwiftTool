@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicTextField: UIButton!
     @IBOutlet var buttonBasicTextView: UIButton!
     @IBOutlet var buttonBasicButton: UIButton!
+    @IBOutlet var buttonBasicAlert: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,8 @@ class MainViewController: UIViewController {
         buttonBasicTextView.addTarget(self, action: #selector(self.onButtonBasicTextViewClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicButton.addTarget(self, action: #selector(self.onButtonBasicButtonClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicAlert.addTarget(self, action: #selector(self.onButtonBasicAlertClick(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -107,6 +110,11 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicButtonClick(_ send: UIButton) {
         let basicButtonViewController = BasicButtonViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicButtonViewController)
+    }
+    
+    @objc private func onButtonBasicAlertClick(_ send: UIButton) {
+        let basicAlertViewController = BasicAlertViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicAlertViewController)
     }
     
     private func basicConsoleTest() {
