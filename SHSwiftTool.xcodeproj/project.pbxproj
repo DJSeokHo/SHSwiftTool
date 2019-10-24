@@ -55,6 +55,11 @@
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
 		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
+		C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37020E02361E14500895D6F /* BasicImageViewController.swift */; };
+		C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37020E12361E14500895D6F /* BasicImageViewController.xib */; };
+		C37020E72361E44E00895D6F /* test_image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C37020E42361E44E00895D6F /* test_image_3.png */; };
+		C37020E82361E44E00895D6F /* test_image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = C37020E52361E44E00895D6F /* test_image_1.png */; };
+		C37020E92361E44E00895D6F /* test_image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C37020E62361E44E00895D6F /* test_image_2.png */; };
 		C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112C022BD036900E92DA8 /* AppDelegate.swift */; };
 		C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37112C722BD036A00E92DA8 /* Assets.xcassets */; };
 		C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112D822BD050800E92DA8 /* MainViewController.swift */; };
@@ -184,6 +189,11 @@
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
+		C37020E02361E14500895D6F /* BasicImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImageViewController.swift; sourceTree = "<group>"; };
+		C37020E12361E14500895D6F /* BasicImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicImageViewController.xib; sourceTree = "<group>"; };
+		C37020E42361E44E00895D6F /* test_image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image_3.png; sourceTree = "<group>"; };
+		C37020E52361E44E00895D6F /* test_image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image_1.png; sourceTree = "<group>"; };
+		C37020E62361E44E00895D6F /* test_image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image_2.png; sourceTree = "<group>"; };
 		C37112BD22BD036900E92DA8 /* SHSwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHSwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37112C022BD036900E92DA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37112C722BD036A00E92DA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -495,8 +505,6 @@
 			isa = PBXGroup;
 			children = (
 				C35FF046230C3B29009D19A0 /* Images */,
-				C35791152307EFD500BDB17E /* icon_back.png */,
-				C358DDAE2301A754007F10C6 /* icon_close.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -537,6 +545,11 @@
 		C35FF046230C3B29009D19A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C35791152307EFD500BDB17E /* icon_back.png */,
+				C358DDAE2301A754007F10C6 /* icon_close.png */,
+				C37020E52361E44E00895D6F /* test_image_1.png */,
+				C37020E62361E44E00895D6F /* test_image_2.png */,
+				C37020E42361E44E00895D6F /* test_image_3.png */,
 				C35FF071230C3E59009D19A0 /* @1x */,
 				C35FF070230C3E56009D19A0 /* @2x */,
 				C35FF06F230C3E52009D19A0 /* @3x */,
@@ -646,6 +659,15 @@
 			path = BasicCheckAPICanUsable;
 			sourceTree = "<group>";
 		};
+		C37020DF2361E12D00895D6F /* BasicImage */ = {
+			isa = PBXGroup;
+			children = (
+				C37020E02361E14500895D6F /* BasicImageViewController.swift */,
+				C37020E12361E14500895D6F /* BasicImageViewController.xib */,
+			);
+			path = BasicImage;
+			sourceTree = "<group>";
+		};
 		C37112B422BD036900E92DA8 = {
 			isa = PBXGroup;
 			children = (
@@ -697,6 +719,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C37020DF2361E12D00895D6F /* BasicImage */,
 				C3F901492360875200C8CFD1 /* BasicAlert */,
 				C3DECD2F235F4D7900AEA02D /* BasicButton */,
 				C3DECD27235F432500AEA02D /* BasicTextView */,
@@ -1026,8 +1049,10 @@
 				C3DD6B05230D850100BDDF5D /* icon_dashboard_un_selected@2x.png in Resources */,
 				C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */,
 				C3DD6B17230D85F800BDDF5D /* icon_product_un_selected.png in Resources */,
+				C37020E92361E44E00895D6F /* test_image_2.png in Resources */,
 				C3DD6B37230D88D500BDDF5D /* icon_profile_selected@2x.png in Resources */,
 				C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */,
+				C37020E82361E44E00895D6F /* test_image_1.png in Resources */,
 				C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */,
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
@@ -1049,11 +1074,13 @@
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
+				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
+				C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
@@ -1147,6 +1174,7 @@
 				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
+				C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
