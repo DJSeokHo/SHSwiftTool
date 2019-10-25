@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicButton: UIButton!
     @IBOutlet var buttonBasicAlert: UIButton!
     @IBOutlet var buttonBasicImage: UIButton!
+    @IBOutlet var buttonBasicDatePicker: UIButton!
+    @IBOutlet var buttonBasicPicker: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +60,10 @@ class MainViewController: UIViewController {
         buttonBasicAlert.addTarget(self, action: #selector(self.onButtonBasicAlertClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicImage.addTarget(self, action: #selector(self.onButtonBasicViewClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicDatePicker.addTarget(self, action: #selector(self.onButtonBasicDatePickerClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicPicker.addTarget(self, action: #selector(self.onButtonBasicPickerClick(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -123,6 +129,16 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicViewClick(_ send: UIButton) {
         let basicBasicImageViewController = BasicImageViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicBasicImageViewController)
+    }
+    
+    @objc private func onButtonBasicDatePickerClick(_ send: UIButton) {
+        let basicDatePickerViewController = BasicDatePickerViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicDatePickerViewController)
+    }
+    
+    @objc private func onButtonBasicPickerClick(_ send: UIButton) {
+        let basicPickerViewController = BasicPickerViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicPickerViewController)
     }
     
     private func basicConsoleTest() {

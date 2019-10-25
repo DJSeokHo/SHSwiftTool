@@ -90,6 +90,11 @@
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
+		C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */; };
+		C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */; };
+		C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */; };
+		C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D14A25236337B400A0C897 /* BasicPickerViewController.xib */; };
+		C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */; };
 		C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D731222358686200C02EC3 /* BasicUIViewController.swift */; };
 		C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D731232358686200C02EC3 /* BasicUIViewController.xib */; };
 		C3DB2ADD2351B09700D1A621 /* BasicFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB2ADC2351B09700D1A621 /* BasicFoundation.swift */; };
@@ -226,6 +231,11 @@
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDatePickerViewController.swift; sourceTree = "<group>"; };
+		C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicDatePickerViewController.xib; sourceTree = "<group>"; };
+		C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewController.swift; sourceTree = "<group>"; };
+		C3D14A25236337B400A0C897 /* BasicPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPickerViewController.xib; sourceTree = "<group>"; };
+		C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
 		C3D731222358686200C02EC3 /* BasicUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUIViewController.swift; sourceTree = "<group>"; };
 		C3D731232358686200C02EC3 /* BasicUIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicUIViewController.xib; sourceTree = "<group>"; };
 		C3DB2ADC2351B09700D1A621 /* BasicFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFoundation.swift; sourceTree = "<group>"; };
@@ -719,6 +729,8 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3D14A23236337A600A0C897 /* BasicPicker */,
+				C3D14A1E236330B300A0C897 /* BasicDatePicker */,
 				C37020DF2361E12D00895D6F /* BasicImage */,
 				C3F901492360875200C8CFD1 /* BasicAlert */,
 				C3DECD2F235F4D7900AEA02D /* BasicButton */,
@@ -898,6 +910,25 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		C3D14A1E236330B300A0C897 /* BasicDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */,
+				C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */,
+			);
+			path = BasicDatePicker;
+			sourceTree = "<group>";
+		};
+		C3D14A23236337A600A0C897 /* BasicPicker */ = {
+			isa = PBXGroup;
+			children = (
+				C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */,
+				C3D14A25236337B400A0C897 /* BasicPickerViewController.xib */,
+				C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */,
+			);
+			path = BasicPicker;
+			sourceTree = "<group>";
+		};
 		C3D731212358684400C02EC3 /* BasicUIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1065,6 +1096,7 @@
 				C3DD6B38230D88D500BDDF5D /* icon_profile_un_selected@2x.png in Resources */,
 				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
 				C3DD6B34230D88BC00BDDF5D /* icon_profile_selected@3x.png in Resources */,
+				C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */,
 				C3DD6B1A230D85F800BDDF5D /* icon_order_selectedpng.png in Resources */,
 				C3DD6B16230D85F800BDDF5D /* icon_client_selected.png in Resources */,
 				C3DD6AF7230D84C100BDDF5D /* icon_dashboard_selected@3x.png in Resources */,
@@ -1095,6 +1127,7 @@
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
+				C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */,
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
@@ -1140,10 +1173,12 @@
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
+				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
+				C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
@@ -1175,6 +1210,7 @@
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
 				C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */,
+				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
