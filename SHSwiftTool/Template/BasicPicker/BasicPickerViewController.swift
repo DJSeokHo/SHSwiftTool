@@ -14,14 +14,30 @@ class BasicPickerViewController: UIViewController {
         ViewControllerUtil.finishSelf(view: self)
     }
     
-    @IBOutlet var pickerView: UIPickerView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        initPickerView()
+        
+    }
+    
+    private func initPickerView() {
+        
+        let fullScreenSize = DisplayUtil.getFullScreenSize()
+        
+        let pickerView = UIPickerView()
+        pickerView.frame = CGRect(x: 0, y: fullScreenSize.height * 0.3, width: fullScreenSize.width, height: 150)
+        
+        let customPickerViewController = CustomPickerViewController()
+        self.addChild(customPickerViewController)
+        
+        pickerView.delegate = customPickerViewController
+        pickerView.dataSource = customPickerViewController
+        
+        self.view.addSubview(pickerView)
         
     }
 

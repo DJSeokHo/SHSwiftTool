@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919423672BD200B2FC2C /* BasicPickerViewDemoViewController.swift */; };
+		C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C304919523672BD200B2FC2C /* BasicPickerViewDemoViewController.xib */; };
+		C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919923672DCA00B2FC2C /* MealsViewController.swift */; };
+		C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */; };
+		C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */; };
 		C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D26D222E8AA2B00A50386 /* Shape.swift */; };
 		C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762C7235DF285006E3434 /* DisplayUtil.swift */; };
 		C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */; };
@@ -146,6 +151,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C304919423672BD200B2FC2C /* BasicPickerViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewDemoViewController.swift; sourceTree = "<group>"; };
+		C304919523672BD200B2FC2C /* BasicPickerViewDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPickerViewDemoViewController.xib; sourceTree = "<group>"; };
+		C304919923672DCA00B2FC2C /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
+		C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSwitchViewController.swift; sourceTree = "<group>"; };
+		C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSwitchViewController.xib; sourceTree = "<group>"; };
 		C31D26D222E8AA2B00A50386 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C32762C7235DF285006E3434 /* DisplayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUtil.swift; sourceTree = "<group>"; };
 		C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +307,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C304919823672D2400B2FC2C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C304919423672BD200B2FC2C /* BasicPickerViewDemoViewController.swift */,
+				C304919523672BD200B2FC2C /* BasicPickerViewDemoViewController.xib */,
+				C304919923672DCA00B2FC2C /* MealsViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		C304919B2367343800B2FC2C /* BasicSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */,
+				C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */,
+			);
+			path = BasicSwitch;
+			sourceTree = "<group>";
+		};
 		C31D26D122E8A9EA00A50386 /* BasicGrammar */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +758,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C304919B2367343800B2FC2C /* BasicSwitch */,
 				C3D14A23236337A600A0C897 /* BasicPicker */,
 				C3D14A1E236330B300A0C897 /* BasicDatePicker */,
 				C37020DF2361E12D00895D6F /* BasicImage */,
@@ -922,6 +952,7 @@
 		C3D14A23236337A600A0C897 /* BasicPicker */ = {
 			isa = PBXGroup;
 			children = (
+				C304919823672D2400B2FC2C /* Demo */,
 				C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */,
 				C3D14A25236337B400A0C897 /* BasicPickerViewController.xib */,
 				C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */,
@@ -1108,6 +1139,7 @@
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
+				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
@@ -1124,6 +1156,7 @@
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
 				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
+				C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
@@ -1167,6 +1200,7 @@
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
+				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
@@ -1175,6 +1209,7 @@
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
+				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
@@ -1220,6 +1255,7 @@
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
+				C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */,
 				C351598223093E0300848456 /* AlertViewUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
