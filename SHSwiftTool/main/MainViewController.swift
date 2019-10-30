@@ -30,6 +30,8 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicPicker: UIButton!
     @IBOutlet var buttonBasicPickerDemo: UIButton!
     @IBOutlet var buttonBasicSwitch: UIButton!
+    @IBOutlet var buttonSegment: UIButton!
+    @IBOutlet var buttonProgress: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,10 @@ class MainViewController: UIViewController {
         buttonBasicPickerDemo.addTarget(self, action: #selector(self.onButtonBasicPickerDemoClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicSwitch.addTarget(self, action: #selector(self.onButtonBasicSwitchClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonSegment.addTarget(self, action: #selector(self.onButtonSegmentClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonProgress.addTarget(self, action: #selector(self.onButtonProgressClick(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -155,6 +161,16 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicSwitchClick(_ send: UIButton) {
         let basicSwitchViewController = BasicSwitchViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicSwitchViewController)
+    }
+    
+    @objc private func onButtonSegmentClick(_ send: UIButton) {
+        let basicSegmentViewController = BasicSegmentViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicSegmentViewController)
+    }
+    
+    @objc private func onButtonProgressClick(_ send: UIButton) {
+        let basicProgressViewController = BasicProgressViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicProgressViewController)
     }
     
     private func basicConsoleTest() {

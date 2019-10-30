@@ -146,6 +146,10 @@
 		C3DECD2E235F4AE400AEA02D /* SoftKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */; };
 		C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */; };
 		C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */; };
+		C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF1B822369C83B006FB168 /* BasicSegmentViewController.swift */; };
+		C3EF1B852369C83B006FB168 /* BasicSegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */; };
+		C3EF1B892369D0FE006FB168 /* BasicProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */; };
+		C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EF1B882369D0FE006FB168 /* BasicProgressViewController.xib */; };
 		C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */; };
 		C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */; };
 /* End PBXBuildFile section */
@@ -292,6 +296,10 @@
 		C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftKeyboardUtil.swift; sourceTree = "<group>"; };
 		C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonViewController.swift; sourceTree = "<group>"; };
 		C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicButtonViewController.xib; sourceTree = "<group>"; };
+		C3EF1B822369C83B006FB168 /* BasicSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSegmentViewController.swift; sourceTree = "<group>"; };
+		C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSegmentViewController.xib; sourceTree = "<group>"; };
+		C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProgressViewController.swift; sourceTree = "<group>"; };
+		C3EF1B882369D0FE006FB168 /* BasicProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProgressViewController.xib; sourceTree = "<group>"; };
 		C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlertViewController.swift; sourceTree = "<group>"; };
 		C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicAlertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -758,6 +766,8 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3EF1B862369D0EF006FB168 /* BasicProgress */,
+				C3EF1B802369C81A006FB168 /* BasicSegment */,
 				C304919B2367343800B2FC2C /* BasicSwitch */,
 				C3D14A23236337A600A0C897 /* BasicPicker */,
 				C3D14A1E236330B300A0C897 /* BasicDatePicker */,
@@ -1039,6 +1049,24 @@
 			path = BasicButton;
 			sourceTree = "<group>";
 		};
+		C3EF1B802369C81A006FB168 /* BasicSegment */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF1B822369C83B006FB168 /* BasicSegmentViewController.swift */,
+				C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */,
+			);
+			path = BasicSegment;
+			sourceTree = "<group>";
+		};
+		C3EF1B862369D0EF006FB168 /* BasicProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */,
+				C3EF1B882369D0FE006FB168 /* BasicProgressViewController.xib */,
+			);
+			path = BasicProgress;
+			sourceTree = "<group>";
+		};
 		C3F901492360875200C8CFD1 /* BasicAlert */ = {
 			isa = PBXGroup;
 			children = (
@@ -1109,6 +1137,7 @@
 				C3DD6B33230D88BC00BDDF5D /* icon_profile_un_selected@3x.png in Resources */,
 				C3DD6B0C230D850100BDDF5D /* icon_order_selected@2x.png in Resources */,
 				C3DD6B05230D850100BDDF5D /* icon_dashboard_un_selected@2x.png in Resources */,
+				C3EF1B852369C83B006FB168 /* BasicSegmentViewController.xib in Resources */,
 				C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */,
 				C3DD6B17230D85F800BDDF5D /* icon_product_un_selected.png in Resources */,
 				C37020E92361E44E00895D6F /* test_image_2.png in Resources */,
@@ -1155,6 +1184,7 @@
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
+				C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */,
 				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
 				C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
@@ -1198,6 +1228,7 @@
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
+				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
@@ -1232,6 +1263,7 @@
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,
 				C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */,
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
+				C3EF1B892369D0FE006FB168 /* BasicProgressViewController.swift in Sources */,
 				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
