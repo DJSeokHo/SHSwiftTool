@@ -13,6 +13,10 @@
 		C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */; };
 		C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */; };
 		C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D26D222E8AA2B00A50386 /* Shape.swift */; };
+		C31F5173236B1CFA00253938 /* BasicSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */; };
+		C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */; };
+		C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5176236B24E200253938 /* BasicStepperViewController.swift */; };
+		C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5177236B24E200253938 /* BasicStepperViewController.xib */; };
 		C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762C7235DF285006E3434 /* DisplayUtil.swift */; };
 		C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */; };
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
@@ -161,6 +165,10 @@
 		C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSwitchViewController.swift; sourceTree = "<group>"; };
 		C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSwitchViewController.xib; sourceTree = "<group>"; };
 		C31D26D222E8AA2B00A50386 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSliderViewController.swift; sourceTree = "<group>"; };
+		C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSliderViewController.xib; sourceTree = "<group>"; };
+		C31F5176236B24E200253938 /* BasicStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepperViewController.swift; sourceTree = "<group>"; };
+		C31F5177236B24E200253938 /* BasicStepperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicStepperViewController.xib; sourceTree = "<group>"; };
 		C32762C7235DF285006E3434 /* DisplayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUtil.swift; sourceTree = "<group>"; };
 		C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelViewController.swift; sourceTree = "<group>"; };
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
@@ -345,6 +353,24 @@
 				C34D31DF22E9E79100E22BC6 /* CardStruct.swift */,
 			);
 			path = BasicGrammar;
+			sourceTree = "<group>";
+		};
+		C31F5170236B1CE400253938 /* BasicSlider */ = {
+			isa = PBXGroup;
+			children = (
+				C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */,
+				C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */,
+			);
+			path = BasicSlider;
+			sourceTree = "<group>";
+		};
+		C31F5175236B24C800253938 /* BasicStepper */ = {
+			isa = PBXGroup;
+			children = (
+				C31F5176236B24E200253938 /* BasicStepperViewController.swift */,
+				C31F5177236B24E200253938 /* BasicStepperViewController.xib */,
+			);
+			path = BasicStepper;
 			sourceTree = "<group>";
 		};
 		C32762C6235DF272006E3434 /* Display */ = {
@@ -766,6 +792,8 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C31F5175236B24C800253938 /* BasicStepper */,
+				C31F5170236B1CE400253938 /* BasicSlider */,
 				C3EF1B862369D0EF006FB168 /* BasicProgress */,
 				C3EF1B802369C81A006FB168 /* BasicSegment */,
 				C304919B2367343800B2FC2C /* BasicSwitch */,
@@ -1164,6 +1192,7 @@
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
+				C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */,
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
@@ -1184,6 +1213,7 @@
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
+				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
 				C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */,
 				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
 				C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */,
@@ -1248,6 +1278,7 @@
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
+				C31F5173236B1CFA00253938 /* BasicSliderViewController.swift in Sources */,
 				C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */,
 				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
@@ -1282,6 +1313,7 @@
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,
+				C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,

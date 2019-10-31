@@ -17,6 +17,7 @@
                 <outlet property="buttonBasicNavigationController" destination="BFX-tW-lkn" id="ine-ra-URv"/>
                 <outlet property="buttonBasicPicker" destination="mar-8n-7jT" id="Z6b-Or-YVR"/>
                 <outlet property="buttonBasicPickerDemo" destination="fPX-NR-Goa" id="A89-jJ-8J2"/>
+                <outlet property="buttonBasicSlider" destination="l6W-2H-n4m" id="NkA-Kb-yZo"/>
                 <outlet property="buttonBasicSwitch" destination="FHz-hz-xNv" id="6YK-1N-viV"/>
                 <outlet property="buttonBasicTextField" destination="sf3-fu-yAy" id="vsy-1T-dgT"/>
                 <outlet property="buttonBasicTextView" destination="qn0-IR-GwQ" id="aqD-8l-fCp"/>
@@ -25,6 +26,7 @@
                 <outlet property="buttonLogin" destination="cdV-fr-df5" id="j8c-Ru-TTw"/>
                 <outlet property="buttonProgress" destination="veO-N4-T2u" id="17D-qg-Y5e"/>
                 <outlet property="buttonSegment" destination="5qa-c6-Bcc" id="ASz-XF-dLc"/>
+                <outlet property="buttonStepper" destination="PGM-v9-Mz1" id="Emv-nO-f63"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="KVB-ij-dh5"/>
             </connections>
         </placeholder>
@@ -162,6 +164,22 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic Progress">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6W-2H-n4m">
+                            <rect key="frame" x="0.0" y="304" width="155" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Slider">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGM-v9-Mz1">
+                            <rect key="frame" x="188" y="304" width="155" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Stepper">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
                     </subviews>

@@ -32,6 +32,8 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicSwitch: UIButton!
     @IBOutlet var buttonSegment: UIButton!
     @IBOutlet var buttonProgress: UIButton!
+    @IBOutlet var buttonBasicSlider: UIButton!
+    @IBOutlet var buttonStepper: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +78,10 @@ class MainViewController: UIViewController {
         buttonSegment.addTarget(self, action: #selector(self.onButtonSegmentClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonProgress.addTarget(self, action: #selector(self.onButtonProgressClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicSlider.addTarget(self, action: #selector(self.onButtonBasicSliderClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonStepper.addTarget(self, action: #selector(self.onButtonStepper(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -171,6 +177,16 @@ class MainViewController: UIViewController {
     @objc private func onButtonProgressClick(_ send: UIButton) {
         let basicProgressViewController = BasicProgressViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicProgressViewController)
+    }
+    
+    @objc private func onButtonBasicSliderClick(_ send: UIButton) {
+        let basicSliderViewController = BasicSliderViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicSliderViewController)
+    }
+    
+    @objc private func onButtonStepper(_ send: UIButton) {
+        let basicStepperViewController = BasicStepperViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicStepperViewController)
     }
     
     private func basicConsoleTest() {
