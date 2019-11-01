@@ -22,6 +22,8 @@
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
 		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
 		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
+		C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */; };
+		C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */; };
 		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
 		C34CB5762348A4E90067F851 /* Eatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5752348A4E90067F851 /* Eatable.swift */; };
 		C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB57B2348A5410067F851 /* AppleEatable.swift */; };
@@ -174,6 +176,8 @@
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
 		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
+		C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebViewController.swift; sourceTree = "<group>"; };
+		C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicWebViewController.xib; sourceTree = "<group>"; };
 		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C34CB5752348A4E90067F851 /* Eatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatable.swift; sourceTree = "<group>"; };
 		C34CB57B2348A5410067F851 /* AppleEatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEatable.swift; sourceTree = "<group>"; };
@@ -397,6 +401,15 @@
 				C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */,
 			);
 			path = BasicTextField;
+			sourceTree = "<group>";
+		};
+		C334AD9F236C68F200C2D0D9 /* BasicWebView */ = {
+			isa = PBXGroup;
+			children = (
+				C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */,
+				C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */,
+			);
+			path = BasicWebView;
 			sourceTree = "<group>";
 		};
 		C34D31E722E9EB9B00E22BC6 /* Protocol */ = {
@@ -792,6 +805,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C334AD9F236C68F200C2D0D9 /* BasicWebView */,
 				C31F5175236B24C800253938 /* BasicStepper */,
 				C31F5170236B1CE400253938 /* BasicSlider */,
 				C3EF1B862369D0EF006FB168 /* BasicProgress */,
@@ -1204,6 +1218,7 @@
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
 				C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
+				C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
@@ -1268,6 +1283,7 @@
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
+				C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */,
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
