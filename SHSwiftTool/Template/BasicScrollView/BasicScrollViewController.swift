@@ -1,5 +1,5 @@
 //
-//  BasicTableViewController.swift
+//  BasicScrollViewController.swift
 //  SHSwiftTool
 //
 //  Created by Seok Ho on 2019/11/03.
@@ -8,26 +8,37 @@
 
 import UIKit
 
-class BasicTableViewController: UIViewController {//}, UITableViewDelegate, UITableViewDataSource {
-   
+class BasicScrollViewController: UIViewController {
+
+    
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var contentView: UIView!
+    
     @IBAction func onButtonCloseClick(_ sender: UIButton) {
+        
         ViewControllerUtil.finishSelf(view: self)
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
+        
+        scrollView.contentSize = CGSize(width: contentView.frame.size.width, height: contentView.frame.size.height)
+        
+        
+        scrollView.addSubview(contentView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
     }
 
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//       <#code#>
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//       <#code#>
-//    }
-    
+
     /*
     // MARK: - Navigation
 

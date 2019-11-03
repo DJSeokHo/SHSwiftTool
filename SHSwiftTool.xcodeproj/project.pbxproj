@@ -101,6 +101,8 @@
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
+		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
+		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
 		C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */; };
 		C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */; };
 		C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */; };
@@ -259,6 +261,8 @@
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
+		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
 		C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDatePickerViewController.swift; sourceTree = "<group>"; };
 		C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicDatePickerViewController.xib; sourceTree = "<group>"; };
 		C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewController.swift; sourceTree = "<group>"; };
@@ -809,6 +813,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3B1E94B236EA36B00DCD7EE /* BasicScrollView */,
 				C3D36248236E8478001B8ACB /* BasicTableView */,
 				C334AD9F236C68F200C2D0D9 /* BasicWebView */,
 				C31F5175236B24C800253938 /* BasicStepper */,
@@ -995,6 +1000,15 @@
 				C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */,
 			);
 			path = Camera;
+			sourceTree = "<group>";
+		};
+		C3B1E94B236EA36B00DCD7EE /* BasicScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */,
+				C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */,
+			);
+			path = BasicScrollView;
 			sourceTree = "<group>";
 		};
 		C3D14A1E236330B300A0C897 /* BasicDatePicker */ = {
@@ -1224,6 +1238,7 @@
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
+				C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */,
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
@@ -1292,6 +1307,7 @@
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
+				C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
