@@ -106,6 +106,8 @@
 		C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */; };
 		C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D14A25236337B400A0C897 /* BasicPickerViewController.xib */; };
 		C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */; };
+		C3D3624B236E849D001B8ACB /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D36249236E849D001B8ACB /* BasicTableViewController.swift */; };
+		C3D3624C236E849D001B8ACB /* BasicTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D3624A236E849D001B8ACB /* BasicTableViewController.xib */; };
 		C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D731222358686200C02EC3 /* BasicUIViewController.swift */; };
 		C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D731232358686200C02EC3 /* BasicUIViewController.xib */; };
 		C3DB2ADD2351B09700D1A621 /* BasicFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB2ADC2351B09700D1A621 /* BasicFoundation.swift */; };
@@ -262,6 +264,8 @@
 		C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewController.swift; sourceTree = "<group>"; };
 		C3D14A25236337B400A0C897 /* BasicPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPickerViewController.xib; sourceTree = "<group>"; };
 		C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerViewController.swift; sourceTree = "<group>"; };
+		C3D36249236E849D001B8ACB /* BasicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
+		C3D3624A236E849D001B8ACB /* BasicTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewController.xib; sourceTree = "<group>"; };
 		C3D731222358686200C02EC3 /* BasicUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUIViewController.swift; sourceTree = "<group>"; };
 		C3D731232358686200C02EC3 /* BasicUIViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicUIViewController.xib; sourceTree = "<group>"; };
 		C3DB2ADC2351B09700D1A621 /* BasicFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFoundation.swift; sourceTree = "<group>"; };
@@ -805,6 +809,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3D36248236E8478001B8ACB /* BasicTableView */,
 				C334AD9F236C68F200C2D0D9 /* BasicWebView */,
 				C31F5175236B24C800253938 /* BasicStepper */,
 				C31F5170236B1CE400253938 /* BasicSlider */,
@@ -1010,6 +1015,15 @@
 				C3D14A2823633C7D00A0C897 /* CustomPickerViewController.swift */,
 			);
 			path = BasicPicker;
+			sourceTree = "<group>";
+		};
+		C3D36248236E8478001B8ACB /* BasicTableView */ = {
+			isa = PBXGroup;
+			children = (
+				C3D36249236E849D001B8ACB /* BasicTableViewController.swift */,
+				C3D3624A236E849D001B8ACB /* BasicTableViewController.xib */,
+			);
+			path = BasicTableView;
 			sourceTree = "<group>";
 		};
 		C3D731212358684400C02EC3 /* BasicUIViewController */ = {
@@ -1226,6 +1240,7 @@
 				C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
+				C3D3624C236E849D001B8ACB /* BasicTableViewController.xib in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
@@ -1312,6 +1327,7 @@
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
 				C3EF1B892369D0FE006FB168 /* BasicProgressViewController.swift in Sources */,
 				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
+				C3D3624B236E849D001B8ACB /* BasicTableViewController.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,

@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicSlider: UIButton!
     @IBOutlet var buttonStepper: UIButton!
     @IBOutlet var buttonBasicWebView: UIButton!
+    @IBOutlet var buttonBasicTableView: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +86,8 @@ class MainViewController: UIViewController {
         buttonStepper.addTarget(self, action: #selector(self.onButtonStepper(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicWebView.addTarget(self, action: #selector(self.onButtonBasicWebView(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicTableView.addTarget(self, action: #selector(self.onButtonTableViewClick(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -195,6 +198,11 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicWebView(_ send: UIButton) {
         let basicWebViewController = BasicWebViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicWebViewController)
+    }
+    
+    @objc private func onButtonTableViewClick(_ send: UIButton) {
+        let basicTableViewController = BasicTableViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicTableViewController)
     }
     
     private func basicConsoleTest() {
