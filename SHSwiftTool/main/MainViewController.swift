@@ -37,6 +37,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicWebView: UIButton!
     @IBOutlet var buttonBasicTableView: UIButton!
     @IBOutlet var buttonBasicScrollView: UIButton!
+    @IBOutlet var buttonBasicViewPager: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +92,8 @@ class MainViewController: UIViewController {
         buttonBasicTableView.addTarget(self, action: #selector(self.onButtonTableViewClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicScrollView.addTarget(self, action: #selector(self.onButtonBasicScrollClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicViewPager.addTarget(self, action: #selector(self.onButtonBasicViewPager(_:)), for: UIControl.Event.touchUpInside)
     }
     
     /*
@@ -211,6 +214,11 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicScrollClick(_ send: UIButton) {
         let basicScrollViewController = BasicScrollViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicScrollViewController)
+    }
+    
+    @objc private func onButtonBasicViewPager(_ send: UIButton) {
+        let basicViewPagerViewController = BasicViewPagerViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicViewPagerViewController)
     }
     
     private func basicConsoleTest() {

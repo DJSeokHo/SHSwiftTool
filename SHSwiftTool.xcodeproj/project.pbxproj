@@ -66,6 +66,8 @@
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
 		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
+		C36A2337237068AB009748AE /* BasicViewPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */; };
+		C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */; };
 		C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37020E02361E14500895D6F /* BasicImageViewController.swift */; };
 		C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37020E12361E14500895D6F /* BasicImageViewController.xib */; };
 		C37020E72361E44E00895D6F /* test_image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C37020E42361E44E00895D6F /* test_image_3.png */; };
@@ -224,6 +226,8 @@
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
+		C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewPagerViewController.swift; sourceTree = "<group>"; };
+		C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicViewPagerViewController.xib; sourceTree = "<group>"; };
 		C37020E02361E14500895D6F /* BasicImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImageViewController.swift; sourceTree = "<group>"; };
 		C37020E12361E14500895D6F /* BasicImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicImageViewController.xib; sourceTree = "<group>"; };
 		C37020E42361E44E00895D6F /* test_image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image_3.png; sourceTree = "<group>"; };
@@ -753,6 +757,15 @@
 			path = BasicCheckAPICanUsable;
 			sourceTree = "<group>";
 		};
+		C36A233423706887009748AE /* BasicViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */,
+				C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */,
+			);
+			path = BasicViewPager;
+			sourceTree = "<group>";
+		};
 		C37020DF2361E12D00895D6F /* BasicImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +826,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C36A233423706887009748AE /* BasicViewPager */,
 				C3B1E94B236EA36B00DCD7EE /* BasicScrollView */,
 				C3D36248236E8478001B8ACB /* BasicTableView */,
 				C334AD9F236C68F200C2D0D9 /* BasicWebView */,
@@ -1251,6 +1265,7 @@
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
+				C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
 				C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
@@ -1318,6 +1333,7 @@
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
+				C36A2337237068AB009748AE /* BasicViewPagerViewController.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
