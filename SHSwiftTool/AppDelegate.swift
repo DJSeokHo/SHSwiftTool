@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
        
-        initMainViewController()
+//        initMainViewController()
 //        initBottomTabBar()
-//        initBottomTabBarWithNavigation()
+        initBottomTabBarWithNavigation()
         
         return true
     }
@@ -36,71 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // make navigation controller as window root view controller
         //        self.window!.rootViewController = navigationController
         window!.rootViewController = mainViewController
-        window!.makeKeyAndVisible()
-    }
-    
-    /*
-     UITabBarController通常最为整个程序的rootViewController，而且不能添加到别的视图控制器中，
-     UITabBarController主要用来管理用户提供的包含各种内容的子视图控制器，
-     而每一个子视图控制器则负责管理自己的视图层级关系。
-     
-     @1x : 推荐 25 x 25   (最大: 48 x 32)
-     @2x : 推荐 50 x 50   (最大: 96 x 64)
-     @3x : 推荐 75 x 75   (最大: 144 x 96)
-     */
-    private func initBottomTabBar() {
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.backgroundColor = UIColor.white
-        
-        let dashboardViewController = DashboardViewController()
-        dashboardViewController.tabBarItem.image = UIImage(named: "icon_dashboard_un_selected")?.withRenderingMode(.alwaysOriginal)
-        dashboardViewController.tabBarItem.selectedImage = UIImage(named: "icon_dashboard_selected")?.withRenderingMode(.alwaysOriginal)
-        dashboardViewController.tabBarItem.title = DashboardViewController.TITLE
-        
-        let clientViewController = ClientViewController()
-        clientViewController.tabBarItem.image = UIImage(named: "icon_client_un_selected")?.withRenderingMode(.alwaysOriginal)
-        clientViewController.tabBarItem.selectedImage = UIImage(named: "icon_client_selected")?.withRenderingMode(.alwaysOriginal)
-        clientViewController.tabBarItem.title = ClientViewController.TITLE
-        
-        let productViewController = ProductViewController()
-        productViewController.tabBarItem.image = UIImage(named: "icon_product_un_selected")?.withRenderingMode(.alwaysOriginal)
-        productViewController.tabBarItem.selectedImage = UIImage(named: "icon_product_selected")?.withRenderingMode(.alwaysOriginal)
-        productViewController.tabBarItem.title = ProductViewController.TITLE
-        
-        
-        let orderViewController = OrderViewController()
-        orderViewController.tabBarItem.image = UIImage(named: "icon_order_un_selected")?.withRenderingMode(.alwaysOriginal)
-        orderViewController.tabBarItem.selectedImage = UIImage(named: "icon_order_selected")?.withRenderingMode(.alwaysOriginal)
-        orderViewController.tabBarItem.title = OrderViewController.TITLE
-        
-        
-        let profileViewController = ProfileViewController()
-        profileViewController.tabBarItem.image = UIImage(named: "icon_profile_un_selected")?.withRenderingMode(.alwaysOriginal)
-        profileViewController.tabBarItem.selectedImage = UIImage(named: "icon_profile_selected")?.withRenderingMode(.alwaysOriginal)
-        profileViewController.tabBarItem.title = ProfileViewController.TITLE
-        
-        let tabBarController = UITabBarController()
-        // tabBarController的主题颜色
-        tabBarController.tabBar.tintColor = UIColor.init(red: 9/255.0, green: 187/255.0, blue: 7/255.0, alpha: 1)
-        
-        // 修改标签栏选中时文字颜色、字体
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .selected)
-        
-        // 修改标签栏未选中时文字颜色、字体
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
-        
-        // tabBarController的子视图控制器集合
-        tabBarController.viewControllers = [
-            dashboardViewController,
-            clientViewController,
-            productViewController,
-            orderViewController,
-            profileViewController
-        ]
-        
-        // 添加到rootViewController
-        window?.rootViewController = tabBarController
         window!.makeKeyAndVisible()
     }
     
@@ -174,8 +109,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         window!.rootViewController = tabBarController
         window!.makeKeyAndVisible()
-        
     }
+    
+    /*
+     UITabBarController通常最为整个程序的rootViewController，而且不能添加到别的视图控制器中，
+     UITabBarController主要用来管理用户提供的包含各种内容的子视图控制器，
+     而每一个子视图控制器则负责管理自己的视图层级关系。
+     
+     @1x : 推荐 25 x 25   (最大: 48 x 32)
+     @2x : 推荐 50 x 50   (最大: 96 x 64)
+     @3x : 推荐 75 x 75   (最大: 144 x 96)
+     */
+//    private func initBottomTabBar() {
+//
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window!.backgroundColor = UIColor.white
+//
+//        let dashboardViewController = DashboardViewController()
+//        dashboardViewController.tabBarItem.image = UIImage(named: "icon_dashboard_un_selected")?.withRenderingMode(.alwaysOriginal)
+//        dashboardViewController.tabBarItem.selectedImage = UIImage(named: "icon_dashboard_selected")?.withRenderingMode(.alwaysOriginal)
+//        dashboardViewController.tabBarItem.title = DashboardViewController.TITLE
+//
+//        let clientViewController = ClientViewController()
+//        clientViewController.tabBarItem.image = UIImage(named: "icon_client_un_selected")?.withRenderingMode(.alwaysOriginal)
+//        clientViewController.tabBarItem.selectedImage = UIImage(named: "icon_client_selected")?.withRenderingMode(.alwaysOriginal)
+//        clientViewController.tabBarItem.title = ClientViewController.TITLE
+//
+//        let productViewController = ProductViewController()
+//        productViewController.tabBarItem.image = UIImage(named: "icon_product_un_selected")?.withRenderingMode(.alwaysOriginal)
+//        productViewController.tabBarItem.selectedImage = UIImage(named: "icon_product_selected")?.withRenderingMode(.alwaysOriginal)
+//        productViewController.tabBarItem.title = ProductViewController.TITLE
+//
+//        let orderViewController = OrderViewController()
+//        orderViewController.tabBarItem.image = UIImage(named: "icon_order_un_selected")?.withRenderingMode(.alwaysOriginal)
+//        orderViewController.tabBarItem.selectedImage = UIImage(named: "icon_order_selected")?.withRenderingMode(.alwaysOriginal)
+//        orderViewController.tabBarItem.title = OrderViewController.TITLE
+//
+//        let profileViewController = ProfileViewController()
+//        profileViewController.tabBarItem.image = UIImage(named: "icon_profile_un_selected")?.withRenderingMode(.alwaysOriginal)
+//        profileViewController.tabBarItem.selectedImage = UIImage(named: "icon_profile_selected")?.withRenderingMode(.alwaysOriginal)
+//        profileViewController.tabBarItem.title = ProfileViewController.TITLE
+//
+//        let tabBarController = UITabBarController()
+//        // tabBarController的主题颜色
+//        tabBarController.tabBar.tintColor = UIColor.init(red: 9/255.0, green: 187/255.0, blue: 7/255.0, alpha: 1)
+//
+//        // 修改标签栏选中时文字颜色、字体
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .selected)
+//
+//        // 修改标签栏未选中时文字颜色、字体
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12.0)], for: .normal)
+//
+//        // tabBarController的子视图控制器集合
+//        tabBarController.viewControllers = [
+//            dashboardViewController,
+//            clientViewController,
+//            productViewController,
+//            orderViewController,
+//            profileViewController
+//        ]
+//
+//        // 添加到rootViewController
+//        window?.rootViewController = tabBarController
+//        window!.makeKeyAndVisible()
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

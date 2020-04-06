@@ -38,16 +38,17 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicTableView: UIButton!
     @IBOutlet var buttonBasicScrollView: UIButton!
     @IBOutlet var buttonBasicViewPager: UIButton!
+    @IBOutlet var buttonClose: UIButton!
+    @IBOutlet var buttonBaseicConsoleTest: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         ILog.debug(tag: MainViewController.TAG, content: "viewDidLoad")
-        basicConsoleTest()
         
         setListener()
-    
+
     }
     
     private func setListener() {
@@ -94,6 +95,19 @@ class MainViewController: UIViewController {
         buttonBasicScrollView.addTarget(self, action: #selector(self.onButtonBasicScrollClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicViewPager.addTarget(self, action: #selector(self.onButtonBasicViewPager(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonClose.addTarget(self , action: #selector(self.onButtonCloseClick), for: UIControl.Event.touchUpInside)
+        
+        
+        buttonBaseicConsoleTest.addTarget(self , action: #selector(self.onButtonBaseicConsoleTest), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonBaseicConsoleTest(_ sender: UIButton) {
+       basicConsoleTest()
+    }
+    
+    @objc private func onButtonCloseClick(_ sender: UIButton) {
+        ViewControllerUtil.finishSelf(view: self)
     }
     
     /*
@@ -224,15 +238,15 @@ class MainViewController: UIViewController {
     private func basicConsoleTest() {
         showPaths()
 
-//        let basicConsoleTest = BasicConsoleTest()
-//        basicConsoleTest.basicGrammarTest()
-//        basicConsoleTest.basicStringTest()
-//        basicConsoleTest.basicCollectionTest()
-//        basicConsoleTest.basicControlFlowTest()
-//        basicConsoleTest.basicFunctionTest()
-//        basicConsoleTest.basicClassAndStruct()
+        let basicConsoleTest = BasicConsoleTest()
+        basicConsoleTest.basicGrammarTest()
+        basicConsoleTest.basicStringTest()
+        basicConsoleTest.basicCollectionTest()
+        basicConsoleTest.basicControlFlowTest()
+        basicConsoleTest.basicFunctionTest()
+        basicConsoleTest.basicClassAndStruct()
 //        basicConsoleTest.basicInherit()
-//        basicConsoleTest.basicFoundation()
+        basicConsoleTest.basicFoundation()
     }
    
     private func showPaths() {

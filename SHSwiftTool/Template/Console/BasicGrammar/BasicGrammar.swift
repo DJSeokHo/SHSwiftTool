@@ -64,11 +64,13 @@ class BasicGrammer {
         print(shoppingList[shoppingList.count - 1])
         
         // 新建一个空字符串数组
-        var emptyArray = [String]()
+        var emptyArray: Array<Any> = []
         emptyArray.append("1")
-        emptyArray.append("2")
+        emptyArray.append(2)
         
-        print(emptyArray[0])
+        for index in 0...emptyArray.count - 1 {
+            print("index \(index) is \(emptyArray[index])")
+        }
     }
     
     /*
@@ -76,25 +78,25 @@ class BasicGrammer {
     */
     func makeDictionary() {
         
-        var peopleDictionary = [
+        let peopleDictionary: Dictionary<String, String> = [
             "name": "haha",
             "age": "20",
-        ] as [String: String]
+        ]
         
         // 未强制解析 - 未强制拆包
         print(peopleDictionary["name"])
         
         
-        var peopleAnyDictionary = [
+        let peopleAnyDictionary: Dictionary<String, Any> = [
             "name": "haha",
             "age": 20,
-        ] as [String: Any]
+        ]
         
         // 惊叹号是强制解析 - 强制拆包
         print(peopleAnyDictionary["age"]!)
         
         // 新建一个新的字典
-        var emptyDictionary = [String: Any]()
+        var emptyDictionary: Dictionary<String, Any> = [:]
         emptyDictionary["name"] = "hehe"
         emptyDictionary["age"] = 40
         
@@ -155,11 +157,15 @@ class BasicGrammer {
             print(number)
         }
         print("-------------------------")
+        
         /* 0..5 0到5， 0..<5 0到4 */
         for i in 0..<numberArray.count {
             print(numberArray[i])
         }
         
+        for i in 0...numberArray.count - 1 {
+            print(numberArray[i])
+        }
     }
     
     /*
