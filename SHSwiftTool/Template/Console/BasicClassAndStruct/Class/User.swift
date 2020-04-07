@@ -13,6 +13,20 @@ class User {
     var last: String = ""
     
     /*
+     构造器
+     */
+    init() {
+        
+    }
+    
+    /*
+     析构器
+     */
+    deinit {
+        print("deinit")
+    }
+    
+    /*
      带set和get的属性
     */
     var fullName: String {

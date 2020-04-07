@@ -51,8 +51,6 @@ class FunctionTypeParameter {
         // 函数类型作为参数类型
         printMathResult(addTwoInts, 3, 5)
         
-        // 嵌套函数
-        
     }
     
 }

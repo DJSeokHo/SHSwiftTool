@@ -16,6 +16,20 @@ class Person {
     var name: String = ""
     var age: Int = 0
     
+    /*
+     构造器
+     */
+    init() {
+        
+    }
+    
+    /*
+     析构器
+     */
+    deinit {
+        print("deinit")
+    }
+    
     /* 带属性观察者的属性 */
     var fullName: String = "" {
         

@@ -23,21 +23,17 @@ class BasicEnum {
         switch someEnum {
             
             case SomeEnum.up:
-                break
+                print("up")
             
             case SomeEnum.down:
-                break
+                print("down")
             
             case SomeEnum.left:
-                break
+                print("left")
             
             case SomeEnum.right:
-                break
-            
-            default:
-                print("not match")
+                print("right")
         }
-        
     }
     
     /*

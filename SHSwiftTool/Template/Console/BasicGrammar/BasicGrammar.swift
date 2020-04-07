@@ -71,6 +71,11 @@ class BasicGrammer {
         for index in 0...emptyArray.count - 1 {
             print("index \(index) is \(emptyArray[index])")
         }
+        
+        // 如果同时需要每个数据项的值和索引值，可以使用 enumerated() 方法来进行数组遍历
+        for (index, value) in emptyArray.enumerated() {
+            print("index \(index) is \(value)")
+        }
     }
     
     /*
@@ -101,6 +106,11 @@ class BasicGrammer {
         emptyDictionary["age"] = 40
         
         print(emptyDictionary["name"]!)
+        
+        // 字典遍历
+        for (key, value) in emptyDictionary {
+            print("key is \(key) and value is \(value)")
+        }
     }
     
     

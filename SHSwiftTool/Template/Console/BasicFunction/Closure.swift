@@ -10,6 +10,16 @@ import Foundation
 
 class Closure {
     
+    /*
+     
+     闭包表达式语法有如下的一般形式
+
+     { (parameters) -> return type in
+         statements
+     }
+     
+     */
+    
     public static let TAG = "Closure"
     
     /*
