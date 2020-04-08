@@ -149,6 +149,7 @@ class BasicConsoleTest {
         classAndStruct.selectableTest()
         classAndStruct.inheritTest()
         classAndStruct.checkObjectType()
+        classAndStruct.protocolTest()
     }
     
     func basicFoundation() {

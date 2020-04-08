@@ -105,6 +105,10 @@
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
+		C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */; };
+		C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045A243E153B009B4456 /* ProtocolTest.swift */; };
+		C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */; };
+		C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045E243E1CF0009B4456 /* ProtocolTestDemo.swift */; };
 		C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */; };
 		C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */; };
 		C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */; };
@@ -267,6 +271,10 @@
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
+		C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestImpl.swift; sourceTree = "<group>"; };
+		C3CD045A243E153B009B4456 /* ProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
+		C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUseTest.swift; sourceTree = "<group>"; };
+		C3CD045E243E1CF0009B4456 /* ProtocolTestDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestDemo.swift; sourceTree = "<group>"; };
 		C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDatePickerViewController.swift; sourceTree = "<group>"; };
 		C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicDatePickerViewController.xib; sourceTree = "<group>"; };
 		C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewController.swift; sourceTree = "<group>"; };
@@ -618,6 +626,7 @@
 		C359FE2122F08D6500D0009E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				C3CD0457243E14F6009B4456 /* ProtocolAsParameter */,
 				C34CB5752348A4E90067F851 /* Eatable.swift */,
 				C34CB57B2348A5410067F851 /* AppleEatable.swift */,
 			);
@@ -1025,6 +1034,17 @@
 			path = BasicScrollView;
 			sourceTree = "<group>";
 		};
+		C3CD0457243E14F6009B4456 /* ProtocolAsParameter */ = {
+			isa = PBXGroup;
+			children = (
+				C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */,
+				C3CD045A243E153B009B4456 /* ProtocolTest.swift */,
+				C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */,
+				C3CD045E243E1CF0009B4456 /* ProtocolTestDemo.swift */,
+			);
+			path = ProtocolAsParameter;
+			sourceTree = "<group>";
+		};
 		C3D14A1E236330B300A0C897 /* BasicDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1301,6 +1321,7 @@
 			files = (
 				C34D31E222E9EA6C00E22BC6 /* ExampleProtocol.swift in Sources */,
 				C3DB2ADD2351B09700D1A621 /* BasicFoundation.swift in Sources */,
+				C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */,
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
@@ -1319,6 +1340,7 @@
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
+				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
@@ -1327,6 +1349,7 @@
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
+				C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
 				C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */,
@@ -1372,6 +1395,7 @@
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
 				C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */,
+				C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */,
 				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,

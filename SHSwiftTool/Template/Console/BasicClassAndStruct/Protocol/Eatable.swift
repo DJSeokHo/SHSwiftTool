@@ -9,6 +9,11 @@
 import Foundation
 
 protocol Eatable {
+    
+    static var TAG: String { get }
+    
+    var name: String { set get }
+
     func taste()
     func test(_ massages: String...)
     

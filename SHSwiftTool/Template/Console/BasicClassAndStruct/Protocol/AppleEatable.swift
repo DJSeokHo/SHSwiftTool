@@ -9,27 +9,27 @@
 import Foundation
 
 class AppleEatable: Eatable {
-   
-    public static let TAG: String = "AppleEatable"
     
-    var name: String = ""
+    public static var TAG: String = "AppleEatable"
     
-    func taste() {
+    public var name: String = ""
+    
+    public func taste() {
         print("apple taste")
     }
  
-    func test(_ massages: String...) {
+    public func test(_ massages: String...) {
         
         for message in massages {
             print(message)
         }
     }
     
-    static func info(_ peopleName: String) {
+    public static func info(_ peopleName: String) {
         print("Hey \(peopleName), this is apple")
     }
     
-    func drop() {
+    public func drop() {
         print("drop me")
     }
 }

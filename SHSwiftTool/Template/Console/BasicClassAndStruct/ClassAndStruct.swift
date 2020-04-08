@@ -125,10 +125,11 @@ class ClassAndStruct {
     
     func extensionTest() {
         print(String.TAG)
-        print(String.info())
     }
     
     func protocolTest() {
+        print("protocolTest")
+        
         print(AppleEatable.TAG)
         let appleEatable: AppleEatable!
         appleEatable = AppleEatable()
@@ -136,6 +137,9 @@ class ClassAndStruct {
         appleEatable.test("haha", "hehe")
         
         AppleEatable.info("sh")
+        
+        let protocolTestDemo = ProtocolTestDemo()
+        protocolTestDemo.test()
     }
 }
 
