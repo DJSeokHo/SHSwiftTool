@@ -52,7 +52,7 @@ class BasicTextViewViewController: UIViewController, UITextViewDelegate {
         textView!.returnKeyType = UIReturnKeyType.default
         
         textView!.isEditable = true
-        
+        textView!.isSelectable = true
         
         let fullScreenSize = DisplayUtil.getFullScreenSize()
 
@@ -60,8 +60,8 @@ class BasicTextViewViewController: UIViewController, UITextViewDelegate {
 
         self.view.addSubview(textView!)
         
+        
         // 定义选取文字后弹出的菜单按钮项
-        textView!.isSelectable = true
         let mailMenuItemAfterSelectContentOfTextView = UIMenuItem(title: "mail", action: #selector(self.onMenuMailClick))
         
         let menu = UIMenuController.shared
