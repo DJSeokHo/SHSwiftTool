@@ -70,8 +70,8 @@ class BasicDatePickerViewController: UIViewController {
         
         datePicker.locale = Locale(identifier: "zh_TW")
         
+        // set date value change listener
         datePicker.addTarget(self, action: #selector(onDatePickerChanged), for: UIControl.Event.valueChanged)
-        
     }
     
     @objc private func onDatePickerChanged() {
