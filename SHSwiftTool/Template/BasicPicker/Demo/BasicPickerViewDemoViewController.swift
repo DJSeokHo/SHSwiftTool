@@ -101,6 +101,9 @@ class BasicPickerViewDemoViewController: UIViewController, UIPickerViewDelegate,
         self.view.endEditing(true)
     }
     
+    /*
+     date picker 值改变的监听
+     */
     @objc private func datePickerChanged(datePicker:UIDatePicker) {
       
         let textField = self.view?.viewWithTag(200) as? UITextField
@@ -108,11 +111,16 @@ class BasicPickerViewDemoViewController: UIViewController, UIPickerViewDelegate,
         textField?.text = formatter.string(from: datePicker.date)
     }
     
-    
+    /*
+     一般的picker view 有几列
+     */
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
        return 1
     }
    
+    /*
+     picker view 有几行
+     */
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
        return meals.count
     }
@@ -136,7 +144,6 @@ class BasicPickerViewDemoViewController: UIViewController, UIPickerViewDelegate,
         textField?.text = meals[row]
     }
     
-
 
     /*
     // MARK: - Navigation
