@@ -79,13 +79,13 @@ class BasicProgressViewController: UIViewController {
     @objc private func onButtonClick() {
         // 读取进度条时冻结按钮
         button.isEnabled = false
-
+        button.backgroundColor = UIColor.red
        
         progressView.progress = 0
         activityIndicator.startAnimating()
 
         // 建立一個 NSTimer
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(showProgress), userInfo: ["test":"for userInfo test"], repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(showProgress), userInfo: ["test":"for userInfo test"], repeats: true)
       
     }
 
@@ -94,7 +94,7 @@ class BasicProgressViewController: UIViewController {
      */
     @objc private func showProgress(sender: Timer) {
        
-        count += 5
+        count += 1
 
         // 添加进度
         progressView.progress = Float(count) / Float(complete)
@@ -115,6 +115,7 @@ class BasicProgressViewController: UIViewController {
 
             // 解除被冻结的按钮
             button.isEnabled = true
+            button.backgroundColor = UIColor.blue
         }
     }
     
