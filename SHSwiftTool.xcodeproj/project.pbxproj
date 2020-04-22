@@ -68,6 +68,8 @@
 		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
 		C36A2337237068AB009748AE /* BasicViewPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */; };
 		C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */; };
+		C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36C66A52450AF860081E862 /* BasicGroupTableViewController.swift */; };
+		C36C66A82450AF860081E862 /* BasicGroupTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36C66A62450AF860081E862 /* BasicGroupTableViewController.xib */; };
 		C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37020E02361E14500895D6F /* BasicImageViewController.swift */; };
 		C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37020E12361E14500895D6F /* BasicImageViewController.xib */; };
 		C37020E72361E44E00895D6F /* test_image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = C37020E42361E44E00895D6F /* test_image_3.png */; };
@@ -232,6 +234,8 @@
 		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
 		C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewPagerViewController.swift; sourceTree = "<group>"; };
 		C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicViewPagerViewController.xib; sourceTree = "<group>"; };
+		C36C66A52450AF860081E862 /* BasicGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGroupTableViewController.swift; sourceTree = "<group>"; };
+		C36C66A62450AF860081E862 /* BasicGroupTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicGroupTableViewController.xib; sourceTree = "<group>"; };
 		C37020E02361E14500895D6F /* BasicImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImageViewController.swift; sourceTree = "<group>"; };
 		C37020E12361E14500895D6F /* BasicImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicImageViewController.xib; sourceTree = "<group>"; };
 		C37020E42361E44E00895D6F /* test_image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image_3.png; sourceTree = "<group>"; };
@@ -1070,6 +1074,8 @@
 			children = (
 				C3D36249236E849D001B8ACB /* BasicTableViewController.swift */,
 				C3D3624A236E849D001B8ACB /* BasicTableViewController.xib */,
+				C36C66A52450AF860081E862 /* BasicGroupTableViewController.swift */,
+				C36C66A62450AF860081E862 /* BasicGroupTableViewController.xib */,
 			);
 			path = BasicTableView;
 			sourceTree = "<group>";
@@ -1262,6 +1268,7 @@
 				C3DD6B34230D88BC00BDDF5D /* icon_profile_selected@3x.png in Resources */,
 				C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */,
 				C3DD6B1A230D85F800BDDF5D /* icon_order_selectedpng.png in Resources */,
+				C36C66A82450AF860081E862 /* BasicGroupTableViewController.xib in Resources */,
 				C3DD6B16230D85F800BDDF5D /* icon_client_selected.png in Resources */,
 				C3DD6AF7230D84C100BDDF5D /* icon_dashboard_selected@3x.png in Resources */,
 				C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */,
@@ -1391,6 +1398,7 @@
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
+				C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */,
 				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,

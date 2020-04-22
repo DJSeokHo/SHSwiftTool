@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicTableViewController: UIViewController {//}, UITableViewDelegate, UITableViewDataSource {
+class BasicTableViewController: UIViewController {
    
     @IBAction func onButtonCloseClick(_ sender: UIButton) {
         ViewControllerUtil.finishSelf(view: self)
@@ -19,15 +19,9 @@ class BasicTableViewController: UIViewController {//}, UITableViewDelegate, UITa
         super.viewDidLoad()
 
     }
-
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//       <#code#>
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//       <#code#>
-//    }
     
+    
+
     /*
     // MARK: - Navigation
 

@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,6 +13,7 @@
                 <outlet property="buttonBasicAlert" destination="uhd-TW-Z35" id="oRG-EK-DwZ"/>
                 <outlet property="buttonBasicButton" destination="nNV-ZE-HCv" id="uls-c7-wvT"/>
                 <outlet property="buttonBasicDatePicker" destination="fsn-MC-vRd" id="TK3-fr-e4V"/>
+                <outlet property="buttonBasicGroupTableView" destination="uXw-qY-sZX" id="G4p-gm-ENz"/>
                 <outlet property="buttonBasicImage" destination="Uvc-Ia-gRo" id="6Fv-pM-OSH"/>
                 <outlet property="buttonBasicLabel" destination="KjZ-Q5-8FT" id="lec-VR-YWn"/>
                 <outlet property="buttonBasicNavigationController" destination="BFX-tW-lkn" id="ine-ra-URv"/>
@@ -213,7 +214,7 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-J2-X0d">
-                            <rect key="frame" x="206" y="380" width="169" height="30"/>
+                            <rect key="frame" x="206" y="418" width="169" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic View Pager">
@@ -230,6 +231,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic Console Test">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXw-qY-sZX">
+                            <rect key="frame" x="206" y="380" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Group Table View">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

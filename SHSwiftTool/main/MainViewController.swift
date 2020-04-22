@@ -36,6 +36,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonStepper: UIButton!
     @IBOutlet var buttonBasicWebView: UIButton!
     @IBOutlet var buttonBasicTableView: UIButton!
+    @IBOutlet var buttonBasicGroupTableView: UIButton!
     @IBOutlet var buttonBasicScrollView: UIButton!
     @IBOutlet var buttonBasicViewPager: UIButton!
     @IBOutlet var buttonClose: UIButton!
@@ -91,6 +92,8 @@ class MainViewController: UIViewController {
         buttonBasicWebView.addTarget(self, action: #selector(self.onButtonBasicWebView(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicTableView.addTarget(self, action: #selector(self.onButtonTableViewClick(_:)), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicGroupTableView.addTarget(self, action: #selector(self.onButtonGroupTableViewClick(_:)), for: UIControl.Event.touchUpInside)
         
         buttonBasicScrollView.addTarget(self, action: #selector(self.onButtonBasicScrollClick(_:)), for: UIControl.Event.touchUpInside)
         
@@ -223,6 +226,11 @@ class MainViewController: UIViewController {
     @objc private func onButtonTableViewClick(_ send: UIButton) {
         let basicTableViewController = BasicTableViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicTableViewController)
+    }
+    
+    @objc private func onButtonGroupTableViewClick(_ send: UIButton) {
+        let basicGroupTableViewController = BasicGroupTableViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicGroupTableViewController)
     }
     
     @objc private func onButtonBasicScrollClick(_ send: UIButton) {
