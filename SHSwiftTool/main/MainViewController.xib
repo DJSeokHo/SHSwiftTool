@@ -12,6 +12,7 @@
                 <outlet property="buttonBaseicConsoleTest" destination="2h7-ZM-0CQ" id="0bk-Wn-TQK"/>
                 <outlet property="buttonBasicAlert" destination="uhd-TW-Z35" id="oRG-EK-DwZ"/>
                 <outlet property="buttonBasicButton" destination="nNV-ZE-HCv" id="uls-c7-wvT"/>
+                <outlet property="buttonBasicCollectionView" destination="OYu-hJ-M51" id="MUc-es-3CU"/>
                 <outlet property="buttonBasicDatePicker" destination="fsn-MC-vRd" id="TK3-fr-e4V"/>
                 <outlet property="buttonBasicGroupTableView" destination="uXw-qY-sZX" id="G4p-gm-ENz"/>
                 <outlet property="buttonBasicImage" destination="Uvc-Ia-gRo" id="6Fv-pM-OSH"/>
@@ -239,6 +240,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic Group Table View">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYu-hJ-M51">
+                            <rect key="frame" x="0.0" y="456" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Collection View">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

@@ -73,7 +73,7 @@ class BasicGroupTableViewController: UIViewController, UITableViewDelegate, UITa
         self.view.addSubview(tableView)
     }
 
-    // group的数量
+    // group里row的数量
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return info[section].count
     }
@@ -119,12 +119,16 @@ class BasicGroupTableViewController: UIViewController, UITableViewDelegate, UITa
     
     // cell click listener
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
+        let name = info[indexPath.section][indexPath.row]
+        print("select item \(name)")
     }
     
     // cell accessory click listener
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        
+        let name = info[indexPath.section][indexPath.row]
+        print("select accessory is \(name)")
     }
     
     // section number

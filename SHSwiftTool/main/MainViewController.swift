@@ -41,6 +41,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicViewPager: UIButton!
     @IBOutlet var buttonClose: UIButton!
     @IBOutlet var buttonBaseicConsoleTest: UIButton!
+    @IBOutlet var buttonBasicCollectionView: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,8 +102,14 @@ class MainViewController: UIViewController {
         
         buttonClose.addTarget(self , action: #selector(self.onButtonCloseClick), for: UIControl.Event.touchUpInside)
         
-        
         buttonBaseicConsoleTest.addTarget(self , action: #selector(self.onButtonBaseicConsoleTest), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicCollectionView.addTarget(self, action: #selector(self.onButtonBasicCollectionView), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonBasicCollectionView(_ sender: UIButton) {
+        let basicCollectionViewController = BasicCollectionViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicCollectionViewController)
     }
     
     @objc private func onButtonBaseicConsoleTest(_ sender: UIButton) {

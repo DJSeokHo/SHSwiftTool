@@ -87,6 +87,9 @@
 		C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3845A5422EDDAC700FAC52B /* ClassAndStruct.swift */; };
 		C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3845A5622EDDE9300FAC52B /* Wolf.swift */; };
 		C3845A5922EDE25900FAC52B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3845A5822EDE25900FAC52B /* User.swift */; };
+		C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C385BFF22450F03100F864C8 /* BasicCollectionViewController.swift */; };
+		C385BFF52450F03100F864C8 /* BasicCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C385BFF32450F03100F864C8 /* BasicCollectionViewController.xib */; };
+		C385BFF82450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C385BFF72450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift */; };
 		C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388903C22F5AF05007C444F /* LoginViewController.swift */; };
 		C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C388903D22F5AF05007C444F /* LoginViewController.xib */; };
 		C388904322F5AF28007C444F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904222F5AF28007C444F /* LoginController.swift */; };
@@ -255,6 +258,9 @@
 		C3845A5422EDDAC700FAC52B /* ClassAndStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStruct.swift; sourceTree = "<group>"; };
 		C3845A5622EDDE9300FAC52B /* Wolf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wolf.swift; sourceTree = "<group>"; };
 		C3845A5822EDE25900FAC52B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C385BFF22450F03100F864C8 /* BasicCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewController.swift; sourceTree = "<group>"; };
+		C385BFF32450F03100F864C8 /* BasicCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCollectionViewController.xib; sourceTree = "<group>"; };
+		C385BFF72450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		C388903C22F5AF05007C444F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C388903D22F5AF05007C444F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C388904222F5AF28007C444F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -839,6 +845,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C385BFF12450F01200F864C8 /* BasicCollectionView */,
 				C36A233423706887009748AE /* BasicViewPager */,
 				C3B1E94B236EA36B00DCD7EE /* BasicScrollView */,
 				C3D36248236E8478001B8ACB /* BasicTableView */,
@@ -898,6 +905,24 @@
 				C35230E422EF24AA00342A44 /* Rect.swift */,
 			);
 			path = Struct;
+			sourceTree = "<group>";
+		};
+		C385BFF12450F01200F864C8 /* BasicCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C385BFF62450FF8C00F864C8 /* Item */,
+				C385BFF22450F03100F864C8 /* BasicCollectionViewController.swift */,
+				C385BFF32450F03100F864C8 /* BasicCollectionViewController.xib */,
+			);
+			path = BasicCollectionView;
+			sourceTree = "<group>";
+		};
+		C385BFF62450FF8C00F864C8 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C385BFF72450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		C388903822F5AE7F007C444F /* GroupUI */ = {
@@ -1314,6 +1339,7 @@
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
+				C385BFF52450F03100F864C8 /* BasicCollectionViewController.xib in Resources */,
 				C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */,
 				C3DD6B28230D863A00BDDF5D /* ClientViewController.xib in Resources */,
 			);
@@ -1345,6 +1371,7 @@
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
+				C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
 				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
@@ -1408,6 +1435,7 @@
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
+				C385BFF82450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift in Sources */,
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,
 				C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
