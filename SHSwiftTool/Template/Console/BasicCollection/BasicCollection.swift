@@ -23,10 +23,6 @@ class BasicCollection {
         // 声明数组
         var stringArray: Array<String>
         
-        // 简化的声明数组方法
-        var nameArray: [String]
-        var ageArray: [Int]
-        
         // 创建数组
         stringArray = Array<String>()
         
@@ -34,6 +30,14 @@ class BasicCollection {
         stringArray.append("1")
         stringArray.append("2")
         stringArray.append("3")
+        
+        
+        // 简化的声明数组方法
+        var nameArray: [String]
+        var ageArray: [Int]
+        
+        // 创建数组
+        ageArray = [Int]()
         
         nameArray = [String](arrayLiteral: "1", "2", "3")
         // 插入数组元素

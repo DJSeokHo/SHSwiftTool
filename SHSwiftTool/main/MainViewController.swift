@@ -42,6 +42,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonClose: UIButton!
     @IBOutlet var buttonBaseicConsoleTest: UIButton!
     @IBOutlet var buttonBasicCollectionView: UIButton!
+    @IBOutlet var buttonBasicSearchView: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +106,13 @@ class MainViewController: UIViewController {
         buttonBaseicConsoleTest.addTarget(self , action: #selector(self.onButtonBaseicConsoleTest), for: UIControl.Event.touchUpInside)
         
         buttonBasicCollectionView.addTarget(self, action: #selector(self.onButtonBasicCollectionView), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicSearchView.addTarget(self, action: #selector(self.onButtonBasicSearchView), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonBasicSearchView(_ sender: UIButton) {
+        let basicSearchViewController = BasicSearchViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicSearchViewController)
     }
     
     @objc private func onButtonBasicCollectionView(_ sender: UIButton) {

@@ -21,6 +21,7 @@
                 <outlet property="buttonBasicPicker" destination="mar-8n-7jT" id="Z6b-Or-YVR"/>
                 <outlet property="buttonBasicPickerDemo" destination="fPX-NR-Goa" id="A89-jJ-8J2"/>
                 <outlet property="buttonBasicScrollView" destination="EeJ-vi-AsT" id="yos-6B-fLn"/>
+                <outlet property="buttonBasicSearchView" destination="cSq-Ph-kJ8" id="Z5m-BU-zcg"/>
                 <outlet property="buttonBasicSlider" destination="l6W-2H-n4m" id="NkA-Kb-yZo"/>
                 <outlet property="buttonBasicSwitch" destination="FHz-hz-xNv" id="6YK-1N-viV"/>
                 <outlet property="buttonBasicTableView" destination="3hk-PI-QKy" id="Jgg-Tp-YuJ"/>
@@ -248,6 +249,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic Collection View">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSq-Ph-kJ8">
+                            <rect key="frame" x="206" y="456" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Search View">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

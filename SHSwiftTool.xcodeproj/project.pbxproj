@@ -22,6 +22,9 @@
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
 		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
 		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
+		C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */; };
+		C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */; };
+		C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */; };
 		C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */; };
 		C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */; };
 		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
@@ -191,6 +194,9 @@
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
 		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
+		C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewController.swift; sourceTree = "<group>"; };
+		C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSearchViewController.xib; sourceTree = "<group>"; };
+		C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebViewController.swift; sourceTree = "<group>"; };
 		C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicWebViewController.xib; sourceTree = "<group>"; };
 		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -431,6 +437,24 @@
 				C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */,
 			);
 			path = BasicTextField;
+			sourceTree = "<group>";
+		};
+		C32EDA942451F17E0034C59D /* BasicSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C32EDA992451F8920034C59D /* Extensions */,
+				C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */,
+				C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */,
+			);
+			path = BasicSearch;
+			sourceTree = "<group>";
+		};
+		C32EDA992451F8920034C59D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C334AD9F236C68F200C2D0D9 /* BasicWebView */ = {
@@ -845,6 +869,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C32EDA942451F17E0034C59D /* BasicSearch */,
 				C385BFF12450F01200F864C8 /* BasicCollectionView */,
 				C36A233423706887009748AE /* BasicViewPager */,
 				C3B1E94B236EA36B00DCD7EE /* BasicScrollView */,
@@ -1336,6 +1361,7 @@
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
+				C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */,
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
@@ -1371,6 +1397,7 @@
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
+				C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */,
 				C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
@@ -1395,6 +1422,7 @@
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
 				C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */,
+				C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
