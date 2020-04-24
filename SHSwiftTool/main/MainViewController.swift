@@ -43,6 +43,10 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBaseicConsoleTest: UIButton!
     @IBOutlet var buttonBasicCollectionView: UIButton!
     @IBOutlet var buttonBasicSearchView: UIButton!
+    @IBOutlet var buttonBasicScrollBigView: UIButton!
+    @IBOutlet var buttonBasicPage: UIButton!
+    @IBOutlet var buttonSimpleAnimation: UIButton!
+    @IBOutlet var buttonSQLite: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +112,35 @@ class MainViewController: UIViewController {
         buttonBasicCollectionView.addTarget(self, action: #selector(self.onButtonBasicCollectionView), for: UIControl.Event.touchUpInside)
         
         buttonBasicSearchView.addTarget(self, action: #selector(self.onButtonBasicSearchView), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicScrollBigView.addTarget(self, action: #selector(self.onButtonBasicScrollBigView), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicPage.addTarget(self, action: #selector(self.onButtonBasicPage), for: UIControl.Event.touchUpInside)
+        
+        buttonSimpleAnimation.addTarget(self, action: #selector(onButtonSimpleAnimation), for: UIControl.Event.touchUpInside)
+        
+        buttonSQLite.addTarget(self, action: #selector(onButtonSQLite), for: UIControl.Event.touchUpInside)
     }
+    
+    @objc private func onButtonSQLite(_ sender: UIButton) {
+        
+    }
+    
+    @objc private func onButtonSimpleAnimation(_ sender: UIButton) {
+        let buttonSimpleAnimation = SimpleAnimationViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: buttonSimpleAnimation)
+    }
+    
+    @objc private func onButtonBasicPage(_ sender: UIButton) {
+        let basicPageViewController = BasicPageViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicPageViewController)
+    }
+    
+    @objc private func onButtonBasicScrollBigView(_ sender: UIButton) {
+        let basicScrollBigViewController = BasicScrollBigViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: basicScrollBigViewController)
+    }
+    
     
     @objc private func onButtonBasicSearchView(_ sender: UIButton) {
         let basicSearchViewController = BasicSearchViewController()

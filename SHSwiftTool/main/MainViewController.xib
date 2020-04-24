@@ -18,8 +18,10 @@
                 <outlet property="buttonBasicImage" destination="Uvc-Ia-gRo" id="6Fv-pM-OSH"/>
                 <outlet property="buttonBasicLabel" destination="KjZ-Q5-8FT" id="lec-VR-YWn"/>
                 <outlet property="buttonBasicNavigationController" destination="BFX-tW-lkn" id="ine-ra-URv"/>
+                <outlet property="buttonBasicPage" destination="TpR-Sb-zYX" id="UTX-3w-QkB"/>
                 <outlet property="buttonBasicPicker" destination="mar-8n-7jT" id="Z6b-Or-YVR"/>
                 <outlet property="buttonBasicPickerDemo" destination="fPX-NR-Goa" id="A89-jJ-8J2"/>
+                <outlet property="buttonBasicScrollBigView" destination="fXa-Ya-AGN" id="apc-sv-sIh"/>
                 <outlet property="buttonBasicScrollView" destination="EeJ-vi-AsT" id="yos-6B-fLn"/>
                 <outlet property="buttonBasicSearchView" destination="cSq-Ph-kJ8" id="Z5m-BU-zcg"/>
                 <outlet property="buttonBasicSlider" destination="l6W-2H-n4m" id="NkA-Kb-yZo"/>
@@ -34,7 +36,9 @@
                 <outlet property="buttonClose" destination="KVB-ja-rvt" id="KX5-Fg-DhG"/>
                 <outlet property="buttonLogin" destination="cdV-fr-df5" id="j8c-Ru-TTw"/>
                 <outlet property="buttonProgress" destination="veO-N4-T2u" id="17D-qg-Y5e"/>
+                <outlet property="buttonSQLite" destination="OGU-bX-yUO" id="XQg-RM-DVx"/>
                 <outlet property="buttonSegment" destination="5qa-c6-Bcc" id="ASz-XF-dLc"/>
+                <outlet property="buttonSimpleAnimation" destination="V70-i4-3ho" id="iMc-PH-fFy"/>
                 <outlet property="buttonStepper" destination="PGM-v9-Mz1" id="Emv-nO-f63"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="KVB-ij-dh5"/>
             </connections>
@@ -257,6 +261,41 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic Search View">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXa-Ya-AGN">
+                            <rect key="frame" x="0.0" y="494" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Scroll Big">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpR-Sb-zYX">
+                            <rect key="frame" x="206" y="494" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Page">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V70-i4-3ho">
+                            <rect key="frame" x="0.0" y="532" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Simple Animation">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onButtonSimpleAnimation:" destination="-1" eventType="touchUpInside" id="Luj-4U-cc0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGU-bX-yUO">
+                            <rect key="frame" x="206" y="532" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="SQLite">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

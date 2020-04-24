@@ -22,6 +22,12 @@
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
 		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
 		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
+		C32C574B2452F90E008AF1A1 /* BasicScrollBigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */; };
+		C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */; };
+		C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */; };
+		C32C57512453268F008AF1A1 /* BasicPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C574F2453268F008AF1A1 /* BasicPageViewController.xib */; };
+		C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C5758245336F0008AF1A1 /* SimpleAnimationViewController.swift */; };
+		C32C575B245336F0008AF1A1 /* SimpleAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C5759245336F0008AF1A1 /* SimpleAnimationViewController.xib */; };
 		C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */; };
 		C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */; };
 		C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */; };
@@ -194,6 +200,12 @@
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
 		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
+		C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollBigViewController.swift; sourceTree = "<group>"; };
+		C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollBigViewController.xib; sourceTree = "<group>"; };
+		C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPageViewController.swift; sourceTree = "<group>"; };
+		C32C574F2453268F008AF1A1 /* BasicPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPageViewController.xib; sourceTree = "<group>"; };
+		C32C5758245336F0008AF1A1 /* SimpleAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAnimationViewController.swift; sourceTree = "<group>"; };
+		C32C5759245336F0008AF1A1 /* SimpleAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleAnimationViewController.xib; sourceTree = "<group>"; };
 		C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewController.swift; sourceTree = "<group>"; };
 		C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSearchViewController.xib; sourceTree = "<group>"; };
 		C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -437,6 +449,40 @@
 				C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */,
 			);
 			path = BasicTextField;
+			sourceTree = "<group>";
+		};
+		C32C57482452F8D0008AF1A1 /* BasicScrollBigView */ = {
+			isa = PBXGroup;
+			children = (
+				C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */,
+				C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */,
+			);
+			path = BasicScrollBigView;
+			sourceTree = "<group>";
+		};
+		C32C574D24532672008AF1A1 /* BasicPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */,
+				C32C574F2453268F008AF1A1 /* BasicPageViewController.xib */,
+			);
+			path = BasicPageControl;
+			sourceTree = "<group>";
+		};
+		C32C5757245336D8008AF1A1 /* SimpleAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C32C5758245336F0008AF1A1 /* SimpleAnimationViewController.swift */,
+				C32C5759245336F0008AF1A1 /* SimpleAnimationViewController.xib */,
+			);
+			path = SimpleAnimation;
+			sourceTree = "<group>";
+		};
+		C32C576124533FAA008AF1A1 /* BasicSQLiteDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BasicSQLiteDemo;
 			sourceTree = "<group>";
 		};
 		C32EDA942451F17E0034C59D /* BasicSearch */ = {
@@ -869,10 +915,14 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C32C576124533FAA008AF1A1 /* BasicSQLiteDemo */,
+				C32C5757245336D8008AF1A1 /* SimpleAnimation */,
+				C32C574D24532672008AF1A1 /* BasicPageControl */,
 				C32EDA942451F17E0034C59D /* BasicSearch */,
 				C385BFF12450F01200F864C8 /* BasicCollectionView */,
 				C36A233423706887009748AE /* BasicViewPager */,
 				C3B1E94B236EA36B00DCD7EE /* BasicScrollView */,
+				C32C57482452F8D0008AF1A1 /* BasicScrollBigView */,
 				C3D36248236E8478001B8ACB /* BasicTableView */,
 				C334AD9F236C68F200C2D0D9 /* BasicWebView */,
 				C31F5175236B24C800253938 /* BasicStepper */,
@@ -1324,12 +1374,14 @@
 				C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */,
+				C32C57512453268F008AF1A1 /* BasicPageViewController.xib in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
 				C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */,
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
 				C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */,
+				C32C575B245336F0008AF1A1 /* SimpleAnimationViewController.xib in Resources */,
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
@@ -1338,6 +1390,7 @@
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
 				C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
+				C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */,
 				C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
@@ -1383,6 +1436,7 @@
 				C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */,
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
+				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
@@ -1405,6 +1459,7 @@
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
+				C32C574B2452F90E008AF1A1 /* BasicScrollBigViewController.swift in Sources */,
 				C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
@@ -1461,6 +1516,7 @@
 				C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */,
 				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
+				C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
 				C385BFF82450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift in Sources */,
