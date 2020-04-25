@@ -17,6 +17,12 @@
 		C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */; };
 		C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5176236B24E200253938 /* BasicStepperViewController.swift */; };
 		C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5177236B24E200253938 /* BasicStepperViewController.xib */; };
+		C327293D245457CD00BA736E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C327293C245457B700BA736E /* libsqlite3.tbd */; };
+		C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327293F245460CB00BA736E /* SQLiteDemoViewController.swift */; };
+		C3272942245460CB00BA736E /* SQLiteDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3272940245460CB00BA736E /* SQLiteDemoViewController.xib */; };
+		C32729442454630000BA736E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32729432454630000BA736E /* DataModel.swift */; };
+		C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3272946245467AC00BA736E /* UUIDUtil.swift */; };
+		C327294A24546CAA00BA736E /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327294924546CAA00BA736E /* DateUtil.swift */; };
 		C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762C7235DF285006E3434 /* DisplayUtil.swift */; };
 		C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */; };
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
@@ -195,6 +201,12 @@
 		C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSliderViewController.xib; sourceTree = "<group>"; };
 		C31F5176236B24E200253938 /* BasicStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepperViewController.swift; sourceTree = "<group>"; };
 		C31F5177236B24E200253938 /* BasicStepperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicStepperViewController.xib; sourceTree = "<group>"; };
+		C327293C245457B700BA736E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C327293F245460CB00BA736E /* SQLiteDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDemoViewController.swift; sourceTree = "<group>"; };
+		C3272940245460CB00BA736E /* SQLiteDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQLiteDemoViewController.xib; sourceTree = "<group>"; };
+		C32729432454630000BA736E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		C3272946245467AC00BA736E /* UUIDUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDUtil.swift; sourceTree = "<group>"; };
+		C327294924546CAA00BA736E /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		C32762C7235DF285006E3434 /* DisplayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUtil.swift; sourceTree = "<group>"; };
 		C32762CA235DF37F006E3434 /* BasicLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLabelViewController.swift; sourceTree = "<group>"; };
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
@@ -369,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C327293D245457CD00BA736E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +436,30 @@
 				C31F5177236B24E200253938 /* BasicStepperViewController.xib */,
 			);
 			path = BasicStepper;
+			sourceTree = "<group>";
+		};
+		C327293B245457B700BA736E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C327293C245457B700BA736E /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C32729452454679800BA736E /* UUID */ = {
+			isa = PBXGroup;
+			children = (
+				C3272946245467AC00BA736E /* UUIDUtil.swift */,
+			);
+			path = UUID;
+			sourceTree = "<group>";
+		};
+		C327294824546C9F00BA736E /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				C327294924546CAA00BA736E /* DateUtil.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		C32762C6235DF272006E3434 /* Display */ = {
@@ -481,6 +518,9 @@
 		C32C576124533FAA008AF1A1 /* BasicSQLiteDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C327293F245460CB00BA736E /* SQLiteDemoViewController.swift */,
+				C3272940245460CB00BA736E /* SQLiteDemoViewController.xib */,
+				C32729432454630000BA736E /* DataModel.swift */,
 			);
 			path = BasicSQLiteDemo;
 			sourceTree = "<group>";
@@ -869,6 +909,7 @@
 			children = (
 				C37112BF22BD036900E92DA8 /* SHSwiftTool */,
 				C37112BE22BD036900E92DA8 /* Products */,
+				C327293B245457B700BA736E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1051,6 +1092,8 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C327294824546C9F00BA736E /* Date */,
+				C32729452454679800BA736E /* UUID */,
 				C3DECD2C235F4AD300AEA02D /* Keyboard */,
 				C32762C6235DF272006E3434 /* Display */,
 				C39AD8B223129A0A0072FAB5 /* Storage */,
@@ -1415,6 +1458,7 @@
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
 				C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */,
+				C3272942245460CB00BA736E /* SQLiteDemoViewController.xib in Resources */,
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
@@ -1436,6 +1480,7 @@
 				C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */,
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
+				C32729442454630000BA736E /* DataModel.swift in Sources */,
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
@@ -1446,7 +1491,9 @@
 				C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */,
 				C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */,
 				C3845A4F22EDDA1200FAC52B /* Person.swift in Sources */,
+				C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
+				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
 				C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
@@ -1467,6 +1514,7 @@
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
 				C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
+				C327294A24546CAA00BA736E /* DateUtil.swift in Sources */,
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
 				C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */,
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
@@ -1664,6 +1712,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swein.SHSwiftTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1682,6 +1731,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swein.SHSwiftTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

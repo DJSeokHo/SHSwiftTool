@@ -123,12 +123,13 @@ class MainViewController: UIViewController {
     }
     
     @objc private func onButtonSQLite(_ sender: UIButton) {
-        
+        let sqliteDemoView = SQLiteDemoViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: sqliteDemoView)
     }
     
     @objc private func onButtonSimpleAnimation(_ sender: UIButton) {
-        let buttonSimpleAnimation = SimpleAnimationViewController()
-        ViewControllerUtil.startNewViewController(from: self, target: buttonSimpleAnimation)
+        let simpleAnimation = SimpleAnimationViewController()
+        ViewControllerUtil.startNewViewController(from: self, target: simpleAnimation)
     }
     
     @objc private func onButtonBasicPage(_ sender: UIButton) {
