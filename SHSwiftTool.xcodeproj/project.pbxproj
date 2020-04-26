@@ -182,6 +182,18 @@
 		C3DECD2E235F4AE400AEA02D /* SoftKeyboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */; };
 		C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */; };
 		C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */; };
+		C3E739502455ECC70097953E /* CheckListMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7394E2455ECC70097953E /* CheckListMainViewController.swift */; };
+		C3E739512455ECC70097953E /* CheckListMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E7394F2455ECC70097953E /* CheckListMainViewController.xib */; };
+		C3E739562455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E739552455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib */; };
+		C3E7395A245600D80097953E /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E73957245600D80097953E /* icon_more.png */; };
+		C3E7395B245600D80097953E /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E73958245600D80097953E /* icon_more@2x.png */; };
+		C3E7395C245600D80097953E /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E73959245600D80097953E /* icon_more@3x.png */; };
+		C3E7395E245601C70097953E /* CheckListMainNavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7395D245601C70097953E /* CheckListMainNavigationBarViewHolder.swift */; };
+		C3E73962245614700097953E /* icon_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E7395F245614700097953E /* icon_plus.png */; };
+		C3E73963245614700097953E /* icon_plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E73960245614700097953E /* icon_plus@2x.png */; };
+		C3E73964245614700097953E /* icon_plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3E73961245614700097953E /* icon_plus@3x.png */; };
+		C3E7396624561B0D0097953E /* CLDBWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7396524561B0D0097953E /* CLDBWrapper.swift */; };
+		C3E7396A245627220097953E /* CheckInfoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E73969245627220097953E /* CheckInfoBean.swift */; };
 		C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF1B822369C83B006FB168 /* BasicSegmentViewController.swift */; };
 		C3EF1B852369C83B006FB168 /* BasicSegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */; };
 		C3EF1B892369D0FE006FB168 /* BasicProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */; };
@@ -368,6 +380,18 @@
 		C3DECD2D235F4AE400AEA02D /* SoftKeyboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftKeyboardUtil.swift; sourceTree = "<group>"; };
 		C3DECD30235F4D8C00AEA02D /* BasicButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButtonViewController.swift; sourceTree = "<group>"; };
 		C3DECD31235F4D8C00AEA02D /* BasicButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicButtonViewController.xib; sourceTree = "<group>"; };
+		C3E7394E2455ECC70097953E /* CheckListMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListMainViewController.swift; sourceTree = "<group>"; };
+		C3E7394F2455ECC70097953E /* CheckListMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListMainViewController.xib; sourceTree = "<group>"; };
+		C3E739552455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListMainNavigationBarViewHolder.xib; sourceTree = "<group>"; };
+		C3E73957245600D80097953E /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_more.png; sourceTree = "<group>"; };
+		C3E73958245600D80097953E /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_more@2x.png"; sourceTree = "<group>"; };
+		C3E73959245600D80097953E /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_more@3x.png"; sourceTree = "<group>"; };
+		C3E7395D245601C70097953E /* CheckListMainNavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListMainNavigationBarViewHolder.swift; sourceTree = "<group>"; };
+		C3E7395F245614700097953E /* icon_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_plus.png; sourceTree = "<group>"; };
+		C3E73960245614700097953E /* icon_plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_plus@2x.png"; sourceTree = "<group>"; };
+		C3E73961245614700097953E /* icon_plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_plus@3x.png"; sourceTree = "<group>"; };
+		C3E7396524561B0D0097953E /* CLDBWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLDBWrapper.swift; sourceTree = "<group>"; };
+		C3E73969245627220097953E /* CheckInfoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInfoBean.swift; sourceTree = "<group>"; };
 		C3EF1B822369C83B006FB168 /* BasicSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSegmentViewController.swift; sourceTree = "<group>"; };
 		C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSegmentViewController.xib; sourceTree = "<group>"; };
 		C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProgressViewController.swift; sourceTree = "<group>"; };
@@ -924,6 +948,7 @@
 		C37112BF22BD036900E92DA8 /* SHSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				C3E739492455E3E10097953E /* ExampleApp */,
 				C358DDAB23019C6A007F10C6 /* Resources */,
 				C388904A22F5B558007C444F /* Framework */,
 				C37112DE22BD0F1D00E92DA8 /* Template */,
@@ -1141,6 +1166,7 @@
 		C38FE9EF235C71800032F41F /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				C3E7396524561B0D0097953E /* CLDBWrapper.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1156,7 +1182,6 @@
 		C39AD8B52312AF600072FAB5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				C38FE9EF235C71800032F41F /* Database */,
 				C38FE9EE235C71590032F41F /* Http */,
 				C39AD8B62312AF700072FAB5 /* Camera */,
 			);
@@ -1302,6 +1327,105 @@
 			path = BasicButton;
 			sourceTree = "<group>";
 		};
+		C3E739272455E2E00097953E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				C3E7395F245614700097953E /* icon_plus.png */,
+				C3E73960245614700097953E /* icon_plus@2x.png */,
+				C3E73961245614700097953E /* icon_plus@3x.png */,
+				C3E73957245600D80097953E /* icon_more.png */,
+				C3E73958245600D80097953E /* icon_more@2x.png */,
+				C3E73959245600D80097953E /* icon_more@3x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		C3E739492455E3E10097953E /* ExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				C3E7394A2455E3EA0097953E /* CheckList */,
+			);
+			path = ExampleApp;
+			sourceTree = "<group>";
+		};
+		C3E7394A2455E3EA0097953E /* CheckList */ = {
+			isa = PBXGroup;
+			children = (
+				C3E73967245626FB0097953E /* Bean */,
+				C3E739522455ECE00097953E /* CommonUI */,
+				C3E7394D2455EC790097953E /* Framework */,
+				C3E7394C2455EC6C0097953E /* Main */,
+				C3E7394B2455EC4B0097953E /* Resources */,
+			);
+			path = CheckList;
+			sourceTree = "<group>";
+		};
+		C3E7394B2455EC4B0097953E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3E739272455E2E00097953E /* Icons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3E7394C2455EC6C0097953E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C3E7394E2455ECC70097953E /* CheckListMainViewController.swift */,
+				C3E7394F2455ECC70097953E /* CheckListMainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C3E7394D2455EC790097953E /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C3E7396B24562CE20097953E /* Modules */,
+				C3E739542455ED010097953E /* Util */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		C3E739522455ECE00097953E /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				C3E739532455ECE70097953E /* NavigationBar */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		C3E739532455ECE70097953E /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				C3E739552455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib */,
+				C3E7395D245601C70097953E /* CheckListMainNavigationBarViewHolder.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		C3E739542455ED010097953E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C3E73967245626FB0097953E /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				C3E73969245627220097953E /* CheckInfoBean.swift */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		C3E7396B24562CE20097953E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C38FE9EF235C71800032F41F /* Database */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		C3EF1B802369C81A006FB168 /* BasicSegment */ = {
 			isa = PBXGroup;
 			children = (
@@ -1401,10 +1525,13 @@
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
 				C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */,
+				C3E73963245614700097953E /* icon_plus@2x.png in Resources */,
 				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
+				C3E7395C245600D80097953E /* icon_more@3x.png in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
+				C3E73964245614700097953E /* icon_plus@3x.png in Resources */,
 				C3DD6AF9230D84C100BDDF5D /* icon_client_un_selected@3x.png in Resources */,
 				C3DD6B38230D88D500BDDF5D /* icon_profile_un_selected@2x.png in Resources */,
 				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
@@ -1428,6 +1555,7 @@
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
+				C3E739512455ECC70097953E /* CheckListMainViewController.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
@@ -1437,9 +1565,11 @@
 				C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
+				C3E739562455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
+				C3E73962245614700097953E /* icon_plus.png in Resources */,
 				C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
@@ -1454,6 +1584,8 @@
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
 				C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */,
+				C3E7395A245600D80097953E /* icon_more.png in Resources */,
+				C3E7395B245600D80097953E /* icon_more@2x.png in Resources */,
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
@@ -1506,12 +1638,14 @@
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
+				C3E739502455ECC70097953E /* CheckListMainViewController.swift in Sources */,
 				C32C574B2452F90E008AF1A1 /* BasicScrollBigViewController.swift in Sources */,
 				C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */,
 				C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */,
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
+				C3E7395E245601C70097953E /* CheckListMainNavigationBarViewHolder.swift in Sources */,
 				C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
 				C327294A24546CAA00BA736E /* DateUtil.swift in Sources */,
@@ -1572,6 +1706,8 @@
 				C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
+				C3E7396624561B0D0097953E /* CLDBWrapper.swift in Sources */,
+				C3E7396A245627220097953E /* CheckInfoBean.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,

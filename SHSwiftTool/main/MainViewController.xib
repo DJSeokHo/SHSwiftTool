@@ -33,6 +33,7 @@
                 <outlet property="buttonBasicViewPager" destination="ooa-J2-X0d" id="6uW-99-Sjf"/>
                 <outlet property="buttonBasicWebView" destination="rBG-uC-jT1" id="RgV-50-2Cr"/>
                 <outlet property="buttonCamera" destination="hyC-Xj-wn1" id="5vC-fr-Frv"/>
+                <outlet property="buttonCheckList" destination="evo-tP-Mzd" id="hEq-bg-b1d"/>
                 <outlet property="buttonClose" destination="KVB-ja-rvt" id="KX5-Fg-DhG"/>
                 <outlet property="buttonLogin" destination="cdV-fr-df5" id="j8c-Ru-TTw"/>
                 <outlet property="buttonProgress" destination="veO-N4-T2u" id="17D-qg-Y5e"/>
@@ -287,15 +288,20 @@
                             <state key="normal" title="Simple Animation">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
-                            <connections>
-                                <action selector="onButtonSimpleAnimation:" destination="-1" eventType="touchUpInside" id="Luj-4U-cc0"/>
-                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGU-bX-yUO">
                             <rect key="frame" x="206" y="532" width="169" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="SQLite">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evo-tP-Mzd">
+                            <rect key="frame" x="0.0" y="570" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Check List">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

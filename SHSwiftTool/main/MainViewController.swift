@@ -47,6 +47,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicPage: UIButton!
     @IBOutlet var buttonSimpleAnimation: UIButton!
     @IBOutlet var buttonSQLite: UIButton!
+    @IBOutlet var buttonCheckList: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,6 +121,13 @@ class MainViewController: UIViewController {
         buttonSimpleAnimation.addTarget(self, action: #selector(onButtonSimpleAnimation), for: UIControl.Event.touchUpInside)
         
         buttonSQLite.addTarget(self, action: #selector(onButtonSQLite), for: UIControl.Event.touchUpInside)
+        
+        buttonCheckList.addTarget(self, action: #selector(onButtonCheckList), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonCheckList(_ sender: UIButton) {
+        let checkListMainViewController = CheckListMainViewController()
+        ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: checkListMainViewController)
     }
     
     @objc private func onButtonSQLite(_ sender: UIButton) {
