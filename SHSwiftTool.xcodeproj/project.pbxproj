@@ -39,6 +39,15 @@
 		C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */; };
 		C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */; };
 		C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */; };
+		C33E394B2457128600384215 /* icon_un_check.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39452457128500384215 /* icon_un_check.png */; };
+		C33E394C2457128600384215 /* icon_un_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39462457128500384215 /* icon_un_check@2x.png */; };
+		C33E394D2457128600384215 /* icon_check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39472457128500384215 /* icon_check@2x.png */; };
+		C33E394E2457128600384215 /* icon_un_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39482457128500384215 /* icon_un_check@3x.png */; };
+		C33E394F2457128600384215 /* icon_check.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39492457128500384215 /* icon_check.png */; };
+		C33E39502457128600384215 /* icon_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E394A2457128500384215 /* icon_check@3x.png */; };
+		C33E39532457153500384215 /* CheckListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E39522457153500384215 /* CheckListAdapter.swift */; };
+		C33E39562457203C00384215 /* CheckListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */; };
+		C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */; };
 		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
 		C34CB5762348A4E90067F851 /* Eatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5752348A4E90067F851 /* Eatable.swift */; };
 		C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB57B2348A5410067F851 /* AppleEatable.swift */; };
@@ -235,6 +244,15 @@
 		C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebViewController.swift; sourceTree = "<group>"; };
 		C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicWebViewController.xib; sourceTree = "<group>"; };
+		C33E39452457128500384215 /* icon_un_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_un_check.png; sourceTree = "<group>"; };
+		C33E39462457128500384215 /* icon_un_check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_un_check@2x.png"; sourceTree = "<group>"; };
+		C33E39472457128500384215 /* icon_check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@2x.png"; sourceTree = "<group>"; };
+		C33E39482457128500384215 /* icon_un_check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_un_check@3x.png"; sourceTree = "<group>"; };
+		C33E39492457128500384215 /* icon_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check.png; sourceTree = "<group>"; };
+		C33E394A2457128500384215 /* icon_check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@3x.png"; sourceTree = "<group>"; };
+		C33E39522457153500384215 /* CheckListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListAdapter.swift; sourceTree = "<group>"; };
+		C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItemTableViewCell.swift; sourceTree = "<group>"; };
+		C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListItemTableViewCell.xib; sourceTree = "<group>"; };
 		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C34CB5752348A4E90067F851 /* Eatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatable.swift; sourceTree = "<group>"; };
 		C34CB57B2348A5410067F851 /* AppleEatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEatable.swift; sourceTree = "<group>"; };
@@ -574,6 +592,24 @@
 				C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */,
 			);
 			path = BasicWebView;
+			sourceTree = "<group>";
+		};
+		C33E3940245710F300384215 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */,
+				C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C33E39512457151600384215 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C33E3940245710F300384215 /* Item */,
+				C33E39522457153500384215 /* CheckListAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		C34D31E722E9EB9B00E22BC6 /* Protocol */ = {
@@ -1330,6 +1366,12 @@
 		C3E739272455E2E00097953E /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				C33E39492457128500384215 /* icon_check.png */,
+				C33E39472457128500384215 /* icon_check@2x.png */,
+				C33E394A2457128500384215 /* icon_check@3x.png */,
+				C33E39452457128500384215 /* icon_un_check.png */,
+				C33E39462457128500384215 /* icon_un_check@2x.png */,
+				C33E39482457128500384215 /* icon_un_check@3x.png */,
 				C3E7395F245614700097953E /* icon_plus.png */,
 				C3E73960245614700097953E /* icon_plus@2x.png */,
 				C3E73961245614700097953E /* icon_plus@3x.png */,
@@ -1351,9 +1393,9 @@
 		C3E7394A2455E3EA0097953E /* CheckList */ = {
 			isa = PBXGroup;
 			children = (
+				C38FE9EF235C71800032F41F /* Database */,
 				C3E73967245626FB0097953E /* Bean */,
 				C3E739522455ECE00097953E /* CommonUI */,
-				C3E7394D2455EC790097953E /* Framework */,
 				C3E7394C2455EC6C0097953E /* Main */,
 				C3E7394B2455EC4B0097953E /* Resources */,
 			);
@@ -1371,19 +1413,11 @@
 		C3E7394C2455EC6C0097953E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C33E39512457151600384215 /* Adapter */,
 				C3E7394E2455ECC70097953E /* CheckListMainViewController.swift */,
 				C3E7394F2455ECC70097953E /* CheckListMainViewController.xib */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		C3E7394D2455EC790097953E /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				C3E7396B24562CE20097953E /* Modules */,
-				C3E739542455ED010097953E /* Util */,
-			);
-			path = Framework;
 			sourceTree = "<group>";
 		};
 		C3E739522455ECE00097953E /* CommonUI */ = {
@@ -1403,27 +1437,12 @@
 			path = NavigationBar;
 			sourceTree = "<group>";
 		};
-		C3E739542455ED010097953E /* Util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		C3E73967245626FB0097953E /* Bean */ = {
 			isa = PBXGroup;
 			children = (
 				C3E73969245627220097953E /* CheckInfoBean.swift */,
 			);
 			path = Bean;
-			sourceTree = "<group>";
-		};
-		C3E7396B24562CE20097953E /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				C38FE9EF235C71800032F41F /* Database */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		C3EF1B802369C81A006FB168 /* BasicSegment */ = {
@@ -1525,11 +1544,13 @@
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
 				C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */,
+				C33E394D2457128600384215 /* icon_check@2x.png in Resources */,
 				C3E73963245614700097953E /* icon_plus@2x.png in Resources */,
 				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3E7395C245600D80097953E /* icon_more@3x.png in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
+				C33E394C2457128600384215 /* icon_un_check@2x.png in Resources */,
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
 				C3E73964245614700097953E /* icon_plus@3x.png in Resources */,
 				C3DD6AF9230D84C100BDDF5D /* icon_client_un_selected@3x.png in Resources */,
@@ -1576,16 +1597,20 @@
 				C3D3624C236E849D001B8ACB /* BasicTableViewController.xib in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
+				C33E394F2457128600384215 /* icon_check.png in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
 				C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */,
 				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
 				C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */,
+				C33E394E2457128600384215 /* icon_un_check@3x.png in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
 				C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */,
 				C3E7395A245600D80097953E /* icon_more.png in Resources */,
 				C3E7395B245600D80097953E /* icon_more@2x.png in Resources */,
+				C33E39502457128600384215 /* icon_check@3x.png in Resources */,
+				C33E394B2457128600384215 /* icon_un_check.png in Resources */,
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
@@ -1594,6 +1619,7 @@
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
+				C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */,
 				C385BFF52450F03100F864C8 /* BasicCollectionViewController.xib in Resources */,
 				C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */,
 				C3DD6B28230D863A00BDDF5D /* ClientViewController.xib in Resources */,
@@ -1627,6 +1653,7 @@
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
 				C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */,
+				C33E39532457153500384215 /* CheckListAdapter.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
@@ -1660,6 +1687,7 @@
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
 				C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */,
 				C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */,
+				C33E39562457203C00384215 /* CheckListItemTableViewCell.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,

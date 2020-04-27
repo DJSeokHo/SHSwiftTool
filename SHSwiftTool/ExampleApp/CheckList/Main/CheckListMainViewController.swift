@@ -9,7 +9,7 @@
 import UIKit
 class CheckListMainViewController: UIViewController, CheckListMainNavigationBarViewHolderDelegate {
    
-    private static let TAG = "CheckListMainViewController"
+    public static let TAG = "CheckListMainViewController"
 
     private var checkListMainNavigationBarViewHolder: CheckListMainNavigationBarViewHolder!
     
@@ -17,6 +17,11 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
     @IBOutlet var viewInputArea: UIView!
     @IBOutlet var buttonPlus: UIButton!
     @IBOutlet var textView: UITextField!
+    @IBOutlet var indicator: UIActivityIndicatorView!
+    
+    private var refreshControl: UIRefreshControl!
+    
+    public var checkInfoBeanList: [CheckInfoBean] = [CheckInfoBean]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +29,18 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
+        initNavigationBar()
+        initInputArea();
+        initTableView();
+        
         setListener()
         
         CLDBWrapper.getInstance().initDB()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        initNavigationBar()
-        initInputArea();
-        initTableView();
+        
+        reloadData();
     }
     
     private func setListener() {
@@ -48,7 +56,8 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         
         ILog.debug(tag: CheckListMainViewController.TAG, content: "onButtonPlusClick")
         hideKeyboard()
-        addCheckInfo()
+        
+        insertData()
         
         textView.text = ""
     }
@@ -59,22 +68,93 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         // 也可以用 resignFirstResponder()
         textView.resignFirstResponder()
     }
-    
-    private func addCheckInfo() {
-        
-        let checkInfoBean = CheckInfoBean(uuid: UUIDUtil.getUUID(), content: self.textView.text!, dateTime: DateUtil.getCurrentDateTimeStringWithStandardSQLiteDateTimeFromatter(), done: "N")
-        
-        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
-        
-        CLDBWrapper.getInstance().insert(checkInfoBean: checkInfoBean)
-    }
 
-    private func initData() {
+    public func reloadData() {
+        
+        showProgress()
+        
+        ThreadUtil.startThread {
+            
+            var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
+            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10"))
+           
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.reload(checkInfoBeanList: checkInfoList)
+                self.hideProgress()
+                
+            }, after: 0)
+        }
+    }
     
+    public func loadMoreData() {
+        
+        showProgress()
+        
+        ThreadUtil.startThread {
+            
+            var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
+            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.getItemCount()), limit: "10"))
+           
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.loadMore(checkInfoBeanList: checkInfoList)
+                self.hideProgress()
+                
+            }, after: 0)
+        }
+        
+    }
+    
+    public func insertData() {
+        
+        showProgress()
+        
+        let content = self.textView.text!
+        
+        ThreadUtil.startThread {
+        
+            let checkInfoBean = CheckInfoBean(uuid: UUIDUtil.getUUID(), content: content, dateTime: DateUtil.getCurrentDateTimeStringWithStandardSQLiteDateTimeFromatter(), done: "N")
+            
+            ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+            
+            CLDBWrapper.getInstance().insert(checkInfoBean: checkInfoBean)
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.insertToFront(checkInfoBean: checkInfoBean)
+                self.hideProgress()
+                
+            }, after: 0)
+        }
     }
     
     private func initTableView() {
         tableView.frame = CGRect(x: 0, y: 140, width: self.view.frame.width, height: self.view.frame.height - 140)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+        tableView.allowsSelection = false
+        tableView.allowsMultipleSelection = false
+        
+        tableView.register(UINib(nibName: CheckListItemTableViewCell.TAG, bundle: nil), forCellReuseIdentifier: CheckListItemTableViewCell.TAG)
+        
+        refreshControl = UIRefreshControl()
+        
+        refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc private func refresh(_ sender: AnyObject) {
+       // Code to refresh table view
+        ILog.debug(tag: CheckListMainViewController.TAG, content: "reload")
+        
+        refreshControl.endRefreshing()
+        
+        reloadData()
     }
     
     private func initNavigationBar() {
@@ -98,6 +178,16 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
     // navigation bar delegate
     func onButtonMoreClicked() {
          ILog.debug(tag: CheckListMainViewController.TAG, content: "onButtonMoreClicked")
+    }
+    
+    private func showProgress() {
+        indicator.isHidden = false
+        indicator.startAnimating()
+    }
+    
+    private func hideProgress() {
+        indicator.stopAnimating()
+        indicator.isHidden = true
     }
 
     /*

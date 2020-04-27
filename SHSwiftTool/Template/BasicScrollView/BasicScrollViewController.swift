@@ -20,7 +20,6 @@ class BasicScrollViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckListMainViewController" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
                 <outlet property="buttonPlus" destination="dFD-iC-x8r" id="Ane-Jr-XBg"/>
+                <outlet property="indicator" destination="k7d-OQ-Ocv" id="VW5-jd-oW2"/>
                 <outlet property="tableView" destination="rBy-uj-sUr" id="PRq-c8-h37"/>
                 <outlet property="textView" destination="tR7-BS-zG8" id="VWU-xb-pje"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,6 +48,11 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-OQ-Ocv">
+                    <rect key="frame" x="189" y="350" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" red="0.10980392160000001" green="0.29803921570000003" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

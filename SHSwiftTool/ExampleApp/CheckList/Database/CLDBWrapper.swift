@@ -203,13 +203,13 @@ class CLDBWrapper {
         sqlite3_finalize(deleteStatement)
     }
 
-    public func getAllData() -> [CheckInfoBean]! {
+    public func getDataArray(offset: String, limit: String) -> [CheckInfoBean]! {
         
         var checkInfoArray: [CheckInfoBean]
         checkInfoArray = [CheckInfoBean]()
         
         let sql = """
-            SELECT * FROM CHECKLIST;
+            SELECT * FROM CHECKLIST ORDER BY DATETIME DESC LIMIT \(limit) OFFSET \(offset);
             """
         
         ILog.debug(tag: CLDBWrapper.TAG, content: sql)
