@@ -128,6 +128,19 @@ extension CheckListMainViewController: UITableViewDataSource, UITableViewDelegat
                 return
             }
         }
-       
+    }
+    
+    public func update(checkInfoBean: CheckInfoBean) {
+        for index in 0..<checkInfoBeanList.count {
+            if checkInfoBeanList[index].uuid == checkInfoBean.uuid {
+                
+                self.checkInfoBeanList[index] = checkInfoBean
+                
+                let indexPath = IndexPath(row: index, section: 0)
+                self.tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                
+                return
+            }
+        }
     }
 }

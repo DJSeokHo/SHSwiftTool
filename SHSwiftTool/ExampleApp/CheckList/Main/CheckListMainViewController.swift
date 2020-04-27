@@ -48,7 +48,6 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         
         NotificationUtil.addObserver(observer: self, selector: #selector(observerEditCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM)
     }
-    
     @objc func observerEditCheckListItem(notfication: NSNotification) {
         ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
         
@@ -56,14 +55,19 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
        
         ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+        
+        AlertViewUtil.showTwoButtonWithOneInputAlertView(from: self, setTitle: "Editing", setMessage: "Change content", setInputPlaceHolder: "input content", setContent: checkInfoBean.content, setConfirmButtonTitle: "Confirm", setCancelButtonTitle: "Cancel", setConfirmDelegate: {newContent in
+            ILog.debug(tag: CheckListMainViewController.TAG, content: newContent)
+            
+            let newCheckInfoBean = CheckInfoBean(uuid: checkInfoBean.uuid, content: newContent, dateTime: checkInfoBean.dateTime, done: checkInfoBean.done)
+            self.updateData(checkInfoBean: newCheckInfoBean)
+        })
     }
-    
     
     private func setListener() {
         buttonPlus.addTarget(self, action: #selector(onButtonPlusClick), for: UIControl.Event.touchUpInside)
         SoftKeyboardUtil.tapSpaceToCloseSoftKeyboard(target: self, action: #selector(hideKeyboard))
     }
-    
     @objc private func onButtonPlusClick(_ sender: UIButton) {
         
         if textView.text == nil || textView.text == "" {
@@ -155,6 +159,22 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
             ThreadUtil.startUIThread(runnable: {
                 
                 self.delete(checkInfoBean: checkInfoBean)
+                self.hideProgress()
+                
+            }, after: 0)
+        }
+    }
+    
+    public func updateData(checkInfoBean: CheckInfoBean) {
+        showProgress()
+        
+        ThreadUtil.startThread {
+        
+            CLDBWrapper.getInstance().updateData(checkInfoBean: checkInfoBean)
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.update(checkInfoBean: checkInfoBean)
                 self.hideProgress()
                 
             }, after: 0)

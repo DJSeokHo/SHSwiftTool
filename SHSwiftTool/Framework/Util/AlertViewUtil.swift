@@ -40,4 +40,33 @@ class AlertViewUtil {
         from.present(alert, animated: true)
     }
     
+    public static func showTwoButtonWithOneInputAlertView(from: UIViewController, setTitle title: String, setMessage message: String, setInputPlaceHolder placeHolder: String, setContent content: String, setConfirmButtonTitle confirmTitle: String, setCancelButtonTitle cancelTitle: String, setConfirmDelegate confirmDelegate: @escaping (String) -> Void) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle:  UIAlertController.Style.alert)
+
+        alertController.addTextField {
+            (textField: UITextField!) -> Void in
+            textField.placeholder = placeHolder
+            textField.text = content
+        }
+      
+        let confirmAction = UIAlertAction(
+            title: confirmTitle,
+            style: UIAlertAction.Style.default) {
+                (action: UIAlertAction!) -> Void in
+                
+                let content = (alertController.textFields?.first)! as UITextField
+               
+                if content.text == nil || content.text == "" {
+                    return
+                }
+                
+                confirmDelegate(content.text!)
+            }
+        
+        alertController.addAction(confirmAction)
+        
+        alertController.addAction(UIAlertAction(title: cancelTitle, style: UIAlertAction.Style.cancel, handler: nil))
+        from.present(alertController, animated: true)
+    }
 }
