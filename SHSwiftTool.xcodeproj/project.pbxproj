@@ -48,6 +48,8 @@
 		C33E39532457153500384215 /* CheckListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E39522457153500384215 /* CheckListAdapter.swift */; };
 		C33E39562457203C00384215 /* CheckListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */; };
 		C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */; };
+		C33E395A24574BA600384215 /* TabUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E395924574BA600384215 /* TabUtil.swift */; };
+		C33E395D24574D3900384215 /* CLNotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E395C24574D3900384215 /* CLNotificationConstants.swift */; };
 		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
 		C34CB5762348A4E90067F851 /* Eatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5752348A4E90067F851 /* Eatable.swift */; };
 		C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB57B2348A5410067F851 /* AppleEatable.swift */; };
@@ -253,6 +255,8 @@
 		C33E39522457153500384215 /* CheckListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListAdapter.swift; sourceTree = "<group>"; };
 		C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItemTableViewCell.swift; sourceTree = "<group>"; };
 		C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListItemTableViewCell.xib; sourceTree = "<group>"; };
+		C33E395924574BA600384215 /* TabUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUtil.swift; sourceTree = "<group>"; };
+		C33E395C24574D3900384215 /* CLNotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLNotificationConstants.swift; sourceTree = "<group>"; };
 		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C34CB5752348A4E90067F851 /* Eatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatable.swift; sourceTree = "<group>"; };
 		C34CB57B2348A5410067F851 /* AppleEatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEatable.swift; sourceTree = "<group>"; };
@@ -610,6 +614,22 @@
 				C33E39522457153500384215 /* CheckListAdapter.swift */,
 			);
 			path = Adapter;
+			sourceTree = "<group>";
+		};
+		C33E395824574B9400384215 /* Tap */ = {
+			isa = PBXGroup;
+			children = (
+				C33E395924574BA600384215 /* TabUtil.swift */,
+			);
+			path = Tap;
+			sourceTree = "<group>";
+		};
+		C33E395B24574D2800384215 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C33E395C24574D3900384215 /* CLNotificationConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C34D31E722E9EB9B00E22BC6 /* Protocol */ = {
@@ -1153,6 +1173,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C33E395824574B9400384215 /* Tap */,
 				C327294824546C9F00BA736E /* Date */,
 				C32729452454679800BA736E /* UUID */,
 				C3DECD2C235F4AD300AEA02D /* Keyboard */,
@@ -1393,6 +1414,7 @@
 		C3E7394A2455E3EA0097953E /* CheckList */ = {
 			isa = PBXGroup;
 			children = (
+				C33E395B24574D2800384215 /* Constants */,
 				C38FE9EF235C71800032F41F /* Database */,
 				C3E73967245626FB0097953E /* Bean */,
 				C3E739522455ECE00097953E /* CommonUI */,
@@ -1644,12 +1666,14 @@
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
 				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
+				C33E395A24574BA600384215 /* TabUtil.swift in Sources */,
 				C34D31EA22E9EBF000E22BC6 /* IntExtension.swift in Sources */,
 				C37112E122BD0FBB00E92DA8 /* BasicGrammar.swift in Sources */,
 				C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */,
 				C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */,
 				C3845A4F22EDDA1200FAC52B /* Person.swift in Sources */,
 				C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */,
+				C33E395D24574D3900384215 /* CLNotificationConstants.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
 				C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */,

@@ -1,0 +1,25 @@
+//
+//  TabUtil.swift
+//  SHSwiftTool
+//
+//  Created by Seok Ho on 2020/04/28.
+//  Copyright © 2020 SWein. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class TapUtil {
+    
+    public static func addTapListener(viewGroup: UIView, target targetView: UIView, action: Selector) {
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: viewGroup, action: action)
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        
+        targetView.isUserInteractionEnabled = true
+        targetView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+}

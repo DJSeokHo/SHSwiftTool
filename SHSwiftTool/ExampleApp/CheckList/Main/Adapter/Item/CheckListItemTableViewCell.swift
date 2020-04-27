@@ -31,7 +31,19 @@ class CheckListItemTableViewCell: UITableViewCell {
     
     
     private func setListener() {
+        
         button.addTarget(self, action: #selector(onButtonCheckClick), for: UIControl.Event.touchUpInside)
+        
+        TapUtil.addTapListener(viewGroup: self, target: label, action: #selector(singleTapped))
+        
+    }
+    
+    @objc func singleTapped(_ recognizer: UITapGestureRecognizer) {
+       
+        var userInfo = Dictionary<AnyHashable, Any>()
+        userInfo["checkInfoBean"] = checkInfoBean
+        
+        NotificationUtil.post(name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM, object: self, userInfo: userInfo)
     }
     
     @objc private func onButtonCheckClick(_ sender: UIButton) {

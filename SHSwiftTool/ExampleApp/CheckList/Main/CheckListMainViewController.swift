@@ -29,6 +29,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
+        initObserver()
         initNavigationBar()
         initInputArea();
         initTableView();
@@ -42,6 +43,21 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         
         reloadData();
     }
+    
+    private func initObserver() {
+        
+        NotificationUtil.addObserver(observer: self, selector: #selector(observerEditCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM)
+    }
+    
+    @objc func observerEditCheckListItem(notfication: NSNotification) {
+        ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
+        
+        let userInfo = notfication.userInfo
+        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+       
+        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+    }
+    
     
     private func setListener() {
         buttonPlus.addTarget(self, action: #selector(onButtonPlusClick), for: UIControl.Event.touchUpInside)
