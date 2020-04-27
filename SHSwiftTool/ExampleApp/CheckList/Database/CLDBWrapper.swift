@@ -148,7 +148,7 @@ class CLDBWrapper {
     
     public func updateData(checkInfoBean: CheckInfoBean) {
         let sql = """
-        UPDATE CHECKLIST SET DONE = '\(checkInfoBean.done)' WHERE UUID = \(checkInfoBean.uuid);
+        UPDATE CHECKLIST SET DONE = '\(checkInfoBean.done)' WHERE UUID = '\(checkInfoBean.uuid)';
         """
         
         ILog.debug(tag: CLDBWrapper.TAG, content: sql)
@@ -176,7 +176,7 @@ class CLDBWrapper {
 
     public func deleteData(checkInfoBean: CheckInfoBean) {
         let sql = """
-        DELETE FROM CHECKLIST WHERE UUID = \(checkInfoBean.uuid);
+        DELETE FROM CHECKLIST WHERE UUID = '\(checkInfoBean.uuid)';
         """
 
         ILog.debug(tag: CLDBWrapper.TAG, content: sql)

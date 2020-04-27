@@ -103,7 +103,6 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
                 
             }, after: 0)
         }
-        
     }
     
     public func insertData() {
@@ -123,6 +122,23 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
             ThreadUtil.startUIThread(runnable: {
                 
                 self.insertToFront(checkInfoBean: checkInfoBean)
+                self.hideProgress()
+                
+            }, after: 0)
+        }
+    }
+    
+    public func deleteData(checkInfoBean: CheckInfoBean) {
+        
+        showProgress()
+        
+        ThreadUtil.startThread {
+        
+            CLDBWrapper.getInstance().deleteData(checkInfoBean: checkInfoBean)
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.delete(checkInfoBean: checkInfoBean)
                 self.hideProgress()
                 
             }, after: 0)

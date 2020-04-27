@@ -42,9 +42,32 @@ extension CheckListMainViewController: UITableViewDataSource, UITableViewDelegat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    // 行左滑 编辑
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBeanList[indexPath.row].toString()!)
+            deleteData(checkInfoBean: checkInfoBeanList[indexPath.row])
+        }
+    }
+    
+    // 行左滑 自定义按钮
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteButton = UITableViewRowAction(style: UITableViewRowAction.Style.normal, title: "Delete", handler: { (action, indexPath) in
+            self.tableView.dataSource?.tableView!(self.tableView, commit: .delete, forRowAt: indexPath)
+        })
+        
+        deleteButton.backgroundColor = UIColor.red
+        return [deleteButton]
+    }
+    
     // get item height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
     public func reload(checkInfoBeanList: [CheckInfoBean]) {
@@ -90,5 +113,21 @@ extension CheckListMainViewController: UITableViewDataSource, UITableViewDelegat
         
         let indexPath = IndexPath(row: 0, section: 0)
         self.tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+    }
+    
+    public func delete(checkInfoBean: CheckInfoBean) {
+        
+        for index in 0..<checkInfoBeanList.count {
+            if checkInfoBeanList[index].uuid == checkInfoBean.uuid {
+                
+                self.checkInfoBeanList.remove(at: index)
+                
+                let indexPath = IndexPath(row: index, section: 0)
+                self.tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                
+                return
+            }
+        }
+       
     }
 }
