@@ -39,6 +39,8 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         CLDBWrapper.getInstance().initDB()
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         
         reloadData();
@@ -242,6 +244,10 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         indicator.isHidden = true
     }
 
+    deinit {
+        NotificationUtil.removeAllObserver(observer: self)
+    }
+    
     /*
     // MARK: - Navigation
 
