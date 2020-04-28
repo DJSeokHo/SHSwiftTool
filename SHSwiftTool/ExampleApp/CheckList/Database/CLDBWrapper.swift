@@ -50,7 +50,8 @@ class CLDBWrapper {
         }
         
         var db: OpaquePointer?
-        if sqlite3_open(dbPath, &db) == SQLITE_OK {
+        // 传入"SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX"来保证sqlite3多线程环境下的稳定性.
+        if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
           
             ILog.debug(tag: CLDBWrapper.TAG, content: "成功打开数据库，路径：\(dbPath ?? "")")
             return db
@@ -65,7 +66,8 @@ class CLDBWrapper {
     public func closeDatabase() {
         
         var db: OpaquePointer?
-        if sqlite3_open(dbPath, &db) == SQLITE_OK {
+        // 传入"SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX"来保证sqlite3多线程环境下的稳定性.
+        if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
           
             ILog.debug(tag: CLDBWrapper.TAG, content: "即将关闭数据库")
             sqlite3_close(db)
@@ -148,7 +150,11 @@ class CLDBWrapper {
     
     public func updateData(checkInfoBean: CheckInfoBean) {
         let sql = """
-        UPDATE CHECKLIST SET CONTENT = '\(checkInfoBean.content)', DONE = '\(checkInfoBean.done)' WHERE UUID = '\(checkInfoBean.uuid)';
+        UPDATE CHECKLIST SET
+        CONTENT = '\(checkInfoBean.content)',
+        DATETIME = '\(checkInfoBean.dateTime)',
+        DONE = '\(checkInfoBean.done)'
+        WHERE UUID = '\(checkInfoBean.uuid)';
         """
         
         ILog.debug(tag: CLDBWrapper.TAG, content: sql)
@@ -203,13 +209,13 @@ class CLDBWrapper {
         sqlite3_finalize(deleteStatement)
     }
 
-    public func getDataArray(offset: String, limit: String) -> [CheckInfoBean]! {
+    public func getDataArray(offset: String, limit: String, isDone: String) -> [CheckInfoBean]! {
         
         var checkInfoArray: [CheckInfoBean]
         checkInfoArray = [CheckInfoBean]()
         
         let sql = """
-            SELECT * FROM CHECKLIST ORDER BY DATETIME DESC LIMIT \(limit) OFFSET \(offset);
+            SELECT * FROM CHECKLIST WHERE DONE = '\(isDone)' ORDER BY DATETIME DESC LIMIT \(limit) OFFSET \(offset);
             """
         
         ILog.debug(tag: CLDBWrapper.TAG, content: sql)

@@ -1,17 +1,17 @@
 //
-//  CheckListItemTableViewCell.swift
+//  DoneListItemTableViewCell.swift
 //  SHSwiftTool
 //
-//  Created by Seok Ho on 2020/04/27.
+//  Created by Seok Ho on 2020/04/29.
 //  Copyright © 2020 SWein. All rights reserved.
 //
 
 import UIKit
 
-class CheckListItemTableViewCell: UITableViewCell {
-
-    public static let TAG = "CheckListItemTableViewCell"
+class DoneListItemTableViewCell: UITableViewCell {
     
+    public static let TAG = "DoneListItemTableViewCell"
+
     @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
@@ -22,33 +22,17 @@ class CheckListItemTableViewCell: UITableViewCell {
         // Initialization code
         setListener()
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    
     private func setListener() {
         
         button.addTarget(self, action: #selector(onButtonCheckClick), for: UIControl.Event.touchUpInside)
         
-        TapUtil.addTapListener(viewGroup: self, target: label, action: #selector(singleTapped))
-        
-    }
-    
-    @objc func singleTapped(_ recognizer: UITapGestureRecognizer) {
-       
-        if checkInfoBean == nil {
-            
-            return
-        }
-        
-        var userInfo = Dictionary<AnyHashable, Any>()
-        userInfo["checkInfoBean"] = checkInfoBean
-        
-        NotificationUtil.post(name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM, object: self, userInfo: userInfo)
     }
     
     @objc private func onButtonCheckClick(_ sender: UIButton) {
@@ -57,13 +41,13 @@ class CheckListItemTableViewCell: UITableViewCell {
             
             return
         }
-        
+       
         var userInfo = Dictionary<AnyHashable, Any>()
         userInfo["checkInfoBean"] = checkInfoBean
         
-        NotificationUtil.post(name: CLNotificationConstants.REQUEST_FINISH_LIST_ITEM, object: self, userInfo: userInfo)
+        NotificationUtil.post(name: CLNotificationConstants.REQUEST_UN_FINISH_LIST_ITEM, object: self, userInfo: userInfo)
         
-        ILog.debug(tag: CheckListItemTableViewCell.TAG, content: checkInfoBean.toString()!)
+        ILog.debug(tag: DoneListItemTableViewCell.TAG, content: checkInfoBean.toString()!)
     }
     
     public func updateView() {

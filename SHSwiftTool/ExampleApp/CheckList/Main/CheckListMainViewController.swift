@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 class CheckListMainViewController: UIViewController, CheckListMainNavigationBarViewHolderDelegate {
    
     public static let TAG = "CheckListMainViewController"
@@ -28,7 +29,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
 
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
-        
+       
         initObserver()
         initNavigationBar()
         initInputArea();
@@ -37,8 +38,8 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         setListener()
         
         CLDBWrapper.getInstance().initDB()
+        
     }
-    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +50,10 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
     private func initObserver() {
         
         NotificationUtil.addObserver(observer: self, selector: #selector(observerEditCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM)
+        
+        NotificationUtil.addObserver(observer: self, selector: #selector(observerFinishCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_FINISH_LIST_ITEM)
+        
+        NotificationUtil.addObserver(observer: self, selector: #selector(observerUnFinishCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_UN_FINISH_LIST_ITEM)
     }
     @objc func observerEditCheckListItem(notfication: NSNotification) {
         ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
@@ -64,6 +69,44 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
             let newCheckInfoBean = CheckInfoBean(uuid: checkInfoBean.uuid, content: newContent, dateTime: checkInfoBean.dateTime, done: checkInfoBean.done)
             self.updateData(checkInfoBean: newCheckInfoBean)
         })
+    }
+    @objc func observerFinishCheckListItem(notfication: NSNotification) {
+        ILog.debug(tag: CheckListMainViewController.TAG, content: "observerFinishCheckListItem")
+        
+        let userInfo = notfication.userInfo
+        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+       
+        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+       
+        checkInfoBean.done = "Y"
+        
+        showProgress()
+        
+        ThreadUtil.startThread {
+        
+            CLDBWrapper.getInstance().updateData(checkInfoBean: checkInfoBean)
+            
+            ThreadUtil.startUIThread(runnable: {
+                
+                self.delete(checkInfoBean: checkInfoBean)
+                self.hideProgress()
+                
+            }, after: 0)
+        }
+    }
+    @objc func observerUnFinishCheckListItem(notfication: NSNotification) {
+        ILog.debug(tag: DoneListViewController.TAG, content: "observerUnFinishCheckListItem")
+        
+        let userInfo = notfication.userInfo
+        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+       
+        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+       
+        checkInfoBean.done = "N"
+        
+        self.insertToFront(checkInfoBean: checkInfoBean)
+        self.hideProgress()
+        
     }
     
     private func setListener() {
@@ -82,6 +125,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         insertData()
         
         textView.text = ""
+        
     }
     
     @objc func hideKeyboard() {
@@ -98,7 +142,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         ThreadUtil.startThread {
             
             var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
-            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10"))
+            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10", isDone: "N"))
            
             ThreadUtil.startUIThread(runnable: {
                 
@@ -116,7 +160,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         ThreadUtil.startThread {
             
             var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
-            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.getItemCount()), limit: "10"))
+            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.getItemCount()), limit: "10", isDone: "N"))
            
             ThreadUtil.startUIThread(runnable: {
                 
@@ -232,6 +276,9 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
     // navigation bar delegate
     func onButtonMoreClicked() {
          ILog.debug(tag: CheckListMainViewController.TAG, content: "onButtonMoreClicked")
+        
+        let settingViewController = SettingViewController()
+        NavigationUtil.navigationToNext(from: self, target: settingViewController, animated: true)
     }
     
     private func showProgress() {

@@ -22,4 +22,15 @@ class TapUtil {
         
     }
     
+    public static func addTapListener(viewGroup: UIViewController, target targetView: UIView, action: Selector) {
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: viewGroup, action: action)
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        
+        targetView.isUserInteractionEnabled = true
+        targetView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
 }
