@@ -9,111 +9,110 @@
 import Foundation
 import UIKit
 
-extension DoneListViewController: UITableViewDataSource, UITableViewDelegate {
+class DoneListAdapter: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // 只有1列
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    private var iBeanArray: [IBean] = [IBean]()
+    
+    public var itemHeight: CGFloat!
+    public var sectionNumber: Int!
+    public var needLoadMore: Bool!
+    public var canRowEdit: Bool!
+    
+    public var loadMoreDelegate: (() -> ())?
+    public var deleteDelegate: ((_ iBean: IBean) -> ())?
+    
+    func numberOfSections() -> Int {
+        return sectionNumber
     }
     
-    // row的数量
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return checkInfoBeanList.count
+        return iBeanArray.count
     }
     
-    // 载入cell并更新cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        ILog.debug(tag: DoneListViewController.TAG, content: "section index is \(indexPath.section)")
-        ILog.debug(tag: DoneListViewController.TAG, content: "row index is \(indexPath.row)")
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: DoneListItemTableViewCell.TAG, for: indexPath) as! DoneListItemTableViewCell
-
-        cell.checkInfoBean = checkInfoBeanList[indexPath.row]
-        
-        cell.updateView()
-        
-        if indexPath.row == checkInfoBeanList.count - 1 {
+        let iCell: ICell = tableView.dequeueReusableCell(withIdentifier: DoneListItemTableViewCell.TAG, for: indexPath) as! ICell
+                   
+        iCell.setData(iBean: iBeanArray[indexPath.row])
+        iCell.updateView()
+            
+        if indexPath.row == iBeanArray.count - 1 {
             ILog.debug(tag: DoneListViewController.TAG, content: "load more")
-            loadMoreData()
+            
+            loadMoreDelegate?()
         }
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+            
+        return iCell as! UITableViewCell
     }
     
     // 行左滑 编辑
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            ILog.debug(tag: DoneListViewController.TAG, content: checkInfoBeanList[indexPath.row].toString()!)
-            deleteData(checkInfoBean: checkInfoBeanList[indexPath.row])
+            ILog.debug(tag: DoneListViewController.TAG, content: "delete ???")
+            
+            deleteDelegate?(iBeanArray[indexPath.row])
         }
     }
-    
+
     // 行左滑 自定义按钮
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
+
         let deleteButton = UITableViewRowAction(style: UITableViewRowAction.Style.normal, title: "Delete", handler: { (action, indexPath) in
-            self.tableView.dataSource?.tableView!(self.tableView, commit: .delete, forRowAt: indexPath)
+            tableView.dataSource?.tableView!(tableView, commit: .delete, forRowAt: indexPath)
         })
-        
+
         deleteButton.backgroundColor = UIColor.red
         return [deleteButton]
     }
     
-    // get item height
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+    public func reload(_ tableView: UITableView, iBeanArray: [IBean]) {
+        self.iBeanArray.removeAll()
+        self.iBeanArray.append(contentsOf: iBeanArray)
+        tableView.reloadData()
     }
     
-    public func reload(checkInfoBeanList: [CheckInfoBean]) {
-        self.checkInfoBeanList.removeAll()
-        self.checkInfoBeanList.append(contentsOf: checkInfoBeanList)
-        self.tableView.reloadData()
-    }
-    
-    public func loadMore(checkInfoBeanList: [CheckInfoBean]) {
+    public func loadMore(_ tableView: UITableView, iBeanArray: [IBean]) {
         
-        if checkInfoBeanList.count == 0 {
+        if iBeanArray.count == 0 {
             return
         }
         
         var indexPathArray: [IndexPath] = [IndexPath]()
         
-        ILog.debug(tag: DoneListViewController.TAG, content: checkInfoBeanList.count)
+        ILog.debug(tag: DoneListViewController.TAG, content: iBeanArray.count)
         
-        for index in 0...checkInfoBeanList.count - 1 {
+        for index in 0...iBeanArray.count - 1 {
             let indexPath = IndexPath(row: getItemCount() + index, section: 0)
             indexPathArray.append(indexPath)
         }
         
-        self.checkInfoBeanList.append(contentsOf: checkInfoBeanList)
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: indexPathArray, with: UITableView.RowAnimation.none)
-        self.tableView.endUpdates()
+        self.iBeanArray.append(contentsOf: iBeanArray)
+        tableView.beginUpdates()
+        tableView.insertRows(at: indexPathArray, with: UITableView.RowAnimation.none)
+        tableView.endUpdates()
     }
     
-    public func getItemCount() -> Int {
-        return self.checkInfoBeanList.count
-    }
-    
-    public func delete(checkInfoBean: CheckInfoBean) {
+    public func delete(_ tableView: UITableView, iBean: IBean) {
+
+        ILog.debug(tag: DoneListViewController.TAG, content: "delete ??? \(iBean.getId())")
         
-        for index in 0..<checkInfoBeanList.count {
-            if checkInfoBeanList[index].uuid == checkInfoBean.uuid {
-                
-                self.checkInfoBeanList.remove(at: index)
-                
+        for index in 0..<iBeanArray.count {
+            if iBeanArray[index].getId() == iBean.getId() {
+
+                self.iBeanArray.remove(at: index)
+
                 let indexPath = IndexPath(row: index, section: 0)
-                self.tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-                
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+
                 return
             }
         }
     }
+    
+    public func getItemCount() -> Int {
+        return iBeanArray.count
+    }
+    
+    public func getCanRowEdit() -> Bool {
+        return canRowEdit
+    }
 }
-

@@ -22,6 +22,8 @@ class DoneListViewController: UIViewController, SimpleNavigationBarViewHolderDel
     
     public var checkInfoBeanList: [CheckInfoBean] = [CheckInfoBean]()
     
+    public var doneListAdapter: DoneListAdapter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,9 +49,9 @@ class DoneListViewController: UIViewController, SimpleNavigationBarViewHolderDel
         ILog.debug(tag: DoneListViewController.TAG, content: "observerUnFinishCheckListItem")
         
         let userInfo = notfication.userInfo
-        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+        let checkInfoBean = userInfo!["iBean"] as! CheckInfoBean
        
-        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+        ILog.debug(tag: DoneListViewController.TAG, content: checkInfoBean.toString())
        
         checkInfoBean.done = "N"
         checkInfoBean.dateTime = DateUtil.getCurrentDateTimeStringWithStandardSQLiteDateTimeFromatter()
@@ -61,8 +63,7 @@ class DoneListViewController: UIViewController, SimpleNavigationBarViewHolderDel
             CLDBWrapper.getInstance().updateData(checkInfoBean: checkInfoBean)
             
             ThreadUtil.startUIThread(runnable: {
-                
-                self.delete(checkInfoBean: checkInfoBean)
+                self.doneListAdapter.delete(self.tableView, iBean: checkInfoBean)
                 self.hideProgress()
                 
             }, after: 0)
@@ -83,9 +84,6 @@ class DoneListViewController: UIViewController, SimpleNavigationBarViewHolderDel
     private func initTableView() {
         tableView.frame = CGRect(x: 0, y: 80, width: self.view.frame.width, height: self.view.frame.height - 80)
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         tableView.allowsSelection = false
@@ -97,6 +95,26 @@ class DoneListViewController: UIViewController, SimpleNavigationBarViewHolderDel
         
         refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
+        
+        doneListAdapter = DoneListAdapter()
+        doneListAdapter.itemHeight = 60
+        doneListAdapter.sectionNumber = 1
+        doneListAdapter.needLoadMore = true
+        doneListAdapter.canRowEdit = true
+        
+        doneListAdapter.loadMoreDelegate = {
+            self.loadMoreData()
+        }
+        
+        doneListAdapter.deleteDelegate = {
+            (iBean: IBean) in
+            
+            self.deleteData(iBean: iBean)
+        }
+       
+        tableView.delegate = doneListAdapter
+        tableView.dataSource = doneListAdapter
+        
     }
     
     @objc private func refresh(_ sender: AnyObject) {
@@ -108,53 +126,52 @@ class DoneListViewController: UIViewController, SimpleNavigationBarViewHolderDel
         reloadData()
     }
     
-    public func reloadData() {
+    private func reloadData() {
         
         showProgress()
         
         ThreadUtil.startThread {
             
-            var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
-            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10", isDone: "Y"))
+            var iBeanArray: [IBean] = [IBean]()
+            iBeanArray.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10", isDone: "Y"))
            
             ThreadUtil.startUIThread(runnable: {
                 
-                self.reload(checkInfoBeanList: checkInfoList)
+                self.doneListAdapter.reload(self.tableView, iBeanArray: iBeanArray)
                 self.hideProgress()
                 
             }, after: 0)
         }
     }
     
-    public func loadMoreData() {
+    private func loadMoreData() {
         
         showProgress()
         
         ThreadUtil.startThread {
             
-            var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
-            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.getItemCount()), limit: "10", isDone: "Y"))
+            var iBeanArray: [IBean] = [IBean]()
+            iBeanArray.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.doneListAdapter.getItemCount()), limit: "10", isDone: "Y"))
            
             ThreadUtil.startUIThread(runnable: {
-                
-                self.loadMore(checkInfoBeanList: checkInfoList)
+                self.doneListAdapter.loadMore(self.tableView, iBeanArray: iBeanArray)
                 self.hideProgress()
                 
             }, after: 0)
         }
     }
     
-    public func deleteData(checkInfoBean: CheckInfoBean) {
+    private func deleteData(iBean: IBean) {
         
         showProgress()
         
         ThreadUtil.startThread {
         
+            let checkInfoBean: CheckInfoBean = iBean as! CheckInfoBean
             CLDBWrapper.getInstance().deleteData(checkInfoBean: checkInfoBean)
             
             ThreadUtil.startUIThread(runnable: {
-                
-                self.delete(checkInfoBean: checkInfoBean)
+                self.doneListAdapter.delete(self.tableView, iBean: iBean)
                 self.hideProgress()
                 
             }, after: 0)

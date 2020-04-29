@@ -45,7 +45,6 @@
 		C33E394E2457128600384215 /* icon_un_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39482457128500384215 /* icon_un_check@3x.png */; };
 		C33E394F2457128600384215 /* icon_check.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E39492457128500384215 /* icon_check.png */; };
 		C33E39502457128600384215 /* icon_check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C33E394A2457128500384215 /* icon_check@3x.png */; };
-		C33E39532457153500384215 /* CheckListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E39522457153500384215 /* CheckListAdapter.swift */; };
 		C33E39562457203C00384215 /* CheckListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */; };
 		C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */; };
 		C33E395A24574BA600384215 /* TabUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E395924574BA600384215 /* TabUtil.swift */; };
@@ -134,6 +133,10 @@
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
+		C39F993724596755000E4CFD /* IBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F993624596755000E4CFD /* IBean.swift */; };
+		C39F993A2459684C000E4CFD /* DoneListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F99392459684C000E4CFD /* DoneListAdapter.swift */; };
+		C39F993D24596A1D000E4CFD /* ICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F993C24596A1D000E4CFD /* ICell.swift */; };
+		C39F99402459BC0E000E4CFD /* CheckListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
 		C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */; };
@@ -208,7 +211,6 @@
 		C3DF666A2458A48D006FD80F /* icon_back_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DF66672458A48D006FD80F /* icon_back_white@2x.png */; };
 		C3DF666B2458A48D006FD80F /* icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DF66682458A48D006FD80F /* icon_back_white.png */; };
 		C3DF666C2458A48D006FD80F /* icon_back_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3DF66692458A48D006FD80F /* icon_back_white@3x.png */; };
-		C3DF66702458AC98006FD80F /* DoneListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF666F2458AC98006FD80F /* DoneListAdapter.swift */; };
 		C3DF66732458ACBB006FD80F /* DoneListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF66712458ACBB006FD80F /* DoneListItemTableViewCell.swift */; };
 		C3DF66742458ACBB006FD80F /* DoneListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DF66722458ACBB006FD80F /* DoneListItemTableViewCell.xib */; };
 		C3E739502455ECC70097953E /* CheckListMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E7394E2455ECC70097953E /* CheckListMainViewController.swift */; };
@@ -270,7 +272,6 @@
 		C33E39482457128500384215 /* icon_un_check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_un_check@3x.png"; sourceTree = "<group>"; };
 		C33E39492457128500384215 /* icon_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check.png; sourceTree = "<group>"; };
 		C33E394A2457128500384215 /* icon_check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_check@3x.png"; sourceTree = "<group>"; };
-		C33E39522457153500384215 /* CheckListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListAdapter.swift; sourceTree = "<group>"; };
 		C33E39542457203C00384215 /* CheckListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItemTableViewCell.swift; sourceTree = "<group>"; };
 		C33E39552457203C00384215 /* CheckListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListItemTableViewCell.xib; sourceTree = "<group>"; };
 		C33E395924574BA600384215 /* TabUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUtil.swift; sourceTree = "<group>"; };
@@ -361,6 +362,10 @@
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		C39F993624596755000E4CFD /* IBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBean.swift; sourceTree = "<group>"; };
+		C39F99392459684C000E4CFD /* DoneListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListAdapter.swift; sourceTree = "<group>"; };
+		C39F993C24596A1D000E4CFD /* ICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICell.swift; sourceTree = "<group>"; };
+		C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListAdapter.swift; sourceTree = "<group>"; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
 		C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestImpl.swift; sourceTree = "<group>"; };
@@ -435,7 +440,6 @@
 		C3DF66672458A48D006FD80F /* icon_back_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back_white@2x.png"; sourceTree = "<group>"; };
 		C3DF66682458A48D006FD80F /* icon_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_white.png; sourceTree = "<group>"; };
 		C3DF66692458A48D006FD80F /* icon_back_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back_white@3x.png"; sourceTree = "<group>"; };
-		C3DF666F2458AC98006FD80F /* DoneListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListAdapter.swift; sourceTree = "<group>"; };
 		C3DF66712458ACBB006FD80F /* DoneListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListItemTableViewCell.swift; sourceTree = "<group>"; };
 		C3DF66722458ACBB006FD80F /* DoneListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneListItemTableViewCell.xib; sourceTree = "<group>"; };
 		C3E7394E2455ECC70097953E /* CheckListMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListMainViewController.swift; sourceTree = "<group>"; };
@@ -647,7 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				C33E3940245710F300384215 /* Item */,
-				C33E39522457153500384215 /* CheckListAdapter.swift */,
+				C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -1290,6 +1294,15 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		C39F993E2459B98E000E4CFD /* CommonTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				C39F993624596755000E4CFD /* IBean.swift */,
+				C39F993C24596A1D000E4CFD /* ICell.swift */,
+			);
+			path = CommonTableCell;
+			sourceTree = "<group>";
+		};
 		C3B1E94B236EA36B00DCD7EE /* BasicScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1452,8 +1465,8 @@
 		C3DF666D2458AC76006FD80F /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				C39F99392459684C000E4CFD /* DoneListAdapter.swift */,
 				C3DF666E2458AC83006FD80F /* Item */,
-				C3DF666F2458AC98006FD80F /* DoneListAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -1538,6 +1551,7 @@
 		C3E739522455ECE00097953E /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				C39F993E2459B98E000E4CFD /* CommonTableCell */,
 				C3DF66622458A388006FD80F /* SimpleNavigationBar */,
 				C3E739532455ECE70097953E /* MainNavigationBar */,
 			);
@@ -1768,6 +1782,7 @@
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
 				C32729442454630000BA736E /* DataModel.swift in Sources */,
+				C39F993A2459684C000E4CFD /* DoneListAdapter.swift in Sources */,
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
@@ -1786,13 +1801,13 @@
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
 				C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */,
-				C33E39532457153500384215 /* CheckListAdapter.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */,
 				C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
+				C39F99402459BC0E000E4CFD /* CheckListAdapter.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
 				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
@@ -1814,7 +1829,6 @@
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
 				C3DF66662458A3BF006FD80F /* SimpleNavigationBarViewHolder.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
-				C3DF66702458AC98006FD80F /* DoneListAdapter.swift in Sources */,
 				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
 				C36A2337237068AB009748AE /* BasicViewPagerViewController.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
@@ -1836,6 +1850,7 @@
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
+				C39F993D24596A1D000E4CFD /* ICell.swift in Sources */,
 				C38FE9E0235C41A00032F41F /* SecondViewController.swift in Sources */,
 				C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */,
 				C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */,
@@ -1863,6 +1878,7 @@
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
+				C39F993724596755000E4CFD /* IBean.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
 				C385BFF82450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift in Sources */,
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,

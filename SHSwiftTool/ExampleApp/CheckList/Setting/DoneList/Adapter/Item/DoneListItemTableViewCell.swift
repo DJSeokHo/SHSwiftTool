@@ -8,14 +8,14 @@
 
 import UIKit
 
-class DoneListItemTableViewCell: UITableViewCell {
+class DoneListItemTableViewCell: UITableViewCell, ICell {
     
     public static let TAG = "DoneListItemTableViewCell"
 
     @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
-    public var checkInfoBean: CheckInfoBean!
+    public var iBean: IBean!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,20 +37,27 @@ class DoneListItemTableViewCell: UITableViewCell {
     
     @objc private func onButtonCheckClick(_ sender: UIButton) {
         
-        if checkInfoBean == nil {
+        if iBean == nil {
             
             return
         }
        
         var userInfo = Dictionary<AnyHashable, Any>()
-        userInfo["checkInfoBean"] = checkInfoBean
-        
+        userInfo["iBean"] = iBean
+
         NotificationUtil.post(name: CLNotificationConstants.REQUEST_UN_FINISH_LIST_ITEM, object: self, userInfo: userInfo)
-        
-        ILog.debug(tag: DoneListItemTableViewCell.TAG, content: checkInfoBean.toString()!)
+
+        ILog.debug(tag: DoneListItemTableViewCell.TAG, content: iBean.toString())
     }
     
-    public func updateView() {
+    func setData(iBean: IBean) {
+        self.iBean = iBean
+    }
+    
+    func updateView() {
+        
+        let checkInfoBean: CheckInfoBean = iBean as! CheckInfoBean
+        
         label.text = checkInfoBean.content
         
         if checkInfoBean.done == "Y" {

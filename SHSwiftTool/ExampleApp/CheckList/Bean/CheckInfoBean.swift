@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CheckInfoBean {
+class CheckInfoBean: IBean {
     
     public var uuid: String
     public var content: String
@@ -21,8 +21,12 @@ class CheckInfoBean {
         self.dateTime = dateTime
         self.done = done
     }
+ 
+    func getId() -> String {
+        return self.uuid
+    }
     
-    public func toString() -> String! {
+    func toString() -> String {
         return uuid + " " + content + " " + dateTime + " " + done
     }
     

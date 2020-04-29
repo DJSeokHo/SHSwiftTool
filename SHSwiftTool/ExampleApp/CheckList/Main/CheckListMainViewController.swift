@@ -20,6 +20,8 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
     @IBOutlet var textView: UITextField!
     @IBOutlet var indicator: UIActivityIndicatorView!
     
+    private var checkListAdapter: CheckListAdapter!
+    
     private var refreshControl: UIRefreshControl!
     
     public var checkInfoBeanList: [CheckInfoBean] = [CheckInfoBean]()
@@ -59,24 +61,24 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
         
         let userInfo = notfication.userInfo
-        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+        let checkInfoBean = userInfo!["iBean"] as! CheckInfoBean
        
-        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString())
         
         AlertViewUtil.showTwoButtonWithOneInputAlertView(from: self, setTitle: "Editing", setMessage: "Change content", setInputPlaceHolder: "input content", setContent: checkInfoBean.content, setConfirmButtonTitle: "Confirm", setCancelButtonTitle: "Cancel", setConfirmDelegate: {newContent in
             ILog.debug(tag: CheckListMainViewController.TAG, content: newContent)
             
             let newCheckInfoBean = CheckInfoBean(uuid: checkInfoBean.uuid, content: newContent, dateTime: checkInfoBean.dateTime, done: checkInfoBean.done)
-            self.updateData(checkInfoBean: newCheckInfoBean)
+            self.checkListAdapter.update(self.tableView, iBean: newCheckInfoBean)
         })
     }
     @objc func observerFinishCheckListItem(notfication: NSNotification) {
         ILog.debug(tag: CheckListMainViewController.TAG, content: "observerFinishCheckListItem")
         
         let userInfo = notfication.userInfo
-        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+        let checkInfoBean = userInfo!["iBean"] as! CheckInfoBean
        
-        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString())
        
         checkInfoBean.done = "Y"
         
@@ -88,7 +90,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
             
             ThreadUtil.startUIThread(runnable: {
                 
-                self.delete(checkInfoBean: checkInfoBean)
+                self.checkListAdapter.delete(self.tableView, iBean: checkInfoBean)
                 self.hideProgress()
                 
             }, after: 0)
@@ -98,13 +100,13 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         ILog.debug(tag: DoneListViewController.TAG, content: "observerUnFinishCheckListItem")
         
         let userInfo = notfication.userInfo
-        let checkInfoBean = userInfo!["checkInfoBean"] as! CheckInfoBean
+        let checkInfoBean = userInfo!["iBean"] as! CheckInfoBean
        
-        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+        ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString())
        
         checkInfoBean.done = "N"
         
-        self.insertToFront(checkInfoBean: checkInfoBean)
+        self.checkListAdapter.insertToFront(tableView, iBean: checkInfoBean)
         self.hideProgress()
         
     }
@@ -141,12 +143,12 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         
         ThreadUtil.startThread {
             
-            var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
-            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10", isDone: "N"))
+            var iBeanArray: [IBean] = [CheckInfoBean]()
+            iBeanArray.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: "0", limit: "10", isDone: "N"))
            
             ThreadUtil.startUIThread(runnable: {
                 
-                self.reload(checkInfoBeanList: checkInfoList)
+                self.checkListAdapter.reload(self.tableView, iBeanArray: iBeanArray)
                 self.hideProgress()
                 
             }, after: 0)
@@ -159,12 +161,12 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         
         ThreadUtil.startThread {
             
-            var checkInfoList: [CheckInfoBean] = [CheckInfoBean]()
-            checkInfoList.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.getItemCount()), limit: "10", isDone: "N"))
+            var iBeanArray: [IBean] = [CheckInfoBean]()
+            iBeanArray.append(contentsOf: CLDBWrapper.getInstance().getDataArray(offset: String(self.checkListAdapter.getItemCount()), limit: "10", isDone: "N"))
            
             ThreadUtil.startUIThread(runnable: {
                 
-                self.loadMore(checkInfoBeanList: checkInfoList)
+                self.checkListAdapter.loadMore(self.tableView, iBeanArray: iBeanArray)
                 self.hideProgress()
                 
             }, after: 0)
@@ -181,46 +183,46 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
         
             let checkInfoBean = CheckInfoBean(uuid: UUIDUtil.getUUID(), content: content, dateTime: DateUtil.getCurrentDateTimeStringWithStandardSQLiteDateTimeFromatter(), done: "N")
             
-            ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString()!)
+            ILog.debug(tag: CheckListMainViewController.TAG, content: checkInfoBean.toString())
             
             CLDBWrapper.getInstance().insert(checkInfoBean: checkInfoBean)
             
             ThreadUtil.startUIThread(runnable: {
                 
-                self.insertToFront(checkInfoBean: checkInfoBean)
+                self.checkListAdapter.insertToFront(self.tableView, iBean: checkInfoBean)
                 self.hideProgress()
                 
             }, after: 0)
         }
     }
     
-    public func deleteData(checkInfoBean: CheckInfoBean) {
+    public func deleteData(iBean: IBean) {
         
         showProgress()
         
         ThreadUtil.startThread {
         
-            CLDBWrapper.getInstance().deleteData(checkInfoBean: checkInfoBean)
+            CLDBWrapper.getInstance().deleteData(checkInfoBean: iBean as! CheckInfoBean)
             
             ThreadUtil.startUIThread(runnable: {
                 
-                self.delete(checkInfoBean: checkInfoBean)
+                self.checkListAdapter.delete(self.tableView, iBean: iBean)
                 self.hideProgress()
                 
             }, after: 0)
         }
     }
     
-    public func updateData(checkInfoBean: CheckInfoBean) {
+    public func updateData(iBean: IBean) {
         showProgress()
         
         ThreadUtil.startThread {
         
-            CLDBWrapper.getInstance().updateData(checkInfoBean: checkInfoBean)
+            CLDBWrapper.getInstance().updateData(checkInfoBean: iBean as! CheckInfoBean)
             
             ThreadUtil.startUIThread(runnable: {
                 
-                self.update(checkInfoBean: checkInfoBean)
+                self.checkListAdapter.update(self.tableView, iBean: iBean)
                 self.hideProgress()
                 
             }, after: 0)
@@ -230,20 +232,36 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
     private func initTableView() {
         tableView.frame = CGRect(x: 0, y: 140, width: self.view.frame.width, height: self.view.frame.height - 140)
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.register(UINib(nibName: CheckListItemTableViewCell.TAG, bundle: nil), forCellReuseIdentifier: CheckListItemTableViewCell.TAG)
         
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         tableView.allowsSelection = false
         tableView.allowsMultipleSelection = false
         
-        tableView.register(UINib(nibName: CheckListItemTableViewCell.TAG, bundle: nil), forCellReuseIdentifier: CheckListItemTableViewCell.TAG)
-        
         refreshControl = UIRefreshControl()
         
         refreshControl.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
+        
+        checkListAdapter = CheckListAdapter()
+              
+        tableView.delegate = checkListAdapter
+        tableView.dataSource = checkListAdapter
+        
+        checkListAdapter.itemHeight = 60
+        checkListAdapter.sectionNumber = 1
+        checkListAdapter.needLoadMore = true
+        checkListAdapter.canRowEdit = true
+
+        checkListAdapter.loadMoreDelegate = {
+          self.loadMoreData()
+        }
+
+        checkListAdapter.deleteDelegate = {
+          (iBean: IBean) in
+          self.deleteData(iBean: iBean)
+        }
     }
     
     @objc private func refresh(_ sender: AnyObject) {
