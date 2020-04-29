@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckListMainNavigationBarViewHolder" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
-                <outlet property="buttonEdit" destination="J9f-ie-iF5" id="rMI-xq-oDi"/>
                 <outlet property="buttonMore" destination="ipQ-KG-IZP" id="LiJ-GN-y1N"/>
             </connections>
         </placeholder>
@@ -21,7 +20,7 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9f-ie-iF5">
                     <rect key="frame" x="20" y="40" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <state key="normal" title="Edit">
+                    <state key="normal">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>

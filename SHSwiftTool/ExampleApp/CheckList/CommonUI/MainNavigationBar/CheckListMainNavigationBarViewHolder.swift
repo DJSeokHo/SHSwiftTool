@@ -18,7 +18,6 @@ class CheckListMainNavigationBarViewHolder: UIView {
     
     private static let TAG = "CheckListMainNavigationBarViewHolder"
     
-    @IBOutlet var buttonEdit: UIButton!
     @IBOutlet var buttonMore: UIButton!
     
     
@@ -60,8 +59,6 @@ class CheckListMainNavigationBarViewHolder: UIView {
     
     private func setListener() {
        
-        self.buttonEdit.addTarget(self, action: #selector(self.onButtonEditCLicked(_:)), for: UIControl.Event.touchUpInside)
-        
         self.buttonMore.addTarget(self, action: #selector(self.onButtonMoreClicked(_:)), for: UIControl.Event.touchUpInside)
     }
 
