@@ -48,6 +48,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonSimpleAnimation: UIButton!
     @IBOutlet var buttonSQLite: UIButton!
     @IBOutlet var buttonCheckList: UIButton!
+    @IBOutlet var buttonKeepAccount: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,6 +124,13 @@ class MainViewController: UIViewController {
         buttonSQLite.addTarget(self, action: #selector(onButtonSQLite), for: UIControl.Event.touchUpInside)
         
         buttonCheckList.addTarget(self, action: #selector(onButtonCheckList), for: UIControl.Event.touchUpInside)
+        
+        buttonKeepAccount.addTarget(self, action: #selector(onButtonKeepAccount), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonKeepAccount(_ sender: UIButton) {
+        let keepAccountMainViewController: KeepAccountMainViewController = KeepAccountMainViewController()
+        ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: keepAccountMainViewController)
     }
     
     @objc private func onButtonCheckList(_ sender: UIButton) {

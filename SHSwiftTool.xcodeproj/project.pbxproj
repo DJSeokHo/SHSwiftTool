@@ -17,6 +17,23 @@
 		C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */; };
 		C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5176236B24E200253938 /* BasicStepperViewController.swift */; };
 		C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5177236B24E200253938 /* BasicStepperViewController.xib */; };
+		C32519A0245B128B008EE973 /* KASettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325199E245B128B008EE973 /* KASettingViewController.swift */; };
+		C32519A1245B128B008EE973 /* KASettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C325199F245B128B008EE973 /* KASettingViewController.xib */; };
+		C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519A2245B12A1008EE973 /* KAAccountViewController.swift */; };
+		C32519A5245B12A1008EE973 /* KAAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32519A3245B12A1008EE973 /* KAAccountViewController.xib */; };
+		C32519A8245B12AB008EE973 /* KAMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519A6245B12AB008EE973 /* KAMapViewController.swift */; };
+		C32519A9245B12AB008EE973 /* KAMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32519A7245B12AB008EE973 /* KAMapViewController.xib */; };
+		C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32519B1245B160C008EE973 /* icon_keep_account@2x.png */; };
+		C32519B5245B160C008EE973 /* icon_keep_account.png in Resources */ = {isa = PBXBuildFile; fileRef = C32519B2245B160C008EE973 /* icon_keep_account.png */; };
+		C32519B7245B1670008EE973 /* icon_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32519B6245B166F008EE973 /* icon_setting@3x.png */; };
+		C32519BA245B2489008EE973 /* CustomCenterSelectUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519B9245B2489008EE973 /* CustomCenterSelectUITabBar.swift */; };
+		C32519BC245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519BB245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift */; };
+		C32519BE245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519BD245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift */; };
+		C32519C1245B2C6C008EE973 /* CustomNormalUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519C0245B2C6C008EE973 /* CustomNormalUITabBar.swift */; };
+		C32519C3245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519C2245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift */; };
+		C32519C7245B3B06008EE973 /* icon_keep_account_un_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32519C6245B3B06008EE973 /* icon_keep_account_un_selected@3x.png */; };
+		C32519C9245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32519C8245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png */; };
+		C32519CB245B3B10008EE973 /* icon_keep_account_un_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C32519CA245B3B0F008EE973 /* icon_keep_account_un_selected.png */; };
 		C327293D245457CD00BA736E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C327293C245457B700BA736E /* libsqlite3.tbd */; };
 		C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327293F245460CB00BA736E /* SQLiteDemoViewController.swift */; };
 		C3272942245460CB00BA736E /* SQLiteDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3272940245460CB00BA736E /* SQLiteDemoViewController.xib */; };
@@ -28,6 +45,27 @@
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
 		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
 		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
+		C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8A7245A74C3005A26BB /* KeepAccountMainViewController.swift */; };
+		C32BE8AA245A74C3005A26BB /* KeepAccountMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8A8245A74C3005A26BB /* KeepAccountMainViewController.xib */; };
+		C32BE8B0245A8B94005A26BB /* CustomCenterClickUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8AF245A8B94005A26BB /* CustomCenterClickUITabBar.swift */; };
+		C32BE8B3245A8F17005A26BB /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8B2245A8F17005A26BB /* ColorUtil.swift */; };
+		C32BE8B5245AE3BE005A26BB /* ic_fabushangping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8B4245AE3BE005A26BB /* ic_fabushangping@3x.png */; };
+		C32BE8B7245AE3C4005A26BB /* ic_fabushangping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8B6245AE3C4005A26BB /* ic_fabushangping@2x.png */; };
+		C32BE8B9245AE3CA005A26BB /* ic_fabushangping.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8B8245AE3CA005A26BB /* ic_fabushangping.png */; };
+		C32BE8BD245AE3FC005A26BB /* ic_shouye_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8BA245AE3FC005A26BB /* ic_shouye_sel@2x.png */; };
+		C32BE8BE245AE3FC005A26BB /* ic_shouye_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8BB245AE3FC005A26BB /* ic_shouye_sel@3x.png */; };
+		C32BE8BF245AE3FC005A26BB /* ic_shouye_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8BC245AE3FC005A26BB /* ic_shouye_sel.png */; };
+		C32BE8C3245AE402005A26BB /* ic_shouye@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8C0245AE401005A26BB /* ic_shouye@3x.png */; };
+		C32BE8C4245AE402005A26BB /* ic_shouye.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8C1245AE402005A26BB /* ic_shouye.png */; };
+		C32BE8C5245AE402005A26BB /* ic_shouye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8C2245AE402005A26BB /* ic_shouye@2x.png */; };
+		C32BE8C7245AE727005A26BB /* CustomCenterClickUITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8C6245AE727005A26BB /* CustomCenterClickUITabBarViewController.swift */; };
+		C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8C9245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift */; };
+		C32BE8D4245AEE46005A26BB /* icon_map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8D1245AEE46005A26BB /* icon_map@3x.png */; };
+		C32BE8D9245AEE4E005A26BB /* icon_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8D6245AEE4E005A26BB /* icon_setting@2x.png */; };
+		C32BE8DB245AEE4E005A26BB /* icon_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8D8245AEE4E005A26BB /* icon_map@2x.png */; };
+		C32BE8DF245AEE55005A26BB /* icon_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8DC245AEE55005A26BB /* icon_setting.png */; };
+		C32BE8E0245AEE55005A26BB /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8DD245AEE55005A26BB /* icon_map.png */; };
+		C32BE8E3245AF175005A26BB /* icon_keep_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8E2245AF174005A26BB /* icon_keep_account@3x.png */; };
 		C32C574B2452F90E008AF1A1 /* BasicScrollBigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */; };
 		C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */; };
 		C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */; };
@@ -139,6 +177,12 @@
 		C39F99402459BC0E000E4CFD /* CheckListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
+		C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */; };
+		C3C5E9C3245B114000678674 /* icon_setting_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */; };
+		C3C5E9C7245B114600678674 /* icon_setting_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */; };
+		C3C5E9C9245B114600678674 /* icon_map_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C6245B114600678674 /* icon_map_selected@2x.png */; };
+		C3C5E9CD245B114D00678674 /* icon_map_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9CA245B114D00678674 /* icon_map_selected.png */; };
+		C3C5E9CE245B114D00678674 /* icon_setting_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9CB245B114D00678674 /* icon_setting_selected.png */; };
 		C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */; };
 		C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045A243E153B009B4456 /* ProtocolTest.swift */; };
 		C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */; };
@@ -244,6 +288,23 @@
 		C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSliderViewController.xib; sourceTree = "<group>"; };
 		C31F5176236B24E200253938 /* BasicStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepperViewController.swift; sourceTree = "<group>"; };
 		C31F5177236B24E200253938 /* BasicStepperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicStepperViewController.xib; sourceTree = "<group>"; };
+		C325199E245B128B008EE973 /* KASettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASettingViewController.swift; sourceTree = "<group>"; };
+		C325199F245B128B008EE973 /* KASettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KASettingViewController.xib; sourceTree = "<group>"; };
+		C32519A2245B12A1008EE973 /* KAAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountViewController.swift; sourceTree = "<group>"; };
+		C32519A3245B12A1008EE973 /* KAAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAAccountViewController.xib; sourceTree = "<group>"; };
+		C32519A6245B12AB008EE973 /* KAMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAMapViewController.swift; sourceTree = "<group>"; };
+		C32519A7245B12AB008EE973 /* KAMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAMapViewController.xib; sourceTree = "<group>"; };
+		C32519B1245B160C008EE973 /* icon_keep_account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keep_account@2x.png"; sourceTree = "<group>"; };
+		C32519B2245B160C008EE973 /* icon_keep_account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_keep_account.png; sourceTree = "<group>"; };
+		C32519B6245B166F008EE973 /* icon_setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting@3x.png"; sourceTree = "<group>"; };
+		C32519B9245B2489008EE973 /* CustomCenterSelectUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterSelectUITabBar.swift; sourceTree = "<group>"; };
+		C32519BB245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterSelectUITabBarViewController.swift; sourceTree = "<group>"; };
+		C32519BD245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterSelectUITabBarDelegate.swift; sourceTree = "<group>"; };
+		C32519C0245B2C6C008EE973 /* CustomNormalUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNormalUITabBar.swift; sourceTree = "<group>"; };
+		C32519C2245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNormalUITabBarViewController.swift; sourceTree = "<group>"; };
+		C32519C6245B3B06008EE973 /* icon_keep_account_un_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keep_account_un_selected@3x.png"; sourceTree = "<group>"; };
+		C32519C8245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keep_account_un_selected@2x.png"; sourceTree = "<group>"; };
+		C32519CA245B3B0F008EE973 /* icon_keep_account_un_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_keep_account_un_selected.png; sourceTree = "<group>"; };
 		C327293C245457B700BA736E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C327293F245460CB00BA736E /* SQLiteDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDemoViewController.swift; sourceTree = "<group>"; };
 		C3272940245460CB00BA736E /* SQLiteDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SQLiteDemoViewController.xib; sourceTree = "<group>"; };
@@ -255,6 +316,27 @@
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
 		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
+		C32BE8A7245A74C3005A26BB /* KeepAccountMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAccountMainViewController.swift; sourceTree = "<group>"; };
+		C32BE8A8245A74C3005A26BB /* KeepAccountMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeepAccountMainViewController.xib; sourceTree = "<group>"; };
+		C32BE8AF245A8B94005A26BB /* CustomCenterClickUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterClickUITabBar.swift; sourceTree = "<group>"; };
+		C32BE8B2245A8F17005A26BB /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
+		C32BE8B4245AE3BE005A26BB /* ic_fabushangping@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_fabushangping@3x.png"; sourceTree = "<group>"; };
+		C32BE8B6245AE3C4005A26BB /* ic_fabushangping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_fabushangping@2x.png"; sourceTree = "<group>"; };
+		C32BE8B8245AE3CA005A26BB /* ic_fabushangping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_fabushangping.png; sourceTree = "<group>"; };
+		C32BE8BA245AE3FC005A26BB /* ic_shouye_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_shouye_sel@2x.png"; sourceTree = "<group>"; };
+		C32BE8BB245AE3FC005A26BB /* ic_shouye_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_shouye_sel@3x.png"; sourceTree = "<group>"; };
+		C32BE8BC245AE3FC005A26BB /* ic_shouye_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_shouye_sel.png; sourceTree = "<group>"; };
+		C32BE8C0245AE401005A26BB /* ic_shouye@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_shouye@3x.png"; sourceTree = "<group>"; };
+		C32BE8C1245AE402005A26BB /* ic_shouye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_shouye.png; sourceTree = "<group>"; };
+		C32BE8C2245AE402005A26BB /* ic_shouye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_shouye@2x.png"; sourceTree = "<group>"; };
+		C32BE8C6245AE727005A26BB /* CustomCenterClickUITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterClickUITabBarViewController.swift; sourceTree = "<group>"; };
+		C32BE8C9245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterClickUITabBarDelegate.swift; sourceTree = "<group>"; };
+		C32BE8D1245AEE46005A26BB /* icon_map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map@3x.png"; sourceTree = "<group>"; };
+		C32BE8D6245AEE4E005A26BB /* icon_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting@2x.png"; sourceTree = "<group>"; };
+		C32BE8D8245AEE4E005A26BB /* icon_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map@2x.png"; sourceTree = "<group>"; };
+		C32BE8DC245AEE55005A26BB /* icon_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_setting.png; sourceTree = "<group>"; };
+		C32BE8DD245AEE55005A26BB /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_map.png; sourceTree = "<group>"; };
+		C32BE8E2245AF174005A26BB /* icon_keep_account@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keep_account@3x.png"; sourceTree = "<group>"; };
 		C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollBigViewController.swift; sourceTree = "<group>"; };
 		C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollBigViewController.xib; sourceTree = "<group>"; };
 		C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPageViewController.swift; sourceTree = "<group>"; };
@@ -368,6 +450,12 @@
 		C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListAdapter.swift; sourceTree = "<group>"; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
+		C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@3x.png"; sourceTree = "<group>"; };
+		C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@3x.png"; sourceTree = "<group>"; };
+		C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@2x.png"; sourceTree = "<group>"; };
+		C3C5E9C6245B114600678674 /* icon_map_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@2x.png"; sourceTree = "<group>"; };
+		C3C5E9CA245B114D00678674 /* icon_map_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_map_selected.png; sourceTree = "<group>"; };
+		C3C5E9CB245B114D00678674 /* icon_setting_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_setting_selected.png; sourceTree = "<group>"; };
 		C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestImpl.swift; sourceTree = "<group>"; };
 		C3CD045A243E153B009B4456 /* ProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
 		C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUseTest.swift; sourceTree = "<group>"; };
@@ -524,6 +612,25 @@
 			path = BasicStepper;
 			sourceTree = "<group>";
 		};
+		C32519B8245B2465008EE973 /* TabBarWithCenterSelect */ = {
+			isa = PBXGroup;
+			children = (
+				C32519B9245B2489008EE973 /* CustomCenterSelectUITabBar.swift */,
+				C32519BB245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift */,
+				C32519BD245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift */,
+			);
+			path = TabBarWithCenterSelect;
+			sourceTree = "<group>";
+		};
+		C32519BF245B2C43008EE973 /* TabBarNormal */ = {
+			isa = PBXGroup;
+			children = (
+				C32519C0245B2C6C008EE973 /* CustomNormalUITabBar.swift */,
+				C32519C2245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift */,
+			);
+			path = TabBarNormal;
+			sourceTree = "<group>";
+		};
 		C327293B245457B700BA736E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +679,164 @@
 				C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */,
 			);
 			path = BasicTextField;
+			sourceTree = "<group>";
+		};
+		C32BE8A3245A66D2005A26BB /* KeepAccount */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8CB245AEDF9005A26BB /* Resources */,
+				C32BE8AB245A8AEB005A26BB /* CommonUI */,
+				C32BE8A6245A680E005A26BB /* Database */,
+				C32BE8A5245A6805005A26BB /* Constants */,
+				C32BE8A4245A67FF005A26BB /* Main */,
+			);
+			path = KeepAccount;
+			sourceTree = "<group>";
+		};
+		C32BE8A4245A67FF005A26BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8E8245B0088005A26BB /* SubViewControllers */,
+				C32BE8A7245A74C3005A26BB /* KeepAccountMainViewController.swift */,
+				C32BE8A8245A74C3005A26BB /* KeepAccountMainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C32BE8A5245A6805005A26BB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C32BE8A6245A680E005A26BB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C32BE8AB245A8AEB005A26BB /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				C32519BF245B2C43008EE973 /* TabBarNormal */,
+				C32519B8245B2465008EE973 /* TabBarWithCenterSelect */,
+				C32BE8AC245A8AF3005A26BB /* TabBarWithCenterClick */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		C32BE8AC245A8AF3005A26BB /* TabBarWithCenterClick */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8AF245A8B94005A26BB /* CustomCenterClickUITabBar.swift */,
+				C32BE8C6245AE727005A26BB /* CustomCenterClickUITabBarViewController.swift */,
+				C32BE8C9245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift */,
+			);
+			path = TabBarWithCenterClick;
+			sourceTree = "<group>";
+		};
+		C32BE8B1245A8F05005A26BB /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8B2245A8F17005A26BB /* ColorUtil.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		C32BE8CB245AEDF9005A26BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8CC245AEE07005A26BB /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C32BE8CC245AEE07005A26BB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8CF245AEE3A005A26BB /* @1x */,
+				C32BE8CE245AEE2E005A26BB /* @2x */,
+				C32BE8CD245AEE0C005A26BB /* @3x */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C32BE8CD245AEE0C005A26BB /* @3x */ = {
+			isa = PBXGroup;
+			children = (
+				C32519C6245B3B06008EE973 /* icon_keep_account_un_selected@3x.png */,
+				C32519B6245B166F008EE973 /* icon_setting@3x.png */,
+				C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */,
+				C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */,
+				C32BE8E2245AF174005A26BB /* icon_keep_account@3x.png */,
+				C32BE8D1245AEE46005A26BB /* icon_map@3x.png */,
+			);
+			path = "@3x";
+			sourceTree = "<group>";
+		};
+		C32BE8CE245AEE2E005A26BB /* @2x */ = {
+			isa = PBXGroup;
+			children = (
+				C32519C8245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png */,
+				C32519B1245B160C008EE973 /* icon_keep_account@2x.png */,
+				C3C5E9C6245B114600678674 /* icon_map_selected@2x.png */,
+				C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */,
+				C32BE8D8245AEE4E005A26BB /* icon_map@2x.png */,
+				C32BE8D6245AEE4E005A26BB /* icon_setting@2x.png */,
+			);
+			path = "@2x";
+			sourceTree = "<group>";
+		};
+		C32BE8CF245AEE3A005A26BB /* @1x */ = {
+			isa = PBXGroup;
+			children = (
+				C32519CA245B3B0F008EE973 /* icon_keep_account_un_selected.png */,
+				C32519B2245B160C008EE973 /* icon_keep_account.png */,
+				C3C5E9CA245B114D00678674 /* icon_map_selected.png */,
+				C3C5E9CB245B114D00678674 /* icon_setting_selected.png */,
+				C32BE8DD245AEE55005A26BB /* icon_map.png */,
+				C32BE8DC245AEE55005A26BB /* icon_setting.png */,
+			);
+			path = "@1x";
+			sourceTree = "<group>";
+		};
+		C32BE8E8245B0088005A26BB /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C32BE8F3245B00E7005A26BB /* Setting */,
+				C32BE8EE245B00C9005A26BB /* Account */,
+				C32BE8ED245B00C0005A26BB /* Map */,
+			);
+			path = SubViewControllers;
+			sourceTree = "<group>";
+		};
+		C32BE8ED245B00C0005A26BB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C32519A6245B12AB008EE973 /* KAMapViewController.swift */,
+				C32519A7245B12AB008EE973 /* KAMapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		C32BE8EE245B00C9005A26BB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C32519A2245B12A1008EE973 /* KAAccountViewController.swift */,
+				C32519A3245B12A1008EE973 /* KAAccountViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		C32BE8F3245B00E7005A26BB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C325199E245B128B008EE973 /* KASettingViewController.swift */,
+				C325199F245B128B008EE973 /* KASettingViewController.xib */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		C32C57482452F8D0008AF1A1 /* BasicScrollBigView */ = {
@@ -894,9 +1159,6 @@
 			children = (
 				C35791152307EFD500BDB17E /* icon_back.png */,
 				C358DDAE2301A754007F10C6 /* icon_close.png */,
-				C37020E52361E44E00895D6F /* test_image_1.png */,
-				C37020E62361E44E00895D6F /* test_image_2.png */,
-				C37020E42361E44E00895D6F /* test_image_3.png */,
 				C35FF071230C3E59009D19A0 /* @1x */,
 				C35FF070230C3E56009D19A0 /* @2x */,
 				C35FF06F230C3E52009D19A0 /* @3x */,
@@ -907,6 +1169,10 @@
 		C35FF06F230C3E52009D19A0 /* @3x */ = {
 			isa = PBXGroup;
 			children = (
+				C32BE8C0245AE401005A26BB /* ic_shouye@3x.png */,
+				C32BE8BB245AE3FC005A26BB /* ic_shouye_sel@3x.png */,
+				C37020E42361E44E00895D6F /* test_image_3.png */,
+				C32BE8B4245AE3BE005A26BB /* ic_fabushangping@3x.png */,
 				C3DD6B32230D88BC00BDDF5D /* icon_profile_selected@3x.png */,
 				C3DD6B31230D88BB00BDDF5D /* icon_profile_un_selected@3x.png */,
 				C3DD6AED230D84C100BDDF5D /* icon_client_selected@3x.png */,
@@ -924,6 +1190,10 @@
 		C35FF070230C3E56009D19A0 /* @2x */ = {
 			isa = PBXGroup;
 			children = (
+				C32BE8C2245AE402005A26BB /* ic_shouye@2x.png */,
+				C32BE8BA245AE3FC005A26BB /* ic_shouye_sel@2x.png */,
+				C37020E62361E44E00895D6F /* test_image_2.png */,
+				C32BE8B6245AE3C4005A26BB /* ic_fabushangping@2x.png */,
 				C3DD6B35230D88D500BDDF5D /* icon_profile_selected@2x.png */,
 				C3DD6B36230D88D500BDDF5D /* icon_profile_un_selected@2x.png */,
 				C3DD6B03230D850000BDDF5D /* icon_client_selected@2x.png */,
@@ -941,6 +1211,10 @@
 		C35FF071230C3E59009D19A0 /* @1x */ = {
 			isa = PBXGroup;
 			children = (
+				C32BE8C1245AE402005A26BB /* ic_shouye.png */,
+				C32BE8BC245AE3FC005A26BB /* ic_shouye_sel.png */,
+				C37020E52361E44E00895D6F /* test_image_1.png */,
+				C32BE8B8245AE3CA005A26BB /* ic_fabushangping.png */,
 				C3DD6B39230D88EF00BDDF5D /* icon_profile_selected.png */,
 				C3DD6B3A230D88EF00BDDF5D /* icon_profile_un_selected.png */,
 				C3DD6B0E230D85F700BDDF5D /* icon_client_selected.png */,
@@ -1213,6 +1487,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C32BE8B1245A8F05005A26BB /* Color */,
 				C33E395824574B9400384215 /* Tap */,
 				C327294824546C9F00BA736E /* Date */,
 				C32729452454679800BA736E /* UUID */,
@@ -1511,6 +1786,7 @@
 		C3E739492455E3E10097953E /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				C32BE8A3245A66D2005A26BB /* KeepAccount */,
 				C3E7394A2455E3EA0097953E /* CheckList */,
 			);
 			path = ExampleApp;
@@ -1665,6 +1941,7 @@
 				C3DD6B05230D850100BDDF5D /* icon_dashboard_un_selected@2x.png in Resources */,
 				C3EF1B852369C83B006FB168 /* BasicSegmentViewController.xib in Resources */,
 				C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */,
+				C32BE8C5245AE402005A26BB /* ic_shouye@2x.png in Resources */,
 				C3DD6B17230D85F800BDDF5D /* icon_product_un_selected.png in Resources */,
 				C37020E92361E44E00895D6F /* test_image_2.png in Resources */,
 				C3DD6B37230D88D500BDDF5D /* icon_profile_selected@2x.png in Resources */,
@@ -1675,37 +1952,48 @@
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
 				C3DD6B08230D850100BDDF5D /* icon_product_un_selected@2x.png in Resources */,
 				C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */,
+				C32BE8DB245AEE4E005A26BB /* icon_map@2x.png in Resources */,
 				C3DF66612458A008006FD80F /* icon_back@3x.png in Resources */,
 				C33E394D2457128600384215 /* icon_check@2x.png in Resources */,
+				C32519A5245B12A1008EE973 /* KAAccountViewController.xib in Resources */,
 				C3E73963245614700097953E /* icon_plus@2x.png in Resources */,
 				C3DF66742458ACBB006FD80F /* DoneListItemTableViewCell.xib in Resources */,
 				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3E7395C245600D80097953E /* icon_more@3x.png in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
+				C3C5E9C3245B114000678674 /* icon_setting_selected@3x.png in Resources */,
 				C33E394C2457128600384215 /* icon_un_check@2x.png in Resources */,
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
 				C3E73964245614700097953E /* icon_plus@3x.png in Resources */,
 				C3DD6AF9230D84C100BDDF5D /* icon_client_un_selected@3x.png in Resources */,
 				C3DD6B38230D88D500BDDF5D /* icon_profile_un_selected@2x.png in Resources */,
+				C32BE8B7245AE3C4005A26BB /* ic_fabushangping@2x.png in Resources */,
 				C3DF665D2458A008006FD80F /* icon_next@2x.png in Resources */,
 				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
 				C3DD6B34230D88BC00BDDF5D /* icon_profile_selected@3x.png in Resources */,
+				C3C5E9CD245B114D00678674 /* icon_map_selected.png in Resources */,
+				C32519B5245B160C008EE973 /* icon_keep_account.png in Resources */,
 				C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */,
 				C3DD6B1A230D85F800BDDF5D /* icon_order_selectedpng.png in Resources */,
 				C36C66A82450AF860081E862 /* BasicGroupTableViewController.xib in Resources */,
 				C3DD6B16230D85F800BDDF5D /* icon_client_selected.png in Resources */,
 				C3DD6AF7230D84C100BDDF5D /* icon_dashboard_selected@3x.png in Resources */,
+				C32BE8B9245AE3CA005A26BB /* ic_fabushangping.png in Resources */,
 				C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
+				C3C5E9CE245B114D00678674 /* icon_setting_selected.png in Resources */,
 				C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */,
 				C32C57512453268F008AF1A1 /* BasicPageViewController.xib in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
 				C3DF666C2458A48D006FD80F /* icon_back_white@3x.png in Resources */,
+				C32BE8AA245A74C3005A26BB /* KeepAccountMainViewController.xib in Resources */,
+				C32BE8D9245AEE4E005A26BB /* icon_setting@2x.png in Resources */,
 				C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */,
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
+				C32BE8E3245AF175005A26BB /* icon_keep_account@3x.png in Resources */,
 				C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */,
 				C3DF66642458A3AD006FD80F /* SimpleNavigationBarViewHolder.xib in Resources */,
 				C32C575B245336F0008AF1A1 /* SimpleAnimationViewController.xib in Resources */,
@@ -1714,24 +2002,35 @@
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
 				C3E739512455ECC70097953E /* CheckListMainViewController.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
+				C32BE8BF245AE3FC005A26BB /* ic_shouye_sel.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
 				C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
+				C32519C9245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png in Resources */,
+				C32BE8BE245AE3FC005A26BB /* ic_shouye_sel@3x.png in Resources */,
 				C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */,
 				C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */,
+				C32BE8C4245AE402005A26BB /* ic_shouye.png in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
 				C3E739562455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib in Resources */,
 				C3DF665C2458A008006FD80F /* icon_back.png in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C3DF666B2458A48D006FD80F /* icon_back_white.png in Resources */,
+				C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */,
 				C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */,
+				C32519B7245B1670008EE973 /* icon_setting@3x.png in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
+				C32BE8DF245AEE55005A26BB /* icon_setting.png in Resources */,
 				C3E73962245614700097953E /* icon_plus.png in Resources */,
+				C32BE8BD245AE3FC005A26BB /* ic_shouye_sel@2x.png in Resources */,
 				C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */,
+				C32519CB245B3B10008EE973 /* icon_keep_account_un_selected.png in Resources */,
 				C3DF665524589F48006FD80F /* DoneListViewController.xib in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
+				C32BE8E0245AEE55005A26BB /* icon_map.png in Resources */,
+				C32519A9245B12AB008EE973 /* KAMapViewController.xib in Resources */,
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3D3624C236E849D001B8ACB /* BasicTableViewController.xib in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
@@ -1740,12 +2039,18 @@
 				C3DF665024589E18006FD80F /* SettingViewController.xib in Resources */,
 				C33E394F2457128600384215 /* icon_check.png in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
+				C32519C7245B3B06008EE973 /* icon_keep_account_un_selected@3x.png in Resources */,
 				C3DF66602458A008006FD80F /* icon_back@2x.png in Resources */,
 				C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */,
+				C3C5E9C7245B114600678674 /* icon_setting_selected@2x.png in Resources */,
 				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
 				C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */,
+				C32BE8C3245AE402005A26BB /* ic_shouye@3x.png in Resources */,
+				C32BE8B5245AE3BE005A26BB /* ic_fabushangping@3x.png in Resources */,
 				C33E394E2457128600384215 /* icon_un_check@3x.png in Resources */,
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
+				C3C5E9C9245B114600678674 /* icon_map_selected@2x.png in Resources */,
+				C32BE8D4245AEE46005A26BB /* icon_map@3x.png in Resources */,
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
 				C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */,
@@ -1756,9 +2061,11 @@
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
 				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
+				C32519A1245B128B008EE973 /* KASettingViewController.xib in Resources */,
 				C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */,
 				C3272942245460CB00BA736E /* SQLiteDemoViewController.xib in Resources */,
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
+				C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
 				C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */,
@@ -1782,6 +2089,7 @@
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
 				C32729442454630000BA736E /* DataModel.swift in Sources */,
+				C32519BA245B2489008EE973 /* CustomCenterSelectUITabBar.swift in Sources */,
 				C39F993A2459684C000E4CFD /* DoneListAdapter.swift in Sources */,
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
@@ -1804,11 +2112,14 @@
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
+				C32519BC245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift in Sources */,
 				C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */,
 				C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
+				C32519A0245B128B008EE973 /* KASettingViewController.swift in Sources */,
 				C39F99402459BC0E000E4CFD /* CheckListAdapter.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
+				C32519BE245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift in Sources */,
 				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
@@ -1820,6 +2131,7 @@
 				C3845A5922EDE25900FAC52B /* User.swift in Sources */,
 				C388904322F5AF28007C444F /* LoginController.swift in Sources */,
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
+				C32BE8C7245AE727005A26BB /* CustomCenterClickUITabBarViewController.swift in Sources */,
 				C3E7395E245601C70097953E /* CheckListMainNavigationBarViewHolder.swift in Sources */,
 				C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
@@ -1835,10 +2147,12 @@
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
 				C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */,
+				C32519C3245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift in Sources */,
 				C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */,
 				C33E39562457203C00384215 /* CheckListItemTableViewCell.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
+				C32BE8B3245A8F17005A26BB /* ColorUtil.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
 				C31F5173236B1CFA00253938 /* BasicSliderViewController.swift in Sources */,
 				C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */,
@@ -1869,6 +2183,7 @@
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
 				C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */,
+				C32BE8B0245A8B94005A26BB /* CustomCenterClickUITabBar.swift in Sources */,
 				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
@@ -1876,21 +2191,26 @@
 				C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */,
 				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
+				C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */,
 				C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C39F993724596755000E4CFD /* IBean.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
 				C385BFF82450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift in Sources */,
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,
+				C32519A8245B12AB008EE973 /* KAMapViewController.swift in Sources */,
 				C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C3DF665424589F48006FD80F /* DoneListViewController.swift in Sources */,
+				C32519C1245B2C6C008EE973 /* CustomNormalUITabBar.swift in Sources */,
 				C3E7396624561B0D0097953E /* CLDBWrapper.swift in Sources */,
 				C3E7396A245627220097953E /* CheckInfoBean.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
+				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
+				C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */,
 				C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */,
 				C351598223093E0300848456 /* AlertViewUtil.swift in Sources */,
 			);

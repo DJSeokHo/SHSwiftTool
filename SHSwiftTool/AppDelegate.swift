@@ -19,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        initMainViewController()
 //        initBottomTabBar()
         initBottomTabBarWithNavigation()
+//        
+//        window = UIWindow.init(frame: UIScreen.main.bounds)
+//        window?.backgroundColor = UIColor.white
+//        window?.makeKeyAndVisible()
+//        window?.rootViewController = CustomUITabBarViewController()
         
         return true
     }
@@ -29,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // create main container view controller
         let mainViewController: MainViewController = MainViewController()
-        
+       
         // create navigation controller and put main view controller as root view
         //        let navigationController: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
