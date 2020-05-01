@@ -45,6 +45,25 @@
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
 		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
 		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
+		C328FEAC245B8C9F002AF147 /* icon_add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEAB245B8C9F002AF147 /* icon_add@3x.png */; };
+		C328FEAE245B8CA2002AF147 /* icon_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEAD245B8CA2002AF147 /* icon_add@2x.png */; };
+		C328FEB0245B8CA6002AF147 /* icon_add.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEAF245B8CA6002AF147 /* icon_add.png */; };
+		C328FEB3245B8CE7002AF147 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEB2245B8CE7002AF147 /* ViewUtil.swift */; };
+		C328FEB6245B8E80002AF147 /* KeepAccountInfoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEB5245B8E80002AF147 /* KeepAccountInfoBean.swift */; };
+		C328FEBB245B8F1C002AF147 /* KABean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBA245B8F1C002AF147 /* KABean.swift */; };
+		C328FEBE245B91D3002AF147 /* KAPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBD245B91D3002AF147 /* KAPageViewController.swift */; };
+		C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */; };
+		C328FEC2245B920F002AF147 /* KAAccountListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */; };
+		C328FEC7245B925F002AF147 /* KAAccountListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEC6245B925F002AF147 /* KAAccountListAdapter.swift */; };
+		C328FECA245B9278002AF147 /* KAAccountListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEC8245B9278002AF147 /* KAAccountListItemTableViewCell.swift */; };
+		C328FECB245B9278002AF147 /* KAAccountListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328FEC9245B9278002AF147 /* KAAccountListItemTableViewCell.xib */; };
+		C328FECF245B9324002AF147 /* KAAccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FECD245B9324002AF147 /* KAAccountDetailViewController.swift */; };
+		C328FED0245B9324002AF147 /* KAAccountDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328FECE245B9324002AF147 /* KAAccountDetailViewController.xib */; };
+		C328FED3245B944F002AF147 /* KANavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328FED2245B944F002AF147 /* KANavigationBarViewHolder.xib */; };
+		C328FED5245B945B002AF147 /* KANavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FED4245B945B002AF147 /* KANavigationBarViewHolder.swift */; };
+		C328FED7245B995F002AF147 /* icon_close_black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FED6245B995F002AF147 /* icon_close_black@3x.png */; };
+		C328FED9245B9963002AF147 /* icon_close_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FED8245B9963002AF147 /* icon_close_black@2x.png */; };
+		C328FEDB245B9968002AF147 /* icon_close_black.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEDA245B9968002AF147 /* icon_close_black.png */; };
 		C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8A7245A74C3005A26BB /* KeepAccountMainViewController.swift */; };
 		C32BE8AA245A74C3005A26BB /* KeepAccountMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8A8245A74C3005A26BB /* KeepAccountMainViewController.xib */; };
 		C32BE8B0245A8B94005A26BB /* CustomCenterClickUITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32BE8AF245A8B94005A26BB /* CustomCenterClickUITabBar.swift */; };
@@ -316,6 +335,25 @@
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
 		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
+		C328FEAB245B8C9F002AF147 /* icon_add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_add@3x.png"; sourceTree = "<group>"; };
+		C328FEAD245B8CA2002AF147 /* icon_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_add@2x.png"; sourceTree = "<group>"; };
+		C328FEAF245B8CA6002AF147 /* icon_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_add.png; sourceTree = "<group>"; };
+		C328FEB2245B8CE7002AF147 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		C328FEB5245B8E80002AF147 /* KeepAccountInfoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAccountInfoBean.swift; sourceTree = "<group>"; };
+		C328FEBA245B8F1C002AF147 /* KABean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KABean.swift; sourceTree = "<group>"; };
+		C328FEBD245B91D3002AF147 /* KAPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPageViewController.swift; sourceTree = "<group>"; };
+		C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListViewController.swift; sourceTree = "<group>"; };
+		C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAAccountListViewController.xib; sourceTree = "<group>"; };
+		C328FEC6245B925F002AF147 /* KAAccountListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListAdapter.swift; sourceTree = "<group>"; };
+		C328FEC8245B9278002AF147 /* KAAccountListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListItemTableViewCell.swift; sourceTree = "<group>"; };
+		C328FEC9245B9278002AF147 /* KAAccountListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAAccountListItemTableViewCell.xib; sourceTree = "<group>"; };
+		C328FECD245B9324002AF147 /* KAAccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountDetailViewController.swift; sourceTree = "<group>"; };
+		C328FECE245B9324002AF147 /* KAAccountDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAAccountDetailViewController.xib; sourceTree = "<group>"; };
+		C328FED2245B944F002AF147 /* KANavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KANavigationBarViewHolder.xib; sourceTree = "<group>"; };
+		C328FED4245B945B002AF147 /* KANavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KANavigationBarViewHolder.swift; sourceTree = "<group>"; };
+		C328FED6245B995F002AF147 /* icon_close_black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close_black@3x.png"; sourceTree = "<group>"; };
+		C328FED8245B9963002AF147 /* icon_close_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close_black@2x.png"; sourceTree = "<group>"; };
+		C328FEDA245B9968002AF147 /* icon_close_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close_black.png; sourceTree = "<group>"; };
 		C32BE8A7245A74C3005A26BB /* KeepAccountMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAccountMainViewController.swift; sourceTree = "<group>"; };
 		C32BE8A8245A74C3005A26BB /* KeepAccountMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeepAccountMainViewController.xib; sourceTree = "<group>"; };
 		C32BE8AF245A8B94005A26BB /* CustomCenterClickUITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCenterClickUITabBar.swift; sourceTree = "<group>"; };
@@ -681,9 +719,82 @@
 			path = BasicTextField;
 			sourceTree = "<group>";
 		};
+		C328FEB1245B8CDA002AF147 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEB2245B8CE7002AF147 /* ViewUtil.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C328FEB4245B8E67002AF147 /* CommonBean */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEB5245B8E80002AF147 /* KeepAccountInfoBean.swift */,
+				C328FEBA245B8F1C002AF147 /* KABean.swift */,
+			);
+			path = CommonBean;
+			sourceTree = "<group>";
+		};
+		C328FEBC245B911D002AF147 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC3245B9213002AF147 /* AccountList */,
+				C328FEBD245B91D3002AF147 /* KAPageViewController.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		C328FEC3245B9213002AF147 /* AccountList */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC4245B921D002AF147 /* Adapter */,
+				C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */,
+				C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */,
+			);
+			path = AccountList;
+			sourceTree = "<group>";
+		};
+		C328FEC4245B921D002AF147 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC5245B9227002AF147 /* Item */,
+				C328FEC6245B925F002AF147 /* KAAccountListAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		C328FEC5245B9227002AF147 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC8245B9278002AF147 /* KAAccountListItemTableViewCell.swift */,
+				C328FEC9245B9278002AF147 /* KAAccountListItemTableViewCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C328FECC245B930B002AF147 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C328FECD245B9324002AF147 /* KAAccountDetailViewController.swift */,
+				C328FECE245B9324002AF147 /* KAAccountDetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C328FED1245B9404002AF147 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				C328FED2245B944F002AF147 /* KANavigationBarViewHolder.xib */,
+				C328FED4245B945B002AF147 /* KANavigationBarViewHolder.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
 		C32BE8A3245A66D2005A26BB /* KeepAccount */ = {
 			isa = PBXGroup;
 			children = (
+				C328FEB4245B8E67002AF147 /* CommonBean */,
 				C32BE8CB245AEDF9005A26BB /* Resources */,
 				C32BE8AB245A8AEB005A26BB /* CommonUI */,
 				C32BE8A6245A680E005A26BB /* Database */,
@@ -720,6 +831,7 @@
 		C32BE8AB245A8AEB005A26BB /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				C328FED1245B9404002AF147 /* NavigationBar */,
 				C32519BF245B2C43008EE973 /* TabBarNormal */,
 				C32519B8245B2465008EE973 /* TabBarWithCenterSelect */,
 				C32BE8AC245A8AF3005A26BB /* TabBarWithCenterClick */,
@@ -766,6 +878,8 @@
 		C32BE8CD245AEE0C005A26BB /* @3x */ = {
 			isa = PBXGroup;
 			children = (
+				C328FED6245B995F002AF147 /* icon_close_black@3x.png */,
+				C328FEAB245B8C9F002AF147 /* icon_add@3x.png */,
 				C32519C6245B3B06008EE973 /* icon_keep_account_un_selected@3x.png */,
 				C32519B6245B166F008EE973 /* icon_setting@3x.png */,
 				C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */,
@@ -779,6 +893,8 @@
 		C32BE8CE245AEE2E005A26BB /* @2x */ = {
 			isa = PBXGroup;
 			children = (
+				C328FED8245B9963002AF147 /* icon_close_black@2x.png */,
+				C328FEAD245B8CA2002AF147 /* icon_add@2x.png */,
 				C32519C8245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png */,
 				C32519B1245B160C008EE973 /* icon_keep_account@2x.png */,
 				C3C5E9C6245B114600678674 /* icon_map_selected@2x.png */,
@@ -792,6 +908,8 @@
 		C32BE8CF245AEE3A005A26BB /* @1x */ = {
 			isa = PBXGroup;
 			children = (
+				C328FEDA245B9968002AF147 /* icon_close_black.png */,
+				C328FEAF245B8CA6002AF147 /* icon_add.png */,
 				C32519CA245B3B0F008EE973 /* icon_keep_account_un_selected.png */,
 				C32519B2245B160C008EE973 /* icon_keep_account.png */,
 				C3C5E9CA245B114D00678674 /* icon_map_selected.png */,
@@ -824,6 +942,8 @@
 		C32BE8EE245B00C9005A26BB /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				C328FECC245B930B002AF147 /* Detail */,
+				C328FEBC245B911D002AF147 /* PageViewController */,
 				C32519A2245B12A1008EE973 /* KAAccountViewController.swift */,
 				C32519A3245B12A1008EE973 /* KAAccountViewController.xib */,
 			);
@@ -1487,6 +1607,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C328FEB1245B8CDA002AF147 /* View */,
 				C32BE8B1245A8F05005A26BB /* Color */,
 				C33E395824574B9400384215 /* Tap */,
 				C327294824546C9F00BA736E /* Date */,
@@ -1977,9 +2098,12 @@
 				C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */,
 				C3DD6B1A230D85F800BDDF5D /* icon_order_selectedpng.png in Resources */,
 				C36C66A82450AF860081E862 /* BasicGroupTableViewController.xib in Resources */,
+				C328FEC2245B920F002AF147 /* KAAccountListViewController.xib in Resources */,
 				C3DD6B16230D85F800BDDF5D /* icon_client_selected.png in Resources */,
 				C3DD6AF7230D84C100BDDF5D /* icon_dashboard_selected@3x.png in Resources */,
 				C32BE8B9245AE3CA005A26BB /* ic_fabushangping.png in Resources */,
+				C328FEAC245B8C9F002AF147 /* icon_add@3x.png in Resources */,
+				C328FECB245B9278002AF147 /* KAAccountListItemTableViewCell.xib in Resources */,
 				C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C3C5E9CE245B114D00678674 /* icon_setting_selected.png in Resources */,
@@ -2016,11 +2140,13 @@
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
 				C3E739562455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib in Resources */,
 				C3DF665C2458A008006FD80F /* icon_back.png in Resources */,
+				C328FED7245B995F002AF147 /* icon_close_black@3x.png in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C3DF666B2458A48D006FD80F /* icon_back_white.png in Resources */,
 				C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */,
 				C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */,
 				C32519B7245B1670008EE973 /* icon_setting@3x.png in Resources */,
+				C328FED0245B9324002AF147 /* KAAccountDetailViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
 				C32BE8DF245AEE55005A26BB /* icon_setting.png in Resources */,
 				C3E73962245614700097953E /* icon_plus.png in Resources */,
@@ -2028,14 +2154,17 @@
 				C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */,
 				C32519CB245B3B10008EE973 /* icon_keep_account_un_selected.png in Resources */,
 				C3DF665524589F48006FD80F /* DoneListViewController.xib in Resources */,
+				C328FEDB245B9968002AF147 /* icon_close_black.png in Resources */,
 				C3DD6B3C230D88EF00BDDF5D /* icon_profile_un_selected.png in Resources */,
 				C32BE8E0245AEE55005A26BB /* icon_map.png in Resources */,
 				C32519A9245B12AB008EE973 /* KAMapViewController.xib in Resources */,
+				C328FEB0245B8CA6002AF147 /* icon_add.png in Resources */,
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3D3624C236E849D001B8ACB /* BasicTableViewController.xib in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3DF665F2458A008006FD80F /* icon_next.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
+				C328FED9245B9963002AF147 /* icon_close_black@2x.png in Resources */,
 				C3DF665024589E18006FD80F /* SettingViewController.xib in Resources */,
 				C33E394F2457128600384215 /* icon_check.png in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
@@ -2051,6 +2180,7 @@
 				C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */,
 				C3C5E9C9245B114600678674 /* icon_map_selected@2x.png in Resources */,
 				C32BE8D4245AEE46005A26BB /* icon_map@3x.png in Resources */,
+				C328FED3245B944F002AF147 /* KANavigationBarViewHolder.xib in Resources */,
 				C3DD6B09230D850100BDDF5D /* icon_client_un_selected@2x.png in Resources */,
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
 				C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */,
@@ -2067,6 +2197,7 @@
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
+				C328FEAE245B8CA2002AF147 /* icon_add@2x.png in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
 				C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */,
 				C385BFF52450F03100F864C8 /* BasicCollectionViewController.xib in Resources */,
@@ -2084,6 +2215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34D31E222E9EA6C00E22BC6 /* ExampleProtocol.swift in Sources */,
+				C328FECF245B9324002AF147 /* KAAccountDetailViewController.swift in Sources */,
 				C3DB2ADD2351B09700D1A621 /* BasicFoundation.swift in Sources */,
 				C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */,
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
@@ -2105,6 +2237,7 @@
 				C3DF664F24589E18006FD80F /* SettingViewController.swift in Sources */,
 				C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */,
 				C3DF66732458ACBB006FD80F /* DoneListItemTableViewCell.swift in Sources */,
+				C328FEB3245B8CE7002AF147 /* ViewUtil.swift in Sources */,
 				C33E395D24574D3900384215 /* CLNotificationConstants.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
@@ -2114,6 +2247,7 @@
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C32519BC245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift in Sources */,
 				C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */,
+				C328FEB6245B8E80002AF147 /* KeepAccountInfoBean.swift in Sources */,
 				C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C32519A0245B128B008EE973 /* KASettingViewController.swift in Sources */,
@@ -2162,6 +2296,7 @@
 				C3DD6B2F230D865200BDDF5D /* OrderViewController.swift in Sources */,
 				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
+				C328FED5245B945B002AF147 /* KANavigationBarViewHolder.swift in Sources */,
 				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
 				C39F993D24596A1D000E4CFD /* ICell.swift in Sources */,
@@ -2173,8 +2308,10 @@
 				C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */,
 				C3EF1B892369D0FE006FB168 /* BasicProgressViewController.swift in Sources */,
 				C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */,
+				C328FEBB245B8F1C002AF147 /* KABean.swift in Sources */,
 				C3D3624B236E849D001B8ACB /* BasicTableViewController.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
+				C328FEBE245B91D3002AF147 /* KAPageViewController.swift in Sources */,
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */,
@@ -2203,6 +2340,7 @@
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C3DF665424589F48006FD80F /* DoneListViewController.swift in Sources */,
+				C328FECA245B9278002AF147 /* KAAccountListItemTableViewCell.swift in Sources */,
 				C32519C1245B2C6C008EE973 /* CustomNormalUITabBar.swift in Sources */,
 				C3E7396624561B0D0097953E /* CLDBWrapper.swift in Sources */,
 				C3E7396A245627220097953E /* CheckInfoBean.swift in Sources */,
@@ -2210,7 +2348,9 @@
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
+				C328FEC7245B925F002AF147 /* KAAccountListAdapter.swift in Sources */,
 				C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */,
+				C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */,
 				C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */,
 				C351598223093E0300848456 /* AlertViewUtil.swift in Sources */,
 			);

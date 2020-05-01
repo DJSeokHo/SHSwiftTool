@@ -1,49 +1,52 @@
 //
-//  KAAccountViewController.swift
+//  KAAccountDetailViewController.swift
 //  SHSwiftTool
 //
-//  Created by Seok Ho on 2020/04/30.
+//  Created by Seok Ho on 2020/05/01.
 //  Copyright © 2020 SWein. All rights reserved.
 //
 
 import UIKit
 
-class KAAccountViewController: UIViewController {
-    
-    public let tag = "KAAccountViewController"
-    public static let TAG = "KAAccountViewController"
+class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolderDelegate {
+
+    public let tag = "KAAccountDetailViewController"
+    public static let TAG = "KAAccountDetailViewController"
     
     private var kaNavigationBarViewHolder: KANavigationBarViewHolder!
-   
+    
+    public var navigationBarTitle: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
-        
+        // Do any additional setup after loading the view. 
         initNavigationBar()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     // MARK: navigation bar
     private func initNavigationBar() {
         
         kaNavigationBarViewHolder = KANavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
-      
-        kaNavigationBarViewHolder.setTitle(title: "Record")
-        kaNavigationBarViewHolder.hideRightButton()
+        kaNavigationBarViewHolder.kaNavigationBarViewHolderDelegate = self
+        
+        kaNavigationBarViewHolder.setTitle(title: navigationBarTitle)
+        kaNavigationBarViewHolder.setRightButtonImage(imageName: "icon_close_black.png")
         kaNavigationBarViewHolder.hideLeftButton()
         
         ViewUtil.setShadow(view: kaNavigationBarViewHolder.bottomLine, color: UIColor.black.cgColor, radius: 3, opacity: 0.5, offsetWidth: 0, offsetHeight: 3)
         
         self.view.addSubview(kaNavigationBarViewHolder!)
     }
-   
-    // MARK: navigation bar
+    func onLeftButtonClick() {
+        ILog.debug(tag: tag, content: "onLeftButtonClick")
+    }
     
+    func onRightButtonClick() {
+        ILog.debug(tag: tag, content: "onRightButtonClick")
+        ViewControllerUtil.finishSelf(view:self)
+    }
+    // MARK: navigation bar
     /*
     // MARK: - Navigation
 

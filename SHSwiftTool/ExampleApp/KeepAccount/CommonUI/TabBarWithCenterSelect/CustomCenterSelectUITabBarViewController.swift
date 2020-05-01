@@ -68,6 +68,19 @@ class CustomCenterSelectUITabBarViewController: UITabBarController, CustomCenter
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        
+        var frame = self.tabBar.frame
+        frame.size.height = 90;
+        frame.origin.y = self.view.frame.size.height - frame.size.height
+        self.tabBar.frame = frame
+        
+        self.tabBar.backgroundColor = ColorUtil.colorWithHexString("999999")
+        self.tabBar.isTranslucent = true
+        
+        self.tabBar.barStyle = .default
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

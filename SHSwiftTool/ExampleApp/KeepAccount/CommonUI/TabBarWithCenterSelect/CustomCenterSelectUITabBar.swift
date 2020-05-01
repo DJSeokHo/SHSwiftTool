@@ -36,6 +36,7 @@ class CustomCenterSelectUITabBar: UITabBar {
         plusButton.addTarget(self, action: #selector(addButtonClick), for: .touchUpInside)
         
         self.addSubview(plusButton)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -62,7 +63,7 @@ class CustomCenterSelectUITabBar: UITabBar {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+      
         changeTopSplitLineColor(color: ColorUtil.colorWithHexString("ffffff"))
         
         let buttonX = self.frame.size.width / CGFloat(buttonNumber)
