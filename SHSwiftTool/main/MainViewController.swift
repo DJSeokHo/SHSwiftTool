@@ -38,7 +38,6 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicTableView: UIButton!
     @IBOutlet var buttonBasicGroupTableView: UIButton!
     @IBOutlet var buttonBasicScrollView: UIButton!
-    @IBOutlet var buttonBasicViewPager: UIButton!
     @IBOutlet var buttonClose: UIButton!
     @IBOutlet var buttonBaseicConsoleTest: UIButton!
     @IBOutlet var buttonBasicCollectionView: UIButton!
@@ -49,6 +48,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonSQLite: UIButton!
     @IBOutlet var buttonCheckList: UIButton!
     @IBOutlet var buttonKeepAccount: UIButton!
+    @IBOutlet var buttonBasicPageController: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,8 +105,6 @@ class MainViewController: UIViewController {
         
         buttonBasicScrollView.addTarget(self, action: #selector(self.onButtonBasicScrollClick(_:)), for: UIControl.Event.touchUpInside)
         
-        buttonBasicViewPager.addTarget(self, action: #selector(self.onButtonBasicViewPager(_:)), for: UIControl.Event.touchUpInside)
-        
         buttonClose.addTarget(self , action: #selector(self.onButtonCloseClick), for: UIControl.Event.touchUpInside)
         
         buttonBaseicConsoleTest.addTarget(self , action: #selector(self.onButtonBaseicConsoleTest), for: UIControl.Event.touchUpInside)
@@ -126,6 +124,13 @@ class MainViewController: UIViewController {
         buttonCheckList.addTarget(self, action: #selector(onButtonCheckList), for: UIControl.Event.touchUpInside)
         
         buttonKeepAccount.addTarget(self, action: #selector(onButtonKeepAccount), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicPageController.addTarget(self, action: #selector(onButtonBasicPageController), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonBasicPageController(_ sender: UIButton) {
+        let basicPage: BasicPageDemoViewController = BasicPageDemoViewController()
+        ViewControllerUtil.startNewFullScreenViewController(from: self, target: basicPage)
     }
     
     @objc private func onButtonKeepAccount(_ sender: UIButton) {
@@ -300,11 +305,6 @@ class MainViewController: UIViewController {
     @objc private func onButtonBasicScrollClick(_ send: UIButton) {
         let basicScrollViewController = BasicScrollViewController()
         ViewControllerUtil.startNewViewController(from: self, target: basicScrollViewController)
-    }
-    
-    @objc private func onButtonBasicViewPager(_ send: UIButton) {
-        let basicViewPagerViewController = BasicViewPagerViewController()
-        ViewControllerUtil.startNewViewController(from: self, target: basicViewPagerViewController)
     }
     
     private func basicConsoleTest() {

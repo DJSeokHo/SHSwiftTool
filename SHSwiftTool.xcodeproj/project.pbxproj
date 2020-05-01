@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3038B9C245C1EB00070254F /* KADBWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038B9B245C1EB00070254F /* KADBWrapper.swift */; };
+		C3038B9E245C29DB0070254F /* KANotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038B9D245C29DB0070254F /* KANotificationConstants.swift */; };
+		C3038BA0245C38380070254F /* KAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038B9F245C38380070254F /* KAConstants.swift */; };
+		C3038BA6245C6D500070254F /* BasicPageDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038BA4245C6D500070254F /* BasicPageDemoViewController.swift */; };
+		C3038BA7245C6D500070254F /* BasicPageDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3038BA5245C6D500070254F /* BasicPageDemoViewController.xib */; };
+		C3038BAC245C6E190070254F /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038BAA245C6E190070254F /* DataViewController.swift */; };
+		C3038BAD245C6E190070254F /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3038BAB245C6E190070254F /* DataViewController.xib */; };
 		C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919423672BD200B2FC2C /* BasicPickerViewDemoViewController.swift */; };
 		C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C304919523672BD200B2FC2C /* BasicPickerViewDemoViewController.xib */; };
 		C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919923672DCA00B2FC2C /* MealsViewController.swift */; };
@@ -148,8 +155,6 @@
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
 		C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */; };
 		C3615B4C234632AC00EF5A85 /* FunctionTypeParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */; };
-		C36A2337237068AB009748AE /* BasicViewPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */; };
-		C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */; };
 		C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36C66A52450AF860081E862 /* BasicGroupTableViewController.swift */; };
 		C36C66A82450AF860081E862 /* BasicGroupTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36C66A62450AF860081E862 /* BasicGroupTableViewController.xib */; };
 		C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37020E02361E14500895D6F /* BasicImageViewController.swift */; };
@@ -297,6 +302,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3038B9B245C1EB00070254F /* KADBWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KADBWrapper.swift; sourceTree = "<group>"; };
+		C3038B9D245C29DB0070254F /* KANotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KANotificationConstants.swift; sourceTree = "<group>"; };
+		C3038B9F245C38380070254F /* KAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAConstants.swift; sourceTree = "<group>"; };
+		C3038BA4245C6D500070254F /* BasicPageDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPageDemoViewController.swift; sourceTree = "<group>"; };
+		C3038BA5245C6D500070254F /* BasicPageDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPageDemoViewController.xib; sourceTree = "<group>"; };
+		C3038BAA245C6E190070254F /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		C3038BAB245C6E190070254F /* DataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 		C304919423672BD200B2FC2C /* BasicPickerViewDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewDemoViewController.swift; sourceTree = "<group>"; };
 		C304919523672BD200B2FC2C /* BasicPickerViewDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicPickerViewDemoViewController.xib; sourceTree = "<group>"; };
 		C304919923672DCA00B2FC2C /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
@@ -438,8 +450,6 @@
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C35FF032230C2BEF009D19A0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		C3615B4B234632AC00EF5A85 /* FunctionTypeParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypeParameter.swift; sourceTree = "<group>"; };
-		C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewPagerViewController.swift; sourceTree = "<group>"; };
-		C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicViewPagerViewController.xib; sourceTree = "<group>"; };
 		C36C66A52450AF860081E862 /* BasicGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGroupTableViewController.swift; sourceTree = "<group>"; };
 		C36C66A62450AF860081E862 /* BasicGroupTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicGroupTableViewController.xib; sourceTree = "<group>"; };
 		C37020E02361E14500895D6F /* BasicImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicImageViewController.swift; sourceTree = "<group>"; };
@@ -600,6 +610,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3038BA1245C5ABA0070254F /* BasicPageView */ = {
+			isa = PBXGroup;
+			children = (
+				C3038BA3245C6D340070254F /* Demo */,
+				C3038BAA245C6E190070254F /* DataViewController.swift */,
+				C3038BAB245C6E190070254F /* DataViewController.xib */,
+			);
+			path = BasicPageView;
+			sourceTree = "<group>";
+		};
+		C3038BA3245C6D340070254F /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C3038BA4245C6D500070254F /* BasicPageDemoViewController.swift */,
+				C3038BA5245C6D500070254F /* BasicPageDemoViewController.xib */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		C304919823672D2400B2FC2C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,6 +846,8 @@
 		C32BE8A5245A6805005A26BB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				C3038B9D245C29DB0070254F /* KANotificationConstants.swift */,
+				C3038B9F245C38380070254F /* KAConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -824,6 +855,7 @@
 		C32BE8A6245A680E005A26BB /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				C3038B9B245C1EB00070254F /* KADBWrapper.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1400,15 +1432,6 @@
 			path = BasicCheckAPICanUsable;
 			sourceTree = "<group>";
 		};
-		C36A233423706887009748AE /* BasicViewPager */ = {
-			isa = PBXGroup;
-			children = (
-				C36A2335237068AB009748AE /* BasicViewPagerViewController.swift */,
-				C36A2336237068AB009748AE /* BasicViewPagerViewController.xib */,
-			);
-			path = BasicViewPager;
-			sourceTree = "<group>";
-		};
 		C37020DF2361E12D00895D6F /* BasicImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1471,12 +1494,12 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3038BA1245C5ABA0070254F /* BasicPageView */,
 				C32C576124533FAA008AF1A1 /* BasicSQLiteDemo */,
 				C32C5757245336D8008AF1A1 /* SimpleAnimation */,
 				C32C574D24532672008AF1A1 /* BasicPageControl */,
 				C32EDA942451F17E0034C59D /* BasicSearch */,
 				C385BFF12450F01200F864C8 /* BasicCollectionView */,
-				C36A233423706887009748AE /* BasicViewPager */,
 				C3B1E94B236EA36B00DCD7EE /* BasicScrollView */,
 				C32C57482452F8D0008AF1A1 /* BasicScrollBigView */,
 				C3D36248236E8478001B8ACB /* BasicTableView */,
@@ -2076,6 +2099,7 @@
 				C32BE8DB245AEE4E005A26BB /* icon_map@2x.png in Resources */,
 				C3DF66612458A008006FD80F /* icon_back@3x.png in Resources */,
 				C33E394D2457128600384215 /* icon_check@2x.png in Resources */,
+				C3038BA7245C6D500070254F /* BasicPageDemoViewController.xib in Resources */,
 				C32519A5245B12A1008EE973 /* KAAccountViewController.xib in Resources */,
 				C3E73963245614700097953E /* icon_plus@2x.png in Resources */,
 				C3DF66742458ACBB006FD80F /* DoneListItemTableViewCell.xib in Resources */,
@@ -2089,6 +2113,7 @@
 				C3E73964245614700097953E /* icon_plus@3x.png in Resources */,
 				C3DD6AF9230D84C100BDDF5D /* icon_client_un_selected@3x.png in Resources */,
 				C3DD6B38230D88D500BDDF5D /* icon_profile_un_selected@2x.png in Resources */,
+				C3038BAD245C6E190070254F /* DataViewController.xib in Resources */,
 				C32BE8B7245AE3C4005A26BB /* ic_fabushangping@2x.png in Resources */,
 				C3DF665D2458A008006FD80F /* icon_next@2x.png in Resources */,
 				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
@@ -2144,7 +2169,6 @@
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C3DF666B2458A48D006FD80F /* icon_back_white.png in Resources */,
 				C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */,
-				C36A2338237068AB009748AE /* BasicViewPagerViewController.xib in Resources */,
 				C32519B7245B1670008EE973 /* icon_setting@3x.png in Resources */,
 				C328FED0245B9324002AF147 /* KAAccountDetailViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
@@ -2226,10 +2250,12 @@
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
+				C3038BAC245C6E190070254F /* DataViewController.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
 				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
 				C33E395A24574BA600384215 /* TabUtil.swift in Sources */,
 				C34D31EA22E9EBF000E22BC6 /* IntExtension.swift in Sources */,
+				C3038B9E245C29DB0070254F /* KANotificationConstants.swift in Sources */,
 				C37112E122BD0FBB00E92DA8 /* BasicGrammar.swift in Sources */,
 				C37112C122BD036900E92DA8 /* AppDelegate.swift in Sources */,
 				C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */,
@@ -2238,6 +2264,7 @@
 				C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */,
 				C3DF66732458ACBB006FD80F /* DoneListItemTableViewCell.swift in Sources */,
 				C328FEB3245B8CE7002AF147 /* ViewUtil.swift in Sources */,
+				C3038BA0245C38380070254F /* KAConstants.swift in Sources */,
 				C33E395D24574D3900384215 /* CLNotificationConstants.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,
 				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
@@ -2273,10 +2300,10 @@
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
 				C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */,
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
+				C3038BA6245C6D500070254F /* BasicPageDemoViewController.swift in Sources */,
 				C3DF66662458A3BF006FD80F /* SimpleNavigationBarViewHolder.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
-				C36A2337237068AB009748AE /* BasicViewPagerViewController.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
@@ -2349,6 +2376,7 @@
 				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
 				C328FEC7245B925F002AF147 /* KAAccountListAdapter.swift in Sources */,
+				C3038B9C245C1EB00070254F /* KADBWrapper.swift in Sources */,
 				C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */,
 				C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */,
 				C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */,
