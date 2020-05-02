@@ -10,6 +10,8 @@ import UIKit
 
 class KAAccountListViewController: UIViewController {
 
+    public var index = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -15,8 +15,13 @@ class KAMapViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
+        
+        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+     
+    }
 
     /*
     // MARK: - Navigation

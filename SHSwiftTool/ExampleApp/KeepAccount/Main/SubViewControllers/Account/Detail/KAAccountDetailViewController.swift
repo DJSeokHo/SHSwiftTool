@@ -10,7 +10,6 @@ import UIKit
 
 class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolderDelegate {
 
-    public let tag = "KAAccountDetailViewController"
     public static let TAG = "KAAccountDetailViewController"
     
     private var kaNavigationBarViewHolder: KANavigationBarViewHolder!
@@ -23,9 +22,17 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         // Do any additional setup after loading the view. 
         initNavigationBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     // MARK: navigation bar
     private func initNavigationBar() {
+        
+        if kaNavigationBarViewHolder != nil {
+            return
+        }
         
         kaNavigationBarViewHolder = KANavigationBarViewHolder(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 80))
         kaNavigationBarViewHolder.kaNavigationBarViewHolderDelegate = self
@@ -39,11 +46,11 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         self.view.addSubview(kaNavigationBarViewHolder!)
     }
     func onLeftButtonClick() {
-        ILog.debug(tag: tag, content: "onLeftButtonClick")
+        ILog.debug(tag: #file, content: "onLeftButtonClick")
     }
     
     func onRightButtonClick() {
-        ILog.debug(tag: tag, content: "onRightButtonClick")
+        ILog.debug(tag: #file, content: "onRightButtonClick")
         ViewControllerUtil.finishSelf(view:self)
     }
     // MARK: navigation bar

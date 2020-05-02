@@ -10,7 +10,6 @@ import UIKit
 
 class KeepAccountMainViewController: UIViewController {
     
-    public let tag = "KeepAccountMainViewController"
     public static let TAG = "KeepAccountMainViewController"
     
     @IBOutlet var buttonAdd: UIButton!
@@ -19,7 +18,7 @@ class KeepAccountMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ILog.debug(tag: tag, content: "viewDidLoad")
+        ILog.debug(tag: #file, content: "viewDidLoad")
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
@@ -64,7 +63,7 @@ class KeepAccountMainViewController: UIViewController {
         customCenterSelectUITabBarViewController.subViewControllerArray.append(contentsOf:[kaMapViewController, kaAccountViewController, kaSettingViewController])
         
         let size = DisplayUtil.getFullScreenSize()
-        let tabBar = CustomCenterSelectUITabBar(frame: CGRect(x: 0, y: 100, width: size.width, height: 80))
+        let tabBar = CustomCenterSelectUITabBar(frame: CGRect(x: 0, y: 100, width: Int(size.width), height: KAConstants.BOTTOM_TAB_BAR_HEIGHT))
         customCenterSelectUITabBarViewController.setTabBar(tabBar: tabBar)
 
         self.addChild(customCenterSelectUITabBarViewController)

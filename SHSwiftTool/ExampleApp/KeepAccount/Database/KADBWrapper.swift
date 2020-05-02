@@ -11,8 +11,6 @@ import SQLite3
 
 class KADBWrapper {
     
-    private let tag = "KADBWrapper"
-    
     private static let instance = KADBWrapper()
     
     private init() {
@@ -53,7 +51,7 @@ class KADBWrapper {
         // use "SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX" to keep sqlite safe under multi-thread
         if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
           
-            ILog.debug(tag: tag, content: "open success，path is：\(dbPath ?? "")")
+            ILog.debug(tag: #file, content: "open success，path is：\(dbPath ?? "")")
             return db
         }
         else {
@@ -69,9 +67,9 @@ class KADBWrapper {
         // use "SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX" to keep sqlite safe under multi-thread
         if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
           
-            ILog.debug(tag: tag, content: "will close db")
+            ILog.debug(tag: #file, content: "will close db")
             sqlite3_close(db)
-            ILog.debug(tag: tag, content: "db closed")
+            ILog.debug(tag: #file, content: "db closed")
         }
     }
 
@@ -91,7 +89,7 @@ class KADBWrapper {
             DONE TEXT);
             """
         
-        ILog.debug(tag: tag, content: sql)
+        ILog.debug(tag: #file, content: sql)
         
         // 1
         var createTableStatement: OpaquePointer?
@@ -101,14 +99,14 @@ class KADBWrapper {
         
             // 3
             if sqlite3_step(createTableStatement) == SQLITE_DONE {
-                ILog.debug(tag: tag, content: "create table success")
+                ILog.debug(tag: #file, content: "create table success")
             }
             else {
-                ILog.debug(tag: tag, content: "create table error")
+                ILog.debug(tag: #file, content: "create table error")
             }
         }
         else {
-            ILog.debug(tag: tag, content: "create table error")
+            ILog.debug(tag: #file, content: "create table error")
         }
        
         // 4
@@ -121,7 +119,7 @@ class KADBWrapper {
             INSERT INTO KEEP_ACCOUNT_LIST (UUID, TITLE, CATEGORY, AMOUNT, CONTENT, DATETIME, IMAGE_URL, LATITUDE, LONGITUDE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
             """
         
-        ILog.debug(tag: tag, content: sql)
+        ILog.debug(tag: #file, content: sql)
         
         var insertStatement: OpaquePointer?
             // 1
@@ -140,14 +138,14 @@ class KADBWrapper {
                 
                 // 3
                 if sqlite3_step(insertStatement) == SQLITE_DONE {
-                    ILog.debug(tag: tag, content: "insert success")
+                    ILog.debug(tag: #file, content: "insert success")
                 }
                 else {
-                    ILog.debug(tag: tag, content: "insert error")
+                    ILog.debug(tag: #file, content: "insert error")
                 }
             }
             else {
-                ILog.debug(tag: tag, content: "insert error")
+                ILog.debug(tag: #file, content: "insert error")
             }
         
             // 4
@@ -169,7 +167,7 @@ class KADBWrapper {
         WHERE UUID = '\(keepAccountInfoBean.uuid!)';
         """
         
-        ILog.debug(tag: tag, content: sql)
+        ILog.debug(tag: #file, content: sql)
         
         var updateStatement: OpaquePointer?
         
@@ -178,14 +176,14 @@ class KADBWrapper {
             
             // 2
             if sqlite3_step(updateStatement) == SQLITE_DONE {
-                ILog.debug(tag: tag, content: "update success")
+                ILog.debug(tag: #file, content: "update success")
             }
             else {
-                ILog.debug(tag: tag, content: "update error")
+                ILog.debug(tag: #file, content: "update error")
             }
         }
         else {
-            ILog.debug(tag: tag, content: "update error")
+            ILog.debug(tag: #file, content: "update error")
         }
         
         // 3
@@ -197,7 +195,7 @@ class KADBWrapper {
         DELETE FROM KEEP_ACCOUNT_LIST WHERE UUID = '\(keepAccountInfoBean.uuid!)';
         """
 
-        ILog.debug(tag: tag, content: sql)
+        ILog.debug(tag: #file, content: sql)
         
         var deleteStatement: OpaquePointer?
         
@@ -206,15 +204,15 @@ class KADBWrapper {
             
             // 2
             if sqlite3_step(deleteStatement) == SQLITE_DONE {
-                ILog.debug(tag: tag, content: "delete success")
+                ILog.debug(tag: #file, content: "delete success")
             
             }
             else {
-               ILog.debug(tag: tag, content: "delete error")
+               ILog.debug(tag: #file, content: "delete error")
            }
         }
         else {
-            ILog.debug(tag: tag, content: "delete error")
+            ILog.debug(tag: #file, content: "delete error")
         }
         
         // 3
@@ -230,7 +228,7 @@ class KADBWrapper {
             SELECT * FROM KEEP_ACCOUNT_LIST ORDER BY DATETIME DESC LIMIT \(limit) OFFSET \(offset);
             """
         
-        ILog.debug(tag: tag, content: sql)
+        ILog.debug(tag: #file, content: sql)
         
         var queryStatement: OpaquePointer?
         

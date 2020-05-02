@@ -58,10 +58,9 @@
 		C328FEB3245B8CE7002AF147 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEB2245B8CE7002AF147 /* ViewUtil.swift */; };
 		C328FEB6245B8E80002AF147 /* KeepAccountInfoBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEB5245B8E80002AF147 /* KeepAccountInfoBean.swift */; };
 		C328FEBB245B8F1C002AF147 /* KABean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBA245B8F1C002AF147 /* KABean.swift */; };
-		C328FEBE245B91D3002AF147 /* KAPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBD245B91D3002AF147 /* KAPageViewController.swift */; };
+		C328FEBE245B91D3002AF147 /* KAPageViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBD245B91D3002AF147 /* KAPageViewWrapper.swift */; };
 		C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */; };
 		C328FEC2245B920F002AF147 /* KAAccountListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */; };
-		C328FEC7245B925F002AF147 /* KAAccountListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEC6245B925F002AF147 /* KAAccountListAdapter.swift */; };
 		C328FECA245B9278002AF147 /* KAAccountListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FEC8245B9278002AF147 /* KAAccountListItemTableViewCell.swift */; };
 		C328FECB245B9278002AF147 /* KAAccountListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C328FEC9245B9278002AF147 /* KAAccountListItemTableViewCell.xib */; };
 		C328FECF245B9324002AF147 /* KAAccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328FECD245B9324002AF147 /* KAAccountDetailViewController.swift */; };
@@ -92,6 +91,9 @@
 		C32BE8DF245AEE55005A26BB /* icon_setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8DC245AEE55005A26BB /* icon_setting.png */; };
 		C32BE8E0245AEE55005A26BB /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8DD245AEE55005A26BB /* icon_map.png */; };
 		C32BE8E3245AF175005A26BB /* icon_keep_account@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C32BE8E2245AF174005A26BB /* icon_keep_account@3x.png */; };
+		C32C3168245D38B000EAC9FB /* KATabLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C3167245D38B000EAC9FB /* KATabLayout.swift */; };
+		C32C316B245D437E00EAC9FB /* KATabLayoutItemViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C3169245D437E00EAC9FB /* KATabLayoutItemViewHolder.swift */; };
+		C32C316C245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C316A245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib */; };
 		C32C574B2452F90E008AF1A1 /* BasicScrollBigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */; };
 		C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */; };
 		C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */; };
@@ -353,10 +355,9 @@
 		C328FEB2245B8CE7002AF147 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		C328FEB5245B8E80002AF147 /* KeepAccountInfoBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepAccountInfoBean.swift; sourceTree = "<group>"; };
 		C328FEBA245B8F1C002AF147 /* KABean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KABean.swift; sourceTree = "<group>"; };
-		C328FEBD245B91D3002AF147 /* KAPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPageViewController.swift; sourceTree = "<group>"; };
+		C328FEBD245B91D3002AF147 /* KAPageViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPageViewWrapper.swift; sourceTree = "<group>"; };
 		C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListViewController.swift; sourceTree = "<group>"; };
 		C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAAccountListViewController.xib; sourceTree = "<group>"; };
-		C328FEC6245B925F002AF147 /* KAAccountListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListAdapter.swift; sourceTree = "<group>"; };
 		C328FEC8245B9278002AF147 /* KAAccountListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListItemTableViewCell.swift; sourceTree = "<group>"; };
 		C328FEC9245B9278002AF147 /* KAAccountListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KAAccountListItemTableViewCell.xib; sourceTree = "<group>"; };
 		C328FECD245B9324002AF147 /* KAAccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountDetailViewController.swift; sourceTree = "<group>"; };
@@ -387,6 +388,9 @@
 		C32BE8DC245AEE55005A26BB /* icon_setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_setting.png; sourceTree = "<group>"; };
 		C32BE8DD245AEE55005A26BB /* icon_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_map.png; sourceTree = "<group>"; };
 		C32BE8E2245AF174005A26BB /* icon_keep_account@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keep_account@3x.png"; sourceTree = "<group>"; };
+		C32C3167245D38B000EAC9FB /* KATabLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KATabLayout.swift; sourceTree = "<group>"; };
+		C32C3169245D437E00EAC9FB /* KATabLayoutItemViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KATabLayoutItemViewHolder.swift; sourceTree = "<group>"; };
+		C32C316A245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KATabLayoutItemViewHolder.xib; sourceTree = "<group>"; };
 		C32C57492452F90E008AF1A1 /* BasicScrollBigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollBigViewController.swift; sourceTree = "<group>"; };
 		C32C574A2452F90E008AF1A1 /* BasicScrollBigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollBigViewController.xib; sourceTree = "<group>"; };
 		C32C574E2453268F008AF1A1 /* BasicPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPageViewController.swift; sourceTree = "<group>"; };
@@ -768,8 +772,8 @@
 		C328FEBC245B911D002AF147 /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C328FEC3245B9213002AF147 /* AccountList */,
-				C328FEBD245B91D3002AF147 /* KAPageViewController.swift */,
+				C32C315B245D362E00EAC9FB /* PageItem */,
+				C328FEBD245B91D3002AF147 /* KAPageViewWrapper.swift */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -777,20 +781,11 @@
 		C328FEC3245B9213002AF147 /* AccountList */ = {
 			isa = PBXGroup;
 			children = (
-				C328FEC4245B921D002AF147 /* Adapter */,
+				C32C316D245D4D6000EAC9FB /* Adapter */,
 				C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */,
 				C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */,
 			);
 			path = AccountList;
-			sourceTree = "<group>";
-		};
-		C328FEC4245B921D002AF147 /* Adapter */ = {
-			isa = PBXGroup;
-			children = (
-				C328FEC5245B9227002AF147 /* Item */,
-				C328FEC6245B925F002AF147 /* KAAccountListAdapter.swift */,
-			);
-			path = Adapter;
 			sourceTree = "<group>";
 		};
 		C328FEC5245B9227002AF147 /* Item */ = {
@@ -974,6 +969,7 @@
 		C32BE8EE245B00C9005A26BB /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				C32C315C245D366C00EAC9FB /* TabLayout */,
 				C328FECC245B930B002AF147 /* Detail */,
 				C328FEBC245B911D002AF147 /* PageViewController */,
 				C32519A2245B12A1008EE973 /* KAAccountViewController.swift */,
@@ -989,6 +985,40 @@
 				C325199F245B128B008EE973 /* KASettingViewController.xib */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		C32C315B245D362E00EAC9FB /* PageItem */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC3245B9213002AF147 /* AccountList */,
+			);
+			path = PageItem;
+			sourceTree = "<group>";
+		};
+		C32C315C245D366C00EAC9FB /* TabLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C32C315E245D367E00EAC9FB /* Item */,
+				C32C3167245D38B000EAC9FB /* KATabLayout.swift */,
+			);
+			path = TabLayout;
+			sourceTree = "<group>";
+		};
+		C32C315E245D367E00EAC9FB /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C32C3169245D437E00EAC9FB /* KATabLayoutItemViewHolder.swift */,
+				C32C316A245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C32C316D245D4D6000EAC9FB /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC5245B9227002AF147 /* Item */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		C32C57482452F8D0008AF1A1 /* BasicScrollBigView */ = {
@@ -2104,6 +2134,7 @@
 				C3E73963245614700097953E /* icon_plus@2x.png in Resources */,
 				C3DF66742458ACBB006FD80F /* DoneListItemTableViewCell.xib in Resources */,
 				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
+				C32C316C245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3E7395C245600D80097953E /* icon_more@3x.png in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
@@ -2279,6 +2310,7 @@
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C32519A0245B128B008EE973 /* KASettingViewController.swift in Sources */,
 				C39F99402459BC0E000E4CFD /* CheckListAdapter.swift in Sources */,
+				C32C3168245D38B000EAC9FB /* KATabLayout.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
 				C32519BE245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift in Sources */,
 				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
@@ -2338,7 +2370,7 @@
 				C328FEBB245B8F1C002AF147 /* KABean.swift in Sources */,
 				C3D3624B236E849D001B8ACB /* BasicTableViewController.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
-				C328FEBE245B91D3002AF147 /* KAPageViewController.swift in Sources */,
+				C328FEBE245B91D3002AF147 /* KAPageViewWrapper.swift in Sources */,
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */,
@@ -2357,6 +2389,7 @@
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */,
 				C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */,
+				C32C316B245D437E00EAC9FB /* KATabLayoutItemViewHolder.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C39F993724596755000E4CFD /* IBean.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
@@ -2375,7 +2408,6 @@
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
-				C328FEC7245B925F002AF147 /* KAAccountListAdapter.swift in Sources */,
 				C3038B9C245C1EB00070254F /* KADBWrapper.swift in Sources */,
 				C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */,
 				C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */,
