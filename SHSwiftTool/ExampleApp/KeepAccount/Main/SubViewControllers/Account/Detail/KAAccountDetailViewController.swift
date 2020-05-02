@@ -41,7 +41,7 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         kaNavigationBarViewHolder.setRightButtonImage(imageName: "icon_close_black.png")
         kaNavigationBarViewHolder.hideLeftButton()
         
-        ViewUtil.setShadow(view: kaNavigationBarViewHolder.bottomLine, color: UIColor.black.cgColor, radius: 3, opacity: 0.5, offsetWidth: 0, offsetHeight: 3)
+        ViewUtil.setShadow(view: kaNavigationBarViewHolder.bottomLine, color: UIColor.black.cgColor, radius: 1, opacity: 0.3, offsetWidth: 0, offsetHeight: 1)
         
         self.view.addSubview(kaNavigationBarViewHolder!)
     }

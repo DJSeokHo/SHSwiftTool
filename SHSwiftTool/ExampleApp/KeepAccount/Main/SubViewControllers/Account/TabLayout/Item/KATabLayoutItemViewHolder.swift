@@ -9,14 +9,21 @@
 import UIKit
 
 class KATabLayoutItemViewHolder: UICollectionViewCell {
+    
+    public static let TAG = "KATabLayoutItemViewHolder"
 
     @IBOutlet var label: UILabel!
     
     public var title: String!
     
+    public var index: Int!
+    
+    public var onClickDelegate: ((_ index: Int) -> ())!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setListener()
     }
 
     private func setListener() {
@@ -25,11 +32,12 @@ class KATabLayoutItemViewHolder: UICollectionViewCell {
     
     @objc private func onLabelClick(_ sender: Any) {
         ILog.debug(tag: #file, content: "\(title!)")
+        onClickDelegate(index)
     }
     
     public func updateView(color: UIColor) {
-        label.text = title
-        label.textColor = color
+        label?.text = title
+        label?.textColor = color
     }
 
 }

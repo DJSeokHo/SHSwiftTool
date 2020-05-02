@@ -29,7 +29,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="label" destination="3Wu-rp-POg" id="FFr-Eu-42h"/>
+                <outlet property="label" destination="3Wu-rp-POg" id="NyF-V8-lxv"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </collectionViewCell>

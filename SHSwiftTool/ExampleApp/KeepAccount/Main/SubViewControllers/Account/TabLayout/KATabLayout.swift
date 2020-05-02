@@ -9,35 +9,36 @@
 import Foundation
 import UIKit
 
-protocol KATabLayoutDelegate {
-    func onSelect(index: Int)
-}
-
-class KATabLayout: NSObject, UICollectionViewDelegate,UICollectionViewDataSource {
+class KATabLayout: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     public var collectionView: UICollectionView!
     public var titleArray: [String] = [String]()
     public var index: Int = 0
     public var frame: CGRect!
     
-    public var kaTabLayoutDelegate: KATabLayoutDelegate!
+    public var onTabSelect: ((_ index: Int) -> ())!
     
     public func initTabLayout() {
         
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: 60, height: 30)
+        flowLayout.itemSize = CGSize(width: 100, height: 30)
         
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
         collectionView = UICollectionView(frame: frame, collectionViewLayout: flowLayout)
+        
+        collectionView.register(UINib(nibName: KATabLayoutItemViewHolder.TAG, bundle: nil), forCellWithReuseIdentifier: "cell")
+        
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = UIColor.cyan
+        collectionView.backgroundColor = UIColor.white
+        
+        collectionView.allowsSelection = true
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(KATabLayoutItemViewHolder.self, forCellWithReuseIdentifier: "cell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,6 +50,12 @@ class KATabLayout: NSObject, UICollectionViewDelegate,UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! KATabLayoutItemViewHolder
 
         cell.title = titleArray[indexPath.row];
+        cell.index = indexPath.row
+        cell.onClickDelegate = {
+            (index: Int) in
+            ILog.debug(tag: #file, content: "collectionView item click \(index)")
+            self.onTabSelect(index)
+        }
         
         if (indexPath.row == index) {
             cell.updateView(color: UIColor.black)
@@ -60,17 +67,4 @@ class KATabLayout: NSObject, UICollectionViewDelegate,UICollectionViewDataSource
         return cell;
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
-        index = indexPath.row
-        
-        kaTabLayoutDelegate.onSelect(index: index)
-
-        ILog.debug(tag: #file, content: "collectionView click \(index)")
-        
-        let indexPath: IndexPath = IndexPath(row: index, section: 0)
-        
-        collectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
-        collectionView.reloadData()
-    }
 }

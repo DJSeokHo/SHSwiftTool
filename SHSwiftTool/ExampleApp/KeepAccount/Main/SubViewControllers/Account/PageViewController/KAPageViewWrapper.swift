@@ -17,6 +17,8 @@ class KAPageViewWrapper: NSObject, UIPageViewControllerDataSource, UIPageViewCon
     public var pageViewController: UIPageViewController!
     public var frame: CGRect!
     
+    public var onPageSelectFinished: ((_ index: Int) -> ())!
+    
     public func createPageViewController() {
        
         pageViewController = UIPageViewController(transitionStyle: UIPageViewController.TransitionStyle.scroll, navigationOrientation: UIPageViewController.NavigationOrientation.horizontal, options: nil)
@@ -25,7 +27,6 @@ class KAPageViewWrapper: NSObject, UIPageViewControllerDataSource, UIPageViewCon
         pageViewController.dataSource = self
         
         pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        
         pageViewController.setViewControllers([pageViewControllerItemArray[index]], direction: UIPageViewController.NavigationDirection.reverse, animated: true, completion: nil)
     }
     
@@ -71,11 +72,8 @@ class KAPageViewWrapper: NSObject, UIPageViewControllerDataSource, UIPageViewCon
             index = currentViewController.index
             
             ILog.debug(tag: #file, content: "current index \(index)")
-            
-//            let indexPath = IndexPath(row: index, section: 0)
-            
-//            tabLayout.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
-//            tabLayout.reloadData()
+         
+            onPageSelectFinished(index)
         }
     }
     // MARK: page view controller delegate
