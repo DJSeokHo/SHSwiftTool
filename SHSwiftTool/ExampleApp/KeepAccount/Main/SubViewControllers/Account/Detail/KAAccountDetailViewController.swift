@@ -128,6 +128,10 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     }
     // MARK: navigation delegate
     
+    private func saveInfo() {
+        
+    }
+    
     private func showProgress() {
         indicator.isHidden = false
         indicator.startAnimating()

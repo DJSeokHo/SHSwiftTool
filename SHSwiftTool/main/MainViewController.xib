@@ -13,6 +13,7 @@
                 <outlet property="buttonBasicAlert" destination="uhd-TW-Z35" id="oRG-EK-DwZ"/>
                 <outlet property="buttonBasicButton" destination="nNV-ZE-HCv" id="uls-c7-wvT"/>
                 <outlet property="buttonBasicCollectionView" destination="OYu-hJ-M51" id="MUc-es-3CU"/>
+                <outlet property="buttonBasicCustomCamera" destination="nrN-Xc-2n6" id="efB-If-rTh"/>
                 <outlet property="buttonBasicDatePicker" destination="fsn-MC-vRd" id="TK3-fr-e4V"/>
                 <outlet property="buttonBasicGroupTableView" destination="uXw-qY-sZX" id="G4p-gm-ENz"/>
                 <outlet property="buttonBasicImage" destination="Uvc-Ia-gRo" id="6Fv-pM-OSH"/>
@@ -311,6 +312,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Keep Account">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrN-Xc-2n6">
+                            <rect key="frame" x="206" y="570" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Custom Camera">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

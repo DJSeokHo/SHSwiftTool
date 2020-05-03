@@ -215,6 +215,10 @@
 		C3C5E9C9245B114600678674 /* icon_map_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C6245B114600678674 /* icon_map_selected@2x.png */; };
 		C3C5E9CD245B114D00678674 /* icon_map_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9CA245B114D00678674 /* icon_map_selected.png */; };
 		C3C5E9CE245B114D00678674 /* icon_setting_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9CB245B114D00678674 /* icon_setting_selected.png */; };
+		C3C82E8F245F3F0B00821E59 /* BasicCustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C82E8D245F3F0B00821E59 /* BasicCustomCameraViewController.swift */; };
+		C3C82E90245F3F0B00821E59 /* BasicCustomCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */; };
+		C3C82E98245F5C0800821E59 /* BasucCapturedPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */; };
+		C3C82E99245F5C0800821E59 /* BasucCapturedPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */; };
 		C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */; };
 		C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045A243E153B009B4456 /* ProtocolTest.swift */; };
 		C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */; };
@@ -520,6 +524,10 @@
 		C3C5E9C6245B114600678674 /* icon_map_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@2x.png"; sourceTree = "<group>"; };
 		C3C5E9CA245B114D00678674 /* icon_map_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_map_selected.png; sourceTree = "<group>"; };
 		C3C5E9CB245B114D00678674 /* icon_setting_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_setting_selected.png; sourceTree = "<group>"; };
+		C3C82E8D245F3F0B00821E59 /* BasicCustomCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCustomCameraViewController.swift; sourceTree = "<group>"; };
+		C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCustomCameraViewController.xib; sourceTree = "<group>"; };
+		C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasucCapturedPictureViewController.swift; sourceTree = "<group>"; };
+		C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasucCapturedPictureViewController.xib; sourceTree = "<group>"; };
 		C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestImpl.swift; sourceTree = "<group>"; };
 		C3CD045A243E153B009B4456 /* ProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
 		C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUseTest.swift; sourceTree = "<group>"; };
@@ -1558,6 +1566,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3C82E8C245F3ADE00821E59 /* BasicCustomCamera */,
 				C3038BA1245C5ABA0070254F /* BasicPageView */,
 				C32C576124533FAA008AF1A1 /* BasicSQLiteDemo */,
 				C32C5757245336D8008AF1A1 /* SimpleAnimation */,
@@ -1793,6 +1802,25 @@
 				C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */,
 			);
 			path = BasicScrollView;
+			sourceTree = "<group>";
+		};
+		C3C82E8C245F3ADE00821E59 /* BasicCustomCamera */ = {
+			isa = PBXGroup;
+			children = (
+				C3C82E91245F4FDA00821E59 /* Result */,
+				C3C82E8D245F3F0B00821E59 /* BasicCustomCameraViewController.swift */,
+				C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */,
+			);
+			path = BasicCustomCamera;
+			sourceTree = "<group>";
+		};
+		C3C82E91245F4FDA00821E59 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */,
+				C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		C3CD0457243E14F6009B4456 /* ProtocolAsParameter */ = {
@@ -2171,6 +2199,7 @@
 				C3DF66742458ACBB006FD80F /* DoneListItemTableViewCell.xib in Resources */,
 				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
 				C32C316C245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib in Resources */,
+				C3C82E90245F3F0B00821E59 /* BasicCustomCameraViewController.xib in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3E7395C245600D80097953E /* icon_more@3x.png in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
@@ -2227,6 +2256,7 @@
 				C32BE8BE245AE3FC005A26BB /* ic_shouye_sel@3x.png in Resources */,
 				C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */,
 				C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */,
+				C3C82E99245F5C0800821E59 /* BasucCapturedPictureViewController.xib in Resources */,
 				C32BE8C4245AE402005A26BB /* ic_shouye.png in Resources */,
 				C3DD6AFC230D84C100BDDF5D /* icon_product_un_selected@3x.png in Resources */,
 				C3DECD2B235F435D00AEA02D /* BasicTextViewViewController.xib in Resources */,
@@ -2419,9 +2449,11 @@
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
 				C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */,
 				C32BE8B0245A8B94005A26BB /* CustomCenterClickUITabBar.swift in Sources */,
+				C3C82E98245F5C0800821E59 /* BasucCapturedPictureViewController.swift in Sources */,
 				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
+				C3C82E8F245F3F0B00821E59 /* BasicCustomCameraViewController.swift in Sources */,
 				C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */,
 				C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */,
 				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
@@ -2510,7 +2542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2565,7 +2597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2579,8 +2611,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU98VK6D82;
+				"DEVELOPMENT_TEAM[sdk=*]" = DU98VK6D82;
 				INFOPLIST_FILE = SHSwiftTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2588,9 +2622,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swein.SHSwiftTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				TVOS_DEPLOYMENT_TARGET = 12.4;
 			};
 			name = Debug;
 		};
@@ -2598,8 +2634,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DU98VK6D82;
+				"DEVELOPMENT_TEAM[sdk=*]" = DU98VK6D82;
 				INFOPLIST_FILE = SHSwiftTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2607,9 +2645,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swein.SHSwiftTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=*]" = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				TVOS_DEPLOYMENT_TARGET = 12.4;
 			};
 			name = Release;
 		};
