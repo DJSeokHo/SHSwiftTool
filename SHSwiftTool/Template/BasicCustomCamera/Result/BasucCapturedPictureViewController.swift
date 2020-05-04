@@ -29,6 +29,14 @@ class BasucCapturedPictureViewController: UIViewController {
         imageView.image = capturedImage!
         
         hideProgress()
+        
+        
+        StorageUtil.deleteFile(pathName: StorageUtil.getLibraryDirectory(), folderName: "Test", fileName: "test_image.png")
+        
+        ILog.debug(tag: #file, content: StorageUtil.exists(path: NSString(string: NSString(string: StorageUtil.getLibraryDirectory()).appendingPathComponent("Test")).appendingPathComponent("test_image.png")))
+        
+        StorageUtil.deleteFolder(pathName: StorageUtil.getLibraryDirectory(), folderName: "Test")
+        ILog.debug(tag: #file, content: StorageUtil.exists(path: NSString(string: StorageUtil.getLibraryDirectory()).appendingPathComponent("Test")))
     }
 
 
@@ -50,6 +58,7 @@ class BasucCapturedPictureViewController: UIViewController {
             // need image info
             let imageInfo = self.saveToFolder()
             ILog.debug(tag: #file, content: "\(imageInfo.0) \(imageInfo.1) \(imageInfo.2)")
+            self.orientation = imageInfo.2
             
             ThreadUtil.startUIThread(runnable: {
                 
@@ -80,70 +89,22 @@ class BasucCapturedPictureViewController: UIViewController {
     
     private func loadFromFolder() -> UIImage {
         
-        let folderPath = NSString(string: StorageUtil.getLibraryDirectory()).appendingPathComponent("Test")
+        return StorageUtil.loadImageFile(
+            pathName: StorageUtil.getLibraryDirectory(),
+            folderName: "Test",
+            imageName: "test_image.png",
+            orientation: orientation)
         
-        let imagePath = NSString(string: folderPath).appendingPathComponent("test_image.png")
-        
-        let image = UIImage(contentsOfFile: imagePath)
-        
-        return image!
     }
-    /*
-     Image Orientations
-     case up
-     The original pixel data matches the image's intended display orientation.
-
-     case down
-     The image has been rotated 180° from the orientation of its original pixel data.
-
-     case left
-     The image has been rotated 90° counterclockwise from the orientation of its original pixel data.
-
-     case right
-     The image has been rotated 90° clockwise from the orientation of its original pixel data.
-
-     case upMirrored
-     The image has been horizontally flipped from the orientation of its original pixel data.
-
-     case downMirrored
-     The image has been vertically flipped from the orientation of its original pixel data.
-
-     case leftMirrored
-     The image has been rotated 90° clockwise and flipped horizontally from the orientation of its original pixel data.
-
-     case rightMirrored
-     The image has been rotated 90° counterclockwise and flipped horizontally from the orientation of its original pixel data.
-     */
+   
     private func saveToFolder() -> (String, String, UIImage.Orientation) {
         
-        ILog.debug(tag: #file, content: StorageUtil.getLibraryDirectory())
-        
-        let folderName = "Test"
-        
-        StorageUtil.createFolder(parentFolder: StorageUtil.getLibraryDirectory(), withName: folderName)
-        
-        // ex: /var/mobile/Containers/Data/Application/8BDD45E8-4629-4CC2-8317-5B135A6BC25C/Library/Test
-        ILog.debug(tag: #file, content: "path ??? \(FileManager.default.fileExists(atPath: "\(NSString(string: StorageUtil.getLibraryDirectory()).appendingPathComponent(folderName))"))")
-        
-        let folderPath = NSString(string: StorageUtil.getLibraryDirectory()).appendingPathComponent(folderName)
-        
-        ILog.debug(tag: #file, content: folderPath)
-        
-        let imageName = "test_image.png"
-        
-        let imagePath = NSString(string: folderPath).appendingPathComponent(imageName)
-        
-        ILog.debug(tag: #file, content: imagePath)
+        return StorageUtil.saveImageFile(
+            pathName: StorageUtil.getLibraryDirectory(),
+            folderName: "Test",
+            imageName: "test_image.png",
+            image: capturedImage!)
       
-        let imageData = UIImage.pngData(capturedImage!)
-        
-        orientation = capturedImage!.imageOrientation
-        
-        FileManager.default.createFile(atPath: imagePath, contents: imageData(), attributes: nil)
-        
-        ILog.debug(tag: #file, content: capturedImage!.imageOrientation.rawValue)
-        
-        return (folderName, imageName, orientation)
     }
     
     private func saveToAlumb() {

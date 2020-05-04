@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 /*
  
@@ -86,24 +86,121 @@ class StorageUtil {
         
         let path = NSString(string: parentFolder).appendingPathComponent(name)
         
-        ILog.debug(tag: "\(StorageUtil.TAG) createFolder", content: path)
-        
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: path)
         {
+            ILog.debug(tag: "\(StorageUtil.TAG) createFolder", content: path)
             try! fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
         }
     }
     
-    public static func deleteFile() {
+    public static func deleteFile(pathName: String, folderName: String, fileName: String) {
         
+        let fileManager = FileManager.default
+        
+        let folderPath = NSString(string: pathName).appendingPathComponent(folderName)
+        
+        if !fileManager.fileExists(atPath: folderPath) {
+            return
+        }
+        
+        let filePath = NSString(string: folderPath).appendingPathComponent(fileName)
+        
+        if !fileManager.fileExists(atPath: filePath) {
+            return
+        }
+        
+        do {
+            try fileManager.removeItem(atPath: filePath)
+            
+            ILog.debug(tag: StorageUtil.TAG, content: "delete file success")
+        }
+        catch {
+            ILog.debug(tag: StorageUtil.TAG, content: "delete file error")
+        }
     }
     
-    public static func saveImageFile() {
+    public static func deleteFolder(pathName: String, folderName: String) {
         
+        let fileManager = FileManager.default
+        
+        let folderPath = NSString(string: pathName).appendingPathComponent(folderName)
+        
+        if !fileManager.fileExists(atPath: folderPath) {
+            return
+        }
+        
+        do {
+            try fileManager.removeItem(atPath: folderPath)
+            
+            ILog.debug(tag: StorageUtil.TAG, content: "delete folder success")
+        }
+        catch {
+            ILog.debug(tag: StorageUtil.TAG, content: "delete folder error")
+        }
     }
     
-    public static func loadImageFile() {
+    public static func exists(path: String) -> Bool {
         
+        if FileManager.default.fileExists(atPath: path) {
+            return true
+        }
+        
+        return false
+    }
+    
+    /*
+    Image Orientations
+    case up
+    The original pixel data matches the image's intended display orientation.
+
+    case down
+    The image has been rotated 180° from the orientation of its original pixel data.
+
+    case left
+    The image has been rotated 90° counterclockwise from the orientation of its original pixel data.
+
+    case right
+    The image has been rotated 90° clockwise from the orientation of its original pixel data.
+
+    case upMirrored
+    The image has been horizontally flipped from the orientation of its original pixel data.
+
+    case downMirrored
+    The image has been vertically flipped from the orientation of its original pixel data.
+
+    case leftMirrored
+    The image has been rotated 90° clockwise and flipped horizontally from the orientation of its original pixel data.
+
+    case rightMirrored
+    The image has been rotated 90° counterclockwise and flipped horizontally from the orientation of its original pixel data.
+    */
+    public static func saveImageFile(pathName: String, folderName: String, imageName: String, image: UIImage) -> (String, String, UIImage.Orientation) {
+           
+           createFolder(parentFolder: pathName, withName: folderName)
+           
+           let folderPath = NSString(string: pathName).appendingPathComponent(folderName)
+           
+           let imagePath = NSString(string: folderPath).appendingPathComponent(imageName)
+           
+           let imageData = UIImage.pngData(image)
+           
+           let orientation = image.imageOrientation
+           
+           FileManager.default.createFile(atPath: imagePath, contents: imageData(), attributes: nil)
+           
+           return (folderName, imageName, orientation)
+       }
+    
+    public static func loadImageFile(pathName: String, folderName: String, imageName: String, orientation: UIImage.Orientation) -> UIImage {
+        
+        let folderPath = NSString(string: pathName).appendingPathComponent(folderName)
+        let imagePath = NSString(string: folderPath).appendingPathComponent(imageName)
+        
+        let tempImage = UIImage(contentsOfFile: imagePath)
+        
+        let image = UIImage(cgImage: tempImage!.cgImage!, scale: tempImage!.scale, orientation: orientation)
+        
+        return image
     }
 }
