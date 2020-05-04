@@ -81,4 +81,18 @@ class StorageUtil {
         ILog.debug(tag: "\(StorageUtil.TAG) getLibraryCachesDirectory", content: libraryCaches!)
         return libraryCaches!
     }
+    
+    public static func createFolder(parentFolder: String, withName name: String) {
+        
+        let path = NSString(string: parentFolder).appendingPathComponent(name)
+        
+        ILog.debug(tag: "\(StorageUtil.TAG) createFolder", content: path)
+        
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: path)
+        {
+            try! fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+        }
+    }
+    
 }

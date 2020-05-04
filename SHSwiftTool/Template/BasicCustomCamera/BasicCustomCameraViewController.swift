@@ -22,9 +22,8 @@ class BasicCustomCameraViewController: UIViewController, AVCapturePhotoCaptureDe
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
-        ILog.debug(tag: #file, content: StorageUtil.getLibraryDirectory())
-        
         initalizeCaptureSession()
+        
     }
 
     func initalizeCaptureSession() {
