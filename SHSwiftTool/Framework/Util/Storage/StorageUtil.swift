@@ -95,4 +95,15 @@ class StorageUtil {
         }
     }
     
+    public static func deleteFile() {
+        
+    }
+    
+    public static func saveImageFile() {
+        
+    }
+    
+    public static func loadImageFile() {
+        
+    }
 }
