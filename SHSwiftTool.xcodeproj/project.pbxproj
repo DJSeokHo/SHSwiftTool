@@ -200,6 +200,9 @@
 		C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */; };
 		C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9E6235C61DA0032F41F /* NavigationRootViewController.swift */; };
 		C38FE9E9235C61DA0032F41F /* NavigationRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FE9E7235C61DA0032F41F /* NavigationRootViewController.xib */; };
+		C38FEF3C2460634600F44C77 /* BasicAlumbImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FEF3A2460634600F44C77 /* BasicAlumbImagePickerViewController.swift */; };
+		C38FEF3D2460634600F44C77 /* BasicAlumbImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38FEF3B2460634600F44C77 /* BasicAlumbImagePickerViewController.xib */; };
+		C38FEF3F246067BE00F44C77 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FEF3E246067BE00F44C77 /* ImagePicker.swift */; };
 		C39AD8B423129A1F0072FAB5 /* StorageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */; };
 		C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */; };
 		C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */; };
@@ -509,6 +512,9 @@
 		C38FE9E3235C41AD0032F41F /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		C38FE9E6235C61DA0032F41F /* NavigationRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRootViewController.swift; sourceTree = "<group>"; };
 		C38FE9E7235C61DA0032F41F /* NavigationRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationRootViewController.xib; sourceTree = "<group>"; };
+		C38FEF3A2460634600F44C77 /* BasicAlumbImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlumbImagePickerViewController.swift; sourceTree = "<group>"; };
+		C38FEF3B2460634600F44C77 /* BasicAlumbImagePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicAlumbImagePickerViewController.xib; sourceTree = "<group>"; };
+		C38FEF3E246067BE00F44C77 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C39AD8B323129A1F0072FAB5 /* StorageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageUtil.swift; sourceTree = "<group>"; };
 		C39AD8B72312AF8A0072FAB5 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C39AD8B82312AF8A0072FAB5 /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
@@ -1566,6 +1572,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C38FEF392460631E00F44C77 /* BasicAlumbImagePicker */,
 				C3C82E8C245F3ADE00821E59 /* BasicCustomCamera */,
 				C3038BA1245C5ABA0070254F /* BasicPageView */,
 				C32C576124533FAA008AF1A1 /* BasicSQLiteDemo */,
@@ -1758,6 +1765,16 @@
 				C3E7396524561B0D0097953E /* CLDBWrapper.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		C38FEF392460631E00F44C77 /* BasicAlumbImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C38FEF3A2460634600F44C77 /* BasicAlumbImagePickerViewController.swift */,
+				C38FEF3B2460634600F44C77 /* BasicAlumbImagePickerViewController.xib */,
+				C38FEF3E246067BE00F44C77 /* ImagePicker.swift */,
+			);
+			path = BasicAlumbImagePicker;
 			sourceTree = "<group>";
 		};
 		C39AD8B223129A0A0072FAB5 /* Storage */ = {
@@ -2263,6 +2280,7 @@
 				C3E739562455F96F0097953E /* CheckListMainNavigationBarViewHolder.xib in Resources */,
 				C3DF665C2458A008006FD80F /* icon_back.png in Resources */,
 				C328FED7245B995F002AF147 /* icon_close_black@3x.png in Resources */,
+				C38FEF3D2460634600F44C77 /* BasicAlumbImagePickerViewController.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
 				C3DF666B2458A48D006FD80F /* icon_back_white.png in Resources */,
 				C349E95B245EC7DD0066E9FB /* icons_save.png in Resources */,
@@ -2345,6 +2363,7 @@
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
 				C32729442454630000BA736E /* DataModel.swift in Sources */,
 				C32519BA245B2489008EE973 /* CustomCenterSelectUITabBar.swift in Sources */,
+				C38FEF3C2460634600F44C77 /* BasicAlumbImagePickerViewController.swift in Sources */,
 				C39F993A2459684C000E4CFD /* DoneListAdapter.swift in Sources */,
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
@@ -2363,6 +2382,7 @@
 				C3272941245460CB00BA736E /* SQLiteDemoViewController.swift in Sources */,
 				C3DF66732458ACBB006FD80F /* DoneListItemTableViewCell.swift in Sources */,
 				C328FEB3245B8CE7002AF147 /* ViewUtil.swift in Sources */,
+				C38FEF3F246067BE00F44C77 /* ImagePicker.swift in Sources */,
 				C3038BA0245C38380070254F /* KAConstants.swift in Sources */,
 				C33E395D24574D3900384215 /* CLNotificationConstants.swift in Sources */,
 				C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */,

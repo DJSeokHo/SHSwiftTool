@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonKeepAccount: UIButton!
     @IBOutlet var buttonBasicPageController: UIButton!
     @IBOutlet var buttonBasicCustomCamera: UIButton!
+    @IBOutlet var buttonBasicAlumbPicker: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +130,14 @@ class MainViewController: UIViewController {
         buttonBasicPageController.addTarget(self, action: #selector(onButtonBasicPageController), for: UIControl.Event.touchUpInside)
         
         buttonBasicCustomCamera.addTarget(self, action: #selector(onButtonBasicCustomCamera), for: UIControl.Event.touchUpInside)
+        
+        buttonBasicAlumbPicker.addTarget(self, action: #selector(onButtonBasicAlumbPicker), for: UIControl.Event.touchUpInside)
+    }
+    
+    
+    @objc private func onButtonBasicAlumbPicker(_ sender: UIButton) {
+        let basicAlumbImagePickerViewController: BasicAlumbImagePickerViewController = BasicAlumbImagePickerViewController()
+        ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: basicAlumbImagePickerViewController)
     }
     
     @objc private func onButtonBasicCustomCamera(_ sender: UIButton) {

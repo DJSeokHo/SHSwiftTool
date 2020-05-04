@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="buttonBaseicConsoleTest" destination="2h7-ZM-0CQ" id="0bk-Wn-TQK"/>
                 <outlet property="buttonBasicAlert" destination="uhd-TW-Z35" id="oRG-EK-DwZ"/>
+                <outlet property="buttonBasicAlumbPicker" destination="dA8-tz-wPk" id="aev-AU-ZpW"/>
                 <outlet property="buttonBasicButton" destination="nNV-ZE-HCv" id="uls-c7-wvT"/>
                 <outlet property="buttonBasicCollectionView" destination="OYu-hJ-M51" id="MUc-es-3CU"/>
                 <outlet property="buttonBasicCustomCamera" destination="nrN-Xc-2n6" id="efB-If-rTh"/>
@@ -320,6 +321,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Basic Custom Camera">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA8-tz-wPk">
+                            <rect key="frame" x="206" y="608" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Basic Alumb Picker">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>

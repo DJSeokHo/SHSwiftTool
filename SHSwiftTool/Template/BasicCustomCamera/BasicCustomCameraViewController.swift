@@ -22,6 +22,8 @@ class BasicCustomCameraViewController: UIViewController, AVCapturePhotoCaptureDe
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
+        ILog.debug(tag: #file, content: StorageUtil.getLibraryDirectory())
+        
         initalizeCaptureSession()
     }
 
@@ -43,7 +45,7 @@ class BasicCustomCameraViewController: UIViewController, AVCapturePhotoCaptureDe
         
         cameraPreviewPlayer = AVCaptureVideoPreviewLayer(session: session)
         cameraPreviewPlayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraPreviewPlayer?.frame = CGRect(x: 0, y: 80, width: view.frame.size.width, height: view.frame.size.height - 80)
+        cameraPreviewPlayer?.frame = CGRect(x: 0, y: 0 , width: view.frame.size.width, height: view.frame.size.height)
         cameraPreviewPlayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
         
         // addsubview时都是在最上面面添加
@@ -76,7 +78,7 @@ class BasicCustomCameraViewController: UIViewController, AVCapturePhotoCaptureDe
         NavigationUtil.navigationToNext(from: self, target: basucCapturedPictureViewController, animated: true)
     }
     
-    // from iOS 11
+    // from  iOS 11
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         
         if let imageData = photo.fileDataRepresentation() {
