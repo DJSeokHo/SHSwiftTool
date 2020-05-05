@@ -21,6 +21,7 @@ class BasucCapturedPictureViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
         if capturedImage == nil {
             NavigationUtil.navigationToPrev(from: self, animated: true)
