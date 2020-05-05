@@ -12,6 +12,7 @@ class KAConstants {
     
     public static let BOTTOM_TAB_BAR_HEIGHT = 80
     
+    public static let CATEGORY_OTHER = "Other"
     public static let CATEGORY_SHOPPING = "Shopping"
     public static let CATEGORY_RESTAURANT = "Restaurant"
     public static let CATEGORY_CULTURAL = "Cultural"

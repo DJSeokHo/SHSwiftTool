@@ -17,8 +17,8 @@ class KeepAccountInfoBean: KABean {
     public var content: String!
     public var dateTime: String!
     public var imageUrl: String!
-    public var latitude: Float!
-    public var longitude: Float!
+    public var latitude: Double!
+    public var longitude: Double!
     
     func toString() -> String {
         return "\(uuid ?? "") \(title ?? "") \(category ?? "") \(amount ?? 0) \(content ?? "") \(dateTime ?? "") \(imageUrl ?? "") \(latitude ?? 0) \(longitude ?? 0)"
@@ -52,11 +52,11 @@ class KeepAccountInfoBean: KABean {
         return imageUrl
     }
     
-    func getLatitude() -> Float {
+    func getLatitude() -> Double {
         return latitude
     }
     
-    func getLongitude() -> Float {
+    func getLongitude() -> Double {
         return longitude
     }
     

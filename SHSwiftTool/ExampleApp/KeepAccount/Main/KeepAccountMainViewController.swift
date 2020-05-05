@@ -28,9 +28,29 @@ class KeepAccountMainViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-       
+        super.viewWillAppear(animated)
         initCenterSelectTabBar()
         self.view.bringSubviewToFront(buttonAdd)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        LocationWrapper.getInstance().initLocation()
+        LocationWrapper.getInstance().requestLocation({
+            AlertViewUtil.showTwoButtonAlertView(from: self, setTitle: "Permission", setMessage: "You need agree location permission", setConfirmButtonTitle: "Confirm", setCancelButtonTitle: "Cancel", setConfirmDelegate: {
+                _ in
+                
+                PermissionUtil.openAppSettingPage()
+               
+            }, setCancelDelegate: {
+                _ in
+                ViewControllerUtil.finishSelf(view: self)
+            })
+        }, onLocateFinished: {
+            
+        })
+        
     }
     
     private func setListener() {
