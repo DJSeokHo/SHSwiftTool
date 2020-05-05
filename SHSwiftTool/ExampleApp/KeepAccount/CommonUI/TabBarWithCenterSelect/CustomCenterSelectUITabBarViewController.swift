@@ -75,7 +75,7 @@ class CustomCenterSelectUITabBarViewController: UITabBarController, CustomCenter
         frame.origin.y = self.view.frame.size.height - frame.size.height
         self.tabBar.frame = frame
         
-        self.tabBar.backgroundColor = ColorUtil.colorWithHexString("999999")
+        self.tabBar.backgroundColor = ColorUtil.colorWithHexString("ffffff")
         self.tabBar.isTranslucent = true
         
         self.tabBar.barStyle = .default

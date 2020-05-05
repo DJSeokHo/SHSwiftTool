@@ -24,6 +24,7 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     @IBOutlet var textViewContent: UITextView!
     @IBOutlet var categoryViewContainer: UIView!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var buttonDelete: UIButton!
     
     private var categoryTabLayout: CategoryTabLayout!
     
@@ -34,6 +35,10 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     private var image: UIImage?
     
     public var navigationBarTitle: String!
+    
+    public var isNew: Bool!
+    
+    public var keepAccountInfoBean: KeepAccountInfoBean!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +98,13 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         initTitleAndAmountTextField()
         initImageView()
         initCategory()
+        
+        if isNew {
+            buttonDelete.isHidden = true
+        }
+        else {
+            buttonDelete.isHidden = false
+        }
     }
     
     private func initCategory() {
@@ -162,6 +174,16 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         textViewContent.delegate = self
         TapUtil.addTapListener(viewGroup: self, target: imageView, action: #selector(onImageViewClick))
         TapUtil.addTapListener(viewGroup: self, target: imageViewPlus, action: #selector(onImageViewClick))
+        buttonDelete.addTarget(self, action: #selector(onButtonDeleteClick), for: UIControl.Event.touchUpInside)
+    }
+    
+    @objc private func onButtonDeleteClick(_ sender: UIButton) {
+        AlertViewUtil.showTwoButtonAlertView(from: self, setTitle: "Alert", setMessage: "Delete record?", setConfirmButtonTitle: "Delete", setCancelButtonTitle: "Cancel", setConfirmDelegate: {
+            _ in
+            
+            // delete record here
+            
+        })
     }
     
     @objc private func onImageViewClick(_ sender: UIButton) {

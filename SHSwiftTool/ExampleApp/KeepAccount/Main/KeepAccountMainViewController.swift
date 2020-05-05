@@ -61,6 +61,7 @@ class KeepAccountMainViewController: UIViewController {
       
         let kaAccountDetailViewController = KAAccountDetailViewController()
         kaAccountDetailViewController.navigationBarTitle = "Add New"
+        kaAccountDetailViewController.isNew = true
         ViewControllerUtil.startNewFullScreenViewController(from: self, target: kaAccountDetailViewController)
     }
     
@@ -71,7 +72,7 @@ class KeepAccountMainViewController: UIViewController {
         }
         
         customCenterSelectUITabBarViewController = CustomCenterSelectUITabBarViewController()
-
+        
         customCenterSelectUITabBarViewController.tabBarTitleArray.append(contentsOf: ["Map", "", "Setting"])
         customCenterSelectUITabBarViewController.tabBarSelectedImageArray.append(contentsOf: ["icon_map_selected", "", "icon_setting_selected"])
         customCenterSelectUITabBarViewController.tabBarUnSelectedImageArray.append(contentsOf: ["icon_map", "", "icon_setting"])
@@ -90,6 +91,8 @@ class KeepAccountMainViewController: UIViewController {
         self.view.addSubview(customCenterSelectUITabBarViewController.view)
 
         ILog.debug(tag: "???", content: "\(customCenterSelectUITabBarViewController.tabBar.frame.width) \(customCenterSelectUITabBarViewController.tabBar.frame.height)")
+        
+        customCenterSelectUITabBarViewController.selectedIndex = 1
     }
     
 //    private func initCenterClickTabBar() {

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KAAccountDetailViewController" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
+                <outlet property="buttonDelete" destination="Nts-BT-E2a" id="7uR-UG-PUc"/>
                 <outlet property="categoryViewContainer" destination="Y3P-oe-fzg" id="8ap-hA-DDW"/>
                 <outlet property="imageView" destination="zhP-Ya-F4O" id="hbl-EP-3Mj"/>
                 <outlet property="imageViewPlus" destination="sH7-AS-Ahh" id="MDb-wl-k9a"/>
@@ -74,6 +75,15 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nts-BT-E2a">
+                            <rect key="frame" x="27" y="618" width="360" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Delete">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>

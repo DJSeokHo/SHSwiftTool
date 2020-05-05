@@ -26,7 +26,7 @@ class CustomCenterSelectUITabBar: UITabBar {
         
         super.init(frame: frame)
         
-        self.backgroundColor = ColorUtil.colorWithHexString("999999")
+        self.backgroundColor = ColorUtil.colorWithHexString("ffffff")
 
         // if ture, will show light grey
         // if you need set color, than
