@@ -26,7 +26,7 @@ protocol KABean {
     
     func getImageUrl() -> String
     
-    func getLatitude() -> Float
+    func getLatitude() -> Double
     
-    func getLongitude() -> Float
+    func getLongitude() -> Double
 }

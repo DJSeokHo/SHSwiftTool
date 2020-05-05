@@ -268,8 +268,8 @@ class KADBWrapper {
                 keepAccountInfoBean.content = content
                 keepAccountInfoBean.dateTime = dateTime
                 keepAccountInfoBean.imageUrl = imageUrl
-                keepAccountInfoBean.latitude = (latitude as NSString).floatValue
-                keepAccountInfoBean.longitude = (longitude as NSString).floatValue
+                keepAccountInfoBean.latitude = (latitude as NSString).doubleValue
+                keepAccountInfoBean.longitude = (longitude as NSString).doubleValue
                 
                 kaInfoArray.append(keepAccountInfoBean)
             
