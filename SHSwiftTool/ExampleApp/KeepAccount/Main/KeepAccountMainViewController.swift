@@ -25,6 +25,7 @@ class KeepAccountMainViewController: UIViewController {
         setListener()
         ViewUtil.setShadow(view: buttonAdd, color: UIColor.black.cgColor, radius: 6, opacity: 1.0)
         
+        KADBWrapper.getInstance().initDB()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -93,6 +94,11 @@ class KeepAccountMainViewController: UIViewController {
         ILog.debug(tag: "???", content: "\(customCenterSelectUITabBarViewController.tabBar.frame.width) \(customCenterSelectUITabBarViewController.tabBar.frame.height)")
         
         customCenterSelectUITabBarViewController.selectedIndex = 1
+    }
+    
+    deinit {
+        ILog.debug(tag: #file, content: "deinit")
+        KADBWrapper.getInstance().closeDatabase()
     }
     
 //    private func initCenterClickTabBar() {

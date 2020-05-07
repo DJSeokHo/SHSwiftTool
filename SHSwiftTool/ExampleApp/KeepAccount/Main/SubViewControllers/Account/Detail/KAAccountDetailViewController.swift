@@ -54,6 +54,52 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         super.viewWillAppear(animated)
         
         initView()
+        
+        SoftKeyboardUtil.tapSpaceToCloseSoftKeyboard(target: self, action: #selector(self.hideKeyboard))
+        
+        ThreadUtil.startThread {
+            var temp: [KeepAccountInfoBean] = [KeepAccountInfoBean]()
+            temp.append(contentsOf: KADBWrapper.getInstance().getDataArray(offset: "0", limit: "20"))
+            ILog.debug(tag: #file, content: temp.count)
+            
+            if temp.count != 0 {
+                
+                let k = temp[0]
+                ILog.debug(tag: #file, content: k.toString())
+                let imageUrl = k.imageUrl
+
+                let tempInfo = imageUrl!.split(separator: "_").last
+                let o = tempInfo!.split(separator: ".").first
+                let oValue = (o! as NSString).intValue
+                
+                self.category = k.category
+                self.image = StorageUtil.loadImageFile(pathName: StorageUtil.getLibraryDirectory(), folderName: KAConstants.IMAGE_FOLDER_NAME, imageName: imageUrl!, orientation: ImageUtil.getImageOrientation(rawValue: Int(oValue)))
+                
+                ThreadUtil.startUIThread(runnable: {
+                    
+                    self.textFieldTitle.text = k.title
+                    self.textFieldAmount.text = String(k.amount)
+                    self.textViewContent.text = k.content
+                    self.imageView.image = self.image
+                    self.imageViewPlus.isHidden = true
+                    
+                    self.categoryTabLayout.setCategory(category: self.category)
+                    
+                    self.initTextViewContent()
+                    
+                }, after: 0)
+            }
+        }
+        
+    }
+    
+    @objc func hideKeyboard() {
+        
+        // 除了用 self.view.endEditing(true)
+        // 也可以用 resignFirstResponder()
+        self.textFieldTitle!.resignFirstResponder()
+        self.textFieldAmount!.resignFirstResponder()
+        self.textViewContent!.resignFirstResponder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -91,6 +137,10 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
        
         imageView.image = image
         imageViewPlus.isHidden = true
+        
+        self.image = image
+        
+        ILog.debug(tag: #file, content: image.imageOrientation.rawValue)
     }
     
     private func initView() {
@@ -159,9 +209,14 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         textViewContent.layer.borderColor = UIColor.lightGray.cgColor
         textViewContent.layer.borderWidth = 1.0
         textViewContent.layer.cornerRadius = 5.0
-
-        textViewContent.text = "Input content";
-        textViewContent.textColor = UIColor.lightGray
+        
+        if textViewContent.text == "" {
+            textViewContent.text = "Input content";
+            textViewContent.textColor = UIColor.lightGray
+        }
+        else {
+            textViewContent.textColor = UIColor.black
+        }
     }
     
     private func initImageView() {
@@ -246,16 +301,6 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     
     private func checkInput() {
         
-//        public var uuid: String!
-//        public var title: String!
-//        public var category: String!
-//        public var amount: Float!
-//        public var content: String!
-//        public var dateTime: String!
-//        public var imageUrl: String!
-//        public var latitude: Double!
-//        public var longitude: Double!
-       
         let title = textFieldTitle.text
         if title == "" {
             AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Alert", setMessage: "Input title please", setButtonTitle: "Confirm")
@@ -286,20 +331,64 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
             return
         }
         
-//        var keepAccountInfoBean: KeepAccountInfoBean = KeepAccountInfoBean()
-//        if textFieldTitle.text == nil {
-//
-//        }
-//
-//         @IBOutlet var textFieldTitle: UITextField!
-//         @IBOutlet var textFieldAmount: UITextField!
-//         @IBOutlet var textViewContent: UITextView!
-//         @IBOutlet var categoryViewContainer: UIView!
-//         @IBOutlet var imageView: UIImageView!
+        saveInfo()
     }
     
     private func saveInfo() {
         
+        let title = textFieldTitle.text
+        let amount = textFieldAmount.text
+        let content = textViewContent.text
+        let uuid = UUIDUtil.getUUID()
+        let orientationRawValue = image!.imageOrientation.rawValue
+        let imageUrl = "\(uuid)_orv_\(orientationRawValue).png"
+            
+        showProgress()
+        
+        ThreadUtil.startThread(runnable: {
+          
+            let storageSuccess: Bool = StorageUtil.saveImageFile(
+                pathName: StorageUtil.getLibraryDirectory(),
+                   folderName: KAConstants.IMAGE_FOLDER_NAME,
+                   imageName: imageUrl,
+                   image: self.image!)
+               
+            if !storageSuccess {
+
+                ThreadUtil.startUIThread(runnable: {
+
+                    self.hideProgress()
+                    ILog.debug(tag: #file, content: "success")
+                }, after: 0)
+
+                return
+            }
+            
+            self.keepAccountInfoBean = KeepAccountInfoBean()
+            self.keepAccountInfoBean.uuid = uuid
+            self.keepAccountInfoBean.title = title
+            self.keepAccountInfoBean.category = self.category
+            self.keepAccountInfoBean.amount = (amount! as NSString).floatValue
+            self.keepAccountInfoBean.content = content
+            self.keepAccountInfoBean.dateTime = DateUtil.getCurrentDateTimeStringWithStandardSQLiteDateTimeFromatter()
+            self.keepAccountInfoBean.imageUrl = imageUrl
+            self.keepAccountInfoBean.latitude = self.latitude
+            self.keepAccountInfoBean.longitude = self.longitude
+            
+            KADBWrapper.getInstance().insert(keepAccountInfoBean: self.keepAccountInfoBean)
+            
+            ThreadUtil.startUIThread(runnable: {
+
+                AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Alert", setMessage: "Save success", setButtonTitle: "Confirm", confirmDelegate: {
+                    _ in
+                    
+                    ViewControllerUtil.finishSelf(view: self)
+                })
+                
+                self.hideProgress()
+                ILog.debug(tag: #file, content: "success")
+            }, after: 0)
+        })
     }
     
     private func showProgress() {

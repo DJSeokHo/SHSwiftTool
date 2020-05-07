@@ -195,6 +195,7 @@
 		C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37112DC22BD0D8100E92DA8 /* Launch Screen.storyboard */; };
 		C37112E122BD0FBB00E92DA8 /* BasicGrammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112E022BD0FBB00E92DA8 /* BasicGrammar.swift */; };
 		C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37112E222BD10C000E92DA8 /* BasicConsoleTest.swift */; };
+		C37930382464736700407D8F /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37930372464736700407D8F /* ImageUtil.swift */; };
 		C3845A4F22EDDA1200FAC52B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3845A4E22EDDA1200FAC52B /* Person.swift */; };
 		C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3845A5222EDDA6F00FAC52B /* Dog.swift */; };
 		C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3845A5422EDDAC700FAC52B /* ClassAndStruct.swift */; };
@@ -525,6 +526,7 @@
 		C37112DC22BD0D8100E92DA8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C37112E022BD0FBB00E92DA8 /* BasicGrammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGrammar.swift; sourceTree = "<group>"; };
 		C37112E222BD10C000E92DA8 /* BasicConsoleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicConsoleTest.swift; sourceTree = "<group>"; };
+		C37930372464736700407D8F /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		C3845A4E22EDDA1200FAC52B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C3845A5222EDDA6F00FAC52B /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		C3845A5422EDDAC700FAC52B /* ClassAndStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStruct.swift; sourceTree = "<group>"; };
@@ -1706,6 +1708,14 @@
 			path = Console;
 			sourceTree = "<group>";
 		};
+		C37930362464735900407D8F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C37930372464736700407D8F /* ImageUtil.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		C3845A5022EDDA4500FAC52B /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -1794,6 +1804,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C37930362464735900407D8F /* Image */,
 				C32D422A2461F47E00B0E7EC /* Permission */,
 				C328FEB1245B8CDA002AF147 /* View */,
 				C32BE8B1245A8F05005A26BB /* Color */,
@@ -2604,6 +2615,7 @@
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
+				C37930382464736700407D8F /* ImageUtil.swift in Sources */,
 				C3038B9C245C1EB00070254F /* KADBWrapper.swift in Sources */,
 				C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */,
 				C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */,

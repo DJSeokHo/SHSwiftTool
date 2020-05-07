@@ -43,6 +43,12 @@ class CategoryTabLayout: NSObject, UICollectionViewDelegate, UICollectionViewDat
         
     }
     
+    public func setCategory(category: String) {
+        self.currentCategory = category
+        self.onTabSelect()
+        collectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.categoryArray.count
     }

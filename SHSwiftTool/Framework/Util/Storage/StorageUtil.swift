@@ -192,6 +192,19 @@ class StorageUtil {
            return (folderName, imageName, orientation)
        }
     
+    public static func saveImageFile(pathName: String, folderName: String, imageName: String, image: UIImage) -> Bool {
+        
+        createFolder(parentFolder: pathName, withName: folderName)
+        
+        let folderPath = NSString(string: pathName).appendingPathComponent(folderName)
+        
+        let imagePath = NSString(string: folderPath).appendingPathComponent(imageName)
+        
+        let imageData = UIImage.pngData(image)
+        
+        return FileManager.default.createFile(atPath: imagePath, contents: imageData(), attributes: nil)
+    }
+    
     public static func loadImageFile(pathName: String, folderName: String, imageName: String, orientation: UIImage.Orientation) -> UIImage {
         
         let folderPath = NSString(string: pathName).appendingPathComponent(folderName)

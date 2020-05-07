@@ -21,6 +21,15 @@ class AlertViewUtil {
         from.present(alert, animated: true)
     }
     
+    public static func showOneButtonAlertView(from: UIViewController, setTitle title: String, setMessage message: String, setButtonTitle buttonTitle: String, confirmDelegate: @escaping ((UIAlertAction) -> Void)) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: buttonTitle, style: UIAlertAction.Style.default, handler: confirmDelegate))
+      
+        from.present(alert, animated: true)
+    }
+    
     public static func showTwoButtonAlertView(from: UIViewController, setTitle title: String, setMessage message: String, setConfirmButtonTitle confirmTitle: String, setCancelButtonTitle cancelTitle: String, setConfirmDelegate confirmDelegate: @escaping ((UIAlertAction) -> Void)) {
         
         /*

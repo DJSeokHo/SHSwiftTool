@@ -76,5 +76,6 @@ class LocationWrapper: NSObject, CLLocationManagerDelegate {
             // 開始定位自身位置
             locationManager.startUpdatingLocation()
         }
+        
     }
 }

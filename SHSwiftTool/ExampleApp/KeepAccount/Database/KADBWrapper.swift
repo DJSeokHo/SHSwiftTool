@@ -55,22 +55,36 @@ class KADBWrapper {
             return db
         }
         else {
-          
-            return nil
+            ILog.debug(tag: #file, content: "open error，path is：\(dbPath ?? "no path")")
+            
+            // sqlite3_open can create db file
+            // sqlite3_open_v2 can only load db file
+            if sqlite3_open(dbPath, &db) == SQLITE_OK {
+              
+                ILog.debug(tag: #file, content: "open and create success，path：\(dbPath ?? "")")
+                
+                sqlite3_close(db)
+                
+                if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
+                  
+                    ILog.debug(tag: #file, content: "open success v2，path：\(dbPath ?? "")")
+                    return db
+                }
+                else {
+                    return nil
+                }
+                
+            }
+            else {
+                 ILog.debug(tag: #file, content: "open error")
+                return nil
+            }
         }
         
     }
     
     public func closeDatabase() {
-        
-        var db: OpaquePointer?
-        // use "SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX" to keep sqlite safe under multi-thread
-        if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
-          
-            ILog.debug(tag: #file, content: "will close db")
-            sqlite3_close(db)
-            ILog.debug(tag: #file, content: "db closed")
-        }
+        sqlite3_close(db)
     }
 
     private func createTable() {
@@ -219,7 +233,7 @@ class KADBWrapper {
         sqlite3_finalize(deleteStatement)
     }
 
-    public func getDataArray(offset: String, limit: String, isDone: String) -> [KeepAccountInfoBean]! {
+    public func getDataArray(offset: String, limit: String) -> [KeepAccountInfoBean]! {
         
         var kaInfoArray: [KeepAccountInfoBean]
         kaInfoArray = [KeepAccountInfoBean]()

@@ -57,24 +57,35 @@ class CLDBWrapper {
             return db
         }
         else {
-             ILog.debug(tag: CLDBWrapper.TAG, content: "打开数据库失败")
-            return nil
+            ILog.debug(tag: CLDBWrapper.TAG, content: "未发现数据库文件，先进性创建")
+            
+            if sqlite3_open(dbPath, &db) == SQLITE_OK {
+              
+                ILog.debug(tag: CLDBWrapper.TAG, content: "成功创建并打开数据库，路径：\(dbPath ?? "")")
+                
+                sqlite3_close(db)
+                
+                if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
+                  
+                    ILog.debug(tag: CLDBWrapper.TAG, content: "成功打开数据库 v2，路径：\(dbPath ?? "")")
+                    return db
+                }
+                else {
+                    return nil
+                }
+                
+            }
+            else {
+                 ILog.debug(tag: CLDBWrapper.TAG, content: "打开数据库失败")
+                return nil
+            }
         }
         
     }
     
     public func closeDatabase() {
-        
-        var db: OpaquePointer?
-        // 传入"SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX"来保证sqlite3多线程环境下的稳定性.
-        if sqlite3_open_v2(dbPath, &db, SQLITE_OPEN_READWRITE|SQLITE_OPEN_FULLMUTEX, nil) == SQLITE_OK {
-          
-            ILog.debug(tag: CLDBWrapper.TAG, content: "即将关闭数据库")
-            sqlite3_close(db)
-        }
-        else {
-             ILog.debug(tag: CLDBWrapper.TAG, content: "关闭数据库失败")
-        }
+        sqlite3_close(db)
+        ILog.debug(tag: CLDBWrapper.TAG, content: "关闭数据库")
     }
 
     private func createTable() {

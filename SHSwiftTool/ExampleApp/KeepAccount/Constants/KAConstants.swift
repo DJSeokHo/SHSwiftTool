@@ -20,4 +20,6 @@ class KAConstants {
     public static let CATEGORY_MEDICAL = "Medical"
     public static let CATEGORY_STUDY = "Study"
     
+    public static let IMAGE_FOLDER_NAME = "KEEP_ACCOUNT_IMAGE"
+    
 }

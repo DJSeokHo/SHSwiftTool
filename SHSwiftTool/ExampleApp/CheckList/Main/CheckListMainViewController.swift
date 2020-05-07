@@ -311,6 +311,7 @@ class CheckListMainViewController: UIViewController, CheckListMainNavigationBarV
 
     deinit {
         NotificationUtil.removeAllObserver(observer: self)
+        CLDBWrapper.getInstance().closeDatabase()
     }
     
     /*
