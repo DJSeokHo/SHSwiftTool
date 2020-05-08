@@ -176,6 +176,8 @@
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
 		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
+		C35940AD24657A1B0030785A /* KAAccountListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35940AC24657A1B0030785A /* KAAccountListAdapter.swift */; };
+		C35940B024657DA40030785A /* KACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35940AF24657DA40030785A /* KACell.swift */; };
 		C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC62F234A0CFB00B94A78 /* Closure.swift */; };
 		C35DC632234A13C900B94A78 /* TrailingClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC631234A13C900B94A78 /* TrailingClosure.swift */; };
 		C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */; };
@@ -209,6 +211,27 @@
 		C388904322F5AF28007C444F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904222F5AF28007C444F /* LoginController.swift */; };
 		C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904422F5AF3B007C444F /* LoginInfoModel.swift */; };
 		C388904E22F5B57E007C444F /* ILog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C388904D22F5B57E007C444F /* ILog.swift */; };
+		C38A561924658AE700D379EC /* icon_category_travel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561224658AE600D379EC /* icon_category_travel@3x.png */; };
+		C38A561A24658AE700D379EC /* icon_category_other@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561324658AE700D379EC /* icon_category_other@3x.png */; };
+		C38A561B24658AE700D379EC /* icon_category_medical@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561424658AE700D379EC /* icon_category_medical@3x.png */; };
+		C38A561C24658AE700D379EC /* icon_category_restaurant@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561524658AE700D379EC /* icon_category_restaurant@3x.png */; };
+		C38A561D24658AE700D379EC /* icon_category_shopping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561624658AE700D379EC /* icon_category_shopping@3x.png */; };
+		C38A561E24658AE700D379EC /* icon_category_study@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561724658AE700D379EC /* icon_category_study@3x.png */; };
+		C38A561F24658AE700D379EC /* icon_category_cultural@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A561824658AE700D379EC /* icon_category_cultural@3x.png */; };
+		C38A562724658AEF00D379EC /* icon_category_restaurant@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562024658AEE00D379EC /* icon_category_restaurant@2x.png */; };
+		C38A562824658AEF00D379EC /* icon_category_medical@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562124658AEE00D379EC /* icon_category_medical@2x.png */; };
+		C38A562924658AEF00D379EC /* icon_category_other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562224658AEE00D379EC /* icon_category_other@2x.png */; };
+		C38A562A24658AEF00D379EC /* icon_category_shopping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562324658AEF00D379EC /* icon_category_shopping@2x.png */; };
+		C38A562B24658AEF00D379EC /* icon_category_cultural@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562424658AEF00D379EC /* icon_category_cultural@2x.png */; };
+		C38A562C24658AEF00D379EC /* icon_category_travel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562524658AEF00D379EC /* icon_category_travel@2x.png */; };
+		C38A562D24658AEF00D379EC /* icon_category_study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562624658AEF00D379EC /* icon_category_study@2x.png */; };
+		C38A563524658AF700D379EC /* icon_category_restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562E24658AF600D379EC /* icon_category_restaurant.png */; };
+		C38A563624658AF700D379EC /* icon_category_cultural.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A562F24658AF600D379EC /* icon_category_cultural.png */; };
+		C38A563724658AF700D379EC /* icon_category_other.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A563024658AF600D379EC /* icon_category_other.png */; };
+		C38A563824658AF700D379EC /* icon_category_medical.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A563124658AF600D379EC /* icon_category_medical.png */; };
+		C38A563924658AF700D379EC /* icon_category_travel.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A563224658AF600D379EC /* icon_category_travel.png */; };
+		C38A563A24658AF700D379EC /* icon_category_study.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A563324658AF700D379EC /* icon_category_study.png */; };
+		C38A563B24658AF700D379EC /* icon_category_shopping.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A563424658AF700D379EC /* icon_category_shopping.png */; };
 		C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B664422F721A6004EE452 /* LoginHomeViewController.swift */; };
 		C38B664722F721A6004EE452 /* LoginHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38B664522F721A6004EE452 /* LoginHomeViewController.xib */; };
 		C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FE9DA235C41940032F41F /* FirstViewController.swift */; };
@@ -505,6 +528,8 @@
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
 		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		C35940AC24657A1B0030785A /* KAAccountListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListAdapter.swift; sourceTree = "<group>"; };
+		C35940AF24657DA40030785A /* KACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KACell.swift; sourceTree = "<group>"; };
 		C35DC62F234A0CFB00B94A78 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		C35DC631234A13C900B94A78 /* TrailingClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingClosure.swift; sourceTree = "<group>"; };
 		C35FF031230C2BEF009D19A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -540,6 +565,27 @@
 		C388904222F5AF28007C444F /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C388904422F5AF3B007C444F /* LoginInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfoModel.swift; sourceTree = "<group>"; };
 		C388904D22F5B57E007C444F /* ILog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ILog.swift; sourceTree = "<group>"; };
+		C38A561224658AE600D379EC /* icon_category_travel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_travel@3x.png"; sourceTree = "<group>"; };
+		C38A561324658AE700D379EC /* icon_category_other@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_other@3x.png"; sourceTree = "<group>"; };
+		C38A561424658AE700D379EC /* icon_category_medical@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_medical@3x.png"; sourceTree = "<group>"; };
+		C38A561524658AE700D379EC /* icon_category_restaurant@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_restaurant@3x.png"; sourceTree = "<group>"; };
+		C38A561624658AE700D379EC /* icon_category_shopping@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_shopping@3x.png"; sourceTree = "<group>"; };
+		C38A561724658AE700D379EC /* icon_category_study@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_study@3x.png"; sourceTree = "<group>"; };
+		C38A561824658AE700D379EC /* icon_category_cultural@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_cultural@3x.png"; sourceTree = "<group>"; };
+		C38A562024658AEE00D379EC /* icon_category_restaurant@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_restaurant@2x.png"; sourceTree = "<group>"; };
+		C38A562124658AEE00D379EC /* icon_category_medical@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_medical@2x.png"; sourceTree = "<group>"; };
+		C38A562224658AEE00D379EC /* icon_category_other@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_other@2x.png"; sourceTree = "<group>"; };
+		C38A562324658AEF00D379EC /* icon_category_shopping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_shopping@2x.png"; sourceTree = "<group>"; };
+		C38A562424658AEF00D379EC /* icon_category_cultural@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_cultural@2x.png"; sourceTree = "<group>"; };
+		C38A562524658AEF00D379EC /* icon_category_travel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_travel@2x.png"; sourceTree = "<group>"; };
+		C38A562624658AEF00D379EC /* icon_category_study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_category_study@2x.png"; sourceTree = "<group>"; };
+		C38A562E24658AF600D379EC /* icon_category_restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_restaurant.png; sourceTree = "<group>"; };
+		C38A562F24658AF600D379EC /* icon_category_cultural.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_cultural.png; sourceTree = "<group>"; };
+		C38A563024658AF600D379EC /* icon_category_other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_other.png; sourceTree = "<group>"; };
+		C38A563124658AF600D379EC /* icon_category_medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_medical.png; sourceTree = "<group>"; };
+		C38A563224658AF600D379EC /* icon_category_travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_travel.png; sourceTree = "<group>"; };
+		C38A563324658AF700D379EC /* icon_category_study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_study.png; sourceTree = "<group>"; };
+		C38A563424658AF700D379EC /* icon_category_shopping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_category_shopping.png; sourceTree = "<group>"; };
 		C38B664422F721A6004EE452 /* LoginHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeViewController.swift; sourceTree = "<group>"; };
 		C38B664522F721A6004EE452 /* LoginHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginHomeViewController.xib; sourceTree = "<group>"; };
 		C38FE9DA235C41940032F41F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -845,9 +891,7 @@
 		C328FEC3245B9213002AF147 /* AccountList */ = {
 			isa = PBXGroup;
 			children = (
-				C32C316D245D4D6000EAC9FB /* Adapter */,
-				C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */,
-				C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */,
+				C35940AA2465791C0030785A /* ViewControllerItem */,
 			);
 			path = AccountList;
 			sourceTree = "<group>";
@@ -924,6 +968,7 @@
 		C32BE8AB245A8AEB005A26BB /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				C35940AE24657D980030785A /* CommonTabCell */,
 				C328FED1245B9404002AF147 /* NavigationBar */,
 				C32519BF245B2C43008EE973 /* TabBarNormal */,
 				C32519B8245B2465008EE973 /* TabBarWithCenterSelect */,
@@ -971,6 +1016,13 @@
 		C32BE8CD245AEE0C005A26BB /* @3x */ = {
 			isa = PBXGroup;
 			children = (
+				C38A561824658AE700D379EC /* icon_category_cultural@3x.png */,
+				C38A561424658AE700D379EC /* icon_category_medical@3x.png */,
+				C38A561324658AE700D379EC /* icon_category_other@3x.png */,
+				C38A561524658AE700D379EC /* icon_category_restaurant@3x.png */,
+				C38A561624658AE700D379EC /* icon_category_shopping@3x.png */,
+				C38A561724658AE700D379EC /* icon_category_study@3x.png */,
+				C38A561224658AE600D379EC /* icon_category_travel@3x.png */,
 				C32D42212461E2E000B0E7EC /* icon_plus_gray@3x.png */,
 				C32D421B2461DF4300B0E7EC /* icon_confirm_white@3x.png */,
 				C32D42152461DBC500B0E7EC /* icon_close_white@3x.png */,
@@ -991,6 +1043,13 @@
 		C32BE8CE245AEE2E005A26BB /* @2x */ = {
 			isa = PBXGroup;
 			children = (
+				C38A562424658AEF00D379EC /* icon_category_cultural@2x.png */,
+				C38A562124658AEE00D379EC /* icon_category_medical@2x.png */,
+				C38A562224658AEE00D379EC /* icon_category_other@2x.png */,
+				C38A562024658AEE00D379EC /* icon_category_restaurant@2x.png */,
+				C38A562324658AEF00D379EC /* icon_category_shopping@2x.png */,
+				C38A562624658AEF00D379EC /* icon_category_study@2x.png */,
+				C38A562524658AEF00D379EC /* icon_category_travel@2x.png */,
 				C32D42232461E2E400B0E7EC /* icon_plus_gray@2x.png */,
 				C32D421D2461DF4700B0E7EC /* icon_confirm_white@2x.png */,
 				C32D42172461DBC900B0E7EC /* icon_close_white@2x.png */,
@@ -1011,6 +1070,13 @@
 		C32BE8CF245AEE3A005A26BB /* @1x */ = {
 			isa = PBXGroup;
 			children = (
+				C38A562F24658AF600D379EC /* icon_category_cultural.png */,
+				C38A563124658AF600D379EC /* icon_category_medical.png */,
+				C38A563024658AF600D379EC /* icon_category_other.png */,
+				C38A562E24658AF600D379EC /* icon_category_restaurant.png */,
+				C38A563424658AF700D379EC /* icon_category_shopping.png */,
+				C38A563324658AF700D379EC /* icon_category_study.png */,
+				C38A563224658AF600D379EC /* icon_category_travel.png */,
 				C32D42252461E2E900B0E7EC /* icon_plus_gray.png */,
 				C32D421F2461DF4B00B0E7EC /* icon_confirm_white.png */,
 				C32D42192461DBCE00B0E7EC /* icon_close_white.png */,
@@ -1092,14 +1158,6 @@
 				C32C316A245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib */,
 			);
 			path = Item;
-			sourceTree = "<group>";
-		};
-		C32C316D245D4D6000EAC9FB /* Adapter */ = {
-			isa = PBXGroup;
-			children = (
-				C328FEC5245B9227002AF147 /* Item */,
-			);
-			path = Adapter;
 			sourceTree = "<group>";
 		};
 		C32C57482452F8D0008AF1A1 /* BasicScrollBigView */ = {
@@ -1434,6 +1492,33 @@
 				C35FF046230C3B29009D19A0 /* Images */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C35940AA2465791C0030785A /* ViewControllerItem */ = {
+			isa = PBXGroup;
+			children = (
+				C35940AB2465792B0030785A /* Adapter */,
+				C328FEBF245B920F002AF147 /* KAAccountListViewController.swift */,
+				C328FEC0245B920F002AF147 /* KAAccountListViewController.xib */,
+			);
+			path = ViewControllerItem;
+			sourceTree = "<group>";
+		};
+		C35940AB2465792B0030785A /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C328FEC5245B9227002AF147 /* Item */,
+				C35940AC24657A1B0030785A /* KAAccountListAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		C35940AE24657D980030785A /* CommonTabCell */ = {
+			isa = PBXGroup;
+			children = (
+				C35940AF24657DA40030785A /* KACell.swift */,
+			);
+			path = CommonTabCell;
 			sourceTree = "<group>";
 		};
 		C359FE2022F08D5400D0009E /* Extension */ = {
@@ -2299,6 +2384,7 @@
 				C3DD6B37230D88D500BDDF5D /* icon_profile_selected@2x.png in Resources */,
 				C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */,
 				C37020E82361E44E00895D6F /* test_image_1.png in Resources */,
+				C38A562D24658AEF00D379EC /* icon_category_study@2x.png in Resources */,
 				C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */,
 				C3DF666A2458A48D006FD80F /* icon_back_white@2x.png in Resources */,
 				C3DD6B1B230D85F800BDDF5D /* icon_order_un_selected.png in Resources */,
@@ -2321,6 +2407,7 @@
 				C3C5E9C3245B114000678674 /* icon_setting_selected@3x.png in Resources */,
 				C33E394C2457128600384215 /* icon_un_check@2x.png in Resources */,
 				C388903F22F5AF05007C444F /* LoginViewController.xib in Resources */,
+				C38A563824658AF700D379EC /* icon_category_medical.png in Resources */,
 				C3E73964245614700097953E /* icon_plus@3x.png in Resources */,
 				C3DD6AF9230D84C100BDDF5D /* icon_client_un_selected@3x.png in Resources */,
 				C3DD6B38230D88D500BDDF5D /* icon_profile_un_selected@2x.png in Resources */,
@@ -2328,27 +2415,36 @@
 				C32BE8B7245AE3C4005A26BB /* ic_fabushangping@2x.png in Resources */,
 				C3DF665D2458A008006FD80F /* icon_next@2x.png in Resources */,
 				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
+				C38A562924658AEF00D379EC /* icon_category_other@2x.png in Resources */,
 				C3DD6B34230D88BC00BDDF5D /* icon_profile_selected@3x.png in Resources */,
 				C3C5E9CD245B114D00678674 /* icon_map_selected.png in Resources */,
 				C32D421E2461DF4700B0E7EC /* icon_confirm_white@2x.png in Resources */,
+				C38A561C24658AE700D379EC /* icon_category_restaurant@3x.png in Resources */,
 				C32519B5245B160C008EE973 /* icon_keep_account.png in Resources */,
 				C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */,
 				C3DD6B1A230D85F800BDDF5D /* icon_order_selectedpng.png in Resources */,
 				C36C66A82450AF860081E862 /* BasicGroupTableViewController.xib in Resources */,
+				C38A562824658AEF00D379EC /* icon_category_medical@2x.png in Resources */,
+				C38A563A24658AF700D379EC /* icon_category_study.png in Resources */,
 				C328FEC2245B920F002AF147 /* KAAccountListViewController.xib in Resources */,
+				C38A563B24658AF700D379EC /* icon_category_shopping.png in Resources */,
 				C3DD6B16230D85F800BDDF5D /* icon_client_selected.png in Resources */,
+				C38A561B24658AE700D379EC /* icon_category_medical@3x.png in Resources */,
 				C3DD6AF7230D84C100BDDF5D /* icon_dashboard_selected@3x.png in Resources */,
 				C32D42162461DBC500B0E7EC /* icon_close_white@3x.png in Resources */,
 				C32D42182461DBC900B0E7EC /* icon_close_white@2x.png in Resources */,
 				C32D421A2461DBCE00B0E7EC /* icon_close_white.png in Resources */,
 				C32BE8B9245AE3CA005A26BB /* ic_fabushangping.png in Resources */,
 				C328FEAC245B8C9F002AF147 /* icon_add@3x.png in Resources */,
+				C38A562B24658AEF00D379EC /* icon_category_cultural@2x.png in Resources */,
 				C328FECB245B9278002AF147 /* KAAccountListItemTableViewCell.xib in Resources */,
+				C38A561D24658AE700D379EC /* icon_category_shopping@3x.png in Resources */,
 				C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C3C5E9CE245B114D00678674 /* icon_setting_selected.png in Resources */,
 				C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */,
 				C32C57512453268F008AF1A1 /* BasicPageViewController.xib in Resources */,
+				C38A561924658AE700D379EC /* icon_category_travel@3x.png in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
 				C3DF666C2458A48D006FD80F /* icon_back_white@3x.png in Resources */,
 				C32BE8AA245A74C3005A26BB /* KeepAccountMainViewController.xib in Resources */,
@@ -2376,6 +2472,7 @@
 				C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */,
 				C32D42102461DB0500B0E7EC /* icon_capture@3x.png in Resources */,
 				C32D42222461E2E000B0E7EC /* icon_plus_gray@3x.png in Resources */,
+				C38A563524658AF700D379EC /* icon_category_restaurant.png in Resources */,
 				C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */,
 				C3C82E99245F5C0800821E59 /* BasucCapturedPictureViewController.xib in Resources */,
 				C32BE8C4245AE402005A26BB /* ic_shouye.png in Resources */,
@@ -2409,6 +2506,7 @@
 				C3DD6B18230D85F800BDDF5D /* icon_client_un_selected.png in Resources */,
 				C3D3624C236E849D001B8ACB /* BasicTableViewController.xib in Resources */,
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
+				C38A563924658AF700D379EC /* icon_category_travel.png in Resources */,
 				C3DF665F2458A008006FD80F /* icon_next.png in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
 				C328FED9245B9963002AF147 /* icon_close_black@2x.png in Resources */,
@@ -2416,10 +2514,12 @@
 				C33E394F2457128600384215 /* icon_check.png in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
 				C32519C7245B3B06008EE973 /* icon_keep_account_un_selected@3x.png in Resources */,
+				C38A563724658AF700D379EC /* icon_category_other.png in Resources */,
 				C3DF66602458A008006FD80F /* icon_back@2x.png in Resources */,
 				C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */,
 				C3C5E9C7245B114600678674 /* icon_setting_selected@2x.png in Resources */,
 				C39AD8BA2312AF8A0072FAB5 /* CameraViewController.xib in Resources */,
+				C38A562724658AEF00D379EC /* icon_category_restaurant@2x.png in Resources */,
 				C304919723672BD200B2FC2C /* BasicPickerViewDemoViewController.xib in Resources */,
 				C32BE8C3245AE402005A26BB /* ic_shouye@3x.png in Resources */,
 				C32BE8B5245AE3BE005A26BB /* ic_fabushangping@3x.png in Resources */,
@@ -2432,8 +2532,10 @@
 				C3DD6B07230D850100BDDF5D /* icon_dashboard_selected@2x.png in Resources */,
 				C3D14A27236337B400A0C897 /* BasicPickerViewController.xib in Resources */,
 				C3E7395A245600D80097953E /* icon_more.png in Resources */,
+				C38A561A24658AE700D379EC /* icon_category_other@3x.png in Resources */,
 				C3E7395B245600D80097953E /* icon_more@2x.png in Resources */,
 				C32D42262461E2E900B0E7EC /* icon_plus_gray.png in Resources */,
+				C38A562A24658AEF00D379EC /* icon_category_shopping@2x.png in Resources */,
 				C32D42122461DB0800B0E7EC /* icon_capture@2x.png in Resources */,
 				C33E39502457128600384215 /* icon_check@3x.png in Resources */,
 				C33E394B2457128600384215 /* icon_un_check.png in Resources */,
@@ -2447,13 +2549,17 @@
 				C3DD6B19230D85F800BDDF5D /* icon_dashboard_selected.png in Resources */,
 				C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */,
 				C35791212308358F00BDB17E /* AlertWaitingViewHolder.xib in Resources */,
+				C38A561E24658AE700D379EC /* icon_category_study@3x.png in Resources */,
 				C328FEAE245B8CA2002AF147 /* icon_add@2x.png in Resources */,
 				C3DD6AFB230D84C100BDDF5D /* icon_product_selected@3x.png in Resources */,
+				C38A563624658AF700D379EC /* icon_category_cultural.png in Resources */,
 				C33E39572457203C00384215 /* CheckListItemTableViewCell.xib in Resources */,
 				C349E957245EC7D40066E9FB /* icon_save@3x.png in Resources */,
 				C385BFF52450F03100F864C8 /* BasicCollectionViewController.xib in Resources */,
 				C3DF665E2458A008006FD80F /* icon_next@3x.png in Resources */,
 				C32D421C2461DF4300B0E7EC /* icon_confirm_white@3x.png in Resources */,
+				C38A562C24658AEF00D379EC /* icon_category_travel@2x.png in Resources */,
+				C38A561F24658AE700D379EC /* icon_category_cultural@3x.png in Resources */,
 				C38FE9E5235C41AD0032F41F /* ThirdViewController.xib in Resources */,
 				C3DD6B28230D863A00BDDF5D /* ClientViewController.xib in Resources */,
 			);
@@ -2482,6 +2588,7 @@
 				C3038BAC245C6E190070254F /* DataViewController.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
 				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
+				C35940B024657DA40030785A /* KACell.swift in Sources */,
 				C33E395A24574BA600384215 /* TabUtil.swift in Sources */,
 				C34D31EA22E9EBF000E22BC6 /* IntExtension.swift in Sources */,
 				C3038B9E245C29DB0070254F /* KANotificationConstants.swift in Sources */,
@@ -2581,6 +2688,7 @@
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
 				C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */,
+				C35940AD24657A1B0030785A /* KAAccountListAdapter.swift in Sources */,
 				C32BE8B0245A8B94005A26BB /* CustomCenterClickUITabBar.swift in Sources */,
 				C3C82E98245F5C0800821E59 /* BasucCapturedPictureViewController.swift in Sources */,
 				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,

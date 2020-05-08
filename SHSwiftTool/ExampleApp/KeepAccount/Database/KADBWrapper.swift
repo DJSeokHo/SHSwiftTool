@@ -233,13 +233,13 @@ class KADBWrapper {
         sqlite3_finalize(deleteStatement)
     }
 
-    public func getDataArray(offset: String, limit: String) -> [KeepAccountInfoBean]! {
+    public func getDataArray(offset: String, limit: String, category: String) -> [KeepAccountInfoBean]! {
         
         var kaInfoArray: [KeepAccountInfoBean]
         kaInfoArray = [KeepAccountInfoBean]()
         
         let sql = """
-            SELECT * FROM KEEP_ACCOUNT_LIST ORDER BY DATETIME DESC LIMIT \(limit) OFFSET \(offset);
+            SELECT * FROM KEEP_ACCOUNT_LIST WHERE CATEGORY = '\(category)' ORDER BY DATETIME DESC LIMIT \(limit) OFFSET \(offset);
             """
         
         ILog.debug(tag: #file, content: sql)

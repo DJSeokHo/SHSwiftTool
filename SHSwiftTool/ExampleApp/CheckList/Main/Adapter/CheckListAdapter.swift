@@ -25,6 +25,10 @@ class CheckListAdapter: UIViewController, UITableViewDataSource, UITableViewDele
         return sectionNumber
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return itemHeight
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return iBeanArray.count
     }

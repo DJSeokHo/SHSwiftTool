@@ -57,39 +57,39 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         
         SoftKeyboardUtil.tapSpaceToCloseSoftKeyboard(target: self, action: #selector(self.hideKeyboard))
         
-        ThreadUtil.startThread {
-            var temp: [KeepAccountInfoBean] = [KeepAccountInfoBean]()
-            temp.append(contentsOf: KADBWrapper.getInstance().getDataArray(offset: "0", limit: "20"))
-            ILog.debug(tag: #file, content: temp.count)
-            
-            if temp.count != 0 {
-                
-                let k = temp[0]
-                ILog.debug(tag: #file, content: k.toString())
-                let imageUrl = k.imageUrl
-
-                let tempInfo = imageUrl!.split(separator: "_").last
-                let o = tempInfo!.split(separator: ".").first
-                let oValue = (o! as NSString).intValue
-                
-                self.category = k.category
-                self.image = StorageUtil.loadImageFile(pathName: StorageUtil.getLibraryDirectory(), folderName: KAConstants.IMAGE_FOLDER_NAME, imageName: imageUrl!, orientation: ImageUtil.getImageOrientation(rawValue: Int(oValue)))
-                
-                ThreadUtil.startUIThread(runnable: {
-                    
-                    self.textFieldTitle.text = k.title
-                    self.textFieldAmount.text = String(k.amount)
-                    self.textViewContent.text = k.content
-                    self.imageView.image = self.image
-                    self.imageViewPlus.isHidden = true
-                    
-                    self.categoryTabLayout.setCategory(category: self.category)
-                    
-                    self.initTextViewContent()
-                    
-                }, after: 0)
-            }
-        }
+//        ThreadUtil.startThread {
+//            var temp: [KeepAccountInfoBean] = [KeepAccountInfoBean]()
+//            temp.append(contentsOf: KADBWrapper.getInstance().getDataArray(offset: "0", limit: "20"))
+//            ILog.debug(tag: #file, content: temp.count)
+//
+//            if temp.count != 0 {
+//
+//                let k = temp.first!
+//                ILog.debug(tag: #file, content: k.toString())
+//                let imageUrl = k.imageUrl
+//
+//                let tempInfo = imageUrl!.split(separator: "_").last
+//                let o = tempInfo!.split(separator: ".").first
+//                let oValue = (o! as NSString).intValue
+//
+//                self.category = k.category
+//                self.image = StorageUtil.loadImageFile(pathName: StorageUtil.getLibraryDirectory(), folderName: KAConstants.IMAGE_FOLDER_NAME, imageName: imageUrl!, orientation: ImageUtil.getImageOrientation(rawValue: Int(oValue)))
+//
+//                ThreadUtil.startUIThread(runnable: {
+//
+//                    self.textFieldTitle.text = k.title
+//                    self.textFieldAmount.text = String(k.amount)
+//                    self.textViewContent.text = k.content
+//                    self.imageView.image = self.image
+//                    self.imageViewPlus.isHidden = true
+//
+//                    self.categoryTabLayout.setCategory(category: self.category)
+//
+//                    self.initTextViewContent()
+//
+//                }, after: 0)
+//            }
+//        }
         
     }
     

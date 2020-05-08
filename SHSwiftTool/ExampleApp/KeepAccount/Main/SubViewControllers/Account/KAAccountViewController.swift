@@ -49,14 +49,23 @@ class KAAccountViewController: UIViewController {
     private func initData() {
         
         currentIndex = 0
+      
+        tabLayoutTitleArray.removeAll()
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_OTHER)
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_SHOPPING)
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_RESTAURANT)
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_CULTURAL)
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_TRAVEL)
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_MEDICAL)
+        tabLayoutTitleArray.append(KAConstants.CATEGORY_STUDY)
         
-        for index in 0..<10 {
+        
+        for index in 0..<tabLayoutTitleArray.count {
             
             let kaAccountListViewController = KAAccountListViewController()
             kaAccountListViewController.index = index
+            kaAccountListViewController.category = tabLayoutTitleArray[index]
             pageViewControllerItemArray.append(kaAccountListViewController)
-            
-            tabLayoutTitleArray.append("page \(index)")
         }
     }
     
