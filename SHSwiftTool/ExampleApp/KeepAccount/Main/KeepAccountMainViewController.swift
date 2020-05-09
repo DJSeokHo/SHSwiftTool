@@ -21,7 +21,7 @@ class KeepAccountMainViewController: UIViewController {
         ILog.debug(tag: #file, content: "viewDidLoad")
         // Do any additional setup after loading the view.
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
-        
+        initObserver()
         setListener()
         ViewUtil.setShadow(view: buttonAdd, color: UIColor.black.cgColor, radius: 6, opacity: 1.0)
         
@@ -51,7 +51,23 @@ class KeepAccountMainViewController: UIViewController {
         }, onLocateFinished: {
             
         })
+    }
+    
+    private func initObserver() {
         
+        NotificationUtil.addObserver(observer: self, selector: #selector(observerEditCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM)
+    }
+    @objc func observerEditCheckListItem(notfication: NSNotification) {
+           ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
+           
+           let userInfo = notfication.userInfo
+           let kaBean = userInfo!["kaBean"] as! KeepAccountInfoBean
+     
+        let kaAccountDetailViewController = KAAccountDetailViewController()
+        kaAccountDetailViewController.navigationBarTitle = "Detail And Modify"
+        kaAccountDetailViewController.isNew = false
+        kaAccountDetailViewController.keepAccountInfoBean = kaBean
+        ViewControllerUtil.startNewFullScreenViewController(from: self, target: kaAccountDetailViewController)
     }
     
     private func setListener() {
@@ -98,6 +114,7 @@ class KeepAccountMainViewController: UIViewController {
     
     deinit {
         ILog.debug(tag: #file, content: "deinit")
+        NotificationUtil.removeAllObserver(observer: self)
         KADBWrapper.getInstance().closeDatabase()
     }
     

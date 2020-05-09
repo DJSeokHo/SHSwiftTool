@@ -26,13 +26,26 @@ class KAAccountListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initObserver()
         hideProgress()
         initTableView()
+        reloadData()
     }
+    
+    private func initObserver() {
+        
+        NotificationUtil.addObserver(observer: self, selector: #selector(observerRefreshList), name: KANotificationConstants.REQUEST_REFRESH_LIST)
+    }
+    
+    @objc func observerRefreshList(notfication: NSNotification) {
+     
+        reloadData()
+        
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        reloadData()
     }
     
     private func initTableView() {

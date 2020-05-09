@@ -48,48 +48,15 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
         initNavigationBar()
         hideProgress()
         setListener()
+        
+        initView()
+        SoftKeyboardUtil.tapSpaceToCloseSoftKeyboard(target: self, action: #selector(self.hideKeyboard))
+        
+        updateView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        initView()
-        
-        SoftKeyboardUtil.tapSpaceToCloseSoftKeyboard(target: self, action: #selector(self.hideKeyboard))
-        
-//        ThreadUtil.startThread {
-//            var temp: [KeepAccountInfoBean] = [KeepAccountInfoBean]()
-//            temp.append(contentsOf: KADBWrapper.getInstance().getDataArray(offset: "0", limit: "20"))
-//            ILog.debug(tag: #file, content: temp.count)
-//
-//            if temp.count != 0 {
-//
-//                let k = temp.first!
-//                ILog.debug(tag: #file, content: k.toString())
-//                let imageUrl = k.imageUrl
-//
-//                let tempInfo = imageUrl!.split(separator: "_").last
-//                let o = tempInfo!.split(separator: ".").first
-//                let oValue = (o! as NSString).intValue
-//
-//                self.category = k.category
-//                self.image = StorageUtil.loadImageFile(pathName: StorageUtil.getLibraryDirectory(), folderName: KAConstants.IMAGE_FOLDER_NAME, imageName: imageUrl!, orientation: ImageUtil.getImageOrientation(rawValue: Int(oValue)))
-//
-//                ThreadUtil.startUIThread(runnable: {
-//
-//                    self.textFieldTitle.text = k.title
-//                    self.textFieldAmount.text = String(k.amount)
-//                    self.textViewContent.text = k.content
-//                    self.imageView.image = self.image
-//                    self.imageViewPlus.isHidden = true
-//
-//                    self.categoryTabLayout.setCategory(category: self.category)
-//
-//                    self.initTextViewContent()
-//
-//                }, after: 0)
-//            }
-//        }
         
     }
     
@@ -299,6 +266,37 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     }
     // MARK: navigation delegate
     
+    private func updateView() {
+        
+        if isNew && keepAccountInfoBean == nil {
+            return
+        }
+        
+        ILog.debug(tag: #file, content: keepAccountInfoBean.toString())
+        let imageUrl = keepAccountInfoBean.imageUrl
+
+        let tempInfo = imageUrl!.split(separator: "_").last
+        let o = tempInfo!.split(separator: ".").first
+        let oValue = (o! as NSString).intValue
+
+        self.category = keepAccountInfoBean.category
+        self.image = StorageUtil.loadImageFile(pathName: StorageUtil.getLibraryDirectory(), folderName: KAConstants.IMAGE_FOLDER_NAME, imageName: imageUrl!, orientation: ImageUtil.getImageOrientation(rawValue: Int(oValue)))
+
+        ThreadUtil.startUIThread(runnable: {
+
+            self.textFieldTitle.text = self.keepAccountInfoBean.title
+            self.textFieldAmount.text = String(self.keepAccountInfoBean.amount)
+            self.textViewContent.text = self.keepAccountInfoBean.content
+            self.imageView.image = self.image
+            self.imageViewPlus.isHidden = true
+
+            self.categoryTabLayout.setCategory(category: self.category)
+
+            self.initTextViewContent()
+
+        }, after: 0)
+    }
+    
     private func checkInput() {
         
         let title = textFieldTitle.text
@@ -331,7 +329,12 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
             return
         }
         
-        saveInfo()
+        if isNew && keepAccountInfoBean == nil {
+            saveInfo()
+        }
+        else {
+            modifyInfo()
+        }
     }
     
     private func saveInfo() {
@@ -381,6 +384,62 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
 
                 AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Alert", setMessage: "Save success", setButtonTitle: "Confirm", confirmDelegate: {
                     _ in
+                    
+                    NotificationUtil.post(name: KANotificationConstants.REQUEST_REFRESH_LIST, object: self)
+                    
+                    ViewControllerUtil.finishSelf(view: self)
+                })
+                
+                self.hideProgress()
+                ILog.debug(tag: #file, content: "success")
+            }, after: 0)
+        })
+    }
+    
+    private func modifyInfo() {
+        
+        let title = textFieldTitle.text
+        let amount = textFieldAmount.text
+        let content = textViewContent.text
+        let uuid = keepAccountInfoBean.uuid
+        let orientationRawValue = image!.imageOrientation.rawValue
+        let imageUrl = "\(uuid!)_orv_\(orientationRawValue).png"
+            
+        showProgress()
+        
+        ThreadUtil.startThread(runnable: {
+          
+            let storageSuccess: Bool = StorageUtil.saveImageFile(
+                pathName: StorageUtil.getLibraryDirectory(),
+                   folderName: KAConstants.IMAGE_FOLDER_NAME,
+                   imageName: imageUrl,
+                   image: self.image!)
+               
+            if !storageSuccess {
+
+                ThreadUtil.startUIThread(runnable: {
+
+                    self.hideProgress()
+                    ILog.debug(tag: #file, content: "success")
+                }, after: 0)
+
+                return
+            }
+            
+            self.keepAccountInfoBean.title = title
+            self.keepAccountInfoBean.category = self.category
+            self.keepAccountInfoBean.amount = (amount! as NSString).floatValue
+            self.keepAccountInfoBean.content = content
+            self.keepAccountInfoBean.imageUrl = imageUrl
+            
+            KADBWrapper.getInstance().updateData(keepAccountInfoBean: self.keepAccountInfoBean)
+            
+            ThreadUtil.startUIThread(runnable: {
+
+                AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Alert", setMessage: "Save success", setButtonTitle: "Confirm", confirmDelegate: {
+                    _ in
+                    
+                    NotificationUtil.post(name: KANotificationConstants.REQUEST_REFRESH_LIST, object: self)
                     
                     ViewControllerUtil.finishSelf(view: self)
                 })

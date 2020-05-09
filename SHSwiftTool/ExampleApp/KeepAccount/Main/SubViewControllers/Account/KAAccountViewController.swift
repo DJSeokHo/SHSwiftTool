@@ -34,10 +34,10 @@ class KAAccountViewController: UIViewController {
         NavigationUtil.hideSystemNavigationBar(navigationController: self.navigationController!)
         
         rootView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - CGFloat(KAConstants.BOTTOM_TAB_BAR_HEIGHT))
-        
+       
         initData()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -170,6 +170,7 @@ class KAAccountViewController: UIViewController {
         
         rootView.addSubview(kaNavigationBarViewHolder!)
     }
+   
    
     // MARK: navigation bar
     

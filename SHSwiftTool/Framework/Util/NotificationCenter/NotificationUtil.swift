@@ -13,7 +13,12 @@ class NotificationUtil {
     public static func post(name: String, object: Any, userInfo: Dictionary<AnyHashable, Any>) {
       
         NotificationCenter.default.post(name: Notification.Name(rawValue: name), object: object, userInfo: userInfo)
-}
+    }
+    
+    public static func post(name: String, object: Any) {
+      
+        NotificationCenter.default.post(name: Notification.Name(rawValue: name), object: object, userInfo: nil)
+    }
     
     public static func addObserver(observer: Any, selector: Selector, name: String) {
         
