@@ -50,6 +50,7 @@ class KeepAccountMainViewController: UIViewController {
             })
         }, onLocateFinished: {
             
+            LocationWrapper.getInstance().stopLocation()
         })
     }
     

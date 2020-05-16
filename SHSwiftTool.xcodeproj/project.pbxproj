@@ -252,6 +252,9 @@
 		C39F993A2459684C000E4CFD /* DoneListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F99392459684C000E4CFD /* DoneListAdapter.swift */; };
 		C39F993D24596A1D000E4CFD /* ICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F993C24596A1D000E4CFD /* ICell.swift */; };
 		C39F99402459BC0E000E4CFD /* CheckListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */; };
+		C3A460EA247023A800D19EB6 /* test_earth_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A460E8247023A800D19EB6 /* test_earth_annotation.png */; };
+		C3A460EB247023A800D19EB6 /* test_home_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A460E9247023A800D19EB6 /* test_home_annotation.png */; };
+		C3A460ED24702DF500D19EB6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A460EC24702DF500D19EB6 /* MapKit.framework */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
 		C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */; };
@@ -606,6 +609,9 @@
 		C39F99392459684C000E4CFD /* DoneListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneListAdapter.swift; sourceTree = "<group>"; };
 		C39F993C24596A1D000E4CFD /* ICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICell.swift; sourceTree = "<group>"; };
 		C39F993F2459BC0E000E4CFD /* CheckListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListAdapter.swift; sourceTree = "<group>"; };
+		C3A460E8247023A800D19EB6 /* test_earth_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_earth_annotation.png; sourceTree = "<group>"; };
+		C3A460E9247023A800D19EB6 /* test_home_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_home_annotation.png; sourceTree = "<group>"; };
+		C3A460EC24702DF500D19EB6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
 		C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@3x.png"; sourceTree = "<group>"; };
@@ -717,6 +723,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A460ED24702DF500D19EB6 /* MapKit.framework in Frameworks */,
 				C327293D245457CD00BA736E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -815,6 +822,7 @@
 		C327293B245457B700BA736E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3A460EC24702DF500D19EB6 /* MapKit.framework */,
 				C327293C245457B700BA736E /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
@@ -1070,6 +1078,8 @@
 		C32BE8CF245AEE3A005A26BB /* @1x */ = {
 			isa = PBXGroup;
 			children = (
+				C3A460E8247023A800D19EB6 /* test_earth_annotation.png */,
+				C3A460E9247023A800D19EB6 /* test_home_annotation.png */,
 				C38A562F24658AF600D379EC /* icon_category_cultural.png */,
 				C38A563124658AF600D379EC /* icon_category_medical.png */,
 				C38A563024658AF600D379EC /* icon_category_other.png */,
@@ -2417,6 +2427,7 @@
 				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
 				C38A562924658AEF00D379EC /* icon_category_other@2x.png in Resources */,
 				C3DD6B34230D88BC00BDDF5D /* icon_profile_selected@3x.png in Resources */,
+				C3A460EB247023A800D19EB6 /* test_home_annotation.png in Resources */,
 				C3C5E9CD245B114D00678674 /* icon_map_selected.png in Resources */,
 				C32D421E2461DF4700B0E7EC /* icon_confirm_white@2x.png in Resources */,
 				C38A561C24658AE700D379EC /* icon_category_restaurant@3x.png in Resources */,
@@ -2460,6 +2471,7 @@
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
+				C3A460EA247023A800D19EB6 /* test_earth_annotation.png in Resources */,
 				C3E739512455ECC70097953E /* CheckListMainViewController.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C32BE8BF245AE3FC005A26BB /* ic_shouye_sel.png in Resources */,

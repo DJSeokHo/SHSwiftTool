@@ -72,7 +72,6 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        LocationWrapper.getInstance().initLocation()
         LocationWrapper.getInstance().requestLocation({
             
             AlertViewUtil.showTwoButtonAlertView(from: self, setTitle: "Permission", setMessage: "You need agree location permission", setConfirmButtonTitle: "Confirm", setCancelButtonTitle: "Cancel", setConfirmDelegate: {
