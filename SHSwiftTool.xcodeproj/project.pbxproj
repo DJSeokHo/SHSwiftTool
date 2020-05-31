@@ -166,7 +166,6 @@
 		C35230F122EF31DE00342A44 /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F022EF31DE00342A44 /* Apple.swift */; };
 		C35230F522EF33CD00342A44 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F422EF33CD00342A44 /* Car.swift */; };
 		C35230F722EF33DA00342A44 /* FlyCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35230F622EF33DA00342A44 /* FlyCar.swift */; };
-		C35791162307EFD500BDB17E /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C35791152307EFD500BDB17E /* icon_back.png */; };
 		C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791182307F05D00BDB17E /* NavigationUtil.swift */; };
 		C357911C2307F28D00BDB17E /* ViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */; };
 		C357911F2308323000BDB17E /* ThreadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C357911E2308323000BDB17E /* ThreadUtil.swift */; };
@@ -175,7 +174,6 @@
 		C35791282308453200BDB17E /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35791272308453200BDB17E /* NotificationConstants.swift */; };
 		C358DDA823019926007F10C6 /* NavigationBarViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */; };
 		C358DDAA23019A2B007F10C6 /* NavigationBarViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */; };
-		C358DDAF2301A754007F10C6 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C358DDAE2301A754007F10C6 /* icon_close.png */; };
 		C35940AD24657A1B0030785A /* KAAccountListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35940AC24657A1B0030785A /* KAAccountListAdapter.swift */; };
 		C35940B024657DA40030785A /* KACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35940AF24657DA40030785A /* KACell.swift */; };
 		C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35DC62F234A0CFB00B94A78 /* Closure.swift */; };
@@ -357,6 +355,8 @@
 		C3EF1B852369C83B006FB168 /* BasicSegmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */; };
 		C3EF1B892369D0FE006FB168 /* BasicProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */; };
 		C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EF1B882369D0FE006FB168 /* BasicProgressViewController.xib */; };
+		C3F71BEE24837E9500AA53E1 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F71BEC24837E9500AA53E1 /* icon_close.png */; };
+		C3F71BEF24837E9500AA53E1 /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F71BED24837E9500AA53E1 /* icon_back.png */; };
 		C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */; };
 		C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */; };
 /* End PBXBuildFile section */
@@ -521,7 +521,6 @@
 		C35230F022EF31DE00342A44 /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 		C35230F422EF33CD00342A44 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		C35230F622EF33DA00342A44 /* FlyCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyCar.swift; sourceTree = "<group>"; };
-		C35791152307EFD500BDB17E /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
 		C35791182307F05D00BDB17E /* NavigationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUtil.swift; sourceTree = "<group>"; };
 		C357911B2307F28D00BDB17E /* ViewControllerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtil.swift; sourceTree = "<group>"; };
 		C357911E2308323000BDB17E /* ThreadUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadUtil.swift; sourceTree = "<group>"; };
@@ -530,7 +529,6 @@
 		C35791272308453200BDB17E /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		C358DDA723019926007F10C6 /* NavigationBarViewHolder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBarViewHolder.xib; sourceTree = "<group>"; };
 		C358DDA923019A2B007F10C6 /* NavigationBarViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewHolder.swift; sourceTree = "<group>"; };
-		C358DDAE2301A754007F10C6 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		C35940AC24657A1B0030785A /* KAAccountListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountListAdapter.swift; sourceTree = "<group>"; };
 		C35940AF24657DA40030785A /* KACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KACell.swift; sourceTree = "<group>"; };
 		C35DC62F234A0CFB00B94A78 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
@@ -714,6 +712,8 @@
 		C3EF1B832369C83B006FB168 /* BasicSegmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSegmentViewController.xib; sourceTree = "<group>"; };
 		C3EF1B872369D0FE006FB168 /* BasicProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProgressViewController.swift; sourceTree = "<group>"; };
 		C3EF1B882369D0FE006FB168 /* BasicProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicProgressViewController.xib; sourceTree = "<group>"; };
+		C3F71BEC24837E9500AA53E1 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		C3F71BED24837E9500AA53E1 /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
 		C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlertViewController.swift; sourceTree = "<group>"; };
 		C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicAlertViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1568,8 +1568,8 @@
 		C35FF046230C3B29009D19A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C35791152307EFD500BDB17E /* icon_back.png */,
-				C358DDAE2301A754007F10C6 /* icon_close.png */,
+				C3F71BED24837E9500AA53E1 /* icon_back.png */,
+				C3F71BEC24837E9500AA53E1 /* icon_close.png */,
 				C35FF071230C3E59009D19A0 /* @1x */,
 				C35FF070230C3E56009D19A0 /* @2x */,
 				C35FF06F230C3E52009D19A0 /* @3x */,
@@ -2411,6 +2411,7 @@
 				C3DECD33235F4D8C00AEA02D /* BasicButtonViewController.xib in Resources */,
 				C32C316C245D437E00EAC9FB /* KATabLayoutItemViewHolder.xib in Resources */,
 				C3C82E90245F3F0B00821E59 /* BasicCustomCameraViewController.xib in Resources */,
+				C3F71BEF24837E9500AA53E1 /* icon_back.png in Resources */,
 				C35FF034230C2BEF009D19A0 /* ProfileViewController.xib in Resources */,
 				C3E7395C245600D80097953E /* icon_more@3x.png in Resources */,
 				C3DD6B15230D85F800BDDF5D /* icon_product_selected.png in Resources */,
@@ -2424,7 +2425,6 @@
 				C3038BAD245C6E190070254F /* DataViewController.xib in Resources */,
 				C32BE8B7245AE3C4005A26BB /* ic_fabushangping@2x.png in Resources */,
 				C3DF665D2458A008006FD80F /* icon_next@2x.png in Resources */,
-				C35791162307EFD500BDB17E /* icon_back.png in Resources */,
 				C38A562924658AEF00D379EC /* icon_category_other@2x.png in Resources */,
 				C3DD6B34230D88BC00BDDF5D /* icon_profile_selected@3x.png in Resources */,
 				C3A460EB247023A800D19EB6 /* test_home_annotation.png in Resources */,
@@ -2477,6 +2477,7 @@
 				C32BE8BF245AE3FC005A26BB /* ic_shouye_sel.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
 				C38FE9E1235C41A00032F41F /* SecondViewController.xib in Resources */,
+				C3F71BEE24837E9500AA53E1 /* icon_close.png in Resources */,
 				C37020E32361E14500895D6F /* BasicImageViewController.xib in Resources */,
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
 				C32519C9245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png in Resources */,
@@ -2552,7 +2553,6 @@
 				C33E39502457128600384215 /* icon_check@3x.png in Resources */,
 				C33E394B2457128600384215 /* icon_un_check.png in Resources */,
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
-				C358DDAF2301A754007F10C6 /* icon_close.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
 				C32519A1245B128B008EE973 /* KASettingViewController.xib in Resources */,
 				C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */,
