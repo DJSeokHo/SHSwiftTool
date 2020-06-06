@@ -56,10 +56,10 @@ class KeepAccountMainViewController: UIViewController {
     
     private func initObserver() {
         
-        NotificationUtil.addObserver(observer: self, selector: #selector(observerEditCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM)
+//        NotificationUtil.addObserver(observer: self, selector: #selector(observerEditCheckListItem(notfication:)), name: CLNotificationConstants.REQUEST_EDIT_LIST_ITEM)
     }
     @objc func observerEditCheckListItem(notfication: NSNotification) {
-           ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
+//           ILog.debug(tag: CheckListMainViewController.TAG, content: "observerEditCheckListItem")
            
            let userInfo = notfication.userInfo
            let kaBean = userInfo!["kaBean"] as! KeepAccountInfoBean

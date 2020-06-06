@@ -198,7 +198,7 @@ class KAAccountListViewController: UIViewController {
 
     deinit {
         NotificationUtil.removeAllObserver(observer: self)
-        CLDBWrapper.getInstance().closeDatabase()
+//        CLDBWrapper.getInstance().closeDatabase()
     }
     
     /*

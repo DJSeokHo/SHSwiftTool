@@ -46,7 +46,6 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicPage: UIButton!
     @IBOutlet var buttonSimpleAnimation: UIButton!
     @IBOutlet var buttonSQLite: UIButton!
-    @IBOutlet var buttonCheckList: UIButton!
     @IBOutlet var buttonKeepAccount: UIButton!
     @IBOutlet var buttonBasicPageController: UIButton!
     @IBOutlet var buttonBasicCustomCamera: UIButton!
@@ -123,8 +122,6 @@ class MainViewController: UIViewController {
         
         buttonSQLite.addTarget(self, action: #selector(onButtonSQLite), for: UIControl.Event.touchUpInside)
         
-        buttonCheckList.addTarget(self, action: #selector(onButtonCheckList), for: UIControl.Event.touchUpInside)
-        
         buttonKeepAccount.addTarget(self, action: #selector(onButtonKeepAccount), for: UIControl.Event.touchUpInside)
         
         buttonBasicPageController.addTarget(self, action: #selector(onButtonBasicPageController), for: UIControl.Event.touchUpInside)
@@ -154,12 +151,7 @@ class MainViewController: UIViewController {
         let keepAccountMainViewController: KeepAccountMainViewController = KeepAccountMainViewController()
         ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: keepAccountMainViewController)
     }
-    
-    @objc private func onButtonCheckList(_ sender: UIButton) {
-        let checkListMainViewController = CheckListMainViewController()
-        ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: checkListMainViewController)
-    }
-    
+ 
     @objc private func onButtonSQLite(_ sender: UIButton) {
         let sqliteDemoView = SQLiteDemoViewController()
         ViewControllerUtil.startNewViewController(from: self, target: sqliteDemoView)

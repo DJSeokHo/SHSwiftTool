@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -35,7 +35,6 @@
                 <outlet property="buttonBasicUIViewController" destination="giS-2S-ltZ" id="AdX-zA-At6"/>
                 <outlet property="buttonBasicWebView" destination="rBG-uC-jT1" id="RgV-50-2Cr"/>
                 <outlet property="buttonCamera" destination="hyC-Xj-wn1" id="5vC-fr-Frv"/>
-                <outlet property="buttonCheckList" destination="evo-tP-Mzd" id="hEq-bg-b1d"/>
                 <outlet property="buttonClose" destination="KVB-ja-rvt" id="KX5-Fg-DhG"/>
                 <outlet property="buttonKeepAccount" destination="9yZ-S9-rEm" id="aAq-lz-9lq"/>
                 <outlet property="buttonLogin" destination="cdV-fr-df5" id="j8c-Ru-TTw"/>
@@ -265,14 +264,6 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="Simple Animation">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evo-tP-Mzd">
-                            <rect key="frame" x="0.0" y="570" width="169" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="Check List">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
