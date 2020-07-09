@@ -323,6 +323,17 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jg5-k3-glx">
+                            <rect key="frame" x="0.0" y="570" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Test">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onButtonTestClick:" destination="-1" eventType="touchUpInside" id="y6u-Xw-gLn"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <viewLayoutGuide key="contentLayoutGuide" id="qxt-5t-vhP"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="a6R-Zg-sjQ"/>

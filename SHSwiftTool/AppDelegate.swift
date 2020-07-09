@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        initMainViewController()
 //        initBottomTabBar()
         initBottomTabBarWithNavigation()
-//        
+//
 //        window = UIWindow.init(frame: UIScreen.main.bounds)
 //        window?.backgroundColor = UIColor.white
 //        window?.makeKeyAndVisible()

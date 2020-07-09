@@ -51,6 +51,12 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicCustomCamera: UIButton!
     @IBOutlet var buttonBasicAlumbPicker: UIButton!
     
+    @IBAction func onButtonTestClick(_ sender: UIButton) {
+      
+        let testWebViewController: TestWebViewController = TestWebViewController()
+        ViewControllerUtil.startNewFullScreenViewController(from: self, target: testWebViewController)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +65,22 @@ class MainViewController: UIViewController {
         
         setListener()
 
+        var resultMapParent = [String: Any]()
+        
+        var resultMap = [String: Any]()
+        resultMap["keyA"] = "valueA"
+        resultMap["keyB"] = "valueB"
+        resultMap["keyC"] = "valueC"
+        resultMap["keyD"] = "valueD"
+        
+        resultMapParent["resultMap"] = resultMap
+        
+        if let theJSONData = try? JSONSerialization.data(
+            withJSONObject: resultMapParent,
+            options: []) {
+                let theJSONText = String(data: theJSONData, encoding: .ascii)
+                print("JSON string = \(theJSONText!)")
+        }
     }
     
     private func setListener() {

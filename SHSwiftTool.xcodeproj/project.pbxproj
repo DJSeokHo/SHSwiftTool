@@ -240,6 +240,8 @@
 		C3A460EA247023A800D19EB6 /* test_earth_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A460E8247023A800D19EB6 /* test_earth_annotation.png */; };
 		C3A460EB247023A800D19EB6 /* test_home_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = C3A460E9247023A800D19EB6 /* test_home_annotation.png */; };
 		C3A460ED24702DF500D19EB6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A460EC24702DF500D19EB6 /* MapKit.framework */; };
+		C3B0F80824B6B0A90000E855 /* TestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0F80624B6B0A90000E855 /* TestWebViewController.swift */; };
+		C3B0F80924B6B0A90000E855 /* TestWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
 		C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */; };
@@ -555,6 +557,8 @@
 		C3A460E8247023A800D19EB6 /* test_earth_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_earth_annotation.png; sourceTree = "<group>"; };
 		C3A460E9247023A800D19EB6 /* test_home_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_home_annotation.png; sourceTree = "<group>"; };
 		C3A460EC24702DF500D19EB6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C3B0F80624B6B0A90000E855 /* TestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWebViewController.swift; sourceTree = "<group>"; };
+		C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestWebViewController.xib; sourceTree = "<group>"; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
 		C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@3x.png"; sourceTree = "<group>"; };
@@ -1181,6 +1185,8 @@
 			children = (
 				C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */,
 				C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */,
+				C3B0F80624B6B0A90000E855 /* TestWebViewController.swift */,
+				C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */,
 			);
 			path = BasicWebView;
 			sourceTree = "<group>";
@@ -2244,6 +2250,7 @@
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
 				C328FED9245B9963002AF147 /* icon_close_black@2x.png in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
+				C3B0F80924B6B0A90000E855 /* TestWebViewController.xib in Resources */,
 				C32519C7245B3B06008EE973 /* icon_keep_account_un_selected@3x.png in Resources */,
 				C38A563724658AF700D379EC /* icon_category_other.png in Resources */,
 				C3EF1B8A2369D0FE006FB168 /* BasicProgressViewController.xib in Resources */,
@@ -2409,6 +2416,7 @@
 				C3C82E8F245F3F0B00821E59 /* BasicCustomCameraViewController.swift in Sources */,
 				C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */,
 				C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */,
+				C3B0F80824B6B0A90000E855 /* TestWebViewController.swift in Sources */,
 				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */,

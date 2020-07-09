@@ -65,6 +65,7 @@ class BasicWebViewController: UIViewController, UITextFieldDelegate, UIWebViewDe
         textField.delegate = self
         webView.delegate = self
     }
+    
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         go()
