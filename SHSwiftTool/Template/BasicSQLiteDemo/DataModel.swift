@@ -23,6 +23,7 @@ class DataModel {
     }
     
     public func toString() -> String {
-        return uuid + " " + name + " " + content + " " + dateTime
+//        return uuid + " " + name + " " + content + " " + dateTime
+        return ""
     }
 }
