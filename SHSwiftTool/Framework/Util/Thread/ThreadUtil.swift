@@ -16,7 +16,7 @@ class ThreadUtil {
         }
     }
     
-    public static func startUIThread(runnable: @escaping () -> Void, after seconds: Double) {
+    public static func startUIThread(runnable: @escaping () -> Void, afterSeconds seconds: Double) {
         
         Thread.sleep(forTimeInterval: seconds)
         
