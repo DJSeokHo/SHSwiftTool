@@ -142,7 +142,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
                 NotificationUtil.post(name: NotifcationConstants.LOGIN_SUCCESS, object: self, userInfo: userInfo)
                 
                 
-            }, after: 3)
+            }, afterSeconds: 3)
         }
         
         ILog.debug(tag: LoginViewController.TAG, content: "auto login...")
@@ -181,7 +181,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
                 NotificationUtil.post(name: NotifcationConstants.LOGIN_SUCCESS, object: self, userInfo: userInfo)
                 
                 
-            }, after: 3)
+            }, afterSeconds: 3)
         }
         
         ILog.debug(tag: LoginViewController.TAG, content: "login...")
