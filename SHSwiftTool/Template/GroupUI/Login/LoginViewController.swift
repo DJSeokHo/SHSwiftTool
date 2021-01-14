@@ -139,7 +139,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
                 var userInfo = Dictionary<AnyHashable, Any>()
                 userInfo[LoginConstants.ID_KEY] = self.loginInfoModel.getUserID()
                 userInfo[LoginConstants.PW_KEY] = self.loginInfoModel.getUserPassword()
-                NotificationUtil.post(name: NotifcationConstants.LOGIN_SUCCESS, object: self, userInfo: userInfo)
+                NotificationUtil.post(name: NotificationConstants.LOGIN_SUCCESS, userInfo: userInfo)
                 
                 
             }, afterSeconds: 3)
@@ -178,7 +178,7 @@ class LoginViewController: UIViewController, NavigationBarViewHolderDelegate {
                 var userInfo = Dictionary<AnyHashable, Any>()
                 userInfo[LoginConstants.ID_KEY] = self.loginInfoModel.getUserID()
                 userInfo[LoginConstants.PW_KEY] = self.loginInfoModel.getUserPassword()
-                NotificationUtil.post(name: NotifcationConstants.LOGIN_SUCCESS, object: self, userInfo: userInfo)
+                NotificationUtil.post(name: NotificationConstants.LOGIN_SUCCESS, userInfo: userInfo)
                 
                 
             }, afterSeconds: 3)

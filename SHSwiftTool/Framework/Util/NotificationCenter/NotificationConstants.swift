@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NotifcationConstants {
+class NotificationConstants {
     
     public static let LOGIN_SUCCESS = "LOGIN_SUCCESS"
     

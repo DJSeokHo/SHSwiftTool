@@ -48,7 +48,7 @@ class KAAccountListItemTableViewCell: UITableViewCell, KACell {
         var userInfo = Dictionary<AnyHashable, Any>()
         userInfo["kaBean"] = kaBean
            
-        NotificationUtil.post(name: KANotificationConstants.REQUEST_EDIT_LIST_ITEM, object: self, userInfo: userInfo)
+        NotificationUtil.post(name: KANotificationConstants.REQUEST_EDIT_LIST_ITEM, userInfo: userInfo)
     }
     
     func setData(kaBean: KABean) {

@@ -93,7 +93,7 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
     
     private func initObserver() {
         
-        NotificationUtil.addObserver(observer: self, selector: #selector(observerConfirmImage), name: KANotificationConstants.REQUEST_CONFRIM_IMAGE)
+        NotificationUtil.addObserver(name: KANotificationConstants.REQUEST_CONFRIM_IMAGE, observer: self, selector: #selector(observerConfirmImage))
         
     }
     @objc func observerConfirmImage(notfication: NSNotification) {
@@ -293,7 +293,7 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
 
             self.initTextViewContent()
 
-        }, after: 0)
+        }, afterSeconds: 0)
     }
     
     private func checkInput() {
@@ -361,7 +361,7 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
 
                     self.hideProgress()
                     ILog.debug(tag: #file, content: "success")
-                }, after: 0)
+                }, afterSeconds: 0)
 
                 return
             }
@@ -384,14 +384,14 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
                 AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Alert", setMessage: "Save success", setButtonTitle: "Confirm", confirmDelegate: {
                     _ in
                     
-                    NotificationUtil.post(name: KANotificationConstants.REQUEST_REFRESH_LIST, object: self)
+                    NotificationUtil.post(name: KANotificationConstants.REQUEST_REFRESH_LIST)
                     
                     ViewControllerUtil.finishSelf(view: self)
                 })
                 
                 self.hideProgress()
                 ILog.debug(tag: #file, content: "success")
-            }, after: 0)
+            }, afterSeconds: 0)
         })
     }
     
@@ -420,7 +420,7 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
 
                     self.hideProgress()
                     ILog.debug(tag: #file, content: "success")
-                }, after: 0)
+                }, afterSeconds: 0)
 
                 return
             }
@@ -438,14 +438,14 @@ class KAAccountDetailViewController: UIViewController, KANavigationBarViewHolder
                 AlertViewUtil.showOneButtonAlertView(from: self, setTitle: "Alert", setMessage: "Save success", setButtonTitle: "Confirm", confirmDelegate: {
                     _ in
                     
-                    NotificationUtil.post(name: KANotificationConstants.REQUEST_REFRESH_LIST, object: self)
+                    NotificationUtil.post(name: KANotificationConstants.REQUEST_REFRESH_LIST)
                     
                     ViewControllerUtil.finishSelf(view: self)
                 })
                 
                 self.hideProgress()
                 ILog.debug(tag: #file, content: "success")
-            }, after: 0)
+            }, afterSeconds: 0)
         })
     }
     

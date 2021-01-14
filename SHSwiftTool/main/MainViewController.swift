@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicPageController: UIButton!
     @IBOutlet var buttonBasicCustomCamera: UIButton!
     @IBOutlet var buttonBasicAlumbPicker: UIButton!
+    @IBOutlet var buttonIG: UIButton!
     
     @IBAction func onButtonTestClick(_ sender: UIButton) {
       
@@ -151,8 +152,15 @@ class MainViewController: UIViewController {
         buttonBasicCustomCamera.addTarget(self, action: #selector(onButtonBasicCustomCamera), for: UIControl.Event.touchUpInside)
         
         buttonBasicAlumbPicker.addTarget(self, action: #selector(onButtonBasicAlumbPicker), for: UIControl.Event.touchUpInside)
+        
+        buttonIG.addTarget(self, action: #selector(onButtonIG), for: UIControl.Event.touchUpInside)
     }
     
+    
+    @objc private func onButtonIG(_ sender: UIButton) {
+        let igLikeCollectionView: IGLikeCollectionView = IGLikeCollectionView()
+        ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: igLikeCollectionView)
+    }
     
     @objc private func onButtonBasicAlumbPicker(_ sender: UIButton) {
         let basicAlumbImagePickerViewController: BasicAlumbImagePickerViewController = BasicAlumbImagePickerViewController()

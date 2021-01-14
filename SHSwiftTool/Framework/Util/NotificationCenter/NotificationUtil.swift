@@ -7,20 +7,22 @@
 //
 
 import Foundation
+import UIKit
 
 class NotificationUtil {
     
-    public static func post(name: String, object: Any, userInfo: Dictionary<AnyHashable, Any>) {
+    public static func post(name: String, userInfo: Dictionary<AnyHashable, Any>) {
       
-        NotificationCenter.default.post(name: Notification.Name(rawValue: name), object: object, userInfo: userInfo)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: name), object: nil, userInfo: userInfo)
     }
     
-    public static func post(name: String, object: Any) {
+    
+    public static func post(name: String) {
       
-        NotificationCenter.default.post(name: Notification.Name(rawValue: name), object: object, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: name), object: nil, userInfo: nil)
     }
     
-    public static func addObserver(observer: Any, selector: Selector, name: String) {
+    public static func addObserver(name: String, observer: Any, selector: Selector) {
         
         NotificationCenter.default.addObserver(observer, selector: selector, name: Notification.Name(rawValue: name), object: nil)
         
@@ -28,5 +30,18 @@ class NotificationUtil {
     
     public static func removeAllObserver(observer: Any) {
         NotificationCenter.default.removeObserver(observer)
+    }
+    
+    public static func navigationTo(from: UINavigationController?, target: AnyClass, animated: Bool) {
+        
+        let viewControllerList = from?.viewControllers ?? Array<UIViewController>()
+        
+        for viewController in viewControllerList {
+            
+            if viewController.isKind(of: target) {
+                from?.popToViewController(viewController, animated: animated)
+            }
+            
+        }
     }
 }

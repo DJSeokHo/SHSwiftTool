@@ -39,7 +39,7 @@ class LoginHomeViewController: UIViewController, NavigationBarViewHolderDelegate
     
     private func initObserver() {
         
-        NotificationUtil.addObserver(observer: self, selector: #selector(observerLoginSuccess(notfication:)), name: NotifcationConstants.LOGIN_SUCCESS)
+        NotificationUtil.addObserver(name: NotificationConstants.LOGIN_SUCCESS, observer: self, selector: #selector(observerLoginSuccess(notfication:)))
        
     }
     

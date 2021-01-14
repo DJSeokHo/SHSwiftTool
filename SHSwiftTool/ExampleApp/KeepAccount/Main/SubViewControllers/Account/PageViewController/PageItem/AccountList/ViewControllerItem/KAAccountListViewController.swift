@@ -34,7 +34,7 @@ class KAAccountListViewController: UIViewController {
     
     private func initObserver() {
         
-        NotificationUtil.addObserver(observer: self, selector: #selector(observerRefreshList), name: KANotificationConstants.REQUEST_REFRESH_LIST)
+        NotificationUtil.addObserver(name: KANotificationConstants.REQUEST_REFRESH_LIST, observer: self, selector: #selector(observerRefreshList))
     }
     
     @objc func observerRefreshList(notfication: NSNotification) {
@@ -105,7 +105,7 @@ class KAAccountListViewController: UIViewController {
                 self.kaAccountListAdapter.reload(self.tableView, kaBeanArray: kaBeanArray)
                 self.hideProgress()
 
-            }, after: 0)
+            }, afterSeconds: 0)
         }
     }
 
@@ -124,7 +124,7 @@ class KAAccountListViewController: UIViewController {
                 self.kaAccountListAdapter.loadMore(self.tableView, kaBeanArray: kaBeanArray)
                 self.hideProgress()
 
-            }, after: 0)
+            }, afterSeconds: 0)
         }
     }
 

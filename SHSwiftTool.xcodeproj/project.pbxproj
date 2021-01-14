@@ -244,6 +244,7 @@
 		C3B0F80924B6B0A90000E855 /* TestWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
+		C3BB78BB25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */; };
 		C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */; };
 		C3C5E9C3245B114000678674 /* icon_setting_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */; };
 		C3C5E9C7245B114600678674 /* icon_setting_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */; };
@@ -254,6 +255,11 @@
 		C3C82E90245F3F0B00821E59 /* BasicCustomCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */; };
 		C3C82E98245F5C0800821E59 /* BasucCapturedPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */; };
 		C3C82E99245F5C0800821E59 /* BasucCapturedPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */; };
+		C3CA363A25AEF02D005782FC /* IGLikeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA363825AEF02D005782FC /* IGLikeCollectionView.swift */; };
+		C3CA363B25AEF02D005782FC /* IGLikeCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA363925AEF02D005782FC /* IGLikeCollectionView.xib */; };
+		C3CA363F25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */; };
+		C3CA364325AEFAC4005782FC /* IGLikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA364125AEFAC4005782FC /* IGLikeCollectionViewCell.swift */; };
+		C3CA364425AEFAC4005782FC /* IGLikeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA364225AEFAC4005782FC /* IGLikeCollectionViewCell.xib */; };
 		C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */; };
 		C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045A243E153B009B4456 /* ProtocolTest.swift */; };
 		C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */; };
@@ -561,6 +567,7 @@
 		C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestWebViewController.xib; sourceTree = "<group>"; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
+		C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@3x.png"; sourceTree = "<group>"; };
 		C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@3x.png"; sourceTree = "<group>"; };
 		C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@2x.png"; sourceTree = "<group>"; };
@@ -571,6 +578,11 @@
 		C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCustomCameraViewController.xib; sourceTree = "<group>"; };
 		C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasucCapturedPictureViewController.swift; sourceTree = "<group>"; };
 		C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasucCapturedPictureViewController.xib; sourceTree = "<group>"; };
+		C3CA363825AEF02D005782FC /* IGLikeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionView.swift; sourceTree = "<group>"; };
+		C3CA363925AEF02D005782FC /* IGLikeCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGLikeCollectionView.xib; sourceTree = "<group>"; };
+		C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		C3CA364125AEFAC4005782FC /* IGLikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3CA364225AEFAC4005782FC /* IGLikeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGLikeCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestImpl.swift; sourceTree = "<group>"; };
 		C3CD045A243E153B009B4456 /* ProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
 		C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUseTest.swift; sourceTree = "<group>"; };
@@ -1649,6 +1661,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3CA363325AEEFC6005782FC /* IGLikeCollectionView */,
 				C38FEF392460631E00F44C77 /* BasicAlumbImagePicker */,
 				C3C82E8C245F3ADE00821E59 /* BasicCustomCamera */,
 				C3038BA1245C5ABA0070254F /* BasicPageView */,
@@ -1909,6 +1922,35 @@
 				C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */,
 			);
 			path = Result;
+			sourceTree = "<group>";
+		};
+		C3CA363325AEEFC6005782FC /* IGLikeCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C3CA363D25AEFA7E005782FC /* Adapter */,
+				C3CA363825AEF02D005782FC /* IGLikeCollectionView.swift */,
+				C3CA363925AEF02D005782FC /* IGLikeCollectionView.xib */,
+				C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */,
+			);
+			path = IGLikeCollectionView;
+			sourceTree = "<group>";
+		};
+		C3CA363D25AEFA7E005782FC /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C3CA364025AEFA9F005782FC /* Item */,
+				C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		C3CA364025AEFA9F005782FC /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C3CA364125AEFAC4005782FC /* IGLikeCollectionViewCell.swift */,
+				C3CA364225AEFAC4005782FC /* IGLikeCollectionViewCell.xib */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 		C3CD0457243E14F6009B4456 /* ProtocolAsParameter */ = {
@@ -2198,6 +2240,7 @@
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
+				C3CA364425AEFAC4005782FC /* IGLikeCollectionViewCell.xib in Resources */,
 				C32BE8E3245AF175005A26BB /* icon_keep_account@3x.png in Resources */,
 				C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */,
 				C32C575B245336F0008AF1A1 /* SimpleAnimationViewController.xib in Resources */,
@@ -2205,6 +2248,7 @@
 				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
 				C3A460EA247023A800D19EB6 /* test_earth_annotation.png in Resources */,
+				C3CA363B25AEF02D005782FC /* IGLikeCollectionView.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
 				C32BE8BF245AE3FC005A26BB /* ic_shouye_sel.png in Resources */,
 				C3DD6B24230D862C00BDDF5D /* DashboardViewController.xib in Resources */,
@@ -2346,6 +2390,8 @@
 				C32519BE245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift in Sources */,
 				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
 				C32D422C2461F48C00B0E7EC /* PermissionUtil.swift in Sources */,
+				C3CA364325AEFAC4005782FC /* IGLikeCollectionViewCell.swift in Sources */,
+				C3CA363A25AEF02D005782FC /* IGLikeCollectionView.swift in Sources */,
 				C3DD6B23230D862C00BDDF5D /* DashboardViewController.swift in Sources */,
 				C3DECD2A235F435D00AEA02D /* BasicTextViewViewController.swift in Sources */,
 				C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */,
@@ -2366,6 +2412,7 @@
 				C3038BA6245C6D500070254F /* BasicPageDemoViewController.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
+				C3CA363F25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift in Sources */,
 				C35159792309333D00848456 /* NotificationUtil.swift in Sources */,
 				C34D31E422E9EB0700E22BC6 /* SimpleClass.swift in Sources */,
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
@@ -2432,6 +2479,7 @@
 				C32D42082461D92600B0E7EC /* KACapturePictureViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
+				C3BB78BB25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift in Sources */,
 				C32D42292461EF5F00B0E7EC /* LocationWrapper.swift in Sources */,
 				C328FECA245B9278002AF147 /* KAAccountListItemTableViewCell.swift in Sources */,
 				C32519C1245B2C6C008EE973 /* CustomNormalUITabBar.swift in Sources */,
@@ -2502,7 +2550,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2557,7 +2605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

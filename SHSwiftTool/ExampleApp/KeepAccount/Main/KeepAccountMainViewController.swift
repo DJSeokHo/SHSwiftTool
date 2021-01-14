@@ -143,7 +143,7 @@ class KeepAccountMainViewController: UIViewController {
 //        self.addChild(customCenterClickUITabBarViewController)
 //        self.view.addSubview(customCenterClickUITabBarViewController.view)
 //    }
-    
+//
 //    private func initNormalTabBar() {
 //
 //        if customNormalUITabBarViewController != nil {

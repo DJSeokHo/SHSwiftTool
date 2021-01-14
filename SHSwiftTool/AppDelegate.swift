@@ -18,12 +18,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
 //        initMainViewController()
 //        initBottomTabBar()
-        initBottomTabBarWithNavigation()
+//        initBottomTabBarWithNavigation()
 //
 //        window = UIWindow.init(frame: UIScreen.main.bounds)
 //        window?.backgroundColor = UIColor.white
 //        window?.makeKeyAndVisible()
 //        window?.rootViewController = CustomUITabBarViewController()
+        
+        
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.backgroundColor = UIColor.white
+        
+        // create main container view controller
+        let igLikeCollectionView: IGLikeCollectionView = IGLikeCollectionView()
+       
+        // create navigation controller and put main view controller as root view
+        //        let navigationController: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        // make navigation controller as window root view controller
+        //        self.window!.rootViewController = navigationController
+        window!.rootViewController = igLikeCollectionView
+        window!.makeKeyAndVisible()
+        
+        
         
         return true
     }

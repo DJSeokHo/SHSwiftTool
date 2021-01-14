@@ -65,7 +65,7 @@ class BasucCapturedPictureViewController: UIViewController {
                 
                 self.hideProgress()
                 ILog.debug(tag: #file, content: "success")
-            }, after: 0)
+            }, afterSeconds: 0)
         }
     }
     
@@ -84,7 +84,7 @@ class BasucCapturedPictureViewController: UIViewController {
                 self.imageView.image = newImage
                 self.hideProgress()
                 ILog.debug(tag: #file, content: "success")
-            }, after: 0)
+            }, afterSeconds: 0)
         }
     }
     
@@ -132,7 +132,7 @@ class BasucCapturedPictureViewController: UIViewController {
                 
                 NavigationUtil.navigationToPrev(from: self, animated: true)
                 
-            }, after: 0)
+            }, afterSeconds: 0)
         }
     }
     

@@ -34,7 +34,7 @@ class KACapturePictureViewController: UIViewController, AVCapturePhotoCaptureDel
     
     private func initObserver() {
         
-        NotificationUtil.addObserver(observer: self, selector: #selector(observerConfirmImage), name: KANotificationConstants.REQUEST_CONFRIM_IMAGE)
+        NotificationUtil.addObserver(name: KANotificationConstants.REQUEST_CONFRIM_IMAGE, observer: self, selector: #selector(observerConfirmImage))
         
     }
     @objc func observerConfirmImage(notfication: NSNotification) {

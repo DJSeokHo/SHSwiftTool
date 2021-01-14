@@ -41,7 +41,7 @@ class KAPictureResultViewController: UIViewController {
         var userInfo = Dictionary<AnyHashable, Any>()
         userInfo["image"] = capturedImage!
            
-        NotificationUtil.post(name: KANotificationConstants.REQUEST_CONFRIM_IMAGE, object: self, userInfo: userInfo)
+        NotificationUtil.post(name: KANotificationConstants.REQUEST_CONFRIM_IMAGE, userInfo: userInfo)
     }
     
     
