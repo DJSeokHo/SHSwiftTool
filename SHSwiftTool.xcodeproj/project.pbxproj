@@ -245,6 +245,9 @@
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
 		C3BB78BB25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */; };
+		C3C41E1925B1726500096D1B /* FileDownloadWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C41E1725B1726500096D1B /* FileDownloadWebViewController.swift */; };
+		C3C41E1A25B1726500096D1B /* FileDownloadWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C41E1825B1726500096D1B /* FileDownloadWebViewController.xib */; };
+		C3C41E1D25B17A9B00096D1B /* AnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C41E1C25B17A9B00096D1B /* AnimationUtil.swift */; };
 		C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */; };
 		C3C5E9C3245B114000678674 /* icon_setting_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */; };
 		C3C5E9C7245B114600678674 /* icon_setting_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */; };
@@ -568,6 +571,9 @@
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
 		C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewLayout.swift; sourceTree = "<group>"; };
+		C3C41E1725B1726500096D1B /* FileDownloadWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadWebViewController.swift; sourceTree = "<group>"; };
+		C3C41E1825B1726500096D1B /* FileDownloadWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileDownloadWebViewController.xib; sourceTree = "<group>"; };
+		C3C41E1C25B17A9B00096D1B /* AnimationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtil.swift; sourceTree = "<group>"; };
 		C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@3x.png"; sourceTree = "<group>"; };
 		C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@3x.png"; sourceTree = "<group>"; };
 		C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@2x.png"; sourceTree = "<group>"; };
@@ -1199,6 +1205,8 @@
 				C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */,
 				C3B0F80624B6B0A90000E855 /* TestWebViewController.swift */,
 				C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */,
+				C3C41E1725B1726500096D1B /* FileDownloadWebViewController.swift */,
+				C3C41E1825B1726500096D1B /* FileDownloadWebViewController.xib */,
 			);
 			path = BasicWebView;
 			sourceTree = "<group>";
@@ -1808,6 +1816,7 @@
 		C388904B22F5B568007C444F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C3C41E1B25B17A8F00096D1B /* Animation */,
 				C37930362464735900407D8F /* Image */,
 				C32D422A2461F47E00B0E7EC /* Permission */,
 				C328FEB1245B8CDA002AF147 /* View */,
@@ -1903,6 +1912,14 @@
 				C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */,
 			);
 			path = BasicScrollView;
+			sourceTree = "<group>";
+		};
+		C3C41E1B25B17A8F00096D1B /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C3C41E1C25B17A9B00096D1B /* AnimationUtil.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		C3C82E8C245F3ADE00821E59 /* BasicCustomCamera */ = {
@@ -2234,6 +2251,7 @@
 				C32C57512453268F008AF1A1 /* BasicPageViewController.xib in Resources */,
 				C38A561924658AE700D379EC /* icon_category_travel@3x.png in Resources */,
 				C37112C822BD036A00E92DA8 /* Assets.xcassets in Resources */,
+				C3C41E1A25B1726500096D1B /* FileDownloadWebViewController.xib in Resources */,
 				C32BE8AA245A74C3005A26BB /* KeepAccountMainViewController.xib in Resources */,
 				C32BE8D9245AEE4E005A26BB /* icon_setting@2x.png in Resources */,
 				C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */,
@@ -2473,6 +2491,7 @@
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
 				C385BFF82450FFB100F864C8 /* BasicCollectionItemCollectionViewCell.swift in Sources */,
+				C3C41E1925B1726500096D1B /* FileDownloadWebViewController.swift in Sources */,
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,
 				C32519A8245B12AB008EE973 /* KAMapViewController.swift in Sources */,
 				C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */,
@@ -2488,6 +2507,7 @@
 				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
 				C35791192307F05D00BDB17E /* NavigationUtil.swift in Sources */,
 				C37930382464736700407D8F /* ImageUtil.swift in Sources */,
+				C3C41E1D25B17A9B00096D1B /* AnimationUtil.swift in Sources */,
 				C3038B9C245C1EB00070254F /* KADBWrapper.swift in Sources */,
 				C32BE8CA245AE783005A26BB /* CustomCenterClickUITabBarDelegate.swift in Sources */,
 				C328FEC1245B920F002AF147 /* KAAccountListViewController.swift in Sources */,

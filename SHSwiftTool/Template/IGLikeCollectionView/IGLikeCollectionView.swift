@@ -39,10 +39,10 @@ class IGLikeCollectionView: UIViewController {
         
         self.list.append(contentsOf: list)
         
-        UIView.performWithoutAnimation {
+        AnimationUtil.withoutAnimation {
             self.collectionView.insertItems(at: paths)
         }
-        
+      
     }
     
     override func viewDidLoad() {

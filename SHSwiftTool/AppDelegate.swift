@@ -31,14 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.backgroundColor = UIColor.white
         
         // create main container view controller
-        let igLikeCollectionView: IGLikeCollectionView = IGLikeCollectionView()
-       
+//        let viewController: IGLikeCollectionView = IGLikeCollectionView()
+        let viewController = FileDownloadWebViewController()
+        viewController.urlString = "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20210114163838935&q_clCode=0&q_estnColumn7=Y"
+        
+        
+        
         // create navigation controller and put main view controller as root view
         //        let navigationController: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
         // make navigation controller as window root view controller
         //        self.window!.rootViewController = navigationController
-        window!.rootViewController = igLikeCollectionView
+        window!.rootViewController = viewController
         window!.makeKeyAndVisible()
         
         
