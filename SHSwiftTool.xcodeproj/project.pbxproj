@@ -248,6 +248,8 @@
 		C3C41E1925B1726500096D1B /* FileDownloadWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C41E1725B1726500096D1B /* FileDownloadWebViewController.swift */; };
 		C3C41E1A25B1726500096D1B /* FileDownloadWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C41E1825B1726500096D1B /* FileDownloadWebViewController.xib */; };
 		C3C41E1D25B17A9B00096D1B /* AnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C41E1C25B17A9B00096D1B /* AnimationUtil.swift */; };
+		C3C41E2025B1903C00096D1B /* IGLikeListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C41E1E25B1903C00096D1B /* IGLikeListCollectionViewCell.swift */; };
+		C3C41E2125B1903C00096D1B /* IGLikeListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C41E1F25B1903C00096D1B /* IGLikeListCollectionViewCell.xib */; };
 		C3C5E9C2245B114000678674 /* icon_map_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */; };
 		C3C5E9C3245B114000678674 /* icon_setting_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */; };
 		C3C5E9C7245B114600678674 /* icon_setting_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */; };
@@ -574,6 +576,8 @@
 		C3C41E1725B1726500096D1B /* FileDownloadWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadWebViewController.swift; sourceTree = "<group>"; };
 		C3C41E1825B1726500096D1B /* FileDownloadWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileDownloadWebViewController.xib; sourceTree = "<group>"; };
 		C3C41E1C25B17A9B00096D1B /* AnimationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtil.swift; sourceTree = "<group>"; };
+		C3C41E1E25B1903C00096D1B /* IGLikeListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3C41E1F25B1903C00096D1B /* IGLikeListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGLikeListCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3C5E9BF245B114000678674 /* icon_map_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_map_selected@3x.png"; sourceTree = "<group>"; };
 		C3C5E9C0245B114000678674 /* icon_setting_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@3x.png"; sourceTree = "<group>"; };
 		C3C5E9C4245B114600678674 /* icon_setting_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_selected@2x.png"; sourceTree = "<group>"; };
@@ -1966,6 +1970,8 @@
 			children = (
 				C3CA364125AEFAC4005782FC /* IGLikeCollectionViewCell.swift */,
 				C3CA364225AEFAC4005782FC /* IGLikeCollectionViewCell.xib */,
+				C3C41E1E25B1903C00096D1B /* IGLikeListCollectionViewCell.swift */,
+				C3C41E1F25B1903C00096D1B /* IGLikeListCollectionViewCell.xib */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -2288,6 +2294,7 @@
 				C328FED7245B995F002AF147 /* icon_close_black@3x.png in Resources */,
 				C38FEF3D2460634600F44C77 /* BasicAlumbImagePickerViewController.xib in Resources */,
 				C38FE9DD235C41940032F41F /* FirstViewController.xib in Resources */,
+				C3C41E2125B1903C00096D1B /* IGLikeListCollectionViewCell.xib in Resources */,
 				C349E95B245EC7DD0066E9FB /* icon_save.png in Resources */,
 				C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */,
 				C32D42202461DF4B00B0E7EC /* icon_confirm_white.png in Resources */,
@@ -2495,6 +2502,7 @@
 				C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */,
 				C32519A8245B12AB008EE973 /* KAMapViewController.swift in Sources */,
 				C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */,
+				C3C41E2025B1903C00096D1B /* IGLikeListCollectionViewCell.swift in Sources */,
 				C32D42082461D92600B0E7EC /* KACapturePictureViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,

@@ -14,9 +14,35 @@ class IGLikeCollectionView: UIViewController {
     
 //    var gridLayout: UICollectionViewFlowLayout!
     var gridLayout: IGLikeCollectionViewLayout!
+    var listLayout: UICollectionViewFlowLayout!
     
     var list: Array<String> = Array<String>()
+    
+    private var isGrid = true
   
+    @IBAction func changeLayout(_ sender: Any) {
+        
+        isGrid = !isGrid
+        
+        AnimationUtil.withoutAnimation {
+            if self.isGrid {
+                self.collectionView.setCollectionViewLayout(self.gridLayout, animated: true, completion: { (com) in
+                        if com {
+                            self.collectionView.reloadData()
+                        }
+                })
+            }
+            else {
+                self.collectionView.setCollectionViewLayout(self.listLayout, animated: true, completion: { (com) in
+                        if com {
+                            self.collectionView.reloadData()
+                        }
+                })
+            }
+        }
+        
+    }
+    
     @IBAction func reload(_ sender: Any) {
         
         let list = loadMore(offset: 0, limit: 30)
@@ -72,6 +98,14 @@ class IGLikeCollectionView: UIViewController {
     private func initList() {
        
         list.removeAll()
+        
+        // init list layout
+        listLayout = UICollectionViewFlowLayout()
+        listLayout.minimumLineSpacing = 0
+        listLayout.minimumInteritemSpacing = 0
+        listLayout.itemSize = CGSize(width: CGFloat(DisplayUtil.getFullScreenSize().width), height: CGFloat(DisplayUtil.getFullScreenSize().width))
+        
+        
         // init grid layout
 //        gridLayout = UICollectionViewFlowLayout()
         gridLayout = IGLikeCollectionViewLayout()
@@ -82,7 +116,7 @@ class IGLikeCollectionView: UIViewController {
         
         collectionView.collectionViewLayout = gridLayout
         
-        
+        collectionView.register(UINib(nibName: IGLikeListCollectionViewCell.TAG, bundle: nil), forCellWithReuseIdentifier: IGLikeListCollectionViewCell.TAG)
         collectionView.register(UINib(nibName: IGLikeCollectionViewCell.TAG, bundle: nil), forCellWithReuseIdentifier: IGLikeCollectionViewCell.TAG)
         
         collectionView.delegate = self

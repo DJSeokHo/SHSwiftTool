@@ -31,9 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.backgroundColor = UIColor.white
         
         // create main container view controller
-//        let viewController: IGLikeCollectionView = IGLikeCollectionView()
-        let viewController = FileDownloadWebViewController()
-        viewController.urlString = "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20210114163838935&q_clCode=0&q_estnColumn7=Y"
+        let viewController: IGLikeCollectionView = IGLikeCollectionView()
+//        let viewController = FileDownloadWebViewController()
+//        viewController.urlString = "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20210114163838935&q_clCode=0&q_estnColumn7=Y"
         
         
         

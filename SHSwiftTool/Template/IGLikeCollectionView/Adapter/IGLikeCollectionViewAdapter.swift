@@ -17,27 +17,36 @@ extension IGLikeCollectionView: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IGLikeCollectionViewCell.TAG, for: indexPath) as! IGLikeCollectionViewCell
-        
-        cell.content = list[indexPath.row]
-        
-        if indexPath.row % 18 == 0 || indexPath.row % 18 == 10 {
-            cell.backgroundColor = UIColor.red
+        if collectionView.collectionViewLayout == listLayout {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IGLikeListCollectionViewCell.TAG, for: indexPath) as! IGLikeListCollectionViewCell
+            
+            cell.content = list[indexPath.row]
+            cell.updateView()
+            
+            return cell;
         }
         else {
-            if indexPath.row % 2 == 0 {
-                cell.backgroundColor = UIColor.gray
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IGLikeCollectionViewCell.TAG, for: indexPath) as! IGLikeCollectionViewCell
+            
+            cell.content = list[indexPath.row]
+            
+            if indexPath.row % 18 == 0 || indexPath.row % 18 == 10 {
+                cell.backgroundColor = UIColor.red
             }
             else {
-               
-                cell.backgroundColor = UIColor.orange
+                if indexPath.row % 2 == 0 {
+                    cell.backgroundColor = UIColor.gray
+                }
+                else {
+                   
+                    cell.backgroundColor = UIColor.orange
+                }
             }
+            
+            cell.updateView()
+            return cell;
         }
         
-        cell.updateView()
-        
-        return cell;
-    
     }
    
 }
