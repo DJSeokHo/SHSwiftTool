@@ -45,6 +45,7 @@ class IGLikeCollectionViewLayout: UICollectionViewFlowLayout {
     private func calculateFrame() {
         
         if frameInfoList.count == numberOfItem {
+            // if haven't any changed
             return
         }
         
@@ -55,7 +56,16 @@ class IGLikeCollectionViewLayout: UICollectionViewFlowLayout {
         var startIndex = 0
         
         if !frameInfoList.isEmpty {
-            startIndex = frameInfoList.count
+            
+            if frameInfoList.count > numberOfItem {
+                // if reload
+                startIndex = 0
+                frameInfoList.removeAll()
+            }
+            else if frameInfoList.count < numberOfItem {
+                // if load more
+                startIndex = frameInfoList.count
+            }
         }
         
         for i in startIndex..<numberOfItem {
@@ -157,91 +167,13 @@ class IGLikeCollectionViewLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
       
-        // calculate frame position
-//        for i in 0..<frameInfoList.count {
-//
-//            ILog.debug(tag: #file, content: "i \(i)")
-//
-//            var x: CGFloat = 0
-//            var y: CGFloat = 0
-//
-//            if i == 0 {
-//                x = 0
-//                y = 0
-//
-//                ILog.debug(tag: #file, content: "first")
-//            }
-//            else {
-//
-//                if frameInfoList[i - 1].maxX < width {
-//
-//                    if i % 3 == 0 {
-//                        x = 0
-//                        y = frameInfoList[i - 1].maxY
-//                        ILog.debug(tag: #file, content: "change row")
-//                    }
-//                    else {
-//                        // not yet to end
-//                        x = frameInfoList[i - 1].maxX
-//                        y = frameInfoList[i - 1].minY
-//                        ILog.debug(tag: #file, content: "not yet \(frameInfoList[i - 1].maxX)")
-//                    }
-//
-//                }
-//                else {
-//                    // to end
-//
-//                    // is array.count %3 == 0?
-//                    // if array.count %3 == 0 means need to change row
-//                    // next row's y is last item's maxY
-//                    if i % 3 == 0 {
-//
-//                        x = 0
-//                        y = frameInfoList[i - 1].maxY
-//                        ILog.debug(tag: #file, content: "change row")
-//                    }
-//                    // else array.count %3 != 0 means don not need to change row
-//                    else {
-//
-//                        ILog.debug(tag: #file, content: "put to end")
-//
-//                        var currentIndex = 0
-//
-//
-//                        if frameInfoList[i - 1].maxY < frameInfoList[i - 2].maxY {
-//                            currentIndex = i - 1
-//                        }
-//                        else {
-//                            currentIndex = i - 2
-//                        }
-//
-//                        ILog.debug(tag: #file, content: "\(frameInfoList[i - 1].maxY) \(frameInfoList[i - 2].maxY) so index is \(currentIndex)")
-//
-//                        // lastest item's max y
-//                        x = frameInfoList[currentIndex].minX
-//                        y = frameInfoList[currentIndex].maxY
-//                    }
-//                }
-//
-//            }
-//
-//            frameInfoList[i] = CGRect(x: x, y: y, width: frameInfoList[i].width, height: frameInfoList[i].height)
-//
-//            if frameInfoList[frameInfoList.count - 1].maxY > frameInfoList[frameInfoList.count - 2].maxY {
-//                maxHeight = frameInfoList[frameInfoList.count - 1].maxY
-//            }
-//            else {
-//                maxHeight = frameInfoList[frameInfoList.count - 2].maxY
-//            }
-//
-////            superArray[i].frame = frameInfoList[i]
-//            ILog.debug(tag: #file, content: "\(frameInfoList[frameInfoList.count - 1].maxY) \(frameInfoList[frameInfoList.count - 2].maxY) so height is \(maxHeight)")
-//        }
-
+        // calculate the view that will return can be visible in rect range
+        return calculateTheViewThatWillReturnCanBeVisibleInRectRange()
+    }
+    
+    private func calculateTheViewThatWillReturnCanBeVisibleInRectRange() -> [UICollectionViewLayoutAttributes] {
         
         var returnFrameList:[UICollectionViewLayoutAttributes] = []
-        // calculate the view that will return can be visible in rect range
-//        guard let superArray = super.layoutAttributesForElements(in: rect) else { return nil }
         
         let offset: CGPoint = collectionView!.contentOffset
         let visibleRect: CGRect = CGRect(x: 0, y: offset.y, width: collectionView!.frame.width, height: collectionView!.frame.height)
@@ -272,121 +204,6 @@ class IGLikeCollectionViewLayout: UICollectionViewFlowLayout {
         }
         
         return returnFrameList
-//        var attributesArray: Array<UICollectionViewLayoutAttributes> = []
-//        let offset: CGPoint = collectionView!.contentOffset
-//        let visibleRect: CGRect = CGRect(x: 0, y: offset.y, width: collectionView!.frame.width, height: collectionView!.frame.height)
-//
-//        ILog.debug(tag: #file, content: "offset is \(offset)")
-//
-//        guard let tempArray = super.layoutAttributesForElements(in: rect) else { return nil }
-//
-//
-//        let width = DisplayUtil.getFullScreenSize().width
-//
-//        for i in 0..<tempArray.count {
-//
-//            let attribute: UICollectionViewLayoutAttributes = tempArray[i]
-//
-//            var size: CGFloat = 0
-//
-//            // calculate size
-//            if i % 18 == 0 || i % 18 == 10 {
-//                size = width / 3.0 * 2.0
-//            }
-//            else {
-//                size = width / 3.0
-//            }
-//
-//            attribute.frame = CGRect(x: 0, y: 0, width: size, height: size)
-//        }
-//
-//        for i in 0..<tempArray.count {
-//
-//            ILog.debug(tag: #file, content: "i \(i)")
-//
-//            var x: CGFloat = 0
-//            var y: CGFloat = 0
-//
-//            if i == 0 {
-//                x = 0
-//                y = 0
-//
-////                ILog.debug(tag: #file, content: "first")
-//            }
-//            else {
-//
-//                if tempArray[i - 1].frame.maxX < width {
-//
-//                    if i % 3 == 0 {
-//                        x = 0
-//                        y = tempArray[i - 1].frame.maxY
-////                        ILog.debug(tag: #file, content: "change row")
-//                    }
-//                    else {
-//                        // not yet to end
-//                        x = tempArray[i - 1].frame.maxX
-//                        y = tempArray[i - 1].frame.minY
-////                        ILog.debug(tag: #file, content: "not yet \(tempArray[i - 1].frame.maxX)")
-//                    }
-//
-//                }
-//                else {
-//                    // to end
-//
-//                    // is array.count %3 == 0?
-//                    // if array.count %3 == 0 means need to change row
-//                    // next row's y is last item's maxY
-//                    if i % 3 == 0 {
-//
-//                        x = 0
-//                        y = tempArray[i - 1].frame.maxY
-////                        ILog.debug(tag: #file, content: "change row")
-//                    }
-//                    // else array.count %3 != 0 means don not need to change row
-//                    else {
-//
-////                        ILog.debug(tag: #file, content: "put to end")
-//
-////                        // lastest item's max y
-////                        x = array[currentIndex].frame.minX
-////                        y = array[currentIndex].frame.maxY
-//
-//                        var currentIndex = 0
-//
-//
-//                        if tempArray[i - 1].frame.maxY < tempArray[i - 2].frame.maxY {
-//                            currentIndex = i - 1
-//                        }
-//                        else {
-//                            currentIndex = i - 2
-//                        }
-//
-////                        ILog.debug(tag: #file, content: "\(tempArray[i - 1].frame.maxY) \(tempArray[i - 2].frame.maxY) so index is \(currentIndex)")
-//
-//                        // lastest item's max y
-//                        x = tempArray[currentIndex].frame.minX
-//                        y = tempArray[currentIndex].frame.maxY
-//                    }
-//                }
-//
-//            }
-//
-//            tempArray[i].frame = CGRect(x: x, y: y, width: tempArray[i].frame.width, height: tempArray[i].frame.height)
-//
-//            if tempArray[tempArray.count - 1].frame.maxY > tempArray[tempArray.count - 2].frame.maxY {
-//                maxHeight = tempArray[tempArray.count - 1].frame.maxY
-//            }
-//            else {
-//                maxHeight = tempArray[tempArray.count - 2].frame.maxY
-//            }
-//
-////            ILog.debug(tag: #file, content: "\(tempArray[tempArray.count - 1].frame.maxY) \(tempArray[tempArray.count - 2].frame.maxY) so height is \(maxHeight)")
-//
-//        }
-//
-//        attributesArray.append(contentsOf: tempArray)
-//        return attributesArray
-////        return tempArray
     }
     
     override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {

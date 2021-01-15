@@ -16,6 +16,16 @@ class IGLikeCollectionView: UIViewController {
     var gridLayout: IGLikeCollectionViewLayout!
     
     var list: Array<String> = Array<String>()
+  
+    @IBAction func reload(_ sender: Any) {
+        
+        let list = loadMore(offset: 0, limit: 30)
+        
+        self.list.removeAll()
+        self.list.append(contentsOf: list)
+        
+        collectionView.reloadData()
+    }
     
     @IBAction func test(_ sender: Any) {
         
