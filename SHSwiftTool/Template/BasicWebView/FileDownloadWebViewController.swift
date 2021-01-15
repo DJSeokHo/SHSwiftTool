@@ -160,16 +160,19 @@ class FileDownloadWebViewController: UIViewController, WKUIDelegate, WKNavigatio
                 downloadData(fromURL: url, fileName: name) {
                     success, destinationURL in
                     
+                    DispatchQueue.main.async {
+                        webView.goBack()
+                    }
+                  
                     if destinationURL != nil {
                         DispatchQueue.main.async {
-                            
-                            webView.goBack()
-                            
+                           
                             let activityVC = UIActivityViewController(activityItems: [destinationURL!], applicationActivities: nil)
                             activityVC.popoverPresentationController?.sourceView = self.view
                             activityVC.popoverPresentationController?.sourceRect = self.view.frame
                             activityVC.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
                             self.present(activityVC, animated: true, completion: nil)
+                            
                         }
                     }
                     
@@ -234,6 +237,7 @@ class FileDownloadWebViewController: UIViewController, WKUIDelegate, WKNavigatio
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         ILog.debug(tag: #file, content: "start \(webView.url?.absoluteString ?? "empty url")")
+       
     }
 
     private func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
