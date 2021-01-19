@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StackViewTestViewController" customModule="SHSwiftTool" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oHw-ua-Tp1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hEo-NL-8fX">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pje-iV-HxX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
+                                    <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="256" id="ylo-xk-WIJ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Pje-iV-HxX" firstAttribute="top" secondItem="hEo-NL-8fX" secondAttribute="top" id="FsB-eG-Mj5"/>
+                                <constraint firstAttribute="bottom" secondItem="Pje-iV-HxX" secondAttribute="bottom" id="ljH-YV-ngG"/>
+                                <constraint firstAttribute="trailing" secondItem="Pje-iV-HxX" secondAttribute="trailing" id="pgv-F7-thE"/>
+                                <constraint firstItem="Pje-iV-HxX" firstAttribute="leading" secondItem="hEo-NL-8fX" secondAttribute="leading" id="yeb-Sw-Srh"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oHw-ua-Tp1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AKy-Jh-yvE"/>
+                <constraint firstItem="oHw-ua-Tp1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nvo-qF-3TW"/>
+                <constraint firstItem="oHw-ua-Tp1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="n29-NR-lun"/>
+                <constraint firstAttribute="bottom" secondItem="oHw-ua-Tp1" secondAttribute="bottom" id="vdh-Y1-A3B"/>
+            </constraints>
+            <point key="canvasLocation" x="56.521739130434788" y="88.392857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
