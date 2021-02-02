@@ -118,6 +118,8 @@
 		C32D42262461E2E900B0E7EC /* icon_plus_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = C32D42252461E2E900B0E7EC /* icon_plus_gray.png */; };
 		C32D42292461EF5F00B0E7EC /* LocationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D42282461EF5F00B0E7EC /* LocationWrapper.swift */; };
 		C32D422C2461F48C00B0E7EC /* PermissionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D422B2461F48C00B0E7EC /* PermissionUtil.swift */; };
+		C32DE5E725C90EF400DEE050 /* AutoStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32DE5E525C90EF400DEE050 /* AutoStackViewController.swift */; };
+		C32DE5E825C90EF400DEE050 /* AutoStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32DE5E625C90EF400DEE050 /* AutoStackViewController.xib */; };
 		C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */; };
 		C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */; };
 		C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */; };
@@ -448,6 +450,8 @@
 		C32D42252461E2E900B0E7EC /* icon_plus_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_plus_gray.png; sourceTree = "<group>"; };
 		C32D42282461EF5F00B0E7EC /* LocationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWrapper.swift; sourceTree = "<group>"; };
 		C32D422B2461F48C00B0E7EC /* PermissionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionUtil.swift; sourceTree = "<group>"; };
+		C32DE5E525C90EF400DEE050 /* AutoStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoStackViewController.swift; sourceTree = "<group>"; };
+		C32DE5E625C90EF400DEE050 /* AutoStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoStackViewController.xib; sourceTree = "<group>"; };
 		C32EDA952451F1AF0034C59D /* BasicSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewController.swift; sourceTree = "<group>"; };
 		C32EDA962451F1AF0034C59D /* BasicSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSearchViewController.xib; sourceTree = "<group>"; };
 		C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -1942,6 +1946,8 @@
 			children = (
 				C3C36E8A25B6882100A4488F /* AutoLayoutTestViewController.swift */,
 				C3C36E8B25B6882100A4488F /* AutoLayoutTestViewController.xib */,
+				C32DE5E525C90EF400DEE050 /* AutoStackViewController.swift */,
+				C32DE5E625C90EF400DEE050 /* AutoStackViewController.xib */,
 			);
 			path = AutoLayoutTest;
 			sourceTree = "<group>";
@@ -2326,6 +2332,7 @@
 				C3C41E2125B1903C00096D1B /* IGLikeListCollectionViewCell.xib in Resources */,
 				C349E95B245EC7DD0066E9FB /* icon_save.png in Resources */,
 				C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */,
+				C32DE5E825C90EF400DEE050 /* AutoStackViewController.xib in Resources */,
 				C32D42202461DF4B00B0E7EC /* icon_confirm_white.png in Resources */,
 				C32519B7245B1670008EE973 /* icon_setting@3x.png in Resources */,
 				C328FED0245B9324002AF147 /* KAAccountDetailViewController.xib in Resources */,
@@ -2416,6 +2423,7 @@
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
 				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
 				C35940B024657DA40030785A /* KACell.swift in Sources */,
+				C32DE5E725C90EF400DEE050 /* AutoStackViewController.swift in Sources */,
 				C33E395A24574BA600384215 /* TabUtil.swift in Sources */,
 				C34D31EA22E9EBF000E22BC6 /* IntExtension.swift in Sources */,
 				C3038B9E245C29DB0070254F /* KANotificationConstants.swift in Sources */,

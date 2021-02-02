@@ -33,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create main container view controller
 //        let viewController: IGLikeCollectionView = IGLikeCollectionView()
 //        let viewController = StackViewTestViewController()
-        let viewController = AutoLayoutTestViewController()
+//        let viewController = AutoLayoutTestViewController()
+        let viewController: AutoStackViewController = AutoStackViewController()
 //        let viewController = FileDownloadWebViewController()
 //        viewController.urlString = "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20210114163838935&q_clCode=0&q_estnColumn7=Y"
         
