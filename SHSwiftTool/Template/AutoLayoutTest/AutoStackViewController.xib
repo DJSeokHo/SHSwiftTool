@@ -28,7 +28,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <point key="canvasLocation" x="68" y="67.916041979010501"/>
         </view>
-        <view contentMode="scaleToFill" ambiguous="YES" id="7aQ-As-4vn">
+        <view contentMode="scaleToFill" id="7aQ-As-4vn">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>

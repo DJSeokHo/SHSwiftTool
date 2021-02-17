@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
 //        initMainViewController()
 //        initBottomTabBar()
-//        initBottomTabBarWithNavigation()
+        initBottomTabBarWithNavigation()
 //
 //        window = UIWindow.init(frame: UIScreen.main.bounds)
 //        window?.backgroundColor = UIColor.white
@@ -27,14 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.backgroundColor = UIColor.white
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window!.backgroundColor = UIColor.white
         
         // create main container view controller
 //        let viewController: IGLikeCollectionView = IGLikeCollectionView()
 //        let viewController = StackViewTestViewController()
 //        let viewController = AutoLayoutTestViewController()
-        let viewController: AutoStackViewController = AutoStackViewController()
+//        let viewController: AutoStackViewController = AutoStackViewController()
 //        let viewController = FileDownloadWebViewController()
 //        viewController.urlString = "https://www.nowon.kr/www/user/bbs/BD_selectBbs.do?q_bbsCode=1003&q_bbscttSn=20210114163838935&q_clCode=0&q_estnColumn7=Y"
         
@@ -45,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // make navigation controller as window root view controller
         //        self.window!.rootViewController = navigationController
-        window!.rootViewController = viewController
-        window!.makeKeyAndVisible()
+//        window!.rootViewController = viewController
+//        window!.makeKeyAndVisible()
         
         
         
