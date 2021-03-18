@@ -124,7 +124,7 @@ class ClassAndStruct {
     }
     
     func extensionTest() {
-        print(String.TAG)
+       
     }
     
     func protocolTest() {

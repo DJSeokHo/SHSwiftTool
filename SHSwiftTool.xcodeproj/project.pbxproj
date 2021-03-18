@@ -19,6 +19,7 @@
 		C304919A23672DCA00B2FC2C /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919923672DCA00B2FC2C /* MealsViewController.swift */; };
 		C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */; };
 		C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */; };
+		C30A9FA426034DDC00C5C0DA /* CALItemBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30A9FA326034DDC00C5C0DA /* CALItemBean.swift */; };
 		C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D26D222E8AA2B00A50386 /* Shape.swift */; };
 		C31F5173236B1CFA00253938 /* BasicSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */; };
 		C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */; };
@@ -132,7 +133,6 @@
 		C349E957245EC7D40066E9FB /* icon_save@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C349E956245EC7D40066E9FB /* icon_save@3x.png */; };
 		C349E959245EC7D80066E9FB /* icon_save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C349E958245EC7D80066E9FB /* icon_save@2x.png */; };
 		C349E95B245EC7DD0066E9FB /* icon_save.png in Resources */ = {isa = PBXBuildFile; fileRef = C349E95A245EC7DD0066E9FB /* icon_save.png */; };
-		C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5732348A2AC0067F851 /* StringExtension.swift */; };
 		C34CB5762348A4E90067F851 /* Eatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB5752348A4E90067F851 /* Eatable.swift */; };
 		C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CB57B2348A5410067F851 /* AppleEatable.swift */; };
 		C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34D31DD22E9E5F800E22BC6 /* RankEnum.swift */; };
@@ -248,6 +248,15 @@
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
 		C3B6232126030C0900343724 /* AutoLayoutScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6231F26030C0900343724 /* AutoLayoutScrollViewController.swift */; };
 		C3B6232226030C0900343724 /* AutoLayoutScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B6232026030C0900343724 /* AutoLayoutScrollViewController.xib */; };
+		C3B62325260322E900343724 /* AutoLayoutScrollWithoutStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B62323260322E900343724 /* AutoLayoutScrollWithoutStackViewController.swift */; };
+		C3B62326260322E900343724 /* AutoLayoutScrollWithoutStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B62324260322E900343724 /* AutoLayoutScrollWithoutStackViewController.xib */; };
+		C3B6232A26032E7800343724 /* AutoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6232926032E7800343724 /* AutoLayoutManager.swift */; };
+		C3B6232E2603342E00343724 /* CollectionAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6232C2603342E00343724 /* CollectionAutoLayoutViewController.swift */; };
+		C3B6232F2603342E00343724 /* CollectionAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B6232D2603342E00343724 /* CollectionAutoLayoutViewController.xib */; };
+		C3B623332603348200343724 /* CALAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B623322603348200343724 /* CALAdapter.swift */; };
+		C3B623362603350A00343724 /* CALItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B623342603350A00343724 /* CALItemCollectionViewCell.swift */; };
+		C3B623372603350A00343724 /* CALItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B623352603350A00343724 /* CALItemCollectionViewCell.xib */; };
+		C3B6233A26033D6600343724 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6233926033D6600343724 /* StringExtension.swift */; };
 		C3BB78BB25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */; };
 		C3C36E8725B684DA00A4488F /* StackViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C36E8525B684DA00A4488F /* StackViewTestViewController.swift */; };
 		C3C36E8825B684DA00A4488F /* StackViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C36E8625B684DA00A4488F /* StackViewTestViewController.xib */; };
@@ -353,6 +362,7 @@
 		C304919923672DCA00B2FC2C /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
 		C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSwitchViewController.swift; sourceTree = "<group>"; };
 		C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSwitchViewController.xib; sourceTree = "<group>"; };
+		C30A9FA326034DDC00C5C0DA /* CALItemBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALItemBean.swift; sourceTree = "<group>"; };
 		C31D26D222E8AA2B00A50386 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSliderViewController.swift; sourceTree = "<group>"; };
 		C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSliderViewController.xib; sourceTree = "<group>"; };
@@ -466,7 +476,6 @@
 		C349E956245EC7D40066E9FB /* icon_save@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_save@3x.png"; sourceTree = "<group>"; };
 		C349E958245EC7D80066E9FB /* icon_save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_save@2x.png"; sourceTree = "<group>"; };
 		C349E95A245EC7DD0066E9FB /* icon_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_save.png; sourceTree = "<group>"; };
-		C34CB5732348A2AC0067F851 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C34CB5752348A4E90067F851 /* Eatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eatable.swift; sourceTree = "<group>"; };
 		C34CB57B2348A5410067F851 /* AppleEatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleEatable.swift; sourceTree = "<group>"; };
 		C34D31DD22E9E5F800E22BC6 /* RankEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankEnum.swift; sourceTree = "<group>"; };
@@ -584,6 +593,15 @@
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
 		C3B6231F26030C0900343724 /* AutoLayoutScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutScrollViewController.swift; sourceTree = "<group>"; };
 		C3B6232026030C0900343724 /* AutoLayoutScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutScrollViewController.xib; sourceTree = "<group>"; };
+		C3B62323260322E900343724 /* AutoLayoutScrollWithoutStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutScrollWithoutStackViewController.swift; sourceTree = "<group>"; };
+		C3B62324260322E900343724 /* AutoLayoutScrollWithoutStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutScrollWithoutStackViewController.xib; sourceTree = "<group>"; };
+		C3B6232926032E7800343724 /* AutoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutManager.swift; sourceTree = "<group>"; };
+		C3B6232C2603342E00343724 /* CollectionAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		C3B6232D2603342E00343724 /* CollectionAutoLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionAutoLayoutViewController.xib; sourceTree = "<group>"; };
+		C3B623322603348200343724 /* CALAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALAdapter.swift; sourceTree = "<group>"; };
+		C3B623342603350A00343724 /* CALItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3B623352603350A00343724 /* CALItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3B6233926033D6600343724 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		C3C36E8525B684DA00A4488F /* StackViewTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewTestViewController.swift; sourceTree = "<group>"; };
 		C3C36E8625B684DA00A4488F /* StackViewTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StackViewTestViewController.xib; sourceTree = "<group>"; };
@@ -1470,7 +1488,6 @@
 		C359FE2022F08D5400D0009E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C34CB5732348A2AC0067F851 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1829,6 +1846,7 @@
 		C388904A22F5B558007C444F /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				C3B6233826033D5500343724 /* Extension */,
 				C39AD8B52312AF600072FAB5 /* Modules */,
 				C388904B22F5B568007C444F /* Util */,
 			);
@@ -1911,6 +1929,7 @@
 		C39AD8B52312AF600072FAB5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C3B6232826032E6600343724 /* AutoLayoutManager */,
 				C32D42272461EF4800B0E7EC /* Location */,
 				C38FE9EE235C71590032F41F /* Http */,
 				C39AD8B62312AF700072FAB5 /* Camera */,
@@ -1936,6 +1955,51 @@
 			path = BasicScrollView;
 			sourceTree = "<group>";
 		};
+		C3B6232826032E6600343724 /* AutoLayoutManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3B6232926032E7800343724 /* AutoLayoutManager.swift */,
+			);
+			path = AutoLayoutManager;
+			sourceTree = "<group>";
+		};
+		C3B6232B2603341500343724 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				C3B623302603346B00343724 /* Adapter */,
+				C3B6232C2603342E00343724 /* CollectionAutoLayoutViewController.swift */,
+				C3B6232D2603342E00343724 /* CollectionAutoLayoutViewController.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		C3B623302603346B00343724 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C3B623312603346F00343724 /* Item */,
+				C3B623322603348200343724 /* CALAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		C3B623312603346F00343724 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C30A9FA326034DDC00C5C0DA /* CALItemBean.swift */,
+				C3B623342603350A00343724 /* CALItemCollectionViewCell.swift */,
+				C3B623352603350A00343724 /* CALItemCollectionViewCell.xib */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C3B6233826033D5500343724 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C3B6233926033D6600343724 /* StringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C3C36E8425B684D300A4488F /* StackViewTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1948,12 +2012,15 @@
 		C3C36E8925B6881200A4488F /* AutoLayoutTest */ = {
 			isa = PBXGroup;
 			children = (
+				C3B6232B2603341500343724 /* Collection */,
 				C3C36E8A25B6882100A4488F /* AutoLayoutTestViewController.swift */,
 				C3C36E8B25B6882100A4488F /* AutoLayoutTestViewController.xib */,
 				C32DE5E525C90EF400DEE050 /* AutoStackViewController.swift */,
 				C32DE5E625C90EF400DEE050 /* AutoStackViewController.xib */,
 				C3B6231F26030C0900343724 /* AutoLayoutScrollViewController.swift */,
 				C3B6232026030C0900343724 /* AutoLayoutScrollViewController.xib */,
+				C3B62323260322E900343724 /* AutoLayoutScrollWithoutStackViewController.swift */,
+				C3B62324260322E900343724 /* AutoLayoutScrollWithoutStackViewController.xib */,
 			);
 			path = AutoLayoutTest;
 			sourceTree = "<group>";
@@ -2288,6 +2355,7 @@
 				C32D421A2461DBCE00B0E7EC /* icon_close_white.png in Resources */,
 				C32BE8B9245AE3CA005A26BB /* ic_fabushangping.png in Resources */,
 				C328FEAC245B8C9F002AF147 /* icon_add@3x.png in Resources */,
+				C3B623372603350A00343724 /* CALItemCollectionViewCell.xib in Resources */,
 				C38A562B24658AEF00D379EC /* icon_category_cultural@2x.png in Resources */,
 				C328FECB245B9278002AF147 /* KAAccountListItemTableViewCell.xib in Resources */,
 				C38A561D24658AE700D379EC /* icon_category_shopping@3x.png in Resources */,
@@ -2303,6 +2371,7 @@
 				C32BE8D9245AEE4E005A26BB /* icon_setting@2x.png in Resources */,
 				C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */,
 				C3DD6AFA230D84C100BDDF5D /* icon_dashboard_un_selected@3x.png in Resources */,
+				C3B6232F2603342E00343724 /* CollectionAutoLayoutViewController.xib in Resources */,
 				C3DD6B0A230D850100BDDF5D /* icon_order_un_selected@2x.png in Resources */,
 				C37020E72361E44E00895D6F /* test_image_3.png in Resources */,
 				C3CA364425AEFAC4005782FC /* IGLikeCollectionViewCell.xib in Resources */,
@@ -2387,6 +2456,7 @@
 				C3DD6B0B230D850100BDDF5D /* icon_client_selected@2x.png in Resources */,
 				C3DD6B2C230D864700BDDF5D /* ProductViewController.xib in Resources */,
 				C32519A1245B128B008EE973 /* KASettingViewController.xib in Resources */,
+				C3B62326260322E900343724 /* AutoLayoutScrollWithoutStackViewController.xib in Resources */,
 				C32EDA982451F1AF0034C59D /* BasicSearchViewController.xib in Resources */,
 				C3272942245460CB00BA736E /* SQLiteDemoViewController.xib in Resources */,
 				C32D42242461E2E400B0E7EC /* icon_plus_gray@2x.png in Resources */,
@@ -2428,6 +2498,7 @@
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
 				C3038BAC245C6E190070254F /* DataViewController.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
+				C3B623332603348200343724 /* CALAdapter.swift in Sources */,
 				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
 				C35940B024657DA40030785A /* KACell.swift in Sources */,
 				C32DE5E725C90EF400DEE050 /* AutoStackViewController.swift in Sources */,
@@ -2488,6 +2559,7 @@
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
 				C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */,
 				C32519C3245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift in Sources */,
+				C3B6232A26032E7800343724 /* AutoLayoutManager.swift in Sources */,
 				C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
@@ -2503,7 +2575,6 @@
 				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
 				C351192E22BFBCC00023C35F /* BasicFunction.swift in Sources */,
 				C328FED5245B945B002AF147 /* KANavigationBarViewHolder.swift in Sources */,
-				C34CB5742348A2AC0067F851 /* StringExtension.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
 				C38FE9E0235C41A00032F41F /* SecondViewController.swift in Sources */,
 				C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */,
@@ -2522,22 +2593,27 @@
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */,
+				C3B6232E2603342E00343724 /* CollectionAutoLayoutViewController.swift in Sources */,
 				C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
+				C3B6233A26033D6600343724 /* StringExtension.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
 				C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */,
 				C35940AD24657A1B0030785A /* KAAccountListAdapter.swift in Sources */,
 				C32BE8B0245A8B94005A26BB /* CustomCenterClickUITabBar.swift in Sources */,
 				C3C82E98245F5C0800821E59 /* BasucCapturedPictureViewController.swift in Sources */,
+				C30A9FA426034DDC00C5C0DA /* CALItemBean.swift in Sources */,
 				C3DECD32235F4D8C00AEA02D /* BasicButtonViewController.swift in Sources */,
 				C34CB5762348A4E90067F851 /* Eatable.swift in Sources */,
 				C35230F522EF33CD00342A44 /* Car.swift in Sources */,
 				C3C82E8F245F3F0B00821E59 /* BasicCustomCameraViewController.swift in Sources */,
 				C37020E22361E14500895D6F /* BasicImageViewController.swift in Sources */,
 				C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */,
+				C3B62325260322E900343724 /* AutoLayoutScrollWithoutStackViewController.swift in Sources */,
 				C3B0F80824B6B0A90000E855 /* TestWebViewController.swift in Sources */,
 				C3D14A2923633C7D00A0C897 /* CustomPickerViewController.swift in Sources */,
+				C3B623362603350A00343724 /* CALItemCollectionViewCell.swift in Sources */,
 				C388904E22F5B57E007C444F /* ILog.swift in Sources */,
 				C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */,
 				C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */,

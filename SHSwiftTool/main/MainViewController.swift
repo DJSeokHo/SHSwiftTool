@@ -88,8 +88,16 @@ class MainViewController: UIViewController {
         ThreadUtil.startThread {
             ThreadUtil.startUIThread(runnable: {
                 
-                let autoLayoutScrollViewController = AutoLayoutScrollViewController()
-                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: autoLayoutScrollViewController)
+//                let autoLayoutScrollViewController = AutoLayoutScrollViewController()
+//                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: autoLayoutScrollViewController)
+                
+                
+//                let viewController = AutoLayoutScrollWithoutStackViewController()
+//                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                
+                let viewController = CollectionAutoLayoutViewController()
+                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                
                 
             }, afterSeconds: 1)
         }
