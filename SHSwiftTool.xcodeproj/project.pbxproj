@@ -246,6 +246,8 @@
 		C3B0F80924B6B0A90000E855 /* TestWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */; };
 		C3B1E94E236EA38700DCD7EE /* BasicScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */; };
 		C3B1E94F236EA38700DCD7EE /* BasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */; };
+		C3B6232126030C0900343724 /* AutoLayoutScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6231F26030C0900343724 /* AutoLayoutScrollViewController.swift */; };
+		C3B6232226030C0900343724 /* AutoLayoutScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B6232026030C0900343724 /* AutoLayoutScrollViewController.xib */; };
 		C3BB78BB25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */; };
 		C3C36E8725B684DA00A4488F /* StackViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C36E8525B684DA00A4488F /* StackViewTestViewController.swift */; };
 		C3C36E8825B684DA00A4488F /* StackViewTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C36E8625B684DA00A4488F /* StackViewTestViewController.xib */; };
@@ -580,6 +582,8 @@
 		C3B0F80724B6B0A90000E855 /* TestWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestWebViewController.xib; sourceTree = "<group>"; };
 		C3B1E94C236EA38700DCD7EE /* BasicScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScrollViewController.swift; sourceTree = "<group>"; };
 		C3B1E94D236EA38700DCD7EE /* BasicScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicScrollViewController.xib; sourceTree = "<group>"; };
+		C3B6231F26030C0900343724 /* AutoLayoutScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutScrollViewController.swift; sourceTree = "<group>"; };
+		C3B6232026030C0900343724 /* AutoLayoutScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoLayoutScrollViewController.xib; sourceTree = "<group>"; };
 		C3BB78BA25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewLayout.swift; sourceTree = "<group>"; };
 		C3C36E8525B684DA00A4488F /* StackViewTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewTestViewController.swift; sourceTree = "<group>"; };
 		C3C36E8625B684DA00A4488F /* StackViewTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StackViewTestViewController.xib; sourceTree = "<group>"; };
@@ -1948,6 +1952,8 @@
 				C3C36E8B25B6882100A4488F /* AutoLayoutTestViewController.xib */,
 				C32DE5E525C90EF400DEE050 /* AutoStackViewController.swift */,
 				C32DE5E625C90EF400DEE050 /* AutoStackViewController.xib */,
+				C3B6231F26030C0900343724 /* AutoLayoutScrollViewController.swift */,
+				C3B6232026030C0900343724 /* AutoLayoutScrollViewController.xib */,
 			);
 			path = AutoLayoutTest;
 			sourceTree = "<group>";
@@ -2306,6 +2312,7 @@
 				C3DD6B1C230D85F800BDDF5D /* icon_dashboard_un_selected.png in Resources */,
 				C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */,
 				C3DD6B3B230D88EF00BDDF5D /* icon_profile_selected.png in Resources */,
+				C3B6232226030C0900343724 /* AutoLayoutScrollViewController.xib in Resources */,
 				C3A460EA247023A800D19EB6 /* test_earth_annotation.png in Resources */,
 				C3CA363B25AEF02D005782FC /* IGLikeCollectionView.xib in Resources */,
 				C3DD6AF6230D84C100BDDF5D /* icon_order_selected@3x.png in Resources */,
@@ -2511,6 +2518,7 @@
 				C3D3624B236E849D001B8ACB /* BasicTableViewController.swift in Sources */,
 				C35791232308359800BDB17E /* AlertWaitingViewHolder.swift in Sources */,
 				C328FEBE245B91D3002AF147 /* KAPageViewWrapper.swift in Sources */,
+				C3B6232126030C0900343724 /* AutoLayoutScrollViewController.swift in Sources */,
 				C38FE9E4235C41AD0032F41F /* ThirdViewController.swift in Sources */,
 				C35230EA22EF281B00342A44 /* Employee.swift in Sources */,
 				C38FE9E8235C61DA0032F41F /* NavigationRootViewController.swift in Sources */,

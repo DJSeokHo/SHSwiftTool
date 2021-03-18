@@ -52,6 +52,7 @@ class MainViewController: UIViewController {
     @IBOutlet var buttonBasicAlumbPicker: UIButton!
     @IBOutlet var buttonIG: UIButton!
     @IBOutlet var buttonAuto: UIButton!
+    @IBOutlet var buttonAutoScroll: UIButton!
     
     @IBAction func onButtonTestClick(_ sender: UIButton) {
       
@@ -83,7 +84,18 @@ class MainViewController: UIViewController {
                 let theJSONText = String(data: theJSONData, encoding: .ascii)
                 print("JSON string = \(theJSONText!)")
         }
+        
+        ThreadUtil.startThread {
+            ThreadUtil.startUIThread(runnable: {
+                
+                let autoLayoutScrollViewController = AutoLayoutScrollViewController()
+                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: autoLayoutScrollViewController)
+                
+            }, afterSeconds: 1)
+        }
+    
     }
+    
     
     private func setListener() {
         buttonBasicUIViewController.addTarget(self, action: #selector(self.onButtonBasicUIViewControllerClick(_:)), for: UIControl.Event.touchUpInside)
@@ -157,6 +169,14 @@ class MainViewController: UIViewController {
         buttonIG.addTarget(self, action: #selector(onButtonIG), for: UIControl.Event.touchUpInside)
         
         buttonAuto.addTarget(self, action: #selector(onButtonAuto), for: UIControl.Event.touchUpInside)
+        
+        buttonAutoScroll.addTarget(self, action: #selector(onButtonAutoScroll), for: .touchUpInside)
+    }
+    
+    @objc private func onButtonAutoScroll(_ sender: UIButton) {
+   
+        let autoLayoutScrollViewController = AutoLayoutScrollViewController()
+        ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: autoLayoutScrollViewController)
     }
     
     @objc private func onButtonAuto(_ sender: UIButton) {

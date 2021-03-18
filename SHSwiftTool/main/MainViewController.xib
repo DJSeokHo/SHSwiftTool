@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="SHSwiftTool" customModuleProvider="target">
             <connections>
                 <outlet property="buttonAuto" destination="6KT-tR-LeX" id="Os5-La-mwO"/>
+                <outlet property="buttonAutoScroll" destination="dHR-Dp-jbZ" id="rqZ-41-pRQ"/>
                 <outlet property="buttonBaseicConsoleTest" destination="2h7-ZM-0CQ" id="0bk-Wn-TQK"/>
                 <outlet property="buttonBasicAlert" destination="uhd-TW-Z35" id="oRG-EK-DwZ"/>
                 <outlet property="buttonBasicAlumbPicker" destination="dA8-tz-wPk" id="aev-AU-ZpW"/>
@@ -345,6 +346,11 @@
                             <rect key="frame" x="166" y="112" width="43" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Auto"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHR-Dp-jbZ">
+                            <rect key="frame" x="152" y="250" width="71" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="AutoScroll"/>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="contentLayoutGuide" id="qxt-5t-vhP"/>
