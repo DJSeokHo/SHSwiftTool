@@ -27,7 +27,7 @@ class AutoLayoutManager {
         layoutConstraintHeight.constant = operation ? view.frame.height + value : view.frame.height - value
     }
     
-    public func toggleLayoutConstraintHeight(layoutConstraintHeight: NSLayoutConstraint, plusWillBeTrueAndMinusWillBeFalse operation: Bool, andValueWhenTrueIs tValue: CGFloat, andValueWhenFalseIs fValue: CGFloat) {
+    public func toggleLayoutConstraintHeight(layoutConstraintHeight: NSLayoutConstraint, operation: Bool, andValueWhenTrueIs tValue: CGFloat, andValueWhenFalseIs fValue: CGFloat) {
         
         layoutConstraintHeight.constant = operation ? tValue : fValue
     }

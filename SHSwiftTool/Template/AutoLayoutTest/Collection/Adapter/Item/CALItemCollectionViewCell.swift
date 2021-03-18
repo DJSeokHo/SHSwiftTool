@@ -19,8 +19,6 @@ class CALItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet var label: UILabel!
     @IBOutlet var imageView: UIImageView!
     
-    @IBOutlet var button: UIButton!
-    
     public var delegate: CALItemCollectionViewCellDelegate?
     
     @IBOutlet var viewContent: UIView!
@@ -28,32 +26,55 @@ class CALItemCollectionViewCell: UICollectionViewCell {
     public var bean: CALItemBean!
     
     private var contentLC: NSLayoutConstraint!
+    private var labelLC: NSLayoutConstraint!
     
     @IBOutlet var scrollView: UIScrollView!
+    
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         contentLC = AutoLayoutManager.instance.createLayoutConstraintHeight(view: viewContent)
+        labelLC = AutoLayoutManager.instance.createLayoutConstraintHeight(view: label)
         
-        button.addTarget(self, action: #selector(onButtonClick), for: .touchUpInside)
-        
-        scrollView.isScrollEnabled = false
+        viewContent.viewSetOnClickListener(self, action: #selector(onButtonClick))
         
     }
     @objc private func onButtonClick() {
+        
+        bean.isImage = !bean.isImage
+        
         delegate?.onClick(bean)
     }
 
     public func updateView() {
         label.text = bean.content
         
-        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: contentLC, plusWillBeTrueAndMinusWillBeFalse: bean.isImage, andValueWhenTrueIs: 225, andValueWhenFalseIs: 60)
+        let labelHeight = bean.content.height(withConstrainedWidth: DisplayUtil.getFullScreenSize().width - 40, font: UIFont.systemFont(ofSize: 15))
+        ILog.debug(tag: #file, content: "labelHeight \(labelHeight)")
         
-        AutoLayoutManager.instance.startToggleAnimation(view: viewContent, withDuration: 0.3, completion: nil)
+        viewContent.frame.size = bean.isImage ? CGSize(width: DisplayUtil.getFullScreenSize().width, height: 225 + labelHeight) : CGSize(width: DisplayUtil.getFullScreenSize().width, height: 60)
+        label.frame.size = bean.isImage ? CGSize(width: DisplayUtil.getFullScreenSize().width - 20, height: labelHeight) : CGSize(width: DisplayUtil.getFullScreenSize().width - 20, height: 20)
         
-        scrollView.isScrollEnabled = bean.isImage ? true : false
+        imageView.frame.origin = bean.isImage ? CGPoint(x: 10, y: 60 + labelHeight) : CGPoint(x: 10, y: 60)
+        
+//        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: contentLC, operation: bean.isImage, andValueWhenTrueIs: 225 + labelHeight, andValueWhenFalseIs: 60)
+//
+//        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: labelLC, operation: bean.isImage, andValueWhenTrueIs: labelHeight, andValueWhenFalseIs: 20)
+        
+//        AutoLayoutManager.instance.startToggleAnimation(view: contentView, withDuration: 0.3, completion: nil)
+//        label.layoutIfNeeded()
+//        viewContent.layoutIfNeeded()
+//        contentView.layoutIfNeeded()
+//        scrollView.setContentOffset(CGPoint.zero, animated: false)
+//        scrollView.isScrollEnabled = false
         
     }
     

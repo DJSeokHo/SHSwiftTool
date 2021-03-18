@@ -38,7 +38,7 @@ class AutoLayoutScrollWithoutStackViewController: UIViewController {
         
         isBig = !isBig
         
-        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: heightConstrains, plusWillBeTrueAndMinusWillBeFalse: isBig, andValueWhenTrueIs: 60, andValueWhenFalseIs: 20)
+        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: heightConstrains, operation: isBig, andValueWhenTrueIs: 60, andValueWhenFalseIs: 20)
 
         AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: viewTopHeightConstrains, andWitchViewWillBeChange: viewTop, plusWillBeTrueAndMinusWillBeFalse: isBig, andValueIs: 40 + imageView.frame.height)
         

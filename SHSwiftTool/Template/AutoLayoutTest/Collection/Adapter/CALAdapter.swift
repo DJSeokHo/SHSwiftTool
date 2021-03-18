@@ -16,7 +16,6 @@ extension CollectionAutoLayoutViewController: UICollectionViewDelegate, UICollec
         let index = list.firstIndex{$0 === bean}!
         ILog.debug(tag: #file, content: "\(index)")
         
-        bean.isImage = !bean.isImage
         collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
 
     }
@@ -40,7 +39,10 @@ extension CollectionAutoLayoutViewController: UICollectionViewDelegate, UICollec
         ILog.debug(tag: #file, content: "here??? \(indexPath.row)")
         
         if list[indexPath.row].isImage {
-            return CGSize(width: DisplayUtil.getFullScreenSize().width, height: 225)
+            
+            let labelHeight = list[indexPath.row].content.height(withConstrainedWidth: DisplayUtil.getFullScreenSize().width - 40, font: UIFont.systemFont(ofSize: 15))
+            
+            return CGSize(width: DisplayUtil.getFullScreenSize().width, height: 225 + labelHeight)
         }
         
         return CGSize(width: DisplayUtil.getFullScreenSize().width, height: 60)

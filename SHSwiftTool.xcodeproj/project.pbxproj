@@ -20,6 +20,7 @@
 		C304919E2367344D00B2FC2C /* BasicSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */; };
 		C304919F2367344D00B2FC2C /* BasicSwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */; };
 		C30A9FA426034DDC00C5C0DA /* CALItemBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30A9FA326034DDC00C5C0DA /* CALItemBean.swift */; };
+		C30A9FA626035EFD00C5C0DA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30A9FA526035EFD00C5C0DA /* UIViewExtension.swift */; };
 		C31D26D322E8AA2B00A50386 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D26D222E8AA2B00A50386 /* Shape.swift */; };
 		C31F5173236B1CFA00253938 /* BasicSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */; };
 		C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */; };
@@ -363,6 +364,7 @@
 		C304919C2367344D00B2FC2C /* BasicSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSwitchViewController.swift; sourceTree = "<group>"; };
 		C304919D2367344D00B2FC2C /* BasicSwitchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSwitchViewController.xib; sourceTree = "<group>"; };
 		C30A9FA326034DDC00C5C0DA /* CALItemBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALItemBean.swift; sourceTree = "<group>"; };
+		C30A9FA526035EFD00C5C0DA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C31D26D222E8AA2B00A50386 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C31F5171236B1CFA00253938 /* BasicSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSliderViewController.swift; sourceTree = "<group>"; };
 		C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSliderViewController.xib; sourceTree = "<group>"; };
@@ -1996,6 +1998,7 @@
 			isa = PBXGroup;
 			children = (
 				C3B6233926033D6600343724 /* StringExtension.swift */,
+				C30A9FA526035EFD00C5C0DA /* UIViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -2634,6 +2637,7 @@
 				C32D42292461EF5F00B0E7EC /* LocationWrapper.swift in Sources */,
 				C328FECA245B9278002AF147 /* KAAccountListItemTableViewCell.swift in Sources */,
 				C32519C1245B2C6C008EE973 /* CustomNormalUITabBar.swift in Sources */,
+				C30A9FA626035EFD00C5C0DA /* UIViewExtension.swift in Sources */,
 				C35230E522EF24AA00342A44 /* Rect.swift in Sources */,
 				C38FE9DC235C41940032F41F /* FirstViewController.swift in Sources */,
 				C32BE8A9245A74C3005A26BB /* KeepAccountMainViewController.swift in Sources */,
