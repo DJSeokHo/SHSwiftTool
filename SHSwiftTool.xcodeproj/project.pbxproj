@@ -278,6 +278,8 @@
 		C3C82E90245F3F0B00821E59 /* BasicCustomCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */; };
 		C3C82E98245F5C0800821E59 /* BasucCapturedPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */; };
 		C3C82E99245F5C0800821E59 /* BasucCapturedPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */; };
+		C3C8F53226045E6F00F97BD2 /* DynamicStackViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C8F53026045E6F00F97BD2 /* DynamicStackViewViewController.swift */; };
+		C3C8F53326045E6F00F97BD2 /* DynamicStackViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C8F53126045E6F00F97BD2 /* DynamicStackViewViewController.xib */; };
 		C3CA363A25AEF02D005782FC /* IGLikeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA363825AEF02D005782FC /* IGLikeCollectionView.swift */; };
 		C3CA363B25AEF02D005782FC /* IGLikeCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA363925AEF02D005782FC /* IGLikeCollectionView.xib */; };
 		C3CA363F25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */; };
@@ -624,6 +626,8 @@
 		C3C82E8E245F3F0B00821E59 /* BasicCustomCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicCustomCameraViewController.xib; sourceTree = "<group>"; };
 		C3C82E96245F5C0800821E59 /* BasucCapturedPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasucCapturedPictureViewController.swift; sourceTree = "<group>"; };
 		C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasucCapturedPictureViewController.xib; sourceTree = "<group>"; };
+		C3C8F53026045E6F00F97BD2 /* DynamicStackViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicStackViewViewController.swift; sourceTree = "<group>"; };
+		C3C8F53126045E6F00F97BD2 /* DynamicStackViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicStackViewViewController.xib; sourceTree = "<group>"; };
 		C3CA363825AEF02D005782FC /* IGLikeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionView.swift; sourceTree = "<group>"; };
 		C3CA363925AEF02D005782FC /* IGLikeCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGLikeCollectionView.xib; sourceTree = "<group>"; };
 		C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewAdapter.swift; sourceTree = "<group>"; };
@@ -2015,6 +2019,7 @@
 		C3C36E8925B6881200A4488F /* AutoLayoutTest */ = {
 			isa = PBXGroup;
 			children = (
+				C3C8F52F26045E4900F97BD2 /* DynamicStackView */,
 				C3B6232B2603341500343724 /* Collection */,
 				C3C36E8A25B6882100A4488F /* AutoLayoutTestViewController.swift */,
 				C3C36E8B25B6882100A4488F /* AutoLayoutTestViewController.xib */,
@@ -2053,6 +2058,31 @@
 				C3C82E97245F5C0800821E59 /* BasucCapturedPictureViewController.xib */,
 			);
 			path = Result;
+			sourceTree = "<group>";
+		};
+		C3C8F52F26045E4900F97BD2 /* DynamicStackView */ = {
+			isa = PBXGroup;
+			children = (
+				C3C8F53426046BC600F97BD2 /* StepItem */,
+				C3C8F53026045E6F00F97BD2 /* DynamicStackViewViewController.swift */,
+				C3C8F53126045E6F00F97BD2 /* DynamicStackViewViewController.xib */,
+			);
+			path = DynamicStackView;
+			sourceTree = "<group>";
+		};
+		C3C8F53426046BC600F97BD2 /* StepItem */ = {
+			isa = PBXGroup;
+			children = (
+				C3C8F53526046BCB00F97BD2 /* StepDetailItem */,
+			);
+			path = StepItem;
+			sourceTree = "<group>";
+		};
+		C3C8F53526046BCB00F97BD2 /* StepDetailItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StepDetailItem;
 			sourceTree = "<group>";
 		};
 		C3CA363325AEEFC6005782FC /* IGLikeCollectionView */ = {
@@ -2362,6 +2392,7 @@
 				C38A562B24658AEF00D379EC /* icon_category_cultural@2x.png in Resources */,
 				C328FECB245B9278002AF147 /* KAAccountListItemTableViewCell.xib in Resources */,
 				C38A561D24658AE700D379EC /* icon_category_shopping@3x.png in Resources */,
+				C3C8F53326045E6F00F97BD2 /* DynamicStackViewViewController.xib in Resources */,
 				C3DD6AF5230D84C100BDDF5D /* icon_client_selected@3x.png in Resources */,
 				C37112DD22BD0D8100E92DA8 /* Launch Screen.storyboard in Resources */,
 				C3C5E9CE245B114D00678674 /* icon_setting_selected.png in Resources */,
@@ -2532,6 +2563,7 @@
 				C32C3168245D38B000EAC9FB /* KATabLayout.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
 				C32519BE245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift in Sources */,
+				C3C8F53226045E6F00F97BD2 /* DynamicStackViewViewController.swift in Sources */,
 				C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */,
 				C32D422C2461F48C00B0E7EC /* PermissionUtil.swift in Sources */,
 				C3CA364325AEFAC4005782FC /* IGLikeCollectionViewCell.swift in Sources */,

@@ -98,6 +98,8 @@ class MainViewController: UIViewController {
                 let viewController = CollectionAutoLayoutViewController()
                 ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
+//                let viewController = DynamicStackViewViewController()
+//                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
             }, afterSeconds: 1)
         }

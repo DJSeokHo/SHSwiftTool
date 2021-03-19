@@ -11,13 +11,31 @@ import UIKit
 
 extension CollectionAutoLayoutViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CALItemCollectionViewCellDelegate {
     
+    func onButton(_ bean: CALItemBean) {
+        
+        let index = list.firstIndex{$0 === bean}!
+        ILog.debug(tag: #file, content: "\(index)")
+        
+        UIView.performWithoutAnimation {
+            
+            collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+            
+        }
+      
+    }
+    
+    
     func onClick(_ bean: CALItemBean) {
         
         let index = list.firstIndex{$0 === bean}!
         ILog.debug(tag: #file, content: "\(index)")
         
-        collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+        UIView.performWithoutAnimation {
+            
+            collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
 
+        }
+       
     }
     
     
@@ -36,16 +54,16 @@ extension CollectionAutoLayoutViewController: UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        
-        ILog.debug(tag: #file, content: "here??? \(indexPath.row)")
+//        ILog.debug(tag: #file, content: "here??? \(indexPath.row)")
         
-        if list[indexPath.row].isImage {
-            
-            let labelHeight = list[indexPath.row].content.height(withConstrainedWidth: DisplayUtil.getFullScreenSize().width - 40, font: UIFont.systemFont(ofSize: 15))
-            
-            return CGSize(width: DisplayUtil.getFullScreenSize().width, height: 225 + labelHeight)
-        }
+//        if list[indexPath.row].isImage {
+//            
+//            let labelHeight = list[indexPath.row].content.height(withConstrainedWidth: DisplayUtil.getFullScreenSize().width - 40, font: UIFont.systemFont(ofSize: 15))
+//            
+//            return CGSize(width: DisplayUtil.getFullScreenSize().width, height: 225 + labelHeight)
+//        }
         
-        return CGSize(width: DisplayUtil.getFullScreenSize().width, height: 60)
+        return CGSize(width: DisplayUtil.getFullScreenSize().width, height: list[indexPath.row].viewHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -32,7 +32,7 @@ class CollectionAutoLayoutViewController: UIViewController {
         listLayout = UICollectionViewFlowLayout()
         listLayout.minimumLineSpacing = 10
         listLayout.minimumInteritemSpacing = 0
-        listLayout.itemSize = CGSize(width: CGFloat(DisplayUtil.getFullScreenSize().width), height: CGFloat(60))
+        listLayout.itemSize = CGSize(width: CGFloat(DisplayUtil.getFullScreenSize().width), height: CGFloat(98))
         
         collectionView.collectionViewLayout = listLayout
      
