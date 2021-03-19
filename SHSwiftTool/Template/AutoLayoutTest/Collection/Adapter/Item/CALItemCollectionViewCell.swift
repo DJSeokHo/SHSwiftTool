@@ -30,8 +30,6 @@ class CALItemCollectionViewCell: UICollectionViewCell {
     private var contentLC: NSLayoutConstraint!
     private var labelLC: NSLayoutConstraint!
     
-    @IBOutlet var scrollView: UIScrollView!
-    
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         
@@ -46,12 +44,34 @@ class CALItemCollectionViewCell: UICollectionViewCell {
         contentLC = AutoLayoutManager.instance.createLayoutConstraintHeight(view: viewContent)
         labelLC = AutoLayoutManager.instance.createLayoutConstraintHeight(view: label)
         
-//        viewContent.viewSetOnClickListener(self, action: #selector(onItemClick))
+        viewContent.viewSetOnClickListener(self, action: #selector(onItemClick))
         
         button.addTarget(self, action: #selector(onButtonClick), for: .touchUpInside)
             
     }
     @objc private func onItemClick() {
+        
+        bean.isSmall = !bean.isSmall
+        
+        if bean.isSmall {
+            
+            bean.labelHeight = CALItemBean.LABEL_VIEW_HEIGHT
+            
+        }
+        else {
+            let tempLabelHeight = bean.content.height(withConstrainedWidth: DisplayUtil.getFullScreenSize().width - 20, font: UIFont.systemFont(ofSize: 15))
+            
+            if tempLabelHeight < CALItemBean.LABEL_VIEW_HEIGHT {
+                bean.labelHeight = CALItemBean.LABEL_VIEW_HEIGHT
+            }
+            else {
+                bean.labelHeight = tempLabelHeight
+            }
+            
+        }
+        
+        bean.viewHeight = CALItemBean.VIEW_HEIGHT + bean.labelHeight + stackView.frame.height
+        
         delegate?.onClick(bean)
     }
     @objc private func onButtonClick() {
@@ -79,47 +99,35 @@ class CALItemCollectionViewCell: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
        
         bean.list.append(view)
-      
         
-        bean.viewHeight += 40
-        bean.stackViewHeight += 40
-//       stackView.frame.size = CGSize(width: stackView.frame.width, height: CGFloat(20 * i))
-//       viewContent.frame.size = CGSize(width: viewContent.frame.width, height: viewContent.frame.height + 20)
-//       i += 1
+        bean.stackViewHeight = CGFloat(bean.list.count * 40)
+
+        bean.viewHeight = CALItemBean.VIEW_HEIGHT + bean.labelHeight + bean.stackViewHeight
+        
     }
     
     public func updateView() {
 //        ILog.debug(tag: #file, content: "update View \(40 + 40 * viewList.count)")
+        
+        
+        ILog.debug(tag: #file, content: "label height is \(bean.labelHeight)")
+        ILog.debug(tag: #file, content: "view height is \(bean.viewHeight)")
+        
         label.text = bean.content
-        ILog.debug(tag: #file, content: "??? stack height \(bean.stackViewHeight)")
+        label.frame.size = CGSize(width: DisplayUtil.getFullScreenSize().width - 20, height: bean.labelHeight
+        )
         
-        stackView.frame = CGRect(x: 10, y: 52, width:  DisplayUtil.getFullScreenSize().width - 20, height: bean.stackViewHeight)
         
-        ILog.debug(tag: #file, content: "!!! \(stackView.frame.width) \(stackView.frame.height)")
+//        ILog.debug(tag: #file, content: "??? stack height \(bean.stackViewHeight)")
+//
+        stackView.frame = CGRect(x: 10, y: 52 + (bean.labelHeight - CALItemBean.LABEL_VIEW_HEIGHT), width:  DisplayUtil.getFullScreenSize().width - 20, height: bean.stackViewHeight)
+        
+//        ILog.debug(tag: #file, content: "!!! \(stackView.frame.width) \(stackView.frame.height)")
         
        
         for i in 0..<bean.list.count {
             stackView.addArrangedSubview(bean.list[i])
         }
-//        let labelHeight = bean.content.height(withConstrainedWidth: DisplayUtil.getFullScreenSize().width - 40, font: UIFont.systemFont(ofSize: 15))
-//        ILog.debug(tag: #file, content: "labelHeight \(labelHeight)")
-//        
-//        viewContent.frame.size = bean.isImage ? CGSize(width: DisplayUtil.getFullScreenSize().width, height: 225 + labelHeight) : CGSize(width: DisplayUtil.getFullScreenSize().width, height: 60)
-//        label.frame.size = bean.isImage ? CGSize(width: DisplayUtil.getFullScreenSize().width - 20, height: labelHeight) : CGSize(width: DisplayUtil.getFullScreenSize().width - 20, height: 20)
-//        
-//        imageView.frame.origin = bean.isImage ? CGPoint(x: 10, y: 60 + labelHeight) : CGPoint(x: 10, y: 60)
-        
-//        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: contentLC, operation: bean.isImage, andValueWhenTrueIs: 225 + labelHeight, andValueWhenFalseIs: 60)
-//
-//        AutoLayoutManager.instance.toggleLayoutConstraintHeight(layoutConstraintHeight: labelLC, operation: bean.isImage, andValueWhenTrueIs: labelHeight, andValueWhenFalseIs: 20)
-        
-//        AutoLayoutManager.instance.startToggleAnimation(view: contentView, withDuration: 0.3, completion: nil)
-//        label.layoutIfNeeded()
-//        viewContent.layoutIfNeeded()
-//        contentView.layoutIfNeeded()
-//        scrollView.setContentOffset(CGPoint.zero, animated: false)
-//        scrollView.isScrollEnabled = false
-        
     }
     
 }
