@@ -95,8 +95,10 @@ class MainViewController: UIViewController {
 //                let viewController = AutoLayoutScrollWithoutStackViewController()
 //                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
-                let viewController = CollectionAutoLayoutViewController()
-                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                let viewController = AutoLayoutTestViewController()
+                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
+//                let viewController = CollectionAutoLayoutViewController()
+//                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
 //                let viewController = DynamicStackViewViewController()
 //                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)

@@ -22,6 +22,11 @@ class AutoLayoutManager {
         return layoutConstrain
     }
     
+    public func createLayoutConstraintHeight(view: UIView, height: CGFloat) -> NSLayoutConstraint {
+        let layoutConstrain = view.heightAnchor.constraint(equalToConstant: height)
+        return layoutConstrain
+    }
+    
     public func toggleLayoutConstraintHeight(layoutConstraintHeight: NSLayoutConstraint, andWitchViewWillBeChange view: UIView, plusWillBeTrueAndMinusWillBeFalse operation: Bool, andValueIs value: CGFloat) {
         
         layoutConstraintHeight.constant = operation ? view.frame.height + value : view.frame.height - value
