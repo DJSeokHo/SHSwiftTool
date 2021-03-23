@@ -98,13 +98,16 @@ class MainViewController: UIViewController {
 //                let viewController = AutoLayoutTestViewController()
 //                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
                 
-                let viewController = StackViewTestViewController()
-                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
+//                let viewController = StackViewTestViewController()
+//                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
 //                let viewController = CollectionAutoLayoutViewController()
 //                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
 //                let viewController = DynamicStackViewViewController()
 //                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                
+                let viewController = StackInScrollViewController()
+                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
                 
             }, afterSeconds: 1)
         }

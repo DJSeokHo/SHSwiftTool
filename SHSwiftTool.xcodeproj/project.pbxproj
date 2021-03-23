@@ -285,6 +285,8 @@
 		C3CA363F25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */; };
 		C3CA364325AEFAC4005782FC /* IGLikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA364125AEFAC4005782FC /* IGLikeCollectionViewCell.swift */; };
 		C3CA364425AEFAC4005782FC /* IGLikeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA364225AEFAC4005782FC /* IGLikeCollectionViewCell.xib */; };
+		C3CC75AF2609EF3800F1AE7F /* StackInScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC75AD2609EF3800F1AE7F /* StackInScrollViewController.swift */; };
+		C3CC75B02609EF3800F1AE7F /* StackInScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CC75AE2609EF3800F1AE7F /* StackInScrollViewController.xib */; };
 		C3CD0459243E1523009B4456 /* ProtocolTestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */; };
 		C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045A243E153B009B4456 /* ProtocolTest.swift */; };
 		C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */; };
@@ -633,6 +635,8 @@
 		C3CA363E25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		C3CA364125AEFAC4005782FC /* IGLikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3CA364225AEFAC4005782FC /* IGLikeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGLikeCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3CC75AD2609EF3800F1AE7F /* StackInScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackInScrollViewController.swift; sourceTree = "<group>"; };
+		C3CC75AE2609EF3800F1AE7F /* StackInScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StackInScrollViewController.xib; sourceTree = "<group>"; };
 		C3CD0458243E1523009B4456 /* ProtocolTestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestImpl.swift; sourceTree = "<group>"; };
 		C3CD045A243E153B009B4456 /* ProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
 		C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUseTest.swift; sourceTree = "<group>"; };
@@ -2019,6 +2023,7 @@
 		C3C36E8925B6881200A4488F /* AutoLayoutTest */ = {
 			isa = PBXGroup;
 			children = (
+				C3CC75AC2609EEE200F1AE7F /* StackViewInScrollView */,
 				C3C8F52F26045E4900F97BD2 /* DynamicStackView */,
 				C3B6232B2603341500343724 /* Collection */,
 				C3C36E8A25B6882100A4488F /* AutoLayoutTestViewController.swift */,
@@ -2114,6 +2119,15 @@
 				C3C41E1F25B1903C00096D1B /* IGLikeListCollectionViewCell.xib */,
 			);
 			path = Item;
+			sourceTree = "<group>";
+		};
+		C3CC75AC2609EEE200F1AE7F /* StackViewInScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				C3CC75AD2609EF3800F1AE7F /* StackInScrollViewController.swift */,
+				C3CC75AE2609EF3800F1AE7F /* StackInScrollViewController.xib */,
+			);
+			path = StackViewInScrollView;
 			sourceTree = "<group>";
 		};
 		C3CD0457243E14F6009B4456 /* ProtocolAsParameter */ = {
@@ -2428,6 +2442,7 @@
 				C32519C9245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png in Resources */,
 				C32BE8BE245AE3FC005A26BB /* ic_shouye_sel@3x.png in Resources */,
 				C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */,
+				C3CC75B02609EF3800F1AE7F /* StackInScrollViewController.xib in Resources */,
 				C32D42102461DB0500B0E7EC /* icon_capture@3x.png in Resources */,
 				C32D42222461E2E000B0E7EC /* icon_plus_gray@3x.png in Resources */,
 				C38A563524658AF700D379EC /* icon_category_restaurant.png in Resources */,
@@ -2527,6 +2542,7 @@
 				C32729442454630000BA736E /* DataModel.swift in Sources */,
 				C32519BA245B2489008EE973 /* CustomCenterSelectUITabBar.swift in Sources */,
 				C38FEF3C2460634600F44C77 /* BasicAlumbImagePickerViewController.swift in Sources */,
+				C3CC75AF2609EF3800F1AE7F /* StackInScrollViewController.swift in Sources */,
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
