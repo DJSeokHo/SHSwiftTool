@@ -127,6 +127,9 @@
 		C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */; };
 		C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */; };
 		C334ADA3236C690A00C2D0D9 /* BasicWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */; };
+		C336FE95262F20BF001ABF25 /* LoginExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C336FE94262F20BF001ABF25 /* LoginExample.storyboard */; };
+		C336FE97262F20DF001ABF25 /* LoginExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336FE96262F20DF001ABF25 /* LoginExampleViewController.swift */; };
+		C336FE99262F2325001ABF25 /* LoginResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336FE98262F2325001ABF25 /* LoginResultViewController.swift */; };
 		C33E395A24574BA600384215 /* TabUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33E395924574BA600384215 /* TabUtil.swift */; };
 		C349E952245EC6BE0066E9FB /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C349E950245EC6BE0066E9FB /* CategoryCollectionViewCell.swift */; };
 		C349E953245EC6BE0066E9FB /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C349E951245EC6BE0066E9FB /* CategoryCollectionViewCell.xib */; };
@@ -475,6 +478,9 @@
 		C32EDA9A2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C334ADA0236C690A00C2D0D9 /* BasicWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicWebViewController.swift; sourceTree = "<group>"; };
 		C334ADA1236C690A00C2D0D9 /* BasicWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicWebViewController.xib; sourceTree = "<group>"; };
+		C336FE94262F20BF001ABF25 /* LoginExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginExample.storyboard; sourceTree = "<group>"; };
+		C336FE96262F20DF001ABF25 /* LoginExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExampleViewController.swift; sourceTree = "<group>"; };
+		C336FE98262F2325001ABF25 /* LoginResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultViewController.swift; sourceTree = "<group>"; };
 		C33E395924574BA600384215 /* TabUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabUtil.swift; sourceTree = "<group>"; };
 		C349E950245EC6BE0066E9FB /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C349E951245EC6BE0066E9FB /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1257,6 +1263,16 @@
 				C3C41E1825B1726500096D1B /* FileDownloadWebViewController.xib */,
 			);
 			path = BasicWebView;
+			sourceTree = "<group>";
+		};
+		C336FE93262F208F001ABF25 /* StoryboardLoginExample */ = {
+			isa = PBXGroup;
+			children = (
+				C336FE94262F20BF001ABF25 /* LoginExample.storyboard */,
+				C336FE96262F20DF001ABF25 /* LoginExampleViewController.swift */,
+				C336FE98262F2325001ABF25 /* LoginResultViewController.swift */,
+			);
+			path = StoryboardLoginExample;
 			sourceTree = "<group>";
 		};
 		C33E395824574B9400384215 /* Tap */ = {
@@ -2254,6 +2270,7 @@
 		C3E739492455E3E10097953E /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				C336FE93262F208F001ABF25 /* StoryboardLoginExample */,
 				C32BE8A3245A66D2005A26BB /* KeepAccount */,
 			);
 			path = ExampleApp;
@@ -2459,6 +2476,7 @@
 				C32519B4245B160C008EE973 /* icon_keep_account@2x.png in Resources */,
 				C32DE5E825C90EF400DEE050 /* AutoStackViewController.xib in Resources */,
 				C32D42202461DF4B00B0E7EC /* icon_confirm_white.png in Resources */,
+				C336FE95262F20BF001ABF25 /* LoginExample.storyboard in Resources */,
 				C32519B7245B1670008EE973 /* icon_setting@3x.png in Resources */,
 				C328FED0245B9324002AF147 /* KAAccountDetailViewController.xib in Resources */,
 				C37112DB22BD050800E92DA8 /* MainViewController.xib in Resources */,
@@ -2648,6 +2666,7 @@
 				C32762CC235DF37F006E3434 /* BasicLabelViewController.swift in Sources */,
 				C34D31E622E9EB5700E22BC6 /* SimpleStructure.swift in Sources */,
 				C3B6233A26033D6600343724 /* StringExtension.swift in Sources */,
+				C336FE99262F2325001ABF25 /* LoginResultViewController.swift in Sources */,
 				C35230EF22EF31B100342A44 /* Fruit.swift in Sources */,
 				C388904522F5AF3B007C444F /* LoginInfoModel.swift in Sources */,
 				C36C66A72450AF860081E862 /* BasicGroupTableViewController.swift in Sources */,
@@ -2680,6 +2699,7 @@
 				C3C41E2025B1903C00096D1B /* IGLikeListCollectionViewCell.swift in Sources */,
 				C32D42082461D92600B0E7EC /* KACapturePictureViewController.swift in Sources */,
 				C34D31DE22E9E5F800E22BC6 /* RankEnum.swift in Sources */,
+				C336FE97262F20DF001ABF25 /* LoginExampleViewController.swift in Sources */,
 				C351192C22BFB9EC0023C35F /* BasicCheckAPICanUsable.swift in Sources */,
 				C3BB78BB25AFDF8200417FE6 /* IGLikeCollectionViewLayout.swift in Sources */,
 				C32D42292461EF5F00B0E7EC /* LocationWrapper.swift in Sources */,

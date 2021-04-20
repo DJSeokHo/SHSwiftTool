@@ -106,8 +106,18 @@ class MainViewController: UIViewController {
 //                let viewController = DynamicStackViewViewController()
 //                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
-                let viewController = StackInScrollViewController()
-                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
+//                let viewController = StackInScrollViewController()
+//                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
+                
+//                let viewController = LoginExampleViewController()
+//                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                
+                let storyboard = UIStoryboard(name: "LoginExample", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "LoginExampleViewController")
+            
+//                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginExampleViewController")
+//
+                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
             }, afterSeconds: 1)
         }
