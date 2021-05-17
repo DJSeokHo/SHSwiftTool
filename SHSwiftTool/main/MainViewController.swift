@@ -112,11 +112,17 @@ class MainViewController: UIViewController {
 //                let viewController = LoginExampleViewController()
 //                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
-                let storyboard = UIStoryboard(name: "LoginExample", bundle: nil)
-                let viewController = storyboard.instantiateViewController(withIdentifier: "LoginExampleViewController")
+                
+                
+                
+//                let storyboard = UIStoryboard(name: "LoginExample", bundle: nil)
+//                let viewController = storyboard.instantiateViewController(withIdentifier: "LoginExampleViewController")
             
+                
 //                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginExampleViewController")
 //
+                let viewController = FirebaseDemoViewController()
+                ILog.debug(tag: #file, content: "start FirebaseDemoViewController")
                 ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
                 
             }, afterSeconds: 1)

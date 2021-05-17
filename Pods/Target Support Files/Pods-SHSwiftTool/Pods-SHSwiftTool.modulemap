@@ -1,0 +1,6 @@
+framework module Pods_SHSwiftTool {
+  umbrella header "Pods-SHSwiftTool-umbrella.h"
+
+  export *
+  module * { export * }
+}

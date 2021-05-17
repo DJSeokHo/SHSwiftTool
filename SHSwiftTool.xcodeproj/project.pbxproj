@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00FE7542FD214FB0ABD5A301 /* Pods_SHSwiftTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E24430B8367CC3BA6AC3DE /* Pods_SHSwiftTool.framework */; };
 		C3038B9C245C1EB00070254F /* KADBWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038B9B245C1EB00070254F /* KADBWrapper.swift */; };
 		C3038B9E245C29DB0070254F /* KANotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038B9D245C29DB0070254F /* KANotificationConstants.swift */; };
 		C3038BA0245C38380070254F /* KAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038B9F245C38380070254F /* KAConstants.swift */; };
@@ -26,6 +27,7 @@
 		C31F5174236B1CFA00253938 /* BasicSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */; };
 		C31F5178236B24E200253938 /* BasicStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F5176236B24E200253938 /* BasicStepperViewController.swift */; };
 		C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F5177236B24E200253938 /* BasicStepperViewController.xib */; };
+		C324636226492D4F00ED1276 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C324636126492D4F00ED1276 /* GoogleService-Info.plist */; };
 		C32519A0245B128B008EE973 /* KASettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C325199E245B128B008EE973 /* KASettingViewController.swift */; };
 		C32519A1245B128B008EE973 /* KASettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C325199F245B128B008EE973 /* KASettingViewController.xib */; };
 		C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32519A2245B12A1008EE973 /* KAAccountViewController.swift */; };
@@ -54,6 +56,15 @@
 		C32762CD235DF37F006E3434 /* BasicLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */; };
 		C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */; };
 		C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */; };
+		C328EA6E264CE898006A93F9 /* MemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA6D264CE898006A93F9 /* MemberModel.swift */; };
+		C328EA70264CE8A5006A93F9 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA6F264CE8A5006A93F9 /* ProductModel.swift */; };
+		C328EA72264CE8AF006A93F9 /* ShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA71264CE8AF006A93F9 /* ShopModel.swift */; };
+		C328EA74264CE8BD006A93F9 /* MemberSelfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA73264CE8BD006A93F9 /* MemberSelfModel.swift */; };
+		C328EA76264CE8D0006A93F9 /* MemberModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA75264CE8D0006A93F9 /* MemberModelService.swift */; };
+		C328EA78264CE8DC006A93F9 /* ProductModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA77264CE8DC006A93F9 /* ProductModelService.swift */; };
+		C328EA7A264CE8EA006A93F9 /* ShopModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA79264CE8EA006A93F9 /* ShopModelService.swift */; };
+		C328EA7D264D1019006A93F9 /* CloudStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA7C264D1019006A93F9 /* CloudStorageManager.swift */; };
+		C328EA7F264D1028006A93F9 /* CloudDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328EA7E264D1028006A93F9 /* CloudDBManager.swift */; };
 		C328FEAC245B8C9F002AF147 /* icon_add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEAB245B8C9F002AF147 /* icon_add@3x.png */; };
 		C328FEAE245B8CA2002AF147 /* icon_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEAD245B8CA2002AF147 /* icon_add@2x.png */; };
 		C328FEB0245B8CA6002AF147 /* icon_add.png in Resources */ = {isa = PBXBuildFile; fileRef = C328FEAF245B8CA6002AF147 /* icon_add.png */; };
@@ -355,9 +366,14 @@
 		C3F71BEF24837E9500AA53E1 /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F71BED24837E9500AA53E1 /* icon_back.png */; };
 		C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */; };
 		C3F9014D2360876D00C8CFD1 /* BasicAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */; };
+		C3FF4F942649088D005EC934 /* FirebaseDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF4F922649088D005EC934 /* FirebaseDemoViewController.swift */; };
+		C3FF4F952649088D005EC934 /* FirebaseDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FF4F932649088D005EC934 /* FirebaseDemoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E24430B8367CC3BA6AC3DE /* Pods_SHSwiftTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHSwiftTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54786E044383BE51AC1CA1C8 /* Pods-SHSwiftTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSwiftTool.debug.xcconfig"; path = "Target Support Files/Pods-SHSwiftTool/Pods-SHSwiftTool.debug.xcconfig"; sourceTree = "<group>"; };
+		B51FDE1BD9BF1DB914F58DDE /* Pods-SHSwiftTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSwiftTool.release.xcconfig"; path = "Target Support Files/Pods-SHSwiftTool/Pods-SHSwiftTool.release.xcconfig"; sourceTree = "<group>"; };
 		C3038B9B245C1EB00070254F /* KADBWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KADBWrapper.swift; sourceTree = "<group>"; };
 		C3038B9D245C29DB0070254F /* KANotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KANotificationConstants.swift; sourceTree = "<group>"; };
 		C3038B9F245C38380070254F /* KAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAConstants.swift; sourceTree = "<group>"; };
@@ -377,6 +393,7 @@
 		C31F5172236B1CFA00253938 /* BasicSliderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSliderViewController.xib; sourceTree = "<group>"; };
 		C31F5176236B24E200253938 /* BasicStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicStepperViewController.swift; sourceTree = "<group>"; };
 		C31F5177236B24E200253938 /* BasicStepperViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicStepperViewController.xib; sourceTree = "<group>"; };
+		C324636126492D4F00ED1276 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C325199E245B128B008EE973 /* KASettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KASettingViewController.swift; sourceTree = "<group>"; };
 		C325199F245B128B008EE973 /* KASettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KASettingViewController.xib; sourceTree = "<group>"; };
 		C32519A2245B12A1008EE973 /* KAAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAccountViewController.swift; sourceTree = "<group>"; };
@@ -405,6 +422,15 @@
 		C32762CB235DF37F006E3434 /* BasicLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicLabelViewController.xib; sourceTree = "<group>"; };
 		C32762CF235DFC27006E3434 /* BasicTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextFieldViewController.swift; sourceTree = "<group>"; };
 		C32762D0235DFC27006E3434 /* BasicTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTextFieldViewController.xib; sourceTree = "<group>"; };
+		C328EA6D264CE898006A93F9 /* MemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModel.swift; sourceTree = "<group>"; };
+		C328EA6F264CE8A5006A93F9 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		C328EA71264CE8AF006A93F9 /* ShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModel.swift; sourceTree = "<group>"; };
+		C328EA73264CE8BD006A93F9 /* MemberSelfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSelfModel.swift; sourceTree = "<group>"; };
+		C328EA75264CE8D0006A93F9 /* MemberModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberModelService.swift; sourceTree = "<group>"; };
+		C328EA77264CE8DC006A93F9 /* ProductModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelService.swift; sourceTree = "<group>"; };
+		C328EA79264CE8EA006A93F9 /* ShopModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopModelService.swift; sourceTree = "<group>"; };
+		C328EA7C264D1019006A93F9 /* CloudStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorageManager.swift; sourceTree = "<group>"; };
+		C328EA7E264D1028006A93F9 /* CloudDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDBManager.swift; sourceTree = "<group>"; };
 		C328FEAB245B8C9F002AF147 /* icon_add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_add@3x.png"; sourceTree = "<group>"; };
 		C328FEAD245B8CA2002AF147 /* icon_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_add@2x.png"; sourceTree = "<group>"; };
 		C328FEAF245B8CA6002AF147 /* icon_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_add.png; sourceTree = "<group>"; };
@@ -708,6 +734,8 @@
 		C3F71BED24837E9500AA53E1 /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
 		C3F9014A2360876D00C8CFD1 /* BasicAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlertViewController.swift; sourceTree = "<group>"; };
 		C3F9014B2360876D00C8CFD1 /* BasicAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicAlertViewController.xib; sourceTree = "<group>"; };
+		C3FF4F922649088D005EC934 /* FirebaseDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDemoViewController.swift; sourceTree = "<group>"; };
+		C3FF4F932649088D005EC934 /* FirebaseDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirebaseDemoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -717,12 +745,22 @@
 			files = (
 				C3A460ED24702DF500D19EB6 /* MapKit.framework in Frameworks */,
 				C327293D245457CD00BA736E /* libsqlite3.tbd in Frameworks */,
+				00FE7542FD214FB0ABD5A301 /* Pods_SHSwiftTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C4738F20FC9DBB18340B1AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54786E044383BE51AC1CA1C8 /* Pods-SHSwiftTool.debug.xcconfig */,
+				B51FDE1BD9BF1DB914F58DDE /* Pods-SHSwiftTool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C3038BA1245C5ABA0070254F /* BasicPageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -816,6 +854,7 @@
 			children = (
 				C3A460EC24702DF500D19EB6 /* MapKit.framework */,
 				C327293C245457B700BA736E /* libsqlite3.tbd */,
+				14E24430B8367CC3BA6AC3DE /* Pods_SHSwiftTool.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1685,6 +1724,7 @@
 				C37112BF22BD036900E92DA8 /* SHSwiftTool */,
 				C37112BE22BD036900E92DA8 /* Products */,
 				C327293B245457B700BA736E /* Frameworks */,
+				6C4738F20FC9DBB18340B1AF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1699,6 +1739,7 @@
 		C37112BF22BD036900E92DA8 /* SHSwiftTool */ = {
 			isa = PBXGroup;
 			children = (
+				C324636126492D4F00ED1276 /* GoogleService-Info.plist */,
 				C3E739492455E3E10097953E /* ExampleApp */,
 				C358DDAB23019C6A007F10C6 /* Resources */,
 				C388904A22F5B558007C444F /* Framework */,
@@ -1872,6 +1913,7 @@
 		C388904A22F5B558007C444F /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF4F8E264907A4005EC934 /* Firebase */,
 				C3B6233826033D5500343724 /* Extension */,
 				C39AD8B52312AF600072FAB5 /* Modules */,
 				C388904B22F5B568007C444F /* Util */,
@@ -2303,6 +2345,64 @@
 			path = BasicAlert;
 			sourceTree = "<group>";
 		};
+		C3FF4F8E264907A4005EC934 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF4F912649087C005EC934 /* Demo */,
+				C3FF4F9026490874005EC934 /* CloudStorage */,
+				C3FF4F8F26490869005EC934 /* CloudDatabase */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		C3FF4F8F26490869005EC934 /* CloudDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				C328EA7E264D1028006A93F9 /* CloudDBManager.swift */,
+			);
+			path = CloudDatabase;
+			sourceTree = "<group>";
+		};
+		C3FF4F9026490874005EC934 /* CloudStorage */ = {
+			isa = PBXGroup;
+			children = (
+				C328EA7C264D1019006A93F9 /* CloudStorageManager.swift */,
+			);
+			path = CloudStorage;
+			sourceTree = "<group>";
+		};
+		C3FF4F912649087C005EC934 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF4F972649099F005EC934 /* Service */,
+				C3FF4F9626490997005EC934 /* Model */,
+				C3FF4F922649088D005EC934 /* FirebaseDemoViewController.swift */,
+				C3FF4F932649088D005EC934 /* FirebaseDemoViewController.xib */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		C3FF4F9626490997005EC934 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C328EA6D264CE898006A93F9 /* MemberModel.swift */,
+				C328EA6F264CE8A5006A93F9 /* ProductModel.swift */,
+				C328EA71264CE8AF006A93F9 /* ShopModel.swift */,
+				C328EA73264CE8BD006A93F9 /* MemberSelfModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3FF4F972649099F005EC934 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C328EA75264CE8D0006A93F9 /* MemberModelService.swift */,
+				C328EA77264CE8DC006A93F9 /* ProductModelService.swift */,
+				C328EA79264CE8EA006A93F9 /* ShopModelService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2310,9 +2410,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37112CF22BD036A00E92DA8 /* Build configuration list for PBXNativeTarget "SHSwiftTool" */;
 			buildPhases = (
+				FDD3ECE25F754258073BC477 /* [CP] Check Pods Manifest.lock */,
 				C37112B922BD036900E92DA8 /* Sources */,
 				C37112BA22BD036900E92DA8 /* Frameworks */,
 				C37112BB22BD036900E92DA8 /* Resources */,
+				91BC0E28BED5B47A566266D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2374,6 +2476,7 @@
 				C37020E92361E44E00895D6F /* test_image_2.png in Resources */,
 				C3DD6B37230D88D500BDDF5D /* icon_profile_selected@2x.png in Resources */,
 				C32762D2235DFC27006E3434 /* BasicTextFieldViewController.xib in Resources */,
+				C324636226492D4F00ED1276 /* GoogleService-Info.plist in Resources */,
 				C37020E82361E44E00895D6F /* test_image_1.png in Resources */,
 				C38A562D24658AEF00D379EC /* icon_category_study@2x.png in Resources */,
 				C3D731252358686200C02EC3 /* BasicUIViewController.xib in Resources */,
@@ -2496,6 +2599,7 @@
 				C3DD6AF8230D84C100BDDF5D /* icon_order_un_selected@3x.png in Resources */,
 				C3C36E8D25B6882100A4488F /* AutoLayoutTestViewController.xib in Resources */,
 				C38A563924658AF700D379EC /* icon_category_travel.png in Resources */,
+				C3FF4F952649088D005EC934 /* FirebaseDemoViewController.xib in Resources */,
 				C3DD6B30230D865200BDDF5D /* OrderViewController.xib in Resources */,
 				C328FED9245B9963002AF147 /* icon_close_black@2x.png in Resources */,
 				C31F5179236B24E200253938 /* BasicStepperViewController.xib in Resources */,
@@ -2546,6 +2650,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		91BC0E28BED5B47A566266D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SHSwiftTool/Pods-SHSwiftTool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SHSwiftTool/Pods-SHSwiftTool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SHSwiftTool/Pods-SHSwiftTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD3ECE25F754258073BC477 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SHSwiftTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C37112B922BD036900E92DA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -2558,14 +2704,17 @@
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
 				C32729442454630000BA736E /* DataModel.swift in Sources */,
+				C328EA78264CE8DC006A93F9 /* ProductModelService.swift in Sources */,
 				C32519BA245B2489008EE973 /* CustomCenterSelectUITabBar.swift in Sources */,
 				C38FEF3C2460634600F44C77 /* BasicAlumbImagePickerViewController.swift in Sources */,
 				C3CC75AF2609EF3800F1AE7F /* StackInScrollViewController.swift in Sources */,
 				C32C57502453268F008AF1A1 /* BasicPageViewController.swift in Sources */,
 				C34E4F5E22BDD2D3009744C1 /* BasicCollection.swift in Sources */,
 				C35230E822EF27E000342A44 /* Customer.swift in Sources */,
+				C328EA6E264CE898006A93F9 /* MemberModel.swift in Sources */,
 				C3038BAC245C6E190070254F /* DataViewController.swift in Sources */,
 				C3845A5722EDDE9300FAC52B /* Wolf.swift in Sources */,
+				C328EA74264CE8BD006A93F9 /* MemberSelfModel.swift in Sources */,
 				C3B623332603348200343724 /* CALAdapter.swift in Sources */,
 				C38B664622F721A6004EE452 /* LoginHomeViewController.swift in Sources */,
 				C35940B024657DA40030785A /* KACell.swift in Sources */,
@@ -2586,7 +2735,9 @@
 				C3272947245467AC00BA736E /* UUIDUtil.swift in Sources */,
 				C3F9014C2360876D00C8CFD1 /* BasicAlertViewController.swift in Sources */,
 				C3845A5522EDDAC700FAC52B /* ClassAndStruct.swift in Sources */,
+				C328EA76264CE8D0006A93F9 /* MemberModelService.swift in Sources */,
 				C37112E322BD10C000E92DA8 /* BasicConsoleTest.swift in Sources */,
+				C328EA7D264D1019006A93F9 /* CloudStorageManager.swift in Sources */,
 				C34CB57C2348A5410067F851 /* AppleEatable.swift in Sources */,
 				C32519BC245B249E008EE973 /* CustomCenterSelectUITabBarViewController.swift in Sources */,
 				C32EDA9B2451F8BC0034C59D /* BasicSearchViewControllerExtensions.swift in Sources */,
@@ -2594,6 +2745,7 @@
 				C385BFF42450F03100F864C8 /* BasicCollectionViewController.swift in Sources */,
 				C35230EC22EF288000342A44 /* Company.swift in Sources */,
 				C32519A0245B128B008EE973 /* KASettingViewController.swift in Sources */,
+				C328EA7A264CE8EA006A93F9 /* ShopModelService.swift in Sources */,
 				C32C3168245D38B000EAC9FB /* KATabLayout.swift in Sources */,
 				C3EF1B842369C83B006FB168 /* BasicSegmentViewController.swift in Sources */,
 				C32519BE245B24B0008EE973 /* CustomCenterSelectUITabBarDelegate.swift in Sources */,
@@ -2613,6 +2765,7 @@
 				C35FF033230C2BEF009D19A0 /* ProfileViewController.swift in Sources */,
 				C32BE8C7245AE727005A26BB /* CustomCenterClickUITabBarViewController.swift in Sources */,
 				C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */,
+				C328EA72264CE8AF006A93F9 /* ShopModel.swift in Sources */,
 				C388903E22F5AF05007C444F /* LoginViewController.swift in Sources */,
 				C327294A24546CAA00BA736E /* DateUtil.swift in Sources */,
 				C37112DA22BD050800E92DA8 /* MainViewController.swift in Sources */,
@@ -2631,6 +2784,7 @@
 				C3B6232A26032E7800343724 /* AutoLayoutManager.swift in Sources */,
 				C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
+				C328EA7F264D1028006A93F9 /* CloudDBManager.swift in Sources */,
 				C35230F122EF31DE00342A44 /* Apple.swift in Sources */,
 				C32BE8B3245A8F17005A26BB /* ColorUtil.swift in Sources */,
 				C35159852309414400848456 /* LoginConstants.swift in Sources */,
@@ -2639,6 +2793,7 @@
 				C35791282308453200BDB17E /* NotificationConstants.swift in Sources */,
 				C351193022BFC55A0023C35F /* BasicEnum.swift in Sources */,
 				C3DECD2E235F4AE400AEA02D /* SoftKeyboardUtil.swift in Sources */,
+				C3FF4F942649088D005EC934 /* FirebaseDemoViewController.swift in Sources */,
 				C3DD6B2F230D865200BDDF5D /* OrderViewController.swift in Sources */,
 				C3C36E8725B684DA00A4488F /* StackViewTestViewController.swift in Sources */,
 				C39AD8B92312AF8A0072FAB5 /* CameraViewController.swift in Sources */,
@@ -2688,6 +2843,7 @@
 				C32519A4245B12A1008EE973 /* KAAccountViewController.swift in Sources */,
 				C32C575A245336F0008AF1A1 /* SimpleAnimationViewController.swift in Sources */,
 				C32C316B245D437E00EAC9FB /* KATabLayoutItemViewHolder.swift in Sources */,
+				C328EA70264CE8A5006A93F9 /* ProductModel.swift in Sources */,
 				C349E952245EC6BE0066E9FB /* CategoryCollectionViewCell.swift in Sources */,
 				C351597E230936B000848456 /* UserDefaultsUtil.swift in Sources */,
 				C3845A5322EDDA6F00FAC52B /* Dog.swift in Sources */,
@@ -2841,6 +2997,7 @@
 		};
 		C37112D022BD036A00E92DA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54786E044383BE51AC1CA1C8 /* Pods-SHSwiftTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
@@ -2864,6 +3021,7 @@
 		};
 		C37112D122BD036A00E92DA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B51FDE1BD9BF1DB914F58DDE /* Pods-SHSwiftTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
