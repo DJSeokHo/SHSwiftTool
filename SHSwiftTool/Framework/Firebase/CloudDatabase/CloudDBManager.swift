@@ -78,16 +78,16 @@ class CloudDBManager {
             query = query.start(afterDocument: offset!)
         }
         
-        if orderByCol != nil {
-            query = query.order(by: orderByCol!, descending: isDesc)
-        }
-        
         if conditionData != nil {
             
             for (key, value) in conditionData! {
                 query = query.whereField(key, isEqualTo: value)
             }
             
+        }
+        
+        if orderByCol != nil {
+            query = query.order(by: orderByCol!, descending: isDesc)
         }
         
         query.getDocuments { (querySnapshot, error) in
