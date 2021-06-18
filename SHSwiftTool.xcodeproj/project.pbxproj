@@ -305,6 +305,12 @@
 		C3CD045B243E153B009B4456 /* ProtocolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045A243E153B009B4456 /* ProtocolTest.swift */; };
 		C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */; };
 		C3CD045F243E1CF0009B4456 /* ProtocolTestDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CD045E243E1CF0009B4456 /* ProtocolTestDemo.swift */; };
+		C3D01FDC267C2D3900779724 /* AutoWrapContentHeightCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D01FDB267C2D3900779724 /* AutoWrapContentHeightCollectionViewAdapter.swift */; };
+		C3D01FDF267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D01FDD267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.swift */; };
+		C3D01FE0267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D01FDE267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.xib */; };
+		C3D01FE4267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D01FE2267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.swift */; };
+		C3D01FE5267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D01FE3267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.xib */; };
+		C3D01FED267C609100779724 /* AutoWrapModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D01FEC267C609100779724 /* AutoWrapModelItem.swift */; };
 		C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */; };
 		C3D14A22236330CD00A0C897 /* BasicDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */; };
 		C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */; };
@@ -673,6 +679,12 @@
 		C3CD045A243E153B009B4456 /* ProtocolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTest.swift; sourceTree = "<group>"; };
 		C3CD045C243E1575009B4456 /* ProtocolUseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolUseTest.swift; sourceTree = "<group>"; };
 		C3CD045E243E1CF0009B4456 /* ProtocolTestDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTestDemo.swift; sourceTree = "<group>"; };
+		C3D01FDB267C2D3900779724 /* AutoWrapContentHeightCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrapContentHeightCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		C3D01FDD267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrapContentHeightCollectionViewController.swift; sourceTree = "<group>"; };
+		C3D01FDE267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoWrapContentHeightCollectionViewController.xib; sourceTree = "<group>"; };
+		C3D01FE2267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrapContentHeightCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3D01FE3267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoWrapContentHeightCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3D01FEC267C609100779724 /* AutoWrapModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoWrapModelItem.swift; sourceTree = "<group>"; };
 		C3D14A1F236330CD00A0C897 /* BasicDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDatePickerViewController.swift; sourceTree = "<group>"; };
 		C3D14A20236330CD00A0C897 /* BasicDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicDatePickerViewController.xib; sourceTree = "<group>"; };
 		C3D14A24236337B400A0C897 /* BasicPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPickerViewController.swift; sourceTree = "<group>"; };
@@ -1773,6 +1785,7 @@
 		C37112DE22BD0F1D00E92DA8 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				C3D01FD5267C2CFF00779724 /* AutoWrapContentHeightCollectionView */,
 				C3C36E8925B6881200A4488F /* AutoLayoutTest */,
 				C3C36E8425B684D300A4488F /* StackViewTest */,
 				C3CA363325AEEFC6005782FC /* IGLikeCollectionView */,
@@ -2199,6 +2212,35 @@
 			path = ProtocolAsParameter;
 			sourceTree = "<group>";
 		};
+		C3D01FD5267C2CFF00779724 /* AutoWrapContentHeightCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C3D01FDA267C2D2000779724 /* Adapter */,
+				C3D01FDD267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.swift */,
+				C3D01FDE267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.xib */,
+			);
+			path = AutoWrapContentHeightCollectionView;
+			sourceTree = "<group>";
+		};
+		C3D01FDA267C2D2000779724 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				C3D01FE1267C2D5000779724 /* Item */,
+				C3D01FDB267C2D3900779724 /* AutoWrapContentHeightCollectionViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		C3D01FE1267C2D5000779724 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C3D01FE2267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.swift */,
+				C3D01FE3267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.xib */,
+				C3D01FEC267C609100779724 /* AutoWrapModelItem.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
 		C3D14A1E236330B300A0C897 /* BasicDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -2561,6 +2603,8 @@
 				C3DD6B06230D850100BDDF5D /* icon_product_selected@2x.png in Resources */,
 				C32519C9245B3B0B008EE973 /* icon_keep_account_un_selected@2x.png in Resources */,
 				C32BE8BE245AE3FC005A26BB /* ic_shouye_sel@3x.png in Resources */,
+				C3D01FE5267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.xib in Resources */,
+				C3D01FE0267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.xib in Resources */,
 				C32C574C2452F90E008AF1A1 /* BasicScrollBigViewController.xib in Resources */,
 				C3CC75B02609EF3800F1AE7F /* StackInScrollViewController.xib in Resources */,
 				C32D42102461DB0500B0E7EC /* icon_capture@3x.png in Resources */,
@@ -2702,6 +2746,7 @@
 				C3DB2ADD2351B09700D1A621 /* BasicFoundation.swift in Sources */,
 				C3CD045D243E1575009B4456 /* ProtocolUseTest.swift in Sources */,
 				C351192A22BFB4580023C35F /* BasicControlFlow.swift in Sources */,
+				C3D01FED267C609100779724 /* AutoWrapModelItem.swift in Sources */,
 				C3DD6B27230D863A00BDDF5D /* ClientViewController.swift in Sources */,
 				C32729442454630000BA736E /* DataModel.swift in Sources */,
 				C328EA78264CE8DC006A93F9 /* ProductModelService.swift in Sources */,
@@ -2773,6 +2818,7 @@
 				C334ADA2236C690A00C2D0D9 /* BasicWebViewController.swift in Sources */,
 				C3D14A26236337B400A0C897 /* BasicPickerViewController.swift in Sources */,
 				C3038BA6245C6D500070254F /* BasicPageDemoViewController.swift in Sources */,
+				C3D01FDF267C2D4B00779724 /* AutoWrapContentHeightCollectionViewController.swift in Sources */,
 				C3DD6B2B230D864700BDDF5D /* ProductViewController.swift in Sources */,
 				C304919623672BD200B2FC2C /* BasicPickerViewDemoViewController.swift in Sources */,
 				C3CA363F25AEFA9A005782FC /* IGLikeCollectionViewAdapter.swift in Sources */,
@@ -2781,6 +2827,7 @@
 				C32762D1235DFC27006E3434 /* BasicTextFieldViewController.swift in Sources */,
 				C3D14A21236330CD00A0C897 /* BasicDatePickerViewController.swift in Sources */,
 				C32519C3245B2C7F008EE973 /* CustomNormalUITabBarViewController.swift in Sources */,
+				C3D01FDC267C2D3900779724 /* AutoWrapContentHeightCollectionViewAdapter.swift in Sources */,
 				C3B6232A26032E7800343724 /* AutoLayoutManager.swift in Sources */,
 				C32EDA972451F1AF0034C59D /* BasicSearchViewController.swift in Sources */,
 				C34E4F5C22BDD1FB009744C1 /* BasicString.swift in Sources */,
@@ -2801,6 +2848,7 @@
 				C328FED5245B945B002AF147 /* KANavigationBarViewHolder.swift in Sources */,
 				C35DC630234A0CFB00B94A78 /* Closure.swift in Sources */,
 				C38FE9E0235C41A00032F41F /* SecondViewController.swift in Sources */,
+				C3D01FE4267C2D7400779724 /* AutoWrapContentHeightCollectionViewCell.swift in Sources */,
 				C32762C8235DF285006E3434 /* DisplayUtil.swift in Sources */,
 				C3D731242358686200C02EC3 /* BasicUIViewController.swift in Sources */,
 				C34D31E022E9E79100E22BC6 /* CardStruct.swift in Sources */,

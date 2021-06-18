@@ -121,9 +121,15 @@ class MainViewController: UIViewController {
                 
 //                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginExampleViewController")
 //
-                let viewController = FirebaseDemoViewController()
-                ILog.debug(tag: #file, content: "start FirebaseDemoViewController")
+//                let viewController = FirebaseDemoViewController()
+//                ILog.debug(tag: #file, content: "start FirebaseDemoViewController")
+//                ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                
+                let viewController = AutoWrapContentHeightCollectionViewController()
                 ViewControllerUtil.startNewFullScreenViewControllerWithNavigation(from: self, target: viewController)
+                
+//                let viewController = ExampleOneViewController()
+//                ViewControllerUtil.startNewFullScreenViewController(from: self, target: viewController)
                 
             }, afterSeconds: 1)
         }
