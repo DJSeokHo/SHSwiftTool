@@ -21,14 +21,11 @@ class AutoWrapContentHeightCollectionViewCell: UICollectionViewCell {
     
     public var autoWrapModelItem: AutoWrapModelItem?
     
+    private var heightConstraint: NSLayoutConstraint?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
         
     }
     
@@ -51,6 +48,7 @@ class AutoWrapContentHeightCollectionViewCell: UICollectionViewCell {
         labelContent.text = autoWrapModelItem?.content
         
         labelContent.sizeToFit()
+        
         layoutIfNeeded()
     }
     
